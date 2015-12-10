@@ -1,0 +1,10 @@
+(cl:defpackage rfid_handle-srv
+  (:use )
+  (:export
+   "CLASSIFIEDDATA"
+   "<CLASSIFIEDDATA-REQUEST>"
+   "CLASSIFIEDDATA-REQUEST"
+   "<CLASSIFIEDDATA-RESPONSE>"
+   "CLASSIFIEDDATA-RESPONSE"
+  ))
+

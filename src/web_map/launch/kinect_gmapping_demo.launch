@@ -1,0 +1,13 @@
+<launch>
+  <include file="$(find web_map)/launch/3dsensor.launch">
+    <arg name="rgb_processing" value="false" />
+    <arg name="depth_registration" value="false" />
+    <arg name="depth_processing" value="false" />
+    
+    <arg name="scan_topic" value="/kinect_scan" />
+  </include>
+
+  <include file="$(find web_map)/launch/gmapping.launch.xml"/>
+
+
+</launch>

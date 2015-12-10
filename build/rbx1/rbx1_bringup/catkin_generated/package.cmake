@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rbx1_bringup")
+set(rbx1_bringup_MAINTAINER "Patrick Goebel <patrick@pirobot.org>")
+set(rbx1_bringup_DEPRECATED "")
+set(rbx1_bringup_VERSION "0.4.0")
+set(rbx1_bringup_BUILD_DEPENDS "rospy" "roscpp" "sensor_msgs")
+set(rbx1_bringup_RUN_DEPENDS "rospy" "roscpp" "sensor_msgs")
+set(rbx1_bringup_BUILDTOOL_DEPENDS "catkin")

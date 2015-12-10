@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/devel
+
+Name: rplidar_python
+Description: Description of rplidar_python
+Version: 0.0.0
+Cflags: -I/home/turtlebot2/xu_slam/devel/include
+Libs: -L/home/turtlebot2/xu_slam/devel/lib -lrplidar_python
+Requires: roslaunch rospy message_runtime std_msgs geometry_msgs

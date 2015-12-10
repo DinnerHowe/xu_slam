@@ -1,0 +1,37 @@
+﻿APIs
+
+
+before running this code pls install python-xlib python-xlrd python-xlwt python-openpyxl
+
+
+execl_coordinate_transfer
+
+　　　模块功能是将excel上的点阵和现实坐标进行相互转换。
+
+
+1.execl_coordinate_transfer.excel2coordinate(data,excel_path)
+　　　输入excel坐标返回现实坐标
+
+2.execl_coordinate_transfer.pointed_coordinate2execl(point,excel_path)
+　　　输入指定的现实坐标返回excel坐标值
+
+
+3.execl_coordinate_transfer.coordinate2execl(excel_path)
+　　　返回机器人在excel坐标系中的位置
+
+
+
+
+
+
+
+
+quat_to_angle
+
+　　　模块功能是将4元组转化成3维数
+
+1.quat_to_angle.quat_to_angle(quat)
+　　　输入4元组返回RPY值
+
+2.quat_to_angle.ort_pose(yaw,pose,r)
+　　　输入yaw，pose，以及半径，返回朝向标志点在excel坐标系的位置。

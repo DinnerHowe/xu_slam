@@ -1,0 +1,4 @@
+<launch>
+  <node name="map_thread" pkg="web_map" type="map_thread.py" respawn="true" />
+  <node name="odom_thread" pkg="web_map" type="odom_thread.py" respawn="true" />
+</launch>

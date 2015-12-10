@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rbx1_speech")
+set(rbx1_speech_MAINTAINER "Patrick Goebel <patrick@pirobot.org>")
+set(rbx1_speech_DEPRECATED "")
+set(rbx1_speech_VERSION "0.4.0")
+set(rbx1_speech_BUILD_DEPENDS "roscpp" "rospy" "pocketsphinx" "sound_play" "std_msgs")
+set(rbx1_speech_RUN_DEPENDS "roscpp" "rospy" "pocketsphinx" "sound_play" "std_msgs")
+set(rbx1_speech_BUILDTOOL_DEPENDS "catkin")

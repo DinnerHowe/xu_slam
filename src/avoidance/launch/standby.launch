@@ -1,0 +1,5 @@
+<launch>
+  <node name="robot_standby" pkg="avoidance" type="robot_standby.py" respawn="true" />
+  <include file="$(find laser)/launch/laser_sensor.launch" />
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+  <node name="base_action" pkg="base_motion_module" type="base_action.py" respawn="true" />
+
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+</launch>

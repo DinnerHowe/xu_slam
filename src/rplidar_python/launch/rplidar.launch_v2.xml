@@ -1,0 +1,13 @@
+<launch>
+ <arg name="rplidar_frame" default="/laser" />
+
+ <node pkg="rplidar_python" type="rplidar_scan_ver4.py" name="rplidar" respawn="true">
+  <param name="frame_id" value="$(arg rplidar_frame)"/>
+  <param name="range_min" value="0.15"/>
+  <param name="range_max" value="6.0"/>
+  <param name="angle_offset" value="0"/>
+  <param name="angle_compensate" value="1"/>
+
+ </node>
+</launch>
+

@@ -1,0 +1,6 @@
+<launch>
+ <node name="rfidread" pkg="rfid" type="reader-pub-row.py" respawn="true" />
+ <node name="Datatransfer" pkg="rfid" type="rfiddata-tranfer.py" respawn="true" />
+ <node name="odom_rfid" pkg="rfid" type="rfid_odom.py" respawn="true" />
+
+</launch>

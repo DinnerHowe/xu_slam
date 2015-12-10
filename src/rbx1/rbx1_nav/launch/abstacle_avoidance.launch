@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="laser_obstacle_detector5_5" pkg="rbx1" type="slam_base_action_sol5-5_addlaser.py" respawn="true" />
+
+</launch>

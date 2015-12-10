@@ -1,0 +1,5 @@
+<launch>
+  <node name="robot_forward" pkg="avoidance" type="robot_forword.py" respawn="true" />
+  <include file="$(find laser)/launch/laser_sensor.launch" />
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+</launch>

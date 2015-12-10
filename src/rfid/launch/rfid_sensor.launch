@@ -1,0 +1,6 @@
+<launch>
+ <group ns="rfid_sensor">
+  <node name="rfidread" pkg="rfid" type="reader-pub-row.py" respawn="true" />
+  <node name="Datatransfer" pkg="rfid" type="rfiddata-tranfer.py" respawn="true" />
+ </group>
+</launch>

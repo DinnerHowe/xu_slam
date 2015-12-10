@@ -1,0 +1,13 @@
+#!/usr/bin/expect  
+  
+set timeout 60 
+  
+spawn roslaunch turtlebot_navigation amcl_demo.launch   
+  
+expect "*odom received!"
+
+send_user  "Now amcl is launched \n"  
+
+expect eof
+
+exit

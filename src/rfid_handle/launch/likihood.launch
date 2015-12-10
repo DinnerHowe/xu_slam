@@ -1,0 +1,5 @@
+<launch>
+
+  <node name="RFID_likihoode" pkg="rfid_handle" type="likelihood.py" respawn="true" />
+
+</launch>

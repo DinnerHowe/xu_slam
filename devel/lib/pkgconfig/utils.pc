@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/devel
+
+Name: utils
+Description: Description of utils
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot2/xu_slam/devel/lib -lutils
+Requires: rospy std_msgs message_runtime

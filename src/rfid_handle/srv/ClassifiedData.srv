@@ -1,0 +1,7 @@
+int16 rssi
+string ID 
+---
+float32[] meanrssi
+float32[] stdrssi
+int16[] idcount
+string[] ID

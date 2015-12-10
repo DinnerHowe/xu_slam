@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "laser")
+set(laser_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
+set(laser_DEPRECATED "")
+set(laser_VERSION "0.0.0")
+set(laser_BUILD_DEPENDS "message_generation" "rospy" "std_msgs")
+set(laser_RUN_DEPENDS "message_runtime" "rospy" "std_msgs")
+set(laser_BUILDTOOL_DEPENDS "catkin")
