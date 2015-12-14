@@ -66,7 +66,6 @@ def metrix_RealPose(map_origin,goal_cell,goal_ort,height,resolution):
  return Goal_Pose
 
 #figger out reasonabel goal for robot moving
-
 def robot_goal_compensated(map_origin,goal_cell,goal_ort,height,resolution,data):
  trigger=[True,True]
  checker=0
@@ -93,7 +92,6 @@ def robot_goal_compensated(map_origin,goal_cell,goal_ort,height,resolution,data)
      x=goal_cell[0]-(i+1)
      trigger[0]=False
   checker=0
-
 #判断y
  #左边
  if trigger[1]:
@@ -220,7 +218,7 @@ def edge_explorer(data):
 
  return checker
 
-#输出一系列点中最近的一个
+#输出一系列点中距离goal最近的一个
 def nearest(goal,list_num,diff=0):
  for i in list_num:
   if diff>abs(i-goal):
@@ -312,8 +310,6 @@ def global_action_director(data,odom_pose):
  else:
   return False
 
-
-
 #存储 for testing convenient
 def store_xlsx(data,high,width):
  accout=getpass.getuser()
@@ -348,7 +344,7 @@ def store_xlsx(data,high,width):
  excel.save(filename=excel_outpath)
  print 'saving process done'
  return 'ok'
-#14
+#存txt
 def store_txt(data):
  store=open('./cellmap.txt','w')	
  for i in range(n):

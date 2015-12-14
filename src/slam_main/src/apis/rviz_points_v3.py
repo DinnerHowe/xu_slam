@@ -3,7 +3,7 @@
 """ 2015/11/12
 接受rviz上发布的点，然后依次过去
 修改：改进闭环扫描的起点，起点定位机器人当前位置，替换之前的地图原点
-修改：
+修改：加入map_listener_reference.py的api
 
 Copyright (c) 2015 Xu Zhihao (Howe).  All rights reserved.
 
@@ -19,6 +19,7 @@ from actionlib_msgs.msg import *
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 from tf.transformations import quaternion_from_euler
 from nav_msgs.msg import *
+from map_listener_reference import *
 
 class go_points():
  def __init__(self):
@@ -27,6 +28,7 @@ class go_points():
   self.map_old=OccupancyGrid()
   actions.twist(1,20,0.0)
   actions.square(0.5)
+
   self.map_updated=False
   self.number=int(raw_input('Please input how many position you wanna achieve: '))
   rospy.Subscriber("clicked_point", PointStamped, self.points_collector)
