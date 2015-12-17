@@ -1,0 +1,7 @@
+<launch>
+ <include file="$(find base_motion_module)/launch/base_go_points.launch.xml">
+  <arg name="frame" value="map" />
+ </include>
+
+</launch>
+

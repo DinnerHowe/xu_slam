@@ -1,0 +1,10 @@
+<launch>
+ <arg name="frame" default="map" />
+ <arg name="bin_number" default="10" />
+
+ <node pkg="base_motion_module" type="base_go_points.py" name="go_points" respawn="true">
+  <param name="frame_id" value="$(arg frame)"/>
+  <param name="bin_number" value="$(arg bin_number)"/>
+ </node>
+</launch>
+

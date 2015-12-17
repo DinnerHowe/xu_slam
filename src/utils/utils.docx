@@ -1,0 +1,56 @@
+﻿小工具功能说明：
+
+code_counter.py：
+计算总共代码量，有效代码量，注释量，空格量的小工具。
+
+coordinate_execl.py：
+this code transfer map data from coordinate fram to execl fram
+
+coordinate_execl_without_coordinate.py
+this code transfer map data from coordinate fram to execl fram
+没有人工坐标标号的，即第一行第一列不再是xy坐标值
+
+coordinate_execl_without_positive_coordinate.py
+this code transfer map data from coordinate fram to execl fram
+没有人工坐标标号的，即第一行第一列不再是xy坐标值，并且图是正的
+
+execl_coordinate.py
+this code transfer  map data from execl fram to coordinate fram
+
+execl_coordinate_without_coordinate.py
+this code transfer  map data from execl fram to coordinate fram
+没有人工坐标标号的，即第一行第一列不再是xy坐标值
+
+execl_coordinate_without_positive_coordinate.py
+this code transfer  map data from execl fram to coordinate fram
+没有人工坐标标号的，即第一行第一列不再是xy坐标值，并且图是正的
+
+fake_map_pub.py
+发布假的地图坐标点
+
+iochecker.py
+io口检测，检测usb1 usb0的链接状态
+
+laser_sub.py
+订阅镭射数据
+
+map_sub_occupancy.py
+订阅occupancy地图数据，然后写到SingleScan.txt中
+
+port_finder.py
+输出目前链接的usb口，id和端口
+
+publish_test_map.py
+发布一个假的地图
+
+tele_handle.py
+将发布的实际的运动控制的topic给wrap成模拟用的topic。即运行该程序，控制程序可在仿真中使用，取消则在实际中使用。
+
+transform_utils.py
+角度转化工具，角度转四元组，大于锐角钝角转化
+
+twist.py
+机器人原地旋转
+
+reference
+reference中是初期web地图的api封装，具体说明见reference/readme.pdf

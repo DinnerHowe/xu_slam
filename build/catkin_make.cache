@@ -1,2 +1,2 @@
-avoidance:base_motion_module:laser:rbx1/rbx1:rbx1/rbx1_apps:rbx1/rbx1_bringup:rbx1/rbx1_description:rbx1/rbx1_dynamixels:rbx1/rbx1_nav:rbx1/rbx1_speech:rbx1/rbx1_vision:rfid:rfid_handle:robot_status:rplidar_python:slam_main:speed_handle:utils:web_map
+avoidance:base_motion_module:cruise:go_points:laser:rbx1/rbx1:rbx1/rbx1_apps:rbx1/rbx1_bringup:rbx1/rbx1_description:rbx1/rbx1_dynamixels:rbx1/rbx1_nav:rbx1/rbx1_speech:rbx1/rbx1_vision:rfid:rfid_handle:robot_status:rplidar_python:slam_main:speed_handle:utils:web_map
 -DCATKIN_DEVEL_PREFIX=/home/turtlebot2/xu_slam/devel -DCMAKE_INSTALL_PREFIX=/home/turtlebot2/xu_slam/install -G Unix Makefiles

@@ -1,0 +1,3 @@
+<launch>
+ <node pkg="cruise" type="cruise.py" name="cruise_modle" respawn="true" />
+</launch>

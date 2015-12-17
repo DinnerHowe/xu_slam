@@ -275,6 +275,12 @@ catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
 
+//Value Computed by CMake
+cruise_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/cruise
+
+//Value Computed by CMake
+cruise_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/cruise
+
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/indigo/share/dynamic_reconfigure/cmake
 
@@ -292,6 +298,12 @@ genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
 
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
+
+//Value Computed by CMake
+go_points_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/go_points
+
+//Value Computed by CMake
+go_points_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/go_points
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/gtest
@@ -591,7 +603,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=21
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=23
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

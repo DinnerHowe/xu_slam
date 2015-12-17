@@ -2165,6 +2165,344 @@ tf_generate_messages_py/fast:
 .PHONY : tf_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named _run_tests_cruise
+
+# Build rule for target.
+_run_tests_cruise: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_cruise
+.PHONY : _run_tests_cruise
+
+# fast build rule for target.
+_run_tests_cruise/fast:
+	$(MAKE) -f cruise/CMakeFiles/_run_tests_cruise.dir/build.make cruise/CMakeFiles/_run_tests_cruise.dir/build
+.PHONY : _run_tests_cruise/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_cruise_roslaunch-check
+
+# Build rule for target.
+_run_tests_cruise_roslaunch-check: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_cruise_roslaunch-check
+.PHONY : _run_tests_cruise_roslaunch-check
+
+# fast build rule for target.
+_run_tests_cruise_roslaunch-check/fast:
+	$(MAKE) -f cruise/CMakeFiles/_run_tests_cruise_roslaunch-check.dir/build.make cruise/CMakeFiles/_run_tests_cruise_roslaunch-check.dir/build
+.PHONY : _run_tests_cruise_roslaunch-check/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_cruise_roslaunch-check_launch
+
+# Build rule for target.
+_run_tests_cruise_roslaunch-check_launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_cruise_roslaunch-check_launch
+.PHONY : _run_tests_cruise_roslaunch-check_launch
+
+# fast build rule for target.
+_run_tests_cruise_roslaunch-check_launch/fast:
+	$(MAKE) -f cruise/CMakeFiles/_run_tests_cruise_roslaunch-check_launch.dir/build.make cruise/CMakeFiles/_run_tests_cruise_roslaunch-check_launch.dir/build
+.PHONY : _run_tests_cruise_roslaunch-check_launch/fast
+
+#=============================================================================
+# Target rules for targets named cruise_gencpp
+
+# Build rule for target.
+cruise_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cruise_gencpp
+.PHONY : cruise_gencpp
+
+# fast build rule for target.
+cruise_gencpp/fast:
+	$(MAKE) -f cruise/CMakeFiles/cruise_gencpp.dir/build.make cruise/CMakeFiles/cruise_gencpp.dir/build
+.PHONY : cruise_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named cruise_generate_messages
+
+# Build rule for target.
+cruise_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cruise_generate_messages
+.PHONY : cruise_generate_messages
+
+# fast build rule for target.
+cruise_generate_messages/fast:
+	$(MAKE) -f cruise/CMakeFiles/cruise_generate_messages.dir/build.make cruise/CMakeFiles/cruise_generate_messages.dir/build
+.PHONY : cruise_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named cruise_generate_messages_cpp
+
+# Build rule for target.
+cruise_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cruise_generate_messages_cpp
+.PHONY : cruise_generate_messages_cpp
+
+# fast build rule for target.
+cruise_generate_messages_cpp/fast:
+	$(MAKE) -f cruise/CMakeFiles/cruise_generate_messages_cpp.dir/build.make cruise/CMakeFiles/cruise_generate_messages_cpp.dir/build
+.PHONY : cruise_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named cruise_generate_messages_lisp
+
+# Build rule for target.
+cruise_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cruise_generate_messages_lisp
+.PHONY : cruise_generate_messages_lisp
+
+# fast build rule for target.
+cruise_generate_messages_lisp/fast:
+	$(MAKE) -f cruise/CMakeFiles/cruise_generate_messages_lisp.dir/build.make cruise/CMakeFiles/cruise_generate_messages_lisp.dir/build
+.PHONY : cruise_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named cruise_generate_messages_py
+
+# Build rule for target.
+cruise_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cruise_generate_messages_py
+.PHONY : cruise_generate_messages_py
+
+# fast build rule for target.
+cruise_generate_messages_py/fast:
+	$(MAKE) -f cruise/CMakeFiles/cruise_generate_messages_py.dir/build.make cruise/CMakeFiles/cruise_generate_messages_py.dir/build
+.PHONY : cruise_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named cruise_genlisp
+
+# Build rule for target.
+cruise_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cruise_genlisp
+.PHONY : cruise_genlisp
+
+# fast build rule for target.
+cruise_genlisp/fast:
+	$(MAKE) -f cruise/CMakeFiles/cruise_genlisp.dir/build.make cruise/CMakeFiles/cruise_genlisp.dir/build
+.PHONY : cruise_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named cruise_genpy
+
+# Build rule for target.
+cruise_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cruise_genpy
+.PHONY : cruise_genpy
+
+# fast build rule for target.
+cruise_genpy/fast:
+	$(MAKE) -f cruise/CMakeFiles/cruise_genpy.dir/build.make cruise/CMakeFiles/cruise_genpy.dir/build
+.PHONY : cruise_genpy/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_cruise
+
+# Build rule for target.
+run_tests_cruise: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_cruise
+.PHONY : run_tests_cruise
+
+# fast build rule for target.
+run_tests_cruise/fast:
+	$(MAKE) -f cruise/CMakeFiles/run_tests_cruise.dir/build.make cruise/CMakeFiles/run_tests_cruise.dir/build
+.PHONY : run_tests_cruise/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_cruise_roslaunch-check
+
+# Build rule for target.
+run_tests_cruise_roslaunch-check: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_cruise_roslaunch-check
+.PHONY : run_tests_cruise_roslaunch-check
+
+# fast build rule for target.
+run_tests_cruise_roslaunch-check/fast:
+	$(MAKE) -f cruise/CMakeFiles/run_tests_cruise_roslaunch-check.dir/build.make cruise/CMakeFiles/run_tests_cruise_roslaunch-check.dir/build
+.PHONY : run_tests_cruise_roslaunch-check/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_cruise_roslaunch-check_launch
+
+# Build rule for target.
+run_tests_cruise_roslaunch-check_launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_cruise_roslaunch-check_launch
+.PHONY : run_tests_cruise_roslaunch-check_launch
+
+# fast build rule for target.
+run_tests_cruise_roslaunch-check_launch/fast:
+	$(MAKE) -f cruise/CMakeFiles/run_tests_cruise_roslaunch-check_launch.dir/build.make cruise/CMakeFiles/run_tests_cruise_roslaunch-check_launch.dir/build
+.PHONY : run_tests_cruise_roslaunch-check_launch/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_go_points
+
+# Build rule for target.
+_run_tests_go_points: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_go_points
+.PHONY : _run_tests_go_points
+
+# fast build rule for target.
+_run_tests_go_points/fast:
+	$(MAKE) -f go_points/CMakeFiles/_run_tests_go_points.dir/build.make go_points/CMakeFiles/_run_tests_go_points.dir/build
+.PHONY : _run_tests_go_points/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_go_points_roslaunch-check
+
+# Build rule for target.
+_run_tests_go_points_roslaunch-check: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_go_points_roslaunch-check
+.PHONY : _run_tests_go_points_roslaunch-check
+
+# fast build rule for target.
+_run_tests_go_points_roslaunch-check/fast:
+	$(MAKE) -f go_points/CMakeFiles/_run_tests_go_points_roslaunch-check.dir/build.make go_points/CMakeFiles/_run_tests_go_points_roslaunch-check.dir/build
+.PHONY : _run_tests_go_points_roslaunch-check/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_go_points_roslaunch-check_launch
+
+# Build rule for target.
+_run_tests_go_points_roslaunch-check_launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_go_points_roslaunch-check_launch
+.PHONY : _run_tests_go_points_roslaunch-check_launch
+
+# fast build rule for target.
+_run_tests_go_points_roslaunch-check_launch/fast:
+	$(MAKE) -f go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/build.make go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/build
+.PHONY : _run_tests_go_points_roslaunch-check_launch/fast
+
+#=============================================================================
+# Target rules for targets named go_points_gencpp
+
+# Build rule for target.
+go_points_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go_points_gencpp
+.PHONY : go_points_gencpp
+
+# fast build rule for target.
+go_points_gencpp/fast:
+	$(MAKE) -f go_points/CMakeFiles/go_points_gencpp.dir/build.make go_points/CMakeFiles/go_points_gencpp.dir/build
+.PHONY : go_points_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named go_points_generate_messages
+
+# Build rule for target.
+go_points_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go_points_generate_messages
+.PHONY : go_points_generate_messages
+
+# fast build rule for target.
+go_points_generate_messages/fast:
+	$(MAKE) -f go_points/CMakeFiles/go_points_generate_messages.dir/build.make go_points/CMakeFiles/go_points_generate_messages.dir/build
+.PHONY : go_points_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named go_points_generate_messages_cpp
+
+# Build rule for target.
+go_points_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go_points_generate_messages_cpp
+.PHONY : go_points_generate_messages_cpp
+
+# fast build rule for target.
+go_points_generate_messages_cpp/fast:
+	$(MAKE) -f go_points/CMakeFiles/go_points_generate_messages_cpp.dir/build.make go_points/CMakeFiles/go_points_generate_messages_cpp.dir/build
+.PHONY : go_points_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named go_points_generate_messages_lisp
+
+# Build rule for target.
+go_points_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go_points_generate_messages_lisp
+.PHONY : go_points_generate_messages_lisp
+
+# fast build rule for target.
+go_points_generate_messages_lisp/fast:
+	$(MAKE) -f go_points/CMakeFiles/go_points_generate_messages_lisp.dir/build.make go_points/CMakeFiles/go_points_generate_messages_lisp.dir/build
+.PHONY : go_points_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named go_points_generate_messages_py
+
+# Build rule for target.
+go_points_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go_points_generate_messages_py
+.PHONY : go_points_generate_messages_py
+
+# fast build rule for target.
+go_points_generate_messages_py/fast:
+	$(MAKE) -f go_points/CMakeFiles/go_points_generate_messages_py.dir/build.make go_points/CMakeFiles/go_points_generate_messages_py.dir/build
+.PHONY : go_points_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named go_points_genlisp
+
+# Build rule for target.
+go_points_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go_points_genlisp
+.PHONY : go_points_genlisp
+
+# fast build rule for target.
+go_points_genlisp/fast:
+	$(MAKE) -f go_points/CMakeFiles/go_points_genlisp.dir/build.make go_points/CMakeFiles/go_points_genlisp.dir/build
+.PHONY : go_points_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named go_points_genpy
+
+# Build rule for target.
+go_points_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 go_points_genpy
+.PHONY : go_points_genpy
+
+# fast build rule for target.
+go_points_genpy/fast:
+	$(MAKE) -f go_points/CMakeFiles/go_points_genpy.dir/build.make go_points/CMakeFiles/go_points_genpy.dir/build
+.PHONY : go_points_genpy/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_go_points
+
+# Build rule for target.
+run_tests_go_points: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_go_points
+.PHONY : run_tests_go_points
+
+# fast build rule for target.
+run_tests_go_points/fast:
+	$(MAKE) -f go_points/CMakeFiles/run_tests_go_points.dir/build.make go_points/CMakeFiles/run_tests_go_points.dir/build
+.PHONY : run_tests_go_points/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_go_points_roslaunch-check
+
+# Build rule for target.
+run_tests_go_points_roslaunch-check: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_go_points_roslaunch-check
+.PHONY : run_tests_go_points_roslaunch-check
+
+# fast build rule for target.
+run_tests_go_points_roslaunch-check/fast:
+	$(MAKE) -f go_points/CMakeFiles/run_tests_go_points_roslaunch-check.dir/build.make go_points/CMakeFiles/run_tests_go_points_roslaunch-check.dir/build
+.PHONY : run_tests_go_points_roslaunch-check/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_go_points_roslaunch-check_launch
+
+# Build rule for target.
+run_tests_go_points_roslaunch-check_launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_go_points_roslaunch-check_launch
+.PHONY : run_tests_go_points_roslaunch-check_launch
+
+# fast build rule for target.
+run_tests_go_points_roslaunch-check_launch/fast:
+	$(MAKE) -f go_points/CMakeFiles/run_tests_go_points_roslaunch-check_launch.dir/build.make go_points/CMakeFiles/run_tests_go_points_roslaunch-check_launch.dir/build
+.PHONY : run_tests_go_points_roslaunch-check_launch/fast
+
+#=============================================================================
 # Target rules for targets named dynamic_reconfigure_gencfg
 
 # Build rule for target.
@@ -2761,6 +3099,32 @@ help:
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
+	@echo "... _run_tests_cruise"
+	@echo "... _run_tests_cruise_roslaunch-check"
+	@echo "... _run_tests_cruise_roslaunch-check_launch"
+	@echo "... cruise_gencpp"
+	@echo "... cruise_generate_messages"
+	@echo "... cruise_generate_messages_cpp"
+	@echo "... cruise_generate_messages_lisp"
+	@echo "... cruise_generate_messages_py"
+	@echo "... cruise_genlisp"
+	@echo "... cruise_genpy"
+	@echo "... run_tests_cruise"
+	@echo "... run_tests_cruise_roslaunch-check"
+	@echo "... run_tests_cruise_roslaunch-check_launch"
+	@echo "... _run_tests_go_points"
+	@echo "... _run_tests_go_points_roslaunch-check"
+	@echo "... _run_tests_go_points_roslaunch-check_launch"
+	@echo "... go_points_gencpp"
+	@echo "... go_points_generate_messages"
+	@echo "... go_points_generate_messages_cpp"
+	@echo "... go_points_generate_messages_lisp"
+	@echo "... go_points_generate_messages_py"
+	@echo "... go_points_genlisp"
+	@echo "... go_points_genpy"
+	@echo "... run_tests_go_points"
+	@echo "... run_tests_go_points_roslaunch-check"
+	@echo "... run_tests_go_points_roslaunch-check_launch"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
