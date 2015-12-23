@@ -813,6 +813,84 @@ run_tests_rfid_roslaunch-check_launch/fast:
 .PHONY : run_tests_rfid_roslaunch-check_launch/fast
 
 #=============================================================================
+# Target rules for targets named _run_tests_robot_bringup
+
+# Build rule for target.
+_run_tests_robot_bringup: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_robot_bringup
+.PHONY : _run_tests_robot_bringup
+
+# fast build rule for target.
+_run_tests_robot_bringup/fast:
+	$(MAKE) -f robot_bringup/CMakeFiles/_run_tests_robot_bringup.dir/build.make robot_bringup/CMakeFiles/_run_tests_robot_bringup.dir/build
+.PHONY : _run_tests_robot_bringup/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_robot_bringup_roslaunch-check
+
+# Build rule for target.
+_run_tests_robot_bringup_roslaunch-check: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_robot_bringup_roslaunch-check
+.PHONY : _run_tests_robot_bringup_roslaunch-check
+
+# fast build rule for target.
+_run_tests_robot_bringup_roslaunch-check/fast:
+	$(MAKE) -f robot_bringup/CMakeFiles/_run_tests_robot_bringup_roslaunch-check.dir/build.make robot_bringup/CMakeFiles/_run_tests_robot_bringup_roslaunch-check.dir/build
+.PHONY : _run_tests_robot_bringup_roslaunch-check/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_robot_bringup_roslaunch-check_launch
+
+# Build rule for target.
+_run_tests_robot_bringup_roslaunch-check_launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_robot_bringup_roslaunch-check_launch
+.PHONY : _run_tests_robot_bringup_roslaunch-check_launch
+
+# fast build rule for target.
+_run_tests_robot_bringup_roslaunch-check_launch/fast:
+	$(MAKE) -f robot_bringup/CMakeFiles/_run_tests_robot_bringup_roslaunch-check_launch.dir/build.make robot_bringup/CMakeFiles/_run_tests_robot_bringup_roslaunch-check_launch.dir/build
+.PHONY : _run_tests_robot_bringup_roslaunch-check_launch/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_robot_bringup
+
+# Build rule for target.
+run_tests_robot_bringup: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_robot_bringup
+.PHONY : run_tests_robot_bringup
+
+# fast build rule for target.
+run_tests_robot_bringup/fast:
+	$(MAKE) -f robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/build.make robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/build
+.PHONY : run_tests_robot_bringup/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_robot_bringup_roslaunch-check
+
+# Build rule for target.
+run_tests_robot_bringup_roslaunch-check: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_robot_bringup_roslaunch-check
+.PHONY : run_tests_robot_bringup_roslaunch-check
+
+# fast build rule for target.
+run_tests_robot_bringup_roslaunch-check/fast:
+	$(MAKE) -f robot_bringup/CMakeFiles/run_tests_robot_bringup_roslaunch-check.dir/build.make robot_bringup/CMakeFiles/run_tests_robot_bringup_roslaunch-check.dir/build
+.PHONY : run_tests_robot_bringup_roslaunch-check/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_robot_bringup_roslaunch-check_launch
+
+# Build rule for target.
+run_tests_robot_bringup_roslaunch-check_launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_robot_bringup_roslaunch-check_launch
+.PHONY : run_tests_robot_bringup_roslaunch-check_launch
+
+# fast build rule for target.
+run_tests_robot_bringup_roslaunch-check_launch/fast:
+	$(MAKE) -f robot_bringup/CMakeFiles/run_tests_robot_bringup_roslaunch-check_launch.dir/build.make robot_bringup/CMakeFiles/run_tests_robot_bringup_roslaunch-check_launch.dir/build
+.PHONY : run_tests_robot_bringup_roslaunch-check_launch/fast
+
+#=============================================================================
 # Target rules for targets named _run_tests_avoidance
 
 # Build rule for target.
@@ -1385,6 +1463,149 @@ run_tests_rplidar_python_roslaunch-check_launch/fast:
 .PHONY : run_tests_rplidar_python_roslaunch-check_launch/fast
 
 #=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rplidar_ros/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make rplidar_ros/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/roscpp_generate_messages_py.dir/build.make rplidar_ros/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make rplidar_ros/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make rplidar_ros/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rplidar_ros/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rplidarNode
+
+# Build rule for target.
+rplidarNode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rplidarNode
+.PHONY : rplidarNode
+
+# fast build rule for target.
+rplidarNode/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
+.PHONY : rplidarNode/fast
+
+#=============================================================================
+# Target rules for targets named rplidarNodeClient
+
+# Build rule for target.
+rplidarNodeClient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rplidarNodeClient
+.PHONY : rplidarNodeClient
+
+# fast build rule for target.
+rplidarNodeClient/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
+.PHONY : rplidarNodeClient/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
+
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make rplidar_ros/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
 # Target rules for targets named _speed_handle_generate_messages_check_deps_Speed
 
 # Build rule for target.
@@ -1669,84 +1890,6 @@ move_base_msgs_generate_messages_py: cmake_check_build_system
 move_base_msgs_generate_messages_py/fast:
 	$(MAKE) -f slam_main/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make slam_main/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
 .PHONY : move_base_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_cpp
-
-# Build rule for target.
-roscpp_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f slam_main/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make slam_main/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f slam_main/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make slam_main/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
-
-# Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f slam_main/CMakeFiles/roscpp_generate_messages_py.dir/build.make slam_main/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f slam_main/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make slam_main/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f slam_main/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make slam_main/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f slam_main/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make slam_main/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named run_tests_slam_main
@@ -2046,45 +2189,6 @@ run_tests_base_motion_module_roslaunch-check_launch: cmake_check_build_system
 run_tests_base_motion_module_roslaunch-check_launch/fast:
 	$(MAKE) -f base_motion_module/CMakeFiles/run_tests_base_motion_module_roslaunch-check_launch.dir/build.make base_motion_module/CMakeFiles/run_tests_base_motion_module_roslaunch-check_launch.dir/build
 .PHONY : run_tests_base_motion_module_roslaunch-check_launch/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
-
-# Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f base_motion_module/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make base_motion_module/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
-
-# Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f base_motion_module/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make base_motion_module/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_py
-
-# Build rule for target.
-sensor_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f base_motion_module/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make base_motion_module/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_cpp
@@ -2995,6 +3099,12 @@ help:
 	@echo "... run_tests_rfid"
 	@echo "... run_tests_rfid_roslaunch-check"
 	@echo "... run_tests_rfid_roslaunch-check_launch"
+	@echo "... _run_tests_robot_bringup"
+	@echo "... _run_tests_robot_bringup_roslaunch-check"
+	@echo "... _run_tests_robot_bringup_roslaunch-check_launch"
+	@echo "... run_tests_robot_bringup"
+	@echo "... run_tests_robot_bringup_roslaunch-check"
+	@echo "... run_tests_robot_bringup_roslaunch-check_launch"
 	@echo "... _run_tests_avoidance"
 	@echo "... _run_tests_avoidance_roslaunch-check"
 	@echo "... _run_tests_avoidance_roslaunch-check_launch"
@@ -3039,6 +3149,17 @@ help:
 	@echo "... run_tests_rplidar_python"
 	@echo "... run_tests_rplidar_python_roslaunch-check"
 	@echo "... run_tests_rplidar_python_roslaunch-check_launch"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... rplidarNode"
+	@echo "... rplidarNodeClient"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... _speed_handle_generate_messages_check_deps_Speed"
 	@echo "... _speed_handle_generate_messages_check_deps_Victor"
 	@echo "... _speed_handle_generate_messages_check_deps_speed"
@@ -3061,12 +3182,6 @@ help:
 	@echo "... move_base_msgs_generate_messages_cpp"
 	@echo "... move_base_msgs_generate_messages_lisp"
 	@echo "... move_base_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... run_tests_slam_main"
 	@echo "... run_tests_slam_main_roslaunch-check"
 	@echo "... run_tests_slam_main_roslaunch-check_launch"
@@ -3090,9 +3205,6 @@ help:
 	@echo "... run_tests_base_motion_module"
 	@echo "... run_tests_base_motion_module_roslaunch-check"
 	@echo "... run_tests_base_motion_module_roslaunch-check_launch"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_py"

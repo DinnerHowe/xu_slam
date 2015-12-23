@@ -332,48 +332,6 @@ run_tests_base_motion_module_roslaunch-check_launch/fast:
 .PHONY : run_tests_base_motion_module_roslaunch-check_launch/fast
 
 # Convenience name for target.
-base_motion_module/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 base_motion_module/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : base_motion_module/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: base_motion_module/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f base_motion_module/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make base_motion_module/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-base_motion_module/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 base_motion_module/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : base_motion_module/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: base_motion_module/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f base_motion_module/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make base_motion_module/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-base_motion_module/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 base_motion_module/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : base_motion_module/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: base_motion_module/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f base_motion_module/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make base_motion_module/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 base_motion_module/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
 	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 base_motion_module/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : base_motion_module/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
@@ -482,9 +440,6 @@ help:
 	@echo "... run_tests_base_motion_module"
 	@echo "... run_tests_base_motion_module_roslaunch-check"
 	@echo "... run_tests_base_motion_module_roslaunch-check_launch"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... test"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"

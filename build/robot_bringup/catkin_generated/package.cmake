@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "robot_bringup")
+set(robot_bringup_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
+set(robot_bringup_DEPRECATED "")
+set(robot_bringup_VERSION "0.0.0")
+set(robot_bringup_BUILD_DEPENDS "rospy" "roscpp" "sensor_msgs")
+set(robot_bringup_RUN_DEPENDS "rospy" "roscpp" "sensor_msgs")
+set(robot_bringup_BUILDTOOL_DEPENDS "catkin")

@@ -318,90 +318,6 @@ move_base_msgs_generate_messages_py/fast:
 .PHONY : move_base_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-slam_main/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 slam_main/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : slam_main/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: slam_main/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f slam_main/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make slam_main/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-slam_main/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 slam_main/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : slam_main/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: slam_main/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f slam_main/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make slam_main/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-slam_main/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 slam_main/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : slam_main/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: slam_main/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f slam_main/CMakeFiles/roscpp_generate_messages_py.dir/build.make slam_main/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-slam_main/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 slam_main/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : slam_main/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: slam_main/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f slam_main/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make slam_main/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-slam_main/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 slam_main/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : slam_main/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: slam_main/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f slam_main/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make slam_main/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-slam_main/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 slam_main/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : slam_main/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: slam_main/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f slam_main/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make slam_main/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 slam_main/CMakeFiles/run_tests_slam_main.dir/rule:
 	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 slam_main/CMakeFiles/run_tests_slam_main.dir/rule
 .PHONY : slam_main/CMakeFiles/run_tests_slam_main.dir/rule
@@ -565,12 +481,6 @@ help:
 	@echo "... move_base_msgs_generate_messages_lisp"
 	@echo "... move_base_msgs_generate_messages_py"
 	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... run_tests_slam_main"
 	@echo "... run_tests_slam_main_roslaunch-check"
 	@echo "... run_tests_slam_main_roslaunch-check_launch"

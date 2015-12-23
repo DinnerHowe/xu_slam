@@ -20,7 +20,7 @@
   <!-- Worker threads for the nodelet manager -->                                                   
   <arg name="num_worker_threads" default="4" />                                                     
 
-  <include file="$(find freenect_launch)/launch/freenect.launch">
+  <include file="$(find slam_main)/launch/freenect.launch">
     <arg name="camera"                          value="$(arg camera)"/>                             
     <arg name="publish_tf"                      value="$(arg publish_tf)"/>                         
     <arg name="depth_registration"              value="$(arg depth_registration)"/>                 

@@ -336,6 +336,9 @@ laser_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/laser
 //Value Computed by CMake
 laser_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/laser
 
+//The directory containing a CMake configuration file for launch.
+launch_DIR:PATH=launch_DIR-NOTFOUND
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/indigo/lib/librostime.so
 
@@ -415,6 +418,18 @@ rfid_handle_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/rfid_handle
 rfid_handle_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/rfid_handle
 
 //Value Computed by CMake
+robot_bringup_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/robot_bringup
+
+//Value Computed by CMake
+robot_bringup_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/robot_bringup
+
+//Value Computed by CMake
+robot_description_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/robot_description
+
+//Value Computed by CMake
+robot_description_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/robot_description
+
+//Value Computed by CMake
 robot_status_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/robot_status
 
 //Value Computed by CMake
@@ -452,6 +467,12 @@ rplidar_python_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/rplidar_python
 
 //Value Computed by CMake
 rplidar_python_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/rplidar_python
+
+//Value Computed by CMake
+rplidar_ros_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/rplidar_ros
+
+//Value Computed by CMake
+rplidar_ros_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/rplidar_ros
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
@@ -603,7 +624,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=23
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=26
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

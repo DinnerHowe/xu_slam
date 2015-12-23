@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/turtlebot2/xu_slam/src/rplidar_ros/src/client.cpp
+ros/ros.h
+/home/turtlebot2/xu_slam/src/rplidar_ros/src/ros/ros.h
+sensor_msgs/LaserScan.h
+/home/turtlebot2/xu_slam/src/rplidar_ros/src/sensor_msgs/LaserScan.h
+
