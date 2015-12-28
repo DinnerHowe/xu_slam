@@ -53,12 +53,6 @@ def square(square_size):
   else:
    print False
 
-#记录path：
-def path_recorder():
- recorder=[]
- path=rospy.wait_for_message("move_base", Path)
- recorder=path.pose 
- return recorder
 #记录path的
 def path_recorder():
  rospy.Subscriber("move_base", Path, path)
@@ -66,47 +60,48 @@ def path(data):
  recorder=data.pose
  return recorder
 
-
+def tasks(pose_number,pose_list):
+ likelihood,weight=0,0.0
+ move_base = actionlib.SimpleActionClient('move_base', MoveBaseAction)
+ move_base.wait_for_server()
+ goal = MoveBaseGoal()
+ for goal_pose in pose_list:
+  init_pose=rospy.wait_for_message("odom",Odometry)
+  pre_position=PointStamped()
+  pre_position.point=init_pose.pose.pose.position
+  angle=angle_generater(goal_pose,pre_position)
+  goal.target_pose.header.frame_id = goal_pose.header.frame_id
+  goal.target_pose.pose.position=goal_pose.point
+  goal.target_pose.pose.orientation=Quaternion(*quaternion_from_euler(0,0,angle))
+  move_base.send_goal(goal)
+  move_base.wait_for_result(rospy.Duration.from_sec(30.0))
+  state=move_base.get_state()
+  if state==GoalStatus.SUCCEEDED:
+   print 'Achieved Goal'
+   weight-=1
+   if weight<=0:
+    weight=0
+   likelihood=weight/pose_number
+  else:
+   print 'Fail to Achieve Goal'
+   weight+=1
+   likelihood=weight/pose_number
+  print 'path reset rate : %s percent'%likelihood
+  if likelihood>=1:
+   move_base.cancel_goal()
+   likelihood,weight=0,0.0
+   print 'goal unchievable, tring to find way out'
+   twist(2,1,0.0)
 
 #巡航模式(选定几个点一直跑)
 def cruise(pose_number):
  pose_list=[]
- likelihood,weight=0,0.0
  for i in range(pose_number):
   pose=rospy.wait_for_message("clicked_point", PointStamped)
   pose_list.append(pose)
   print 'position',1+i,'recieved'
 
  while not rospy.is_shutdown():
-  move_base = actionlib.SimpleActionClient('move_base', MoveBaseAction)
-  move_base.wait_for_server()
-  goal = MoveBaseGoal()
-  for goal_pose in pose_list:
-   init_pose=rospy.wait_for_message("odom",Odometry)
-   pre_position=PointStamped()
-   pre_position.point=init_pose.pose.pose.position
-   angle=angle_generater(goal_pose,pre_position)
-   goal.target_pose.header.frame_id = goal_pose.header.frame_id
-   goal.target_pose.pose.position=goal_pose.point
-   goal.target_pose.pose.orientation=Quaternion(*quaternion_from_euler(0,0,angle))
-   move_base.send_goal(goal)
-   move_base.wait_for_result(rospy.Duration.from_sec(30.0))
-   state=move_base.get_state()
-   if state==GoalStatus.SUCCEEDED:
-    print 'Achieved Goal'
-    weight-=1
-    if weight<=0:
-     weight=0
-    likelihood=weight/pose_number
-   else:
-    print 'Fail to Achieve Goal'
-    weight+=1
-    likelihood=weight/pose_number
-   print likelihood
-   if likelihood>=1:
-    move_base.cancel_goal()
-    likelihood,weight=0,0.0
-    print 'goal unchievable, tring to find way out'
-    twist(2,1,0.0)
+  tasks(pose_number,pose_list)
 
 

@@ -1,0 +1,11 @@
+<launch>
+ <!-- nav_demo -->
+ <include file="$(find nav_staff)/launch/xml/nav_demo.launch.xml">
+
+  <arg name='map_file' default='$(find nav_staff)/map/office_map.yaml'/>
+  <arg name='initial_pose_x' default='0.0' />
+  <arg name='initial_pose_y' default='0.0' />
+  <arg name='initial_pose_a' default='0.0' />
+
+</launch>
+
