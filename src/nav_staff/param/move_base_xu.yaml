@@ -14,3 +14,5 @@ oscillation_distance:		0.15
 
 base_local_planner:		'dwa_local_planner/DWAPlannerROS'
 base_global_planner:		'navfn/NavfnROS'
+
+

@@ -1,8 +1,0 @@
-prefix=/home/turtlebot2/xu_slam/devel
-
-Name: web_map
-Description: Description of web_map
-Version: 0.0.0
-Cflags: -I/home/turtlebot2/xu_slam/devel/include
-Libs: -L/home/turtlebot2/xu_slam/devel/lib 
-Requires: rospy geometry_msgs std_msgs message_runtime

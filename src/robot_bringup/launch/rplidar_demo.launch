@@ -1,0 +1,6 @@
+<launch>
+ <include file="$(find robot_bringup)/launch/rplidar.launch.xml">
+  <arg name="rplidar_frame" value="/camera_depth_frame" />
+ </include>
+</launch>
+

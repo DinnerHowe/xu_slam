@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "cruise")
-set(cruise_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
-set(cruise_DEPRECATED "")
-set(cruise_VERSION "0.0.0")
-set(cruise_BUILD_DEPENDS "message_generation" "roscpp" "rospy" "tf")
-set(cruise_RUN_DEPENDS "message_runtime" "roscpp" "rospy" "tf")
-set(cruise_BUILDTOOL_DEPENDS "catkin")

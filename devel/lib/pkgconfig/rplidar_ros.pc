@@ -1,8 +1,0 @@
-prefix=/home/turtlebot2/xu_slam/devel
-
-Name: rplidar_ros
-Description: Description of rplidar_ros
-Version: 1.0.1
-Cflags: 
-Libs: -L/home/turtlebot2/xu_slam/devel/lib 
-Requires: 

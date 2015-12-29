@@ -1,8 +1,0 @@
-prefix=/home/turtlebot2/xu_slam/install
-
-Name: rfid
-Description: Description of rfid
-Version: 0.0.0
-Cflags: -I/home/turtlebot2/xu_slam/install/include
-Libs: -L/home/turtlebot2/xu_slam/install/lib -lrfid
-Requires: rospy std_msgs message_runtime

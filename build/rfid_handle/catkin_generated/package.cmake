@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "rfid_handle")
-set(rfid_handle_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
-set(rfid_handle_DEPRECATED "")
-set(rfid_handle_VERSION "0.0.0")
-set(rfid_handle_BUILD_DEPENDS "message_generation" "roslaunch" "rospy" "std_msgs")
-set(rfid_handle_RUN_DEPENDS "message_runtime" "roslaunch" "rospy" "std_msgs")
-set(rfid_handle_BUILDTOOL_DEPENDS "catkin")

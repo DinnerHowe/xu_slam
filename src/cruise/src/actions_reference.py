@@ -53,6 +53,11 @@ def square(square_size):
   else:
    print False
 
+#generate a path
+def path_gen(goal):
+ init_pose=rospy.wait_for_message("odom",Odometry)
+ goal.target_pose.pose.position
+
 #记录path的
 def path_recorder():
  rospy.Subscriber("move_base", Path, path)
