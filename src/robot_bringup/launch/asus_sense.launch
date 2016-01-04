@@ -22,7 +22,7 @@
  <arg name="num_worker_threads" default="4" />
 
  <!-- Laserscan topic -->
- <arg name="scan_topic" default="/scan"/>
+ <arg name="scan_topic" default="scan"/>
 
  <include file="$(find robot_bringup)/launch/asus_xtion_pro.launch.xml">
   <arg name="camera" value="$(arg camera)"/>

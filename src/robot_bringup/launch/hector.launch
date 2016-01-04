@@ -1,3 +1,13 @@
 <launch>
-  <include file="$(find robot_bringup)/launch/gmapping.launch.xml"/>
+  <arg name="geotiff_map_file_path" default="$(find robot_bringup)/maps"/>
+
+  <param name="/use_sim_time" value="true"/>
+
+  <include file="$(find robot_bringup)/launch/hector.launch.xml"/>
+
+  <include file="$(find hector_geotiff)/launch/geotiff_mapper.launch">
+    <arg name="trajectory_source_frame_name" value="scanmatcher_frame"/>
+    <arg name="map_file_path" value="$(arg geotiff_map_file_path)"/>
+  </include>
+
 </launch>

@@ -1,41 +1,42 @@
 <launch>
- <include file='$(find nav_staff)/launch/xml/velocity_smoother.launch.xml'/>
- <include file='$(find nav_staff)/launch/xml/safety_controller.launch.xml'/>
+ <include file="$(find nav_staff)/launch/xml/velocity_smoother.launch.xml"/>
+ <include file="$(find nav_staff)/launch/xml/safety_controller.launch.xml"/>
 
- <arg name='odom_frame_id' default='odom'/>
- <arg name='base_frame_id' default='base_footprint'/>
- <arg name='global_frame_id' default='map'/>
- <arg name='odom_topic' default='odom'/>
- <arg name='laser_topic' default='scan'/>
+ <arg name="odom_frame_id"   default="odom"/>
+ <arg name="base_frame_id"   default="base_footprint"/>
+ <arg name="global_frame_id" default="map"/>
+ <arg name="odom_topic" default="odom" />
+ <arg name="laser_topic" default="scan" />
+ <arg name="custom_param_file" default="$(find turtlebot_navigation)/param/dummy.yaml"/>
 
- <node pkg='move_base' type='move_base' respawn='false' name='move_base' output='screen'>
+ <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
 
  <!--setting param.yaml-->
-  <rosparam file='$(find nav_staff)/param/costmap_params.yaml' command='load' ns='global_costmap' />
-  <rosparam file='$(find nav_staff)/param/costmap_params.yaml' command='load' ns='local_costmap' />
+  <rosparam file="$(find nav_staff)/param/costmap_params.yaml" command="load" ns="global_costmap" />
+  <rosparam file="$(find nav_staff)/param/costmap_params.yaml" command="load" ns="local_costmap" />
 
-  <rosparam file='$(find nav_staff)/param/local_costmap.yaml' command='load' />
-  <rosparam file='$(find nav_staff)/param/global_costmap.yaml' command='load' />
+  <rosparam file="$(find nav_staff)/param/local_costmap.yaml" command="load" />
+  <rosparam file="$(find nav_staff)/param/global_costmap.yaml" command="load" />
 
-  <rosparam file='$(find nav_staff)/param/dwa_planner.yaml' command='load' />
-  <rosparam file='$(find nav_staff)/param/move_base_xu.yaml' command='load' />
-  <rosparam file='$(find nav_staff)/param/global_planner.yaml' commmand='load' />
-  <rosparam file='$(find nav_staff)/param/navfn_global_planner.yaml'  command='load'/>
+  <rosparam file="$(find nav_staff)/param/dwa_planner.yaml" command="load" />
+  <rosparam file="$(find nav_staff)/param/move_base_xu.yaml" command="load" />
+  <rosparam file="$(find nav_staff)/param/global_planner.yaml" command="load" />
+  <rosparam file="$(find nav_staff)/param/navfn_global_planner.yaml" command="load" />
 
-  <arg name='custom_param_file' default='$(find nav_staff)/param/dummy.yaml'>
-  <rosparam file='$(arg custom_param_file)' command='load' />
+
+  <rosparam file="$(arg custom_param_file)" command="load" />
 
  <!--setting frame-->
-  <param name='global_costmap/global_frame' value='$(arg global_frame_id)'/>
-  <param name='global_costamp/robot_base_frame' value='$(arg base_frame_id)'/>
+  <param name="global_costmap/global_frame" value="$(arg global_frame_id)"/>
+  <param name="global_costamp/robot_base_frame" value="$(arg base_frame_id)"/>
 
-  <param name='local_costmap/global_frame' value='$(arg odom_frame_id)'/>
-  <param name='local_costmap/robot_base_frame' value='$(arg base_frame_id)'/>
-  <param name='DWAPlannerRos/global_frame_id' value='$(arg odom_frame_id)'/>
+  <param name="local_costmap/global_frame" value="$(arg odom_frame_id)"/>
+  <param name="local_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+  <param name="DWAPlannerRos/global_frame_id" value="$(arg odom_frame_id)"/>
 
  <!--remap topics-->
-  <remap from='cmd_vel' to='navigation_velocity_smoother/raw_cmd_vel'/>
-  <remap from='odom' to='$(arg odom_topic)'/>
-  <remap from='scan' to='$(arg laser_topic)'>
+  <remap from="cmd_vel" to="navigation_velocity_smoother/raw_cmd_vel"/>
+  <remap from="odom" to="$(arg odom_topic)"/>
+  <remap from="scan" to="$(arg laser_topic)"/>
  </node>
 </launch>

@@ -1,11 +1,32 @@
+<!--this file is demo for nav with auto obstacle avoidance -->
 <launch>
- <!-- nav_demo -->
- <include file="$(find nav_staff)/launch/xml/nav_demo.launch.xml">
+ <arg name="custom_param_file" default="$(find nav_staff)/param/dummy.yaml"/>
 
-  <arg name='map_file' default='$(find nav_staff)/map/office_map.yaml'/>
-  <arg name='initial_pose_x' default='0.0' />
-  <arg name='initial_pose_y' default='0.0' />
-  <arg name='initial_pose_a' default='0.0' />
+ <!--sensor-->
+ <include file="$(find robot_bringup)/launch/asus_sense.launch">
+  <arg name="rgb_processing" default="false" />
+  <arg name="depth_registration" default="false" />
+  <arg name="depth_processing" default="false" />
+  <arg name="scan_topic" default="/scan" />
+ </include>
 
+ <!--map saver-->
+ <arg name="map_file" default="$(find nav_staff)/map/office_map.yaml"/>
+ <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+ <arg name="initial_pose_x" default="0.0"/>
+ <arg name="initial_pose_y" default="0.0"/>
+ <arg name="initial_pose_a" default="0.0"/>
+
+ <!--amcl-->
+ <include file="$(find nav_staff)/launch/xml/amcl_xu.launch.xml">
+  <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
+  <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
+  <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
+ </include>
+
+ <!--move base-->
+ <include file="$(find nav_staff)/launch/xml/move_base_xu.launch.xml">
+  <arg name="custom_param_file" value="$(arg custom_param_file)"/>
+ </include>
 </launch>
 

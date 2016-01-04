@@ -1,18 +1,18 @@
-shutdown_costmaps:		false
+shutdown_costmaps: false
 
-controller_frequency:		5.0
-controller_patience:		3.0
+controller_frequency: 5.0
+controller_patience: 3.0
 
-planner_frequencey:		1.0
-planner_patience:		5.0
+planner_frequencey: 1.0
+planner_patience: 5.0
 
-oscillation_timeout:		5.0
-oscillation_distance:		0.15
+oscillation_timeout: 5.0
+oscillation_distance: 0.15
 
 #local planner
 #pls visit https://github.com/ros-planning/navigation/tree/jade-devel/dwa_local_planner/src
 
-base_local_planner:		'dwa_local_planner/DWAPlannerROS'
-base_global_planner:		'navfn/NavfnROS'
+base_local_planner: 'dwa_local_planner/DWAPlannerROS'
+base_global_planner: 'navfn/NavfnROS'
 
 
