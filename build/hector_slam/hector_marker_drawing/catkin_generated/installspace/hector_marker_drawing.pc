@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/install
+
+Name: hector_marker_drawing
+Description: Description of hector_marker_drawing
+Version: 0.3.4
+Cflags: -I/home/turtlebot2/xu_slam/install/include -I/usr/include/eigen3
+Libs: -L/home/turtlebot2/xu_slam/install/lib 
+Requires: roscpp visualization_msgs

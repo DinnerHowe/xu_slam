@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/devel
+
+Name: speed_handle
+Description: Description of speed_handle
+Version: 0.0.0
+Cflags: -I/home/turtlebot2/xu_slam/devel/include
+Libs: -L/home/turtlebot2/xu_slam/devel/lib -lspeed_handle
+Requires: roslaunch rospy std_msgs message_runtime

@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/devel
+
+Name: hector_imu_attitude_to_tf
+Description: Description of hector_imu_attitude_to_tf
+Version: 0.3.4
+Cflags: 
+Libs: -L/home/turtlebot2/xu_slam/devel/lib 
+Requires: 

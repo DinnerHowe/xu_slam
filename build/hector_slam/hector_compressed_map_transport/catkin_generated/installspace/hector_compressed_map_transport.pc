@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/install
+
+Name: hector_compressed_map_transport
+Description: Description of hector_compressed_map_transport
+Version: 0.3.4
+Cflags: 
+Libs: -L/home/turtlebot2/xu_slam/install/lib 
+Requires: 

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rbx1_vision")
+set(rbx1_vision_MAINTAINER "Patrick Goebel <patrick@pirobot.org>")
+set(rbx1_vision_DEPRECATED "")
+set(rbx1_vision_VERSION "0.4.0")
+set(rbx1_vision_BUILD_DEPENDS "roscpp" "rospy" "cv_bridge")
+set(rbx1_vision_RUN_DEPENDS "roscpp" "rospy" "cv_bridge")
+set(rbx1_vision_BUILDTOOL_DEPENDS "catkin")

@@ -27,8 +27,8 @@ class go_points():
   rospy.init_node('go_points')
   self.point_list=[]
   self.map_old=OccupancyGrid()
-  actions.twist(1,20,0.0)
-  actions.square(0.5)
+  #actions.twist(1,20,0.0)
+  #actions.square(0.5)
 
   self.map_updated=False
   self.number=int(raw_input('Please input how many position you wanna achieve: '))

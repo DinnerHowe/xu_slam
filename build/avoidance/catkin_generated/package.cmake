@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "avoidance")
+set(avoidance_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
+set(avoidance_DEPRECATED "")
+set(avoidance_VERSION "1.0.0")
+set(avoidance_BUILD_DEPENDS "message_generation" "roslaunch" "rospy" "std_msgs" "nav_msgs" "sensor_msgs")
+set(avoidance_RUN_DEPENDS "message_runtime" "roslaunch" "rospy" "std_msgs" "sensor_msgs" "nav_msgs")
+set(avoidance_BUILDTOOL_DEPENDS "catkin")

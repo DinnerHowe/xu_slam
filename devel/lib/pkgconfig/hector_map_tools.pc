@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/devel
+
+Name: hector_map_tools
+Description: Description of hector_map_tools
+Version: 0.3.4
+Cflags: -I/home/turtlebot2/xu_slam/src/hector_slam/hector_map_tools/include
+Libs: -L/home/turtlebot2/xu_slam/devel/lib 
+Requires: nav_msgs

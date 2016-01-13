@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/devel
+
+Name: base_motion_module
+Description: Description of base_motion_module
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot2/xu_slam/devel/lib -lbase_motion_module
+Requires: roscpp rospy tf message_runtime

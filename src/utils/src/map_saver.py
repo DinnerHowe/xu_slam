@@ -18,4 +18,4 @@ import os,getpass
 
 if __name__ == '__main__':
  count=getpass.getuser()
- os.system('rosrun map_server map_saver -f /home/%s/xu_slam/office_map'%count)
+ os.system('rosrun map_server map_saver -f /home/%s/xu_slam/src/nav_staff/map/office_map1.yaml'%count)

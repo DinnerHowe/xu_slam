@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/install
+
+Name: robot_bringup
+Description: Description of robot_bringup
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot2/xu_slam/install/lib 
+Requires: 

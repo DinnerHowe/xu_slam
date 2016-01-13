@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rbx1_nav")
+set(rbx1_nav_MAINTAINER "Patrick Goebel <patrick@pirobot.org>")
+set(rbx1_nav_DEPRECATED "")
+set(rbx1_nav_VERSION "0.4.0")
+set(rbx1_nav_BUILD_DEPENDS "roscpp" "rospy" "geometry_msgs" "nav_msgs" "move_base_msgs" "visualization_msgs" "tf" "actionlib" "orocos_kdl" "dynamic_reconfigure")
+set(rbx1_nav_RUN_DEPENDS "roscpp" "rospy" "geometry_msgs" "nav_msgs" "move_base_msgs" "visualization_msgs" "tf" "actionlib" "orocos_kdl" "dynamic_reconfigure")
+set(rbx1_nav_BUILDTOOL_DEPENDS "catkin")

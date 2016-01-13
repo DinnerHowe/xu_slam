@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rbx1_description")
+set(rbx1_description_MAINTAINER "Patrick Goebel <patrick@pirobot.org>")
+set(rbx1_description_DEPRECATED "")
+set(rbx1_description_VERSION "0.4.0")
+set(rbx1_description_BUILD_DEPENDS "roscpp" "rospy" "urdf")
+set(rbx1_description_RUN_DEPENDS "roscpp" "rospy" "urdf")
+set(rbx1_description_BUILDTOOL_DEPENDS "catkin")

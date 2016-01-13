@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/install
+
+Name: hector_nav_msgs
+Description: Description of hector_nav_msgs
+Version: 0.3.4
+Cflags: -I/home/turtlebot2/xu_slam/install/include
+Libs: -L/home/turtlebot2/xu_slam/install/lib 
+Requires: nav_msgs geometry_msgs message_runtime

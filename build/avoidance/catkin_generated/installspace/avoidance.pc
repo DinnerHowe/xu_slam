@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/install
+
+Name: avoidance
+Description: Description of avoidance
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/turtlebot2/xu_slam/install/lib -lmotion_module
+Requires: roslaunch rospy std_msgs message_runtime

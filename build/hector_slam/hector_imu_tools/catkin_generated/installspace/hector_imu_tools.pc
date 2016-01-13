@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/install
+
+Name: hector_imu_tools
+Description: Description of hector_imu_tools
+Version: 0.3.4
+Cflags: 
+Libs: -L/home/turtlebot2/xu_slam/install/lib 
+Requires: 

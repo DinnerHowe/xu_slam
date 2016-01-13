@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/devel
+
+Name: cruise
+Description: Description of cruise
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot2/xu_slam/devel/lib -lbase_motion_module
+Requires: roscpp rospy tf message_runtime

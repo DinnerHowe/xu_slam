@@ -30,7 +30,7 @@
     <param name="update_factor_free" value="0.4"/>
     <param name="update_factor_occupied" value="0.9" />    
     <param name="map_update_distance_thresh" value="0.4"/>
-    <param name="map_update_angle_thresh" value="0.06" />
+    <param name="map_update_angle_thresh" value="1.6" />
     <param name="laser_z_min_value" value = "-1.0" />
     <param name="laser_z_max_value" value = "1.0" />
     
@@ -41,5 +41,6 @@
     <param name="scan_topic" value="$(arg scan_topic)"/>
     <param name="tf_map_scanmatch_transform_frame_name" value="$(arg tf_map_scanmatch_transform_frame_name)" />
   </node>
-  <node pkg="tf" type="static_transform_publisher" name="map_nav_broadcaster" args="0 0 0 0 0 0 map nav 100"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="static_transform_publisher3" args="0 0 0 0 0 0 map odom 100"/>
 </launch>

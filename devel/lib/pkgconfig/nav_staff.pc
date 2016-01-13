@@ -1,0 +1,8 @@
+prefix=/home/turtlebot2/xu_slam/devel
+
+Name: nav_staff
+Description: Description of nav_staff
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot2/xu_slam/devel/lib 
+Requires: 
