@@ -144,7 +144,6 @@ class voice_interface():
    self.linear_speed,self.duration,self.angle_speed=0,0,0
 
 
-  
 ############  前往（单向）##########
 #注释：position这里要是PointStamped
   if data.my_navigation.navigation:
@@ -168,6 +167,7 @@ class voice_interface():
 #循环到任务完成为止？？？？？
    while state!=GoalStatus.SUCCEEDED:
     state=vioce_tasks(1,position,orientation)
+
 
 ###############送/取东西(双向)###################
   if data.my_send.transmit:

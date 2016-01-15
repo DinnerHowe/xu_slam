@@ -21,13 +21,12 @@ class register():
 	'31','32','33','34','35','36',
 	'41','42','43','44','45','46']
   self.dictionary=dict()
-  stored_pose=self.read_coordinate()
+  stored_pose=self.read_data()
   if set(self.name_sp).issubset(stored_pose.keys()):
    pass
   else:
    self.store_data(data)
-  #rospy.Subscriber('initialpose',PoseWithCovarianceStamped,self.store_data)
-  #rospy.spin()
+
 
  def store_data(self):
   for name in self.name_sp:
@@ -44,7 +43,7 @@ class register():
    self.dictionary.update({'%s_position'%name:data.pose.pose.position,'%s_orientation'%name:data.pose.pose.orientation})
    rospy.loginfo('注册%s的位置'%name)
 
- def read_coordinate(self):
+ def read_data(self):
   count=getpass.getuser()
   pose={}
   store=open('/home/%s/mapdata/pre_regist_pose.txt'%count,'r')
