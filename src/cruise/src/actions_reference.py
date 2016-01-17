@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #coding=utf-8
 
-import rospy,actionlib
+import rospy,actionlib,getpass
 from geometry_msgs.msg import *
 from nav_msgs.msg import *
 from math import *
@@ -9,6 +9,7 @@ from tf.transformations import *
 from actionlib_msgs.msg import *
 from move_base_msgs.msg import *
 from map_listener_reference import *
+from visualization_msgs.msg import *
 
 #turn_speed in rad/s,radius in meter, duration in sec
 def twist(turn_speed,duration,radius):
@@ -65,6 +66,7 @@ def path(data):
  recorder=data.pose
  return recorder
 
+#任务执行
 def tasks(pose_number,pose_list):
  likelihood,weight=0,0.0
  move_base = actionlib.SimpleActionClient('move_base', MoveBaseAction)
@@ -97,16 +99,131 @@ def tasks(pose_number,pose_list):
    likelihood,weight=0,0.0
    print 'goal unchievable, tring to find way out'
    twist(2,1,0.0)
+  else:
+   pass
+ return
+
 
 #巡航模式(选定几个点一直跑)
 def cruise(pose_number):
+ marker_pub = rospy.Publisher('curse_markers', Marker, queue_size=1)
+ marker=marker_define()
+
+ intial=rospy.wait_for_message("odom",Odometry)
+ intial_point=PointStamped()
+ intial_point.point=intial.pose.pose.position
+ intial_point.header.stamp=rospy.Time.now()
+ intial_point.header.frame_id='map'
+ marker.points=[intial_point.point]
  pose_list=[]
  for i in range(pose_number):
+  rospy.loginfo('请输入第%s个您希望机器人到达的位置'%(i+1))
   pose=rospy.wait_for_message("clicked_point", PointStamped)
   pose_list.append(pose)
+  marker.points.append(pose.point)
   print 'position',1+i,'recieved'
-
- while not rospy.is_shutdown():
+ pose_list.append(intial_point)
+ marker_pub.publish(marker)
+ quest=raw_input('您希望巡航吗？y/n: ')
+ if quest=='y':
+  times=raw_input('请输入巡航的次数，或者机器人默认将会无限次循环：')
+  try:
+   times=int(times)
+   for i in range(times):
+    rospy.loginfo('第%s轮导航开始'%(i+1))
+    tasks(pose_number,pose_list)
+  except:
+   while not rospy.is_shutdown():
+    rospy.loginfo('无限次导航开始')
+    tasks(pose_number,pose_list)
+ else:
+  rospy.loginfo('单次导航开始') 
   tasks(pose_number,pose_list)
 
+#默认模式的注册程序
+def pre_regist():
+ marker_pub = rospy.Publisher('curse_markers', Marker, queue_size=1)
+ marker=marker_define()
+ try:
+  intial=rospy.wait_for_message("odom",Odometry)
+  intial_point=PointStamped()
+  intial_point.point=intial.pose.pose.position
+  intial_point.header.stamp=rospy.Time.now()
+  intial_point.header.frame_id='map'
+  marker.points=[intial_point.point]
+ except:
+  marker.points=[]
+ pose_list,pose_dic,poses=[],{},{}
+ for i in range(3):
+  rospy.loginfo('请在地图上用 publish point 输入第%s个您希望机器人到达的位置'%(i+1))
+  pose=rospy.wait_for_message("clicked_point", PointStamped)
+  pose_list.append(pose)
+  marker.points.append(pose.point)
+  pose_dic={'pose_%s'%i:{'x':pose.point.x,'y':pose.point.y,'z':pose.point.z}}
+  poses.update(pose_dic)
+  print 'position',1+i,'recieved'
+ try:
+  pose_list.append(intial_point)
+  #pose_dic={'pose_%s'%(i+1):{'x':intial_point.point.x,'y':intial_point.point.y,'z':intial_point.point.z}}
+  #poses.update(pose_dic)
+ except:
+  pass
+ marker_pub.publish(marker)
+ count=getpass.getuser()
+ write=open('/home/%s/maps/pre_regist_pose.txt'%count,'w')
+ write.writelines('%s'%poses)
+ write.close()
+ tasks(len(pose_list),pose_list)
+
+#默认模式的读取预注册程序
+def pre_load():
+ rospy.loginfo('读取预设位置')
+ marker=marker_define()
+ count=getpass.getuser()
+ read=open('/home/%s/maps/pre_regist_pose.txt'%count,'r')
+ pose=read.readlines()
+ read.close()
+ poses=eval(pose[0])
+ try:
+  intial=rospy.wait_for_message("odom",Odometry)
+  intial_point=PointStamped()
+  intial_point.point=intial.pose.pose.position
+  intial_point.header.stamp=rospy.Time.now()
+  intial_point.header.frame_id='map'
+  marker.points=[intial_point.point]
+ except:
+  marker.points=[]
+ pose_list=[]
+ for i in range(len(poses)):
+  point=PointStamped()
+  point.header.frame_id='map'
+  point.header.stamp=rospy.Time.now()
+  point.point.x=poses['pose_%s'%i]['x']
+  point.point.y=poses['pose_%s'%i]['y']
+  point.point.z=poses['pose_%s'%i]['z']
+  point.header.seq=i+1
+  pose_list.append(point)
+  marker.points.append(point.point)
+ pose_list.append(intial_point)
+ marker_pub = rospy.Publisher('curse_markers', Marker, queue_size=5)
+ rospy.sleep(3)
+ marker_pub.publish(marker)
+ tasks(len(pose_list),pose_list)
+
+def marker_define():
+ marker=Marker()
+ marker.color.r=1.0
+ marker.color.g=0.0
+ marker.color.b=0.0
+ marker.color.a=1.0
+ marker.id = 0
+ marker.ns='task_points'
+ marker.scale.x=0.1
+ marker.scale.y=0.1
+ marker.header.stamp =rospy.Time.now()
+ marker.header.frame_id='map'
+ marker.type=Marker.SPHERE_LIST
+ marker.action=Marker.ADD
+ marker.lifetime = rospy.Duration(0)
+ return marker
 

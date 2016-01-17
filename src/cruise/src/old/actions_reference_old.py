@@ -9,7 +9,6 @@ from tf.transformations import *
 from actionlib_msgs.msg import *
 from move_base_msgs.msg import *
 from map_listener_reference import *
-from visualization_msgs.msg import *
 
 #turn_speed in rad/s,radius in meter, duration in sec
 def twist(turn_speed,duration,radius):
@@ -98,98 +97,16 @@ def tasks(pose_number,pose_list):
    likelihood,weight=0,0.0
    print 'goal unchievable, tring to find way out'
    twist(2,1,0.0)
-  else:
-   pass
- return
-
 
 #巡航模式(选定几个点一直跑)
 def cruise(pose_number):
- marker_pub = rospy.Publisher('curse_markers', Marker, queue_size=1)
- marker=Marker()
- marker.color.r=1.0
- marker.color.g=0.0
- marker.color.b=0.0
- marker.color.a=1.0
- marker.id = 0
- marker.ns='task_points'
- marker.scale.x=0.1
- marker.scale.y=0.1
- marker.header.stamp =rospy.Time.now()
- marker.header.frame_id='map'
- marker.type=Marker.SPHERE_LIST
- marker.action=Marker.ADD
- marker.lifetime = rospy.Duration(0)
- intial=rospy.wait_for_message("odom",Odometry)
- intial_point=PointStamped()
- intial_point.point=intial.pose.pose.position
- intial_point.header.stamp=rospy.Time.now()
- intial_point.header.frame_id='map'
- marker.points=[intial_point.point]
  pose_list=[]
  for i in range(pose_number):
-  rospy.loginfo('请输入第%s个您希望机器人到达的位置'%(i+1))
   pose=rospy.wait_for_message("clicked_point", PointStamped)
   pose_list.append(pose)
-  marker.points.append(pose.point)
   print 'position',1+i,'recieved'
- pose_list.append(intial_point)
- marker_pub.publish(marker)
- quest=raw_input('您希望巡航吗？y/n: ')
- if quest=='y':
-  times=raw_input('请输入巡航的次数，或者机器人默认将会无限次循环：')
-  try:
-   times=int(times)
-   for i in range(times):
-    rospy.loginfo('第%s轮导航开始'%(i+1))
-    tasks(pose_number,pose_list)
-  except:
-   while not rospy.is_shutdown():
-    rospy.loginfo('无限次导航开始')
-    tasks(pose_number,pose_list)
 
- else:
-  rospy.loginfo('单次导航开始') 
+ while not rospy.is_shutdown():
   tasks(pose_number,pose_list)
 
-#默认模式的注册程序
-def pre_regist():
- marker_pub = rospy.Publisher('curse_markers', Marker, queue_size=1)
- marker=Marker()
- marker.color.r=1.0
- marker.color.g=0.0
- marker.color.b=0.0
- marker.color.a=1.0
- marker.id = 0
- marker.ns='task_points'
- marker.scale.x=0.1
- marker.scale.y=0.1
- marker.header.stamp =rospy.Time.now()
- marker.header.frame_id='map'
- marker.type=Marker.SPHERE_LIST
- marker.action=Marker.ADD
- marker.lifetime = rospy.Duration(0)
- try:
-  intial=rospy.wait_for_message("odom",Odometry)
-  intial_point=PointStamped()
-  intial_point.point=intial.pose.pose.position
-  intial_point.header.stamp=rospy.Time.now()
-  intial_point.header.frame_id='map'
-  marker.points=[intial_point.point]
- except:
-  marker.points=[]
- pose_list=[]
- for i in range(3):
-  rospy.loginfo('请输入第%s个您希望机器人到达的位置'%(i+1))
-  pose=rospy.wait_for_message("clicked_point", PointStamped)
-  pose_list.append(pose)
-  marker.points.append(pose.point)
-  print 'position',1+i,'recieved'
- try:
-  pose_list.append(intial_point)
- except:
-  pass
- marker_pub.publish(marker)
- return pose_list
- 
 
