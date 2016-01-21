@@ -7,13 +7,13 @@ import struct
 import voice_interface.msg
 
 class Command(genpy.Message):
-  _md5sum = "67564e82934e40b8032cd16a31a7961c"
+  _md5sum = "3cbdeafeecf997d6c967c6edbf968861"
   _type = "voice_interface/Command"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """Motion my_motion
 Navigation my_navigation
-Send my_send
-Get my_get
+Transmit my_send
+Transmit my_get
 
 ================================================================================
 MSG: voice_interface/Motion
@@ -32,26 +32,14 @@ int64 columnNum
 int64 rowNum
 
 ================================================================================
-MSG: voice_interface/Send
-bool send
-int64 song1
-int64 object1
-int64 dao1
-int64 dd
-int64 rencheng1
-
-
-================================================================================
-MSG: voice_interface/Get
-bool get
-int64 rencheng2
-int64 operation
-int64 object2
-int64 action
+MSG: voice_interface/Transmit
+bool transmit
+int64 object
+int64 didian
 
 """
   __slots__ = ['my_motion','my_navigation','my_send','my_get']
-  _slot_types = ['voice_interface/Motion','voice_interface/Navigation','voice_interface/Send','voice_interface/Get']
+  _slot_types = ['voice_interface/Motion','voice_interface/Navigation','voice_interface/Transmit','voice_interface/Transmit']
 
   def __init__(self, *args, **kwds):
     """
@@ -75,14 +63,14 @@ int64 action
       if self.my_navigation is None:
         self.my_navigation = voice_interface.msg.Navigation()
       if self.my_send is None:
-        self.my_send = voice_interface.msg.Send()
+        self.my_send = voice_interface.msg.Transmit()
       if self.my_get is None:
-        self.my_get = voice_interface.msg.Get()
+        self.my_get = voice_interface.msg.Transmit()
     else:
       self.my_motion = voice_interface.msg.Motion()
       self.my_navigation = voice_interface.msg.Navigation()
-      self.my_send = voice_interface.msg.Send()
-      self.my_get = voice_interface.msg.Get()
+      self.my_send = voice_interface.msg.Transmit()
+      self.my_get = voice_interface.msg.Transmit()
 
   def _get_types(self):
     """
@@ -97,7 +85,7 @@ int64 action
     """
     try:
       _x = self
-      buff.write(_struct_B4qB4qB5qB4q.pack(_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.send, _x.my_send.song1, _x.my_send.object1, _x.my_send.dao1, _x.my_send.dd, _x.my_send.rencheng1, _x.my_get.get, _x.my_get.rencheng2, _x.my_get.operation, _x.my_get.object2, _x.my_get.action))
+      buff.write(_struct_B4qB4qB2qB2q.pack(_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -112,18 +100,18 @@ int64 action
       if self.my_navigation is None:
         self.my_navigation = voice_interface.msg.Navigation()
       if self.my_send is None:
-        self.my_send = voice_interface.msg.Send()
+        self.my_send = voice_interface.msg.Transmit()
       if self.my_get is None:
-        self.my_get = voice_interface.msg.Get()
+        self.my_get = voice_interface.msg.Transmit()
       end = 0
       _x = self
       start = end
-      end += 140
-      (_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.send, _x.my_send.song1, _x.my_send.object1, _x.my_send.dao1, _x.my_send.dd, _x.my_send.rencheng1, _x.my_get.get, _x.my_get.rencheng2, _x.my_get.operation, _x.my_get.object2, _x.my_get.action,) = _struct_B4qB4qB5qB4q.unpack(str[start:end])
+      end += 100
+      (_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian,) = _struct_B4qB4qB2qB2q.unpack(str[start:end])
       self.my_motion.motion = bool(self.my_motion.motion)
       self.my_navigation.navigation = bool(self.my_navigation.navigation)
-      self.my_send.send = bool(self.my_send.send)
-      self.my_get.get = bool(self.my_get.get)
+      self.my_send.transmit = bool(self.my_send.transmit)
+      self.my_get.transmit = bool(self.my_get.transmit)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -137,7 +125,7 @@ int64 action
     """
     try:
       _x = self
-      buff.write(_struct_B4qB4qB5qB4q.pack(_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.send, _x.my_send.song1, _x.my_send.object1, _x.my_send.dao1, _x.my_send.dd, _x.my_send.rencheng1, _x.my_get.get, _x.my_get.rencheng2, _x.my_get.operation, _x.my_get.object2, _x.my_get.action))
+      buff.write(_struct_B4qB4qB2qB2q.pack(_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -153,21 +141,21 @@ int64 action
       if self.my_navigation is None:
         self.my_navigation = voice_interface.msg.Navigation()
       if self.my_send is None:
-        self.my_send = voice_interface.msg.Send()
+        self.my_send = voice_interface.msg.Transmit()
       if self.my_get is None:
-        self.my_get = voice_interface.msg.Get()
+        self.my_get = voice_interface.msg.Transmit()
       end = 0
       _x = self
       start = end
-      end += 140
-      (_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.send, _x.my_send.song1, _x.my_send.object1, _x.my_send.dao1, _x.my_send.dd, _x.my_send.rencheng1, _x.my_get.get, _x.my_get.rencheng2, _x.my_get.operation, _x.my_get.object2, _x.my_get.action,) = _struct_B4qB4qB5qB4q.unpack(str[start:end])
+      end += 100
+      (_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian,) = _struct_B4qB4qB2qB2q.unpack(str[start:end])
       self.my_motion.motion = bool(self.my_motion.motion)
       self.my_navigation.navigation = bool(self.my_navigation.navigation)
-      self.my_send.send = bool(self.my_send.send)
-      self.my_get.get = bool(self.my_get.get)
+      self.my_send.transmit = bool(self.my_send.transmit)
+      self.my_get.transmit = bool(self.my_get.transmit)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_B4qB4qB5qB4q = struct.Struct("<B4qB4qB5qB4q")
+_struct_B4qB4qB2qB2q = struct.Struct("<B4qB4qB2qB2q")

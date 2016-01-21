@@ -16,7 +16,7 @@ from actions_reference import *
 class cruise_modle():
  def __init__(self):
   rospy.init_node('cruise_modle')
-  module=raw_input('请问您是希望自定义机器人的将要到达的位置（1），还是希望运行机器人到达默认的位置（2 default）： ')
+  module=raw_input('请问您是希望自定义机器人的将要到达的位置（1），还是希望运行机器人到达默认的位置(任意键)（2 positions by default）： ')
   if module=='1':
    rospy.loginfo('您选择了自定义任务')
    pose_number=int(raw_input('请输入您希望机器人一次任务需要到达多少个地点: '))

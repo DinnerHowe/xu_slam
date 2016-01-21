@@ -5,10 +5,8 @@
    "NAVIGATION"
    "<MOTION>"
    "MOTION"
-   "<GET>"
-   "GET"
-   "<SEND>"
-   "SEND"
+   "<TRANSMIT>"
+   "TRANSMIT"
    "<COMMAND>"
    "COMMAND"
   ))

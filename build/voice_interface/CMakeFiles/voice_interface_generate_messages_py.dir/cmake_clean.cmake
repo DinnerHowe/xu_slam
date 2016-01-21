@@ -1,9 +1,8 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/voice_interface_generate_messages_py"
-  "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Get.py"
   "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Navigation.py"
   "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Motion.py"
-  "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Send.py"
+  "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Transmit.py"
   "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Command.py"
   "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/__init__.py"
 )

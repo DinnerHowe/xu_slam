@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Get.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Send.msg"
+messages_str = "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg"
 services_str = ""
 pkg_name = "voice_interface"
 dependencies_str = "std_msgs"

@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command.dir/progress.make
 
 voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command:
-	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py voice_interface /home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg voice_interface/Get:voice_interface/Navigation:voice_interface/Send:voice_interface/Motion
+	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py voice_interface /home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg voice_interface/Navigation:voice_interface/Transmit:voice_interface/Motion
 
 _voice_interface_generate_messages_check_deps_Command: voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command
 _voice_interface_generate_messages_check_deps_Command: voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command.dir/build.make

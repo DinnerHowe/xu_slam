@@ -902,6 +902,12 @@ actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
 actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
 
 //Value Computed by CMake
+agv_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/agv
+
+//Value Computed by CMake
+agv_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/agv
+
+//Value Computed by CMake
 avoidance_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/avoidance
 
 //Value Computed by CMake
@@ -1417,7 +1423,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=41
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=42
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

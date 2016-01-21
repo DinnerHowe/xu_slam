@@ -10,10 +10,10 @@ This programm is tested on kuboki base turtlebot.
 
 """
 import rospy
-from motion.msgs import *
+#from motion.msgs import *
 from math import *
 from actions_reference import *
-from positiondict import *
+#from positiondict import *
 from geometry_msgs import *
 from voice_interface.msg import *
 from actionlib_msgs.msg import *
@@ -24,98 +24,159 @@ class voice_interface():
   self.linear_speed,self.duration,self.angle_speed=0,0,0
   self.motion_dict={1:'直行', 2:'倒退',3:'左转直行',4:'右转直行',
 		    5:'左前',6:'右前',7:'左后',8:'右后',9:'左转',10:'右转',11:'后转',12:'停'}
-		    4:'linear_positive,angle_nagtive','linear_nagtive,angle_nagtive'}
+		    #4:'linear_positive,angle_nagtive','linear_nagtive,angle_nagtive'}
   self.sp_dict={13:0.2,14:0.4,15:0.2}
+
   self.distance_dict={16:1,17:2,18:3,19:4,20:5,21:6,22:7,23:8,24:9,25:10,26:20,27:50,28:100,
 			90:29,180:30,270:31,360:32}
+
   self.unit_dic={33:1,34:pi/180}
+
   self.angle_distance={'左转直行':pi/2,'右转直行':pi/2,'左前':pi/4,'右前':pi/4,'左后':pi*3/4,'右后':pi*3/4,'左转':pi,'右转':pi,'后转':2*pi}
+
   self.direct_position_dic={34:'门口',35:'盆栽',36:'充电',37:'孟孟',38:'刘森',39:'徐志浩'}
+
   self.colum_dic={40:1,41:2,42:3,43:4,44:5,45:6}
+
   self.row_dic={46:1,47:2,48:3,49:4}
-  self.object_dic={51:'水杯'，52:'书'}
+
+  self.object_dic={51:'水杯',52:'书'}
 
  def __init__(self): 
-  definition()
-  rospy.Subscriber('Command', Command, self.ForwardAction)
-
+  self.definition()
+  rospy.init_node('voice_interface',anonymous=False)
+  data=rospy.wait_for_message('Command', Command)
+  self.motion_director(data)
+  #测试用
+  stop=Twist()
+  stop.linear.x=0
+  stop.linear.y=0
+  stop.linear.z=0
+  pub = rospy.Publisher('/cmd_vel_mux/input/teleop', Twist, queue_size=10)
+  pub.publish(stop)
+  #rospy.Subscriber('Command', Command, self.callback)
+  #rospy.spin()
 #voice control
- def callback(self,data):
+ #def callback(self,data):
+  
+
+ def motion_director(self,data):
 ############ 运动指示 ##############
   if data.my_motion.motion:
 
-   self.duration=self.distance_dict[data.my_motion.stepcount]/(self.sp_dict[data.my_motion.pattern]*self.unit_dic[data.my_motion.metric])
-
+   rospy.loginfo('运动指示:%s'%self.motion_dict[data.my_motion.direction])
 # 转距固定，线距不定
    if self.motion_dict[data.my_motion.direction]=='左前':
     self.angle_speed=self.sp_dict[data.my_motion.pattern]
     self.linear_speed=0
     angle_duration=self.angle_distance[self.motion_dict[data.my_motion.direction]]/self.sp_dict[data.my_motion.pattern]
-    twist(self.linear_speed,angle_duration,self.angle_speed)
+    rospy.loginfo('线速度：%s  角速度：%s  耗时：%s'%(self.linear_speed,self.angle_speed,angle_duration))
+    twist(self.angle_speed,angle_duration,self.linear_speed)
     self.angle_speed=0
     self.linear_speed=self.sp_dict[data.my_motion.pattern]
+    try:
+     self.distance_dict[data.my_motion.stepcount]
+    except:
+     #default
+     data.my_motion.stepcount=16
 
    if self.motion_dict[data.my_motion.direction]=='右前':
     self.angle_speed=-self.sp_dict[data.my_motion.pattern]
     self.linear_speed=0
     angle_duration=self.angle_distance[self.motion_dict[data.my_motion.direction]]/self.sp_dict[data.my_motion.pattern]
-    twist(self.linear_speed,angle_duration,self.angle_speed)
+    rospy.loginfo('线速度：%s  角速度：%s  耗时：%s'%(self.linear_speed,self.angle_speed,angle_duration))
+    twist(self.angle_speed,angle_duration,self.linear_speed)
     self.angle_speed=0
     self.linear_speed=self.sp_dict[data.my_motion.pattern]
+    try:
+     self.distance_dict[data.my_motion.stepcount]
+    except:
+     #default
+     data.my_motion.stepcount=16
 
    if self.motion_dict[data.my_motion.direction]=='左后':
     self.angle_speed=self.sp_dict[data.my_motion.pattern]
     self.linear_speed=0
     angle_duration=self.angle_distance[self.motion_dict[data.my_motion.direction]]/self.sp_dict[data.my_motion.pattern]
-    twist(self.linear_speed,angle_duration,self.angle_speed)
+    rospy.loginfo('线速度：%s  角速度：%s  耗时：%s'%(self.linear_speed,self.angle_speed,angle_duration))
+    twist(self.angle_speed,angle_duration,self.linear_speed)
     self.angle_speed=0
     self.linear_speed=self.sp_dict[data.my_motion.pattern]
+    try:
+     self.distance_dict[data.my_motion.stepcount]
+    except:
+     #default
+     data.my_motion.stepcount=16
 
    if self.motion_dict[data.my_motion.direction]=='右后':
     self.angle_speed=-self.sp_dict[data.my_motion.pattern]
     self.linear_speed=0
     angle_duration=self.angle_distance[self.motion_dict[data.my_motion.direction]]/self.sp_dict[data.my_motion.pattern]
-    twist(self.linear_speed,angle_duration,self.angle_speed)
+    rospy.loginfo('线速度：%s  角速度：%s  耗时：%s'%(self.linear_speed,self.angle_speed,angle_duration))
+    twist(self.angle_speed,angle_duration,self.linear_speed)
     self.angle_speed=0
     self.linear_speed=self.sp_dict[data.my_motion.pattern]
-
+    try:
+     self.distance_dict[data.my_motion.stepcount]
+    except:
+     #default
+     data.my_motion.stepcount=16
    if self.motion_dict[data.my_motion.direction]=='直行':
     self.linear_speed=self.sp_dict[data.my_motion.pattern]
     self.angle_speed=0
+    try:
+     self.distance_dict[data.my_motion.stepcount]
+    except:
+     #default
+     data.my_motion.stepcount=16
     
    if self.motion_dict[data.my_motion.direction]=='倒退':
-    self.angle_speed=-self.sp_dict[data.my_motion.pattern]
-    self.linear_speed=0
+    self.linear_speed=-self.sp_dict[data.my_motion.pattern]
+    self.angle_speed=0
+    try:
+     self.distance_dict[data.my_motion.stepcount]
+    except:
+     #default
+     data.my_motion.stepcount=16
 
 # 转距不定，线距不定
-   if self.motion_dict[data.my_motion.direction]=='左转直行'
+   if self.motion_dict[data.my_motion.direction]=='左转直行':
     self.angle_speed=self.sp_dict[data.my_motion.pattern]
     self.linear_speed=0
-    try:
-     angle_duration=self.distance_dict[data.my_motion.stepcount]/(self.sp_dict[data.my_motion.pattern]*self.unit_dic[data.my_motion.metric])
-    except:
-     angle_duration=self.angle_distance[self.motion_dict[data.my_motion.direction]]/self.sp_dict[data.my_motion.pattern]
-    twist(self.linear_speed,angle_duration,self.angle_speed)
+    angle_duration=self.angle_distance[self.motion_dict[data.my_motion.direction]]/self.sp_dict[data.my_motion.pattern]
+    rospy.loginfo('线速度：%s  角速度：%s  耗时：%s'%(self.linear_speed,self.angle_speed,angle_duration))
+    twist(self.angle_speed,angle_duration,self.linear_speed)
     self.angle_speed=0
     self.linear_speed=self.sp_dict[data.my_motion.pattern]
+    try:
+     self.distance_dict[data.my_motion.stepcount]
+    except:
+     #default
+     data.my_motion.stepcount=16
 
    if self.motion_dict[data.my_motion.direction]=='右转直行':
     self.angle_speed=-self.sp_dict[data.my_motion.pattern]
     self.linear_speed=0
-    try:
-     angle_duration=self.distance_dict[data.my_motion.stepcount]/(self.sp_dict[data.my_motion.pattern]*self.unit_dic[data.my_motion.metric])
-    except:
+    #defaut
     angle_duration=self.angle_distance[self.motion_dict[data.my_motion.direction]]/self.sp_dict[data.my_motion.pattern]
-    twist(self.linear_speed,angle_duration,self.angle_speed)
+    rospy.loginfo('线速度：%s  角速度：%s  耗时：%s'%(self.linear_speed,self.angle_speed,angle_duration))
+    twist(self.angle_speed,angle_duration,self.linear_speed)
     self.angle_speed=0
     self.linear_speed=self.sp_dict[data.my_motion.pattern]
+    try:
+     self.distance_dict[data.my_motion.stepcount]
+    except:
+     #default
+     data.my_motion.stepcount=16
 
    if self.motion_dict[data.my_motion.direction]=='左转':
     self.angle_speed=self.sp_dict[data.my_motion.pattern]
     self.linear_speed=0
     try:
+     #customer
      angle_duration=self.distance_dict[data.my_motion.stepcount]/(self.sp_dict[data.my_motion.pattern]*self.unit_dic[data.my_motion.metric])
     except:
+     #defaut
      angle_duration=self.angle_distance[self.motion_dict[data.my_motion.direction]]/self.sp_dict[data.my_motion.pattern]
     self.duration=angle_duration
 
@@ -139,8 +200,13 @@ class voice_interface():
 
    if self.motion_dict[data.my_motion.direction]=='停':
     self.linear_speed,self.duration,self.angle_speed=0,0,0
+   rospy.loginfo('线速度：%s  角速度：%s  耗时：%s'%(self.linear_speed,self.angle_speed,self.duration))
 
-   twist(self.linear_speed,self.duration,self.angle_speed)
+   try:
+    self.duration=self.distance_dict[data.my_motion.stepcount]/(self.sp_dict[data.my_motion.pattern]*self.unit_dic[data.my_motion.metric])
+    twist(self.angle_speed,self.duration,self.linear_speed)
+   except:
+    pass
    self.linear_speed,self.duration,self.angle_speed=0,0,0
 
 
@@ -162,7 +228,7 @@ class voice_interface():
     else:
      rospy.loginfo('this especial position not in pre-register position list')
    else:
-    rospy.loginfo('error message')
+    rospy.loginfo('navigation error message')
    state=vioce_tasks(1,position,orientation)
 #循环到任务完成为止？？？？？
    while state!=GoalStatus.SUCCEEDED:
@@ -171,15 +237,16 @@ class voice_interface():
 
 ###############送/取东西(双向)###################
   if data.my_send.transmit:
-   self.trans(data.my_send)
-  else:
-   rospy.loginfo('error message')
+   if data.my_send.transmit:
+    self.trans(data.my_send)
+   else:
+    rospy.loginfo('send error message')
 
   if data.my_get.transmit:
-   self.trans(data.my_get)
-  else:
-   rospy.loginfo('error message')
-
+   if data.my_send.transmit:
+    self.trans(data.my_get)
+   else:
+    rospy.loginfo('get error message')
 
  def trans(self,data):
   position=PointStamped()

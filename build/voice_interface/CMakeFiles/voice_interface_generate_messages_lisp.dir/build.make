@@ -45,51 +45,42 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 # Include the progress variables for this target.
 include voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/progress.make
 
-voice_interface/CMakeFiles/voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Get.lisp
 voice_interface/CMakeFiles/voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Navigation.lisp
 voice_interface/CMakeFiles/voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Motion.lisp
-voice_interface/CMakeFiles/voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Send.lisp
+voice_interface/CMakeFiles/voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Transmit.lisp
 voice_interface/CMakeFiles/voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp
-
-/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Get.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
-/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Get.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Get.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from voice_interface/Get.msg"
-	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Get.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg
 
 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Navigation.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Navigation.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from voice_interface/Navigation.msg"
 	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg
 
 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Motion.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Motion.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from voice_interface/Motion.msg"
 	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg
 
-/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Send.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
-/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Send.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Send.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from voice_interface/Send.msg"
-	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Send.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg
+/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Transmit.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Transmit.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from voice_interface/Transmit.msg"
+	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg
 
 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg
-/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Get.msg
 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg
-/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Send.msg
+/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg
 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp: /home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from voice_interface/Command.msg"
 	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg
 
 voice_interface_generate_messages_lisp: voice_interface/CMakeFiles/voice_interface_generate_messages_lisp
-voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Get.lisp
 voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Navigation.lisp
 voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Motion.lisp
-voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Send.lisp
+voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Transmit.lisp
 voice_interface_generate_messages_lisp: /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp
 voice_interface_generate_messages_lisp: voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/build.make
 .PHONY : voice_interface_generate_messages_lisp

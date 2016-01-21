@@ -17,8 +17,8 @@
 
 #include <voice_interface/Motion.h>
 #include <voice_interface/Navigation.h>
-#include <voice_interface/Send.h>
-#include <voice_interface/Get.h>
+#include <voice_interface/Transmit.h>
+#include <voice_interface/Transmit.h>
 
 namespace voice_interface
 {
@@ -48,10 +48,10 @@ struct Command_
    typedef  ::voice_interface::Navigation_<ContainerAllocator>  _my_navigation_type;
   _my_navigation_type my_navigation;
 
-   typedef  ::voice_interface::Send_<ContainerAllocator>  _my_send_type;
+   typedef  ::voice_interface::Transmit_<ContainerAllocator>  _my_send_type;
   _my_send_type my_send;
 
-   typedef  ::voice_interface::Get_<ContainerAllocator>  _my_get_type;
+   typedef  ::voice_interface::Transmit_<ContainerAllocator>  _my_get_type;
   _my_get_type my_get;
 
 
@@ -131,12 +131,12 @@ struct MD5Sum< ::voice_interface::Command_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "67564e82934e40b8032cd16a31a7961c";
+    return "3cbdeafeecf997d6c967c6edbf968861";
   }
 
   static const char* value(const ::voice_interface::Command_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x67564e82934e40b8ULL;
-  static const uint64_t static_value2 = 0x032cd16a31a7961cULL;
+  static const uint64_t static_value1 = 0x3cbdeafeecf997d6ULL;
+  static const uint64_t static_value2 = 0xc967c6edbf968861ULL;
 };
 
 template<class ContainerAllocator>
@@ -157,8 +157,8 @@ struct Definition< ::voice_interface::Command_<ContainerAllocator> >
   {
     return "Motion my_motion\n\
 Navigation my_navigation\n\
-Send my_send\n\
-Get my_get\n\
+Transmit my_send\n\
+Transmit my_get\n\
 \n\
 ================================================================================\n\
 MSG: voice_interface/Motion\n\
@@ -177,22 +177,10 @@ int64 columnNum\n\
 int64 rowNum\n\
 \n\
 ================================================================================\n\
-MSG: voice_interface/Send\n\
-bool send\n\
-int64 song1\n\
-int64 object1\n\
-int64 dao1\n\
-int64 dd\n\
-int64 rencheng1\n\
-\n\
-\n\
-================================================================================\n\
-MSG: voice_interface/Get\n\
-bool get\n\
-int64 rencheng2\n\
-int64 operation\n\
-int64 object2\n\
-int64 action\n\
+MSG: voice_interface/Transmit\n\
+bool transmit\n\
+int64 object\n\
+int64 didian\n\
 ";
   }
 
@@ -241,10 +229,10 @@ struct Printer< ::voice_interface::Command_<ContainerAllocator> >
     Printer< ::voice_interface::Navigation_<ContainerAllocator> >::stream(s, indent + "  ", v.my_navigation);
     s << indent << "my_send: ";
     s << std::endl;
-    Printer< ::voice_interface::Send_<ContainerAllocator> >::stream(s, indent + "  ", v.my_send);
+    Printer< ::voice_interface::Transmit_<ContainerAllocator> >::stream(s, indent + "  ", v.my_send);
     s << indent << "my_get: ";
     s << std::endl;
-    Printer< ::voice_interface::Get_<ContainerAllocator> >::stream(s, indent + "  ", v.my_get);
+    Printer< ::voice_interface::Transmit_<ContainerAllocator> >::stream(s, indent + "  ", v.my_get);
   }
 };
 
