@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#coding=utf-8
 """
 - Version 1.0 2015/22/12
 
@@ -14,13 +15,23 @@ This programm is tested on kuboki base turtlebot.
 
 """
 
-import os,getpass
+import os,getpass,subprocess
 
 if __name__ == '__main__':
  count=getpass.getuser()
- directory='/home/%s/map_data'%count
- if os.path.exists(directory):
-  os.system('rosrun map_server map_saver -f %s/office_map1.yaml'%directory)
- else:
+ directory='/home/%s/xu_slam/src/nav_staff/map'%count
+ try:
+  os.system('rosrun map_server map_saver -f %s/office_map'%directory)
+ except:
   os.mkdir(directory) 
-  os.system('rosrun map_server map_saver -f %s/office_map1.yaml'%directory)
+  os.system('rosrun map_server map_saver -f %s/office_map'%directory)
+ print '关闭制图模式'
+ node_list=subprocess.Popen('rosnode list',shell=True,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+ nodes=node_list.stdout.readlines()
+ node_name=[]
+ for node in nodes:
+  if 'master' not in node.split('\n')[0]:
+   node_name.append(node.split('\n')[0])
+ for i in node_name:
+  subprocess.call('rosnode kill %s'%i,shell=True,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+ print '请运行rosrun agv agv.py 启动机器人，并且选择拥有地图模式'

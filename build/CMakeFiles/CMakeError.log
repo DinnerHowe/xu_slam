@@ -1,21 +1,21 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec4043611879/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4043611879.dir/build.make CMakeFiles/cmTryCompileExec4043611879.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec618594122/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec618594122.dir/build.make CMakeFiles/cmTryCompileExec618594122.dir/build
 make[1]: Entering directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec4043611879.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4043611879.dir/CheckSymbolExists.c.o   -c /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec4043611879
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4043611879.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec4043611879.dir/CheckSymbolExists.c.o  -o cmTryCompileExec4043611879 -rdynamic 
-CMakeFiles/cmTryCompileExec4043611879.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTryCompileExec618594122.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec618594122.dir/CheckSymbolExists.c.o   -c /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec618594122
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec618594122.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec618594122.dir/CheckSymbolExists.c.o  -o cmTryCompileExec618594122 -rdynamic 
+CMakeFiles/cmTryCompileExec618594122.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTryCompileExec4043611879] Error 1
+make[1]: *** [cmTryCompileExec618594122] Error 1
 make[1]: Leaving directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec4043611879/fast] Error 2
+make: *** [cmTryCompileExec618594122/fast] Error 2
 
 File /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -35,38 +35,38 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1246677263/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1246677263.dir/build.make CMakeFiles/cmTryCompileExec1246677263.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec1464428350/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1464428350.dir/build.make CMakeFiles/cmTryCompileExec1464428350.dir/build
 make[1]: Entering directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1246677263.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1246677263.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1246677263
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1246677263.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1246677263.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1246677263 -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTryCompileExec1464428350.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1464428350.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1464428350
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1464428350.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1464428350.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1464428350 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTryCompileExec1246677263] Error 1
+make[1]: *** [cmTryCompileExec1464428350] Error 1
 make[1]: Leaving directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec1246677263/fast] Error 2
+make: *** [cmTryCompileExec1464428350/fast] Error 2
 
 
 Determining if the Q_WS_WIN exist failed with the following output:
 Change Dir: /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3861011461/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3861011461.dir/build.make CMakeFiles/cmTryCompileExec3861011461.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec3474912154/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3474912154.dir/build.make CMakeFiles/cmTryCompileExec3474912154.dir/build
 make[1]: Entering directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec3861011461.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3861011461.dir/CheckSymbolExists.cxx.o -c /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTryCompileExec3474912154.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3474912154.dir/CheckSymbolExists.cxx.o -c /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
    return ((int*)(&Q_WS_WIN))[argc];
                    ^
-make[1]: *** [CMakeFiles/cmTryCompileExec3861011461.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec3861011461/fast] Error 2
+make[1]: *** [CMakeFiles/cmTryCompileExec3474912154.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTryCompileExec3474912154/fast] Error 2
 
 File /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -86,19 +86,19 @@ int main(int argc, char** argv)
 Determining if the Q_WS_QWS exist failed with the following output:
 Change Dir: /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3895061384/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3895061384.dir/build.make CMakeFiles/cmTryCompileExec3895061384.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec3616461839/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3616461839.dir/build.make CMakeFiles/cmTryCompileExec3616461839.dir/build
 make[1]: Entering directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec3895061384.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3895061384.dir/CheckSymbolExists.cxx.o -c /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTryCompileExec3616461839.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3616461839.dir/CheckSymbolExists.cxx.o -c /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
    return ((int*)(&Q_WS_QWS))[argc];
                    ^
-make[1]: *** [CMakeFiles/cmTryCompileExec3895061384.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTryCompileExec3616461839.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec3895061384/fast] Error 2
+make: *** [cmTryCompileExec3616461839/fast] Error 2
 
 File /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -118,19 +118,19 @@ int main(int argc, char** argv)
 Determining if the Q_WS_MAC exist failed with the following output:
 Change Dir: /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2695584690/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2695584690.dir/build.make CMakeFiles/cmTryCompileExec2695584690.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec135102117/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec135102117.dir/build.make CMakeFiles/cmTryCompileExec135102117.dir/build
 make[1]: Entering directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec2695584690.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec2695584690.dir/CheckSymbolExists.cxx.o -c /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTryCompileExec135102117.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec135102117.dir/CheckSymbolExists.cxx.o -c /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
    return ((int*)(&Q_WS_MAC))[argc];
                    ^
-make[1]: *** [CMakeFiles/cmTryCompileExec2695584690.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: *** [CMakeFiles/cmTryCompileExec135102117.dir/CheckSymbolExists.cxx.o] Error 1
 make[1]: Leaving directory `/home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec2695584690/fast] Error 2
+make: *** [cmTryCompileExec135102117/fast] Error 2
 
 File /home/turtlebot2/xu_slam/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "facerobot")
+set(facerobot_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
+set(facerobot_DEPRECATED "")
+set(facerobot_VERSION "0.0.0")
+set(facerobot_BUILD_DEPENDS "message_generation" "roscpp" "rospy" "tf")
+set(facerobot_RUN_DEPENDS "message_runtime" "roscpp" "rospy" "tf")
+set(facerobot_BUILDTOOL_DEPENDS "catkin")

@@ -32,7 +32,9 @@ class agv_launcher():
   if mapper=='n':
    self.bringup_info=self.bring_up.stdout.readline()
    if 'self.pub = rospy.Publisher(self.topic, Status)' in self.bringup_info:
+    self.bringup_info=''
     self.mapping()
+
    else:
     timer+=ti.timeit()
     if timer>10:
@@ -55,17 +57,29 @@ class agv_launcher():
  def mapping(self):
   print '进入建图阶段，请稍候...'
   subprocess.Popen('roslaunch nav_staff asus_gmapping_demo.launch',shell=True,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+  #subprocess.Popen('roslaunch nav_staff kinect_gmapping_demo.launch',shell=True)#,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
   rospy.Subscriber('/rosout',Log, self.mapping_callback)
   rospy.spin()
 
  def mapping_callback(self,data):
+  #print data.msg
   if 'odom received!' in data.msg:
+  #if 'Laser is mounted upwards.' in data.msg:
    print '地图构建程序已启动'
-   self.mapsaver()
+   print '请启动可视化界面（roslaunch nav_staff mapping.launch）'
+   rospy.sleep(10)
+   print '请使用 2D Nav Goal 来命令机器人将要探索的位置，并且在完成地图探索后输入 “rosrun nav_staff map_saver.py” 来存储地图'
+   #subprocess.Popen('rosrun cruise cruise.py',shell=True)
+   rospy.sleep(20)
+   mapper_trigger=raw_input()
+   if mapper_trigger=='储存地图':
+    self.mapsaver()
+   else:
+    pass
 
  def navigation(self):
   print '进入导航阶段，请稍候...'
-  subprocess.Popen('roslaunch nav_staff nav_demo.launch',shell=True,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+  subprocess.Popen('roslaunch nav_staff nav_demo.launch',shell=True)#,stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
   rospy.Subscriber("/rosout", Log, self.nav_callback)
   rospy.spin()
 
@@ -73,8 +87,11 @@ class agv_launcher():
   print data.msg
   if 'odom received!' in data.msg:
    print '启动导航程序'
+   print '请启动可视化界面（roslaunch nav_staff navigation.launch）并且使用2D Pose Estimate选择机器人的起始点'
+   rospy.sleep(10)
    subprocess.Popen('rosrun cruise cruise.py',shell=True)
    print '导航程序已启动'
+
 
  def mapsaver(self):
    map_saver=raw_input('您是否储存地图：（y/n）: ')

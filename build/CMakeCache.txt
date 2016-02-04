@@ -943,6 +943,12 @@ cv_bridge_DIR:PATH=/opt/ros/indigo/share/cv_bridge/cmake
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/indigo/share/dynamic_reconfigure/cmake
 
+//Value Computed by CMake
+facerobot_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/facerobot
+
+//Value Computed by CMake
+facerobot_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/facerobot
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
 
@@ -1299,6 +1305,12 @@ voice_interface_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/voice_interface
 voice_interface_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/voice_interface
 
 //Value Computed by CMake
+voice_msg_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/voice_msg
+
+//Value Computed by CMake
+voice_msg_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/voice_msg
+
+//Value Computed by CMake
 web_map_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/web_map
 
 //Value Computed by CMake
@@ -1423,7 +1435,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=42
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=43
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

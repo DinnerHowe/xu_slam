@@ -6,3 +6,4 @@
   <remap from='kobuki_safety_controller/events/wheel_drop' to='/mobile_base/events/wheel_drop'/>
  </node>
 </launch>
+

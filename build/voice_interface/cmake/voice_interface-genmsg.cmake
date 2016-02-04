@@ -1,8 +1,10 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "voice_interface: 4 messages, 0 services")
+message(WARNING "Invoking generate_messages() without having added any message or service file before.
+You should either add add_message_files() and/or add_service_files() calls or remove the invocation of generate_messages().")
+message(STATUS "voice_interface: 0 messages, 0 services")
 
-set(MSG_I_FLAGS "-Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,56 +17,12 @@ add_custom_target(voice_interface_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg" NAME_WE)
-add_custom_target(_voice_interface_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_interface" "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg" "voice_interface/Navigation:voice_interface/Transmit:voice_interface/Motion"
-)
-
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg" NAME_WE)
-add_custom_target(_voice_interface_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_interface" "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg" ""
-)
-
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg" NAME_WE)
-add_custom_target(_voice_interface_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_interface" "/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg" ""
-)
-
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg" NAME_WE)
-add_custom_target(_voice_interface_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_interface" "/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg" ""
-)
-
 #
 #  langs = gencpp;genlisp;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
-_generate_msg_cpp(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/voice_interface
-)
-_generate_msg_cpp(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/voice_interface
-)
-_generate_msg_cpp(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/voice_interface
-)
-_generate_msg_cpp(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg"
-  "${MSG_I_FLAGS}"
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/voice_interface
-)
 
 ### Generating Services
 
@@ -80,14 +38,6 @@ add_custom_target(voice_interface_generate_messages_cpp
 add_dependencies(voice_interface_generate_messages voice_interface_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_cpp _voice_interface_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_cpp _voice_interface_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_cpp _voice_interface_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_cpp _voice_interface_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(voice_interface_gencpp)
@@ -98,30 +48,6 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS voice_interface_generate_messages_c
 
 ### Section generating for lang: genlisp
 ### Generating Messages
-_generate_msg_lisp(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/voice_interface
-)
-_generate_msg_lisp(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/voice_interface
-)
-_generate_msg_lisp(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/voice_interface
-)
-_generate_msg_lisp(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg"
-  "${MSG_I_FLAGS}"
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/voice_interface
-)
 
 ### Generating Services
 
@@ -137,14 +63,6 @@ add_custom_target(voice_interface_generate_messages_lisp
 add_dependencies(voice_interface_generate_messages voice_interface_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_lisp _voice_interface_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_lisp _voice_interface_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_lisp _voice_interface_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_lisp _voice_interface_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(voice_interface_genlisp)
@@ -155,30 +73,6 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS voice_interface_generate_messages_l
 
 ### Section generating for lang: genpy
 ### Generating Messages
-_generate_msg_py(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/voice_interface
-)
-_generate_msg_py(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/voice_interface
-)
-_generate_msg_py(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/voice_interface
-)
-_generate_msg_py(voice_interface
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg"
-  "${MSG_I_FLAGS}"
-  "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg;/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/voice_interface
-)
 
 ### Generating Services
 
@@ -194,14 +88,6 @@ add_custom_target(voice_interface_generate_messages_py
 add_dependencies(voice_interface_generate_messages voice_interface_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_py _voice_interface_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_py _voice_interface_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_py _voice_interface_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg" NAME_WE)
-add_dependencies(voice_interface_generate_messages_py _voice_interface_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(voice_interface_genpy)

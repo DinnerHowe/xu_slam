@@ -1,7 +1,7 @@
 DWAPlannerROS:
 
 # Robot Configuration Parameters - Kobuki
- max_vel_x: 0.5
+ max_vel_x: 0.45
  min_vel_x: 0.0
 
  max_vel_y: 0.0
@@ -10,7 +10,7 @@ DWAPlannerROS:
 # choose slightly less than the base's capability
  max_trans_vel: 0.5
 # this is the min trans velocity when there is negligible rotational velocity,do not set min_trans_vel to 0.0 otherwise dwa will always think translational velocities.
- min_trans_vle: 0.1
+ min_trans_vel: 0.1
  tans_stopped_vel: 0.1
 
  max_rot_vel: 5.0
@@ -22,14 +22,17 @@ DWAPlannerROS:
  acc_lim_y: 0.0
 
  #goal tolerance
- yaw_goal_tolerance: 0.3
- xy_goal_tolerancd: 0.1
+ yaw_goal_tolerance: 0.5
+ xy_goal_tolerancd: 0.05
+ latch_xy_goal_tolerance: true
 
  #forward simulation params
- sim_time: 0.1
- vx_samples: 6
- vy_samples: 1
- vtheta_samples: 20
+ sim_time: 1.0 #The amount of time to forward-simulate trajectories in seconds 
+ vx_samples: 3
+ vy_samples: 2
+ vtheta_samples: 10
+ #controller_frequency: 10
+ #penalize_negative_x: true
 
  #trajectory scoring params
  #ps:

@@ -47,14 +47,17 @@ class register():
   count=getpass.getuser()
   pose={}
   store=open('/home/%s/mapdata/pre_regist_pose.txt'%count,'r')
-  pose=eval(store.readlines())
+  pose=eval(store.readlines()[0])
   store.close()
   return pose
 
+################################################
+################  要写一个存坐标的代码 ##########
+################################################
+
+
  def defination(self):
-  pose=self.read_coordinate()
-  self.point=Point()
-  self.orientation=Quaternion()
+  pose=self.read_data()
   self.direct_position_dic={'门口':pose['门口_position'],'盆栽':pose['盆栽_position'],'充电':pose['充电_position'],'孟孟':pose['孟孟_position'],'刘森':pose['刘森_position'],'徐志浩':pose['徐志浩_position']}
   self.direct_orientation_dic={'门口':pose['门口_orientation'],'盆栽':pose['盆栽_orientation'],'充电':pose['充电_orientation'],'孟孟':pose['孟孟_orientation'],'刘森':pose['刘森_orientation'],'徐志浩':pose['徐志浩_orientation']}
 

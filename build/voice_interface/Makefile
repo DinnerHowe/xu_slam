@@ -192,62 +192,6 @@ _run_tests_voice_interface_roslaunch-check_launch/fast:
 .PHONY : _run_tests_voice_interface_roslaunch-check_launch/fast
 
 # Convenience name for target.
-voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command.dir/rule
-.PHONY : voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command.dir/rule
-
-# Convenience name for target.
-_voice_interface_generate_messages_check_deps_Command: voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command.dir/rule
-.PHONY : _voice_interface_generate_messages_check_deps_Command
-
-# fast build rule for target.
-_voice_interface_generate_messages_check_deps_Command/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command.dir/build.make voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Command.dir/build
-.PHONY : _voice_interface_generate_messages_check_deps_Command/fast
-
-# Convenience name for target.
-voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Motion.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Motion.dir/rule
-.PHONY : voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Motion.dir/rule
-
-# Convenience name for target.
-_voice_interface_generate_messages_check_deps_Motion: voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Motion.dir/rule
-.PHONY : _voice_interface_generate_messages_check_deps_Motion
-
-# fast build rule for target.
-_voice_interface_generate_messages_check_deps_Motion/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Motion.dir/build.make voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Motion.dir/build
-.PHONY : _voice_interface_generate_messages_check_deps_Motion/fast
-
-# Convenience name for target.
-voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Navigation.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Navigation.dir/rule
-.PHONY : voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Navigation.dir/rule
-
-# Convenience name for target.
-_voice_interface_generate_messages_check_deps_Navigation: voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Navigation.dir/rule
-.PHONY : _voice_interface_generate_messages_check_deps_Navigation
-
-# fast build rule for target.
-_voice_interface_generate_messages_check_deps_Navigation/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Navigation.dir/build.make voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Navigation.dir/build
-.PHONY : _voice_interface_generate_messages_check_deps_Navigation/fast
-
-# Convenience name for target.
-voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Transmit.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Transmit.dir/rule
-.PHONY : voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Transmit.dir/rule
-
-# Convenience name for target.
-_voice_interface_generate_messages_check_deps_Transmit: voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Transmit.dir/rule
-.PHONY : _voice_interface_generate_messages_check_deps_Transmit
-
-# fast build rule for target.
-_voice_interface_generate_messages_check_deps_Transmit/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Transmit.dir/build.make voice_interface/CMakeFiles/_voice_interface_generate_messages_check_deps_Transmit.dir/build
-.PHONY : _voice_interface_generate_messages_check_deps_Transmit/fast
-
-# Convenience name for target.
 voice_interface/CMakeFiles/run_tests_voice_interface.dir/rule:
 	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/run_tests_voice_interface.dir/rule
 .PHONY : voice_interface/CMakeFiles/run_tests_voice_interface.dir/rule
@@ -396,10 +340,6 @@ help:
 	@echo "... _run_tests_voice_interface"
 	@echo "... _run_tests_voice_interface_roslaunch-check"
 	@echo "... _run_tests_voice_interface_roslaunch-check_launch"
-	@echo "... _voice_interface_generate_messages_check_deps_Command"
-	@echo "... _voice_interface_generate_messages_check_deps_Motion"
-	@echo "... _voice_interface_generate_messages_check_deps_Navigation"
-	@echo "... _voice_interface_generate_messages_check_deps_Transmit"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"

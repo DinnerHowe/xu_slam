@@ -1,4 +1,5 @@
 shutdown_costmaps: false
+#Determines whether or not to shutdown the costmaps of the node when move_base is in an inactive state 
 
 controller_frequency: 5.0
 controller_patience: 3.0

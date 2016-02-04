@@ -8,13 +8,13 @@ find_package(catkin REQUIRED COMPONENTS
  message_generation
 )
 
-add_message_files(FILES Command.msg Motion.msg Navigation.msg Transmit.msg)
+#add_message_files(FILES Command.msg Motion.msg Navigation.msg Transmit.msg)
 
 roslaunch_add_file_check(launch)
 
  generate_messages(
    DEPENDENCIES
-   std_msgs 
+   std_msgs
  )
 
 catkin_package(

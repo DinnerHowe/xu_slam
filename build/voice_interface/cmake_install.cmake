@@ -33,15 +33,6 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/voice_interface/msg" TYPE FILE FILES
-    "/home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg"
-    "/home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg"
-    "/home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg"
-    "/home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg"
-    )
-ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-
-IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/voice_interface/cmake" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interface-msg-paths.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 if [ -n "$DESTDIR" ] ; then
     case $DESTDIR in
@@ -12,12 +12,14 @@ if [ -n "$DESTDIR" ] ; then
     DESTDIR_ARG="--root=$DESTDIR"
 fi
 
-cd "/home/turtlebot2/xu_slam/src/rbx1/rbx1_vision"
+echo_and_run() { echo "+ $@" ; "$@" ; }
+
+echo_and_run cd "/home/turtlebot2/xu_slam/src/rbx1/rbx1_vision"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
-/usr/bin/env \
+echo_and_run /usr/bin/env \
     PYTHONPATH="/home/turtlebot2/xu_slam/install/lib/python2.7/dist-packages:/home/turtlebot2/xu_slam/build/lib/python2.7/dist-packages:$PYTHONPATH" \
     CATKIN_BINARY_DIR="/home/turtlebot2/xu_slam/build" \
     "/usr/bin/python" \

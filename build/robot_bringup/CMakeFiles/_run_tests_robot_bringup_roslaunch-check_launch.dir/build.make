@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include robot_bringup/CMakeFiles/_run_tests_robot_bringup_roslaunch-check_launch.dir/progress.make
 
 robot_bringup/CMakeFiles/_run_tests_robot_bringup_roslaunch-check_launch:
-	cd /home/turtlebot2/xu_slam/build/robot_bringup && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot2/xu_slam/build/test_results/robot_bringup/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot2/xu_slam/build/test_results/robot_bringup \ -o\ '/home/turtlebot2/xu_slam/build/test_results/robot_bringup/roslaunch-check_launch.xml'\ '/home/turtlebot2/xu_slam/src/robot_bringup/launch'\ 
+	cd /home/turtlebot2/xu_slam/build/robot_bringup && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot2/xu_slam/build/test_results/robot_bringup/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot2/xu_slam/build/test_results/robot_bringup /opt/ros/indigo/share/roslaunch/cmake/../scripts/roslaunch-check\ -o\ '/home/turtlebot2/xu_slam/build/test_results/robot_bringup/roslaunch-check_launch.xml'\ '/home/turtlebot2/xu_slam/src/robot_bringup/launch'\ 
 
 _run_tests_robot_bringup_roslaunch-check_launch: robot_bringup/CMakeFiles/_run_tests_robot_bringup_roslaunch-check_launch
 _run_tests_robot_bringup_roslaunch-check_launch: robot_bringup/CMakeFiles/_run_tests_robot_bringup_roslaunch-check_launch.dir/build.make

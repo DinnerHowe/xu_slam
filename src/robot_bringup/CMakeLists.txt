@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(robot_bringup)
 
-find_package(catkin REQUIRED )
+find_package(catkin REQUIRED rospy roslaunch)
 
 roslaunch_add_file_check(launch)
 

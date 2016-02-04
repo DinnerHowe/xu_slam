@@ -45,47 +45,9 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 # Include the progress variables for this target.
 include voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/progress.make
 
-voice_interface/CMakeFiles/voice_interface_generate_messages_cpp: /home/turtlebot2/xu_slam/devel/include/voice_interface/Navigation.h
-voice_interface/CMakeFiles/voice_interface_generate_messages_cpp: /home/turtlebot2/xu_slam/devel/include/voice_interface/Motion.h
-voice_interface/CMakeFiles/voice_interface_generate_messages_cpp: /home/turtlebot2/xu_slam/devel/include/voice_interface/Transmit.h
-voice_interface/CMakeFiles/voice_interface_generate_messages_cpp: /home/turtlebot2/xu_slam/devel/include/voice_interface/Command.h
-
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Navigation.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Navigation.h: /home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Navigation.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from voice_interface/Navigation.msg"
-	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/include/voice_interface -e /opt/ros/indigo/share/gencpp/cmake/..
-
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Motion.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Motion.h: /home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Motion.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from voice_interface/Motion.msg"
-	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/include/voice_interface -e /opt/ros/indigo/share/gencpp/cmake/..
-
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Transmit.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Transmit.h: /home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Transmit.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from voice_interface/Transmit.msg"
-	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/include/voice_interface -e /opt/ros/indigo/share/gencpp/cmake/..
-
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Command.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Command.h: /home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Command.h: /home/turtlebot2/xu_slam/src/voice_interface/msg/Navigation.msg
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Command.h: /home/turtlebot2/xu_slam/src/voice_interface/msg/Transmit.msg
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Command.h: /home/turtlebot2/xu_slam/src/voice_interface/msg/Motion.msg
-/home/turtlebot2/xu_slam/devel/include/voice_interface/Command.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from voice_interface/Command.msg"
-	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/turtlebot2/xu_slam/src/voice_interface/msg/Command.msg -Ivoice_interface:/home/turtlebot2/xu_slam/src/voice_interface/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p voice_interface -o /home/turtlebot2/xu_slam/devel/include/voice_interface -e /opt/ros/indigo/share/gencpp/cmake/..
+voice_interface/CMakeFiles/voice_interface_generate_messages_cpp:
 
 voice_interface_generate_messages_cpp: voice_interface/CMakeFiles/voice_interface_generate_messages_cpp
-voice_interface_generate_messages_cpp: /home/turtlebot2/xu_slam/devel/include/voice_interface/Navigation.h
-voice_interface_generate_messages_cpp: /home/turtlebot2/xu_slam/devel/include/voice_interface/Motion.h
-voice_interface_generate_messages_cpp: /home/turtlebot2/xu_slam/devel/include/voice_interface/Transmit.h
-voice_interface_generate_messages_cpp: /home/turtlebot2/xu_slam/devel/include/voice_interface/Command.h
 voice_interface_generate_messages_cpp: voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/build.make
 .PHONY : voice_interface_generate_messages_cpp
 

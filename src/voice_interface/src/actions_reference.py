@@ -115,7 +115,7 @@ def cruise(pose_number):
 #vioce task模式
 def vioce_tasks(pose_number,pose_list,orientation):
  if type(pose_list) is list:
-  tasks_(pose_number,pose_list)
+  tasks(pose_number,pose_list)
  else:
   move_base = actionlib.SimpleActionClient('move_base', MoveBaseAction)
   move_base.wait_for_server()
