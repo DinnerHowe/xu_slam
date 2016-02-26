@@ -79,6 +79,7 @@ hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/src
 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/src/map_to_image_node.cpp.o: /opt/ros/indigo/include/ros/wall_timer_options.h
 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/src/map_to_image_node.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/src/map_to_image_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/CameraInfo.h
+hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/src/map_to_image_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/CompressedImage.h
 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/src/map_to_image_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/Image.h
 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/src/map_to_image_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/src/map_to_image_node.cpp.o: /opt/ros/indigo/include/sensor_msgs/image_encodings.h

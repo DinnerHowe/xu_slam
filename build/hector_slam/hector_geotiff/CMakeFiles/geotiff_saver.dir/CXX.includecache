@@ -407,6 +407,8 @@ boost/make_shared.hpp
 -
 
 /opt/ros/indigo/include/ros/message_forward.h
+cstddef
+-
 memory
 -
 

@@ -146,6 +146,7 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/src/HectorMappingRos.cp
  /opt/ros/indigo/include/tf2/buffer_core.h
  /opt/ros/indigo/include/tf2/convert.h
  /opt/ros/indigo/include/tf2/exceptions.h
+ /opt/ros/indigo/include/tf2/impl/convert.h
  /opt/ros/indigo/include/tf2/transform_datatypes.h
  /opt/ros/indigo/include/tf2/transform_storage.h
  /opt/ros/indigo/include/tf2_msgs/FrameGraph.h
@@ -660,6 +661,7 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/src/main.cpp.o
  /opt/ros/indigo/include/tf2/buffer_core.h
  /opt/ros/indigo/include/tf2/convert.h
  /opt/ros/indigo/include/tf2/exceptions.h
+ /opt/ros/indigo/include/tf2/impl/convert.h
  /opt/ros/indigo/include/tf2/transform_datatypes.h
  /opt/ros/indigo/include/tf2/transform_storage.h
  /opt/ros/indigo/include/tf2_msgs/FrameGraph.h

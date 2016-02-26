@@ -171,8 +171,7 @@ def pre_regist(odom,modle):
    print 'position',1+i,'recieved'
 
  elif modle=='voice_interface':
-  
-  while 
+  for i in range(10):
    rospy.loginfo('请在地图上用 publish point 输入第%s个您希望机器人到达的位置'%(i+1))
    pose=rospy.wait_for_message("clicked_point", PointStamped)
    pose_list.append(pose)
@@ -180,8 +179,10 @@ def pre_regist(odom,modle):
    pose_dic={'pose_%s'%i:{'x':pose.point.x,'y':pose.point.y,'z':pose.point.z}}
    poses.update(pose_dic)
    print 'position',1+i,'recieved'
+
  else:
   rospy.loginfo('error unkown module')
+
 # if back to initial
  try:
   pose_list.append(intial_point)

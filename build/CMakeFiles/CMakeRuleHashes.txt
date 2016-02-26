@@ -1,8 +1,4 @@
 # Hashes of file build rules.
-e6b7f0a27e541d826d1fbc0919e6ba43 /home/turtlebot2/xu_slam/devel/include/facerobot/Command.h
-3cbd5b538db7b8920943979f0db2c33a /home/turtlebot2/xu_slam/devel/include/facerobot/Motion.h
-941daad7d009980b1fc5bf1b0c0c3839 /home/turtlebot2/xu_slam/devel/include/facerobot/Navigation.h
-e4603e38e0efab61a3f6cda3024231cb /home/turtlebot2/xu_slam/devel/include/facerobot/Transmit.h
 bda54aa23e19506a2ac742c9b5896e30 /home/turtlebot2/xu_slam/devel/include/hector_mapping/HectorDebugInfo.h
 fe44858052ab7362130d1ff1cd7a2632 /home/turtlebot2/xu_slam/devel/include/hector_mapping/HectorIterData.h
 c8fb32b0e6f0793d4b25b28d90442806 /home/turtlebot2/xu_slam/devel/include/hector_nav_msgs/GetDistanceToObstacle.h
@@ -33,10 +29,6 @@ d783ab8ac4ef9c513fca866cad628dcc /home/turtlebot2/xu_slam/devel/include/slam_mai
 b12aae643b893db52e1d08cdfdd5ea7e /home/turtlebot2/xu_slam/devel/include/speed_handle/Speed.h
 f1543df53eda164e55137b7075a2625c /home/turtlebot2/xu_slam/devel/include/speed_handle/Victor.h
 12a49696a7df80ee0716430779cd7155 /home/turtlebot2/xu_slam/devel/include/speed_handle/speed.h
-b250566a7ed27f1f99dddcd10299cf27 /home/turtlebot2/xu_slam/devel/include/voice_interface/Command.h
-6783c9e7b03ff24289fbdde87253fd83 /home/turtlebot2/xu_slam/devel/include/voice_interface/Motion.h
-dbf369605506d2f7ade2708c08a96a48 /home/turtlebot2/xu_slam/devel/include/voice_interface/Navigation.h
-b58af7512c5c53ea2ddaa231c5d47931 /home/turtlebot2/xu_slam/devel/include/voice_interface/Transmit.h
 ae74b1cd8b90eaa5e9c45a9647681f83 /home/turtlebot2/xu_slam/devel/include/voice_msg/Command.h
 771ddd07fd079a28b322f7a1eb335cf3 /home/turtlebot2/xu_slam/devel/include/voice_msg/Motion.h
 efbb62f525a13bf74c2c448a3f89223b /home/turtlebot2/xu_slam/devel/include/voice_msg/Navigation.h
@@ -44,11 +36,6 @@ efbb62f525a13bf74c2c448a3f89223b /home/turtlebot2/xu_slam/devel/include/voice_ms
 8985405ee527943b80ce703055f88fbe /home/turtlebot2/xu_slam/devel/include/web_map/ort2D.h
 67529ca916b353513c39adb77c1dab7d /home/turtlebot2/xu_slam/devel/include/web_map/web_map.h
 90192ea3c406b74e13693b4a57eae13e /home/turtlebot2/xu_slam/devel/include/web_map/web_odom.h
-ac266abd3e57c525b33f58d387636a21 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/facerobot/msg/_Command.py
-5b64065eb95bed70c058f3b3aa186a5b /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/facerobot/msg/_Motion.py
-67e859285b220fa976721fd6caa6721d /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/facerobot/msg/_Navigation.py
-0f3858d2750370ba15fddcd13c8cece7 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/facerobot/msg/_Transmit.py
-00ef63eaa216cc66508bac52d995ebab /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/facerobot/msg/__init__.py
 758c9452640de049de6ef214b6301f02 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/hector_mapping/msg/_HectorDebugInfo.py
 d6ada6b19bdfae6f30475a6eea827477 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/hector_mapping/msg/_HectorIterData.py
 00cb8d1377b0df113e20e4a7d3e65630 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/hector_mapping/msg/__init__.py
@@ -89,11 +76,6 @@ ff0a05c39201fae310e64ee0b583a34b /home/turtlebot2/xu_slam/devel/lib/python2.7/di
 17be0336d7dad261ee3abf5b7619bfe2 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py
 cad1b6d0fbf72562f8d923a8a1ce97dc /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py
 06ebd408834e5d92c271e2a1ba4e64f4 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py
-610276b73a8c80a4ff3dc67fa71440f7 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Command.py
-2ba3fd3a327a16533a14d7fa2e6188bb /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Motion.py
-bf6b2331a47cd4137c0b41372f834306 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Navigation.py
-27a44e9b8177604125d6ee000bedc991 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/_Transmit.py
-850be8e5b503c921cd5567bd26e491e2 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/__init__.py
 45fcea22a4813c2cc61c1b72b66cd09f /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py
 3d2a97ff584e57ab553f2e3dcc396347 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py
 f87661bb7e3024350aa178910afaa9d0 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py
@@ -103,10 +85,6 @@ e417fc9d5c8ac6fade84c2d4eea7012e /home/turtlebot2/xu_slam/devel/lib/python2.7/di
 9b90901b5de8911ef6888784100b650d /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/web_map/msg/_ort2D.py
 10fb5c18c7a35a26300d5ae92a1752e0 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/web_map/msg/_web_map.py
 6ceaa176bc2e5471d310badf734259d9 /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/web_map/msg/_web_odom.py
-a9ba891235d1e4f21fc52001b7357e66 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/facerobot/msg/Command.lisp
-be75d58c34bfd4eb9e8503d39f4fb717 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/facerobot/msg/Motion.lisp
-dcf7419d8f78895249ef58d1cd8906b9 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/facerobot/msg/Navigation.lisp
-c9166fc548c7ef0def1a25e7d49fb64c /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/facerobot/msg/Transmit.lisp
 dbb295a2ecc1e16bc1a79a9c1a49f42a /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/hector_mapping/msg/HectorDebugInfo.lisp
 efc3b88680bca4b3c3c7178e6f64159e /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/hector_mapping/msg/HectorIterData.lisp
 5e1b575f110a1943b73fdc2162f0ef1a /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetDistanceToObstacle.lisp
@@ -135,10 +113,6 @@ cfa97e0de6274f62247a3c7fb67e8e62 /home/turtlebot2/xu_slam/devel/share/common-lis
 94ec06531dd99680fc2be623aea76ca6 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/speed_handle/msg/Victor.lisp
 96fdcdce9ab707e8f41af8055d867fef /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/speed_handle/msg/speed.lisp
 a61f4ea0d56911d1d5945374bfc01ce3 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/speed_handle/srv/Speed.lisp
-ba3e8bc0b2fd030e51c15a77f3cbab6b /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Command.lisp
-4bbfb7fe9cc730eec07986ca6a0784cf /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Motion.lisp
-5e9698ab2c16af573f1885ae6138e386 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Navigation.lisp
-a55d10e3af9178e43e59fdc9ecd2f6d2 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_interface/msg/Transmit.lisp
 8040a97e1a8edf08cb829300ed052372 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_msg/msg/Command.lisp
 0bb2dcdcaafc087aa20f2bc1bf07207a /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_msg/msg/Motion.lisp
 adad38a222778e9fc007fddf8f410597 /home/turtlebot2/xu_slam/devel/share/common-lisp/ros/voice_msg/msg/Navigation.lisp

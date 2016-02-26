@@ -93,6 +93,7 @@ hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o: /opt/ros/indigo/include/tf2/buffer_core.h
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o: /opt/ros/indigo/include/tf2/convert.h
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o: /opt/ros/indigo/include/tf2/exceptions.h
+hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o: /opt/ros/indigo/include/tf2/impl/convert.h
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o: /opt/ros/indigo/include/tf2/transform_datatypes.h
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o: /opt/ros/indigo/include/tf2/transform_storage.h
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o: /opt/ros/indigo/include/tf2_msgs/FrameGraph.h

@@ -717,6 +717,8 @@ boost/make_shared.hpp
 -
 
 /opt/ros/indigo/include/ros/message_forward.h
+cstddef
+-
 memory
 -
 
@@ -1461,10 +1463,14 @@ tf2/exceptions.h
 -
 geometry_msgs/TransformStamped.h
 -
+tf2/impl/convert.h
+-
 
 /opt/ros/indigo/include/tf2/exceptions.h
 stdexcept
 -
+
+/opt/ros/indigo/include/tf2/impl/convert.h
 
 /opt/ros/indigo/include/tf2/transform_datatypes.h
 string

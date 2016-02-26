@@ -80,6 +80,7 @@ hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/src
  /opt/ros/indigo/include/ros/wall_timer_options.h
  /opt/ros/indigo/include/rosconsole/macros_generated.h
  /opt/ros/indigo/include/sensor_msgs/CameraInfo.h
+ /opt/ros/indigo/include/sensor_msgs/CompressedImage.h
  /opt/ros/indigo/include/sensor_msgs/Image.h
  /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
  /opt/ros/indigo/include/sensor_msgs/image_encodings.h

@@ -63,8 +63,8 @@ class agv_launcher():
 
  def mapping_callback(self,data):
   #print data.msg
-  if 'odom received!' in data.msg:
-  #if 'Laser is mounted upwards.' in data.msg:
+  #if 'odom received!' in data.msg:#kinect
+  if 'Laser is mounted upwards.' in data.msg:#asus
    print '地图构建程序已启动'
    print '请启动可视化界面（roslaunch nav_staff mapping.launch）'
    rospy.sleep(10)

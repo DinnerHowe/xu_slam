@@ -943,12 +943,6 @@ cv_bridge_DIR:PATH=/opt/ros/indigo/share/cv_bridge/cmake
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/indigo/share/dynamic_reconfigure/cmake
 
-//Value Computed by CMake
-facerobot_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/facerobot
-
-//Value Computed by CMake
-facerobot_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/facerobot
-
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
 

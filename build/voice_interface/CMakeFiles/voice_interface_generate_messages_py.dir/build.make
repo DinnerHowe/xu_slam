@@ -45,15 +45,9 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 # Include the progress variables for this target.
 include voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/progress.make
 
-voice_interface/CMakeFiles/voice_interface_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/__init__.py
-
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for voice_interface"
-	cd /home/turtlebot2/xu_slam/build/voice_interface && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg --initpy
+voice_interface/CMakeFiles/voice_interface_generate_messages_py:
 
 voice_interface_generate_messages_py: voice_interface/CMakeFiles/voice_interface_generate_messages_py
-voice_interface_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface/msg/__init__.py
 voice_interface_generate_messages_py: voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/build.make
 .PHONY : voice_interface_generate_messages_py
 

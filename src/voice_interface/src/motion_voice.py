@@ -17,6 +17,7 @@ from voice_msg.msg import Command
 from actionlib_msgs.msg import *
 from coordinates import *
 
+
 class voice_interface():
  def definition(self):
   self.linear_speed,self.duration,self.angle_speed=0,0,0

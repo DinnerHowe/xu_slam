@@ -112,6 +112,7 @@ hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_se
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o: /opt/ros/indigo/include/tf2/buffer_core.h
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o: /opt/ros/indigo/include/tf2/convert.h
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o: /opt/ros/indigo/include/tf2/exceptions.h
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o: /opt/ros/indigo/include/tf2/impl/convert.h
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o: /opt/ros/indigo/include/tf2/transform_datatypes.h
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o: /opt/ros/indigo/include/tf2/transform_storage.h
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o: /opt/ros/indigo/include/tf2_msgs/FrameGraph.h

@@ -211,6 +211,8 @@ stdexcept
 /opt/ros/indigo/include/ros/macros.h
 
 /opt/ros/indigo/include/ros/message_forward.h
+cstddef
+-
 memory
 -
 
