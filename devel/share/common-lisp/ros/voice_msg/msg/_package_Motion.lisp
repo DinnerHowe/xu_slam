@@ -7,6 +7,4 @@
           PATTERN
           STEPCOUNT-VAL
           STEPCOUNT
-          METRIC-VAL
-          METRIC
 ))

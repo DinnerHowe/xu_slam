@@ -79,16 +79,16 @@
   "voice_msg/Command")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Command>)))
   "Returns md5sum for a message object of type '<Command>"
-  "3cbdeafeecf997d6c967c6edbf968861")
+  "93cb2845c321adf1c318805c4ffd4891")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Command)))
   "Returns md5sum for a message object of type 'Command"
-  "3cbdeafeecf997d6c967c6edbf968861")
+  "93cb2845c321adf1c318805c4ffd4891")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Command>)))
   "Returns full string definition for message of type '<Command>"
-  (cl:format cl:nil "Motion my_motion~%Navigation my_navigation~%Transmit my_send~%Transmit my_get~%~%================================================================================~%MSG: voice_msg/Motion~%bool motion~%int64 direction~%int64 pattern~%int64 stepcount~%int64 metric~%~%================================================================================~%MSG: voice_msg/Navigation~%bool navigation~%int64 go~%int64 direct~%int64 columnNum~%int64 rowNum~%~%================================================================================~%MSG: voice_msg/Transmit~%bool transmit~%int64 object~%int64 didian~%~%~%"))
+  (cl:format cl:nil "Motion my_motion~%Navigation my_navigation~%Transmit my_send~%Transmit my_get~%~%================================================================================~%MSG: voice_msg/Motion~%bool motion~%int64 direction~%int64 pattern~%int64 stepcount~%~%================================================================================~%MSG: voice_msg/Navigation~%bool navigation~%int64 go~%int64 direct~%int64 columnNum~%int64 rowNum~%~%================================================================================~%MSG: voice_msg/Transmit~%bool transmit~%int64 object~%int64 didian~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Command)))
   "Returns full string definition for message of type 'Command"
-  (cl:format cl:nil "Motion my_motion~%Navigation my_navigation~%Transmit my_send~%Transmit my_get~%~%================================================================================~%MSG: voice_msg/Motion~%bool motion~%int64 direction~%int64 pattern~%int64 stepcount~%int64 metric~%~%================================================================================~%MSG: voice_msg/Navigation~%bool navigation~%int64 go~%int64 direct~%int64 columnNum~%int64 rowNum~%~%================================================================================~%MSG: voice_msg/Transmit~%bool transmit~%int64 object~%int64 didian~%~%~%"))
+  (cl:format cl:nil "Motion my_motion~%Navigation my_navigation~%Transmit my_send~%Transmit my_get~%~%================================================================================~%MSG: voice_msg/Motion~%bool motion~%int64 direction~%int64 pattern~%int64 stepcount~%~%================================================================================~%MSG: voice_msg/Navigation~%bool navigation~%int64 go~%int64 direct~%int64 columnNum~%int64 rowNum~%~%================================================================================~%MSG: voice_msg/Transmit~%bool transmit~%int64 object~%int64 didian~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Command>))
   (cl:+ 0
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'my_motion))

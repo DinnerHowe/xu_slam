@@ -20,9 +20,9 @@ from coordinates import register
 class tester():
  def __init__(self): 
   rospy.init_node('tester',anonymous=False)
-  #instance=register()
-  #instance.store_coordinate()
-  register().store_coordinate()
+  instance=register()
+  instance.store_coordinate()
+  #register().store_coordinate()
   print 'okokokokok'
  
 

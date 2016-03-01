@@ -27,15 +27,13 @@ struct Motion_
     : motion(false)
     , direction(0)
     , pattern(0)
-    , stepcount(0)
-    , metric(0)  {
+    , stepcount(0)  {
     }
   Motion_(const ContainerAllocator& _alloc)
     : motion(false)
     , direction(0)
     , pattern(0)
-    , stepcount(0)
-    , metric(0)  {
+    , stepcount(0)  {
     }
 
 
@@ -51,9 +49,6 @@ struct Motion_
 
    typedef int64_t _stepcount_type;
   _stepcount_type stepcount;
-
-   typedef int64_t _metric_type;
-  _metric_type metric;
 
 
 
@@ -132,12 +127,12 @@ struct MD5Sum< ::voice_msg::Motion_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "1ccb0619e5e125cf9d4604d26cea8e26";
+    return "e8697dfd5fe04ac5e825e08bf637779c";
   }
 
   static const char* value(const ::voice_msg::Motion_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x1ccb0619e5e125cfULL;
-  static const uint64_t static_value2 = 0x9d4604d26cea8e26ULL;
+  static const uint64_t static_value1 = 0xe8697dfd5fe04ac5ULL;
+  static const uint64_t static_value2 = 0xe825e08bf637779cULL;
 };
 
 template<class ContainerAllocator>
@@ -160,7 +155,6 @@ struct Definition< ::voice_msg::Motion_<ContainerAllocator> >
 int64 direction\n\
 int64 pattern\n\
 int64 stepcount\n\
-int64 metric\n\
 ";
   }
 
@@ -183,7 +177,6 @@ namespace serialization
       stream.next(m.direction);
       stream.next(m.pattern);
       stream.next(m.stepcount);
-      stream.next(m.metric);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -210,8 +203,6 @@ struct Printer< ::voice_msg::Motion_<ContainerAllocator> >
     Printer<int64_t>::stream(s, indent + "  ", v.pattern);
     s << indent << "stepcount: ";
     Printer<int64_t>::stream(s, indent + "  ", v.stepcount);
-    s << indent << "metric: ";
-    Printer<int64_t>::stream(s, indent + "  ", v.metric);
   }
 };
 

@@ -28,8 +28,7 @@ class voice_interface():
 		    
   self.sp_dict={13:0.2,14:0.4}
 
-  self.distance_dict={16:1,17:2,18:3,19:4,20:5,21:6,22:7,23:8,24:9,25:10,26:20,27:50,28:100,
-			90:29,180:30,270:31,360:32}
+  self.distance_dict={16:1,17:2,18:3,19:4,20:5,21:6,22:7,23:8,24:9,25:10,26:20,27:50,28:100,29:90,30:180,31:270,32:360}
 
   self.angle_distance={'左转直行':pi/2,'右转直行':pi/2,'左前':pi/4,'右前':pi/4,'左后':pi*3/4,'右后':pi*3/4,'左转':pi/2,'右转':pi/2,'后转':pi}
 
@@ -41,8 +40,10 @@ class voice_interface():
 
   self.object_dic={51:'水杯',52:'书'}
   try:
+   print'检测注册物体'
    object_stored_dic=self.read('object_dic')
    if set(self.object_dic.keys()).issubset(object_stored_dic.keys()):
+    print'更新注册物体'
     self.object_dic=object_stored_dic
    else:
     pass
@@ -52,17 +53,23 @@ class voice_interface():
  def __init__(self): 
   self.definition()
   rospy.init_node('voice_interface',anonymous=False)
-  data=rospy.wait_for_message('Command', Command)
-  self.motion_director(data)
-  #测试用
-  stop=Twist()
-  stop.linear.x=0
-  stop.linear.y=0
-  stop.linear.z=0
-  pub = rospy.Publisher('/cmd_vel_mux/input/teleop', Twist, queue_size=10)
-  pub.publish(stop)
+  yes=''
+  while yes!='p': 
+   yes=raw_input('输入p退出')
+   data=Command()
+   data=rospy.wait_for_message('Command', Command)
+   self.motion_director(data)
+
+   #测试用
+   stop=Twist()
+   stop.linear.x=0
+   stop.linear.y=0
+   stop.linear.z=0
+   pub = rospy.Publisher('/cmd_vel_mux/input/teleop', Twist, queue_size=10)
+   pub.publish(stop)
   
  def motion_director(self,data):
+  #instance=register()
 ############ 运动指示 ##############
   if data.my_motion.motion:
 
@@ -72,6 +79,7 @@ class voice_interface():
    except:
     rospy.loginfo('错误运动指示')
     data.my_motion.direction=12
+    rospy.loginfo('设置运动指示，默认为:%s'%self.motion_dict[data.my_motion.direction])
 # 转距固定，线距不定
    if self.motion_dict[data.my_motion.direction]=='左前':
     self.angle_speed=self.default_speed_setting(data)
@@ -166,14 +174,13 @@ class voice_interface():
     self.duration=angle_duration
 
    if self.motion_dict[data.my_motion.direction]=='右转':
-    self.angle_speed=self.default_speed_setting(data)
+    self.angle_speed=-self.default_speed_setting(data)
     self.linear_speed=0
     try:
      angle_duration=(self.distance_dict[data.my_motion.stepcount]*pi/180)/abs(self.angle_speed)
     except:
      angle_duration=self.angle_distance[self.motion_dict[data.my_motion.direction]]/abs(self.angle_speed)
     self.duration=angle_duration
-
 
    if self.motion_dict[data.my_motion.direction]=='后转':
     self.angle_speed=self.default_speed_setting(data)
@@ -186,19 +193,24 @@ class voice_interface():
 
  #final motion
    try:
-    self.duration
-   except:
     self.duration=self.distance_dict[self.stepcount]/abs(self.linear_speed)
+   except:
+    self.duration
 
    try:
     rospy.loginfo('执行最后动作')#测试
-    rospy.loginfo('线速度：%s  角速度：%s  预计耗时：%s'%(self.linear_speed,self.angle_speed,self.duration))
-    #twist(self.angle_speed,self.duration,self.linear_speed)
+    if self.angle_speed:
+     self.tdis=abs(self.duration*self.angle_speed)
+    if self.linear_speed:
+     self.tdis=abs(self.duration*self.linear_speed)
+    rospy.loginfo('线速度：%s  角速度：%s  距离%s 预计耗时：%s'%(self.linear_speed,self.angle_speed,self.tdis,self.duration))
    except:
     pass
    self.linear_speed,self.duration,self.angle_speed=0,0,0
    rospy.loginfo('最后动作完成')#测试
-
+  #twist(self.angle_speed,self.duration,self.linear_speed)
+   self.stepcount,self.linear_speed,self.angle_speed,angle_duration,self.duration=0,0,0,0,0
+   self.tdis=0
 ############  导航（单向）##########
 #注释：position这里要是PointStamped
   if data.my_navigation.navigation:
@@ -208,19 +220,29 @@ class voice_interface():
    orientation=Quaternion()
    if data.my_navigation.go==33:
     if data.my_navigation.direct in self.direct_position_dic:
-     position.point=register.pre_register_position(self.direct_position_dic(data.my_navigation.direct))
+     position.point.x=float(register().pre_register_position(self.direct_position_dic[data.my_navigation.direct])[0])
+     position.point.y=float(register().pre_register_position(self.direct_position_dic[data.my_navigation.direct])[1])
+     position.point.z=float(register().pre_register_position(self.direct_position_dic[data.my_navigation.direct])[2])
 
      position.header.frame_id='map'
 
-     orientation=register.pre_register_orientation(self.direct_position_dic(data.my_navigation.direct))
+     orientation.x=float(register().pre_register_orientation(self.direct_position_dic[data.my_navigation.direct])[0])
+     orientation.y=float(register().pre_register_orientation(self.direct_position_dic[data.my_navigation.direct])[1])
+     orientation.z=float(register().pre_register_orientation(self.direct_position_dic[data.my_navigation.direct])[2])
+     orientation.w=float(register().pre_register_orientation(self.direct_position_dic[data.my_navigation.direct])[3])
 
     elif data.my_navigation.columnNum in self.colum_dic and data.my_navigation.rowNum in self.row_dic:
 
-     position.point=register.office_desk_matrix_position(self.colum_dic(data.my_navigation.columnNum),self.row_dic(data.my_navigation.rowNum))
+     position.point.x=float(register().office_desk_matrix_position(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[0])
+     position.point.y=float(register().office_desk_matrix_position(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[1])
+     position.point.z=float(register().office_desk_matrix_position(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[2])
 
      position.header.frame_id='map'
 
-     orientation=register.office_desk_matrix_orientation(self.colum_dic(data.my_navigation.columnNum),self.row_dic(data.my_navigation.rowNum))
+     orientation.x=float(register().office_desk_matrix_orientation(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[0])
+     orientation.y=float(register().office_desk_matrix_orientation(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[1])
+     orientation.z=float(register().office_desk_matrix_orientation(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[2])
+     orientation.w=float(register().office_desk_matrix_orientation(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[3])
 
     else:
      rospy.loginfo('this especial position not in pre-register position list')
@@ -263,20 +285,26 @@ class voice_interface():
     self.object_dic[data.my_send.object]=raw_input('请输入该物品的名称')
     self.store('object_dic',self.object_dic)
     self.trans(data.my_get)   #等有机械臂后用rospy.wait_for_message()监听机械臂
-  else:
-   rospy.loginfo('get error message')
+
 
  def trans(self,data):
   position=PointStamped()
   orientation=Quaternion()
   init_pose=rospy.wait_for_message("odom",Odometry)
   if data.didian in self.direct_position_dic:
-   position.point=register.pre_register_position(self.direct_position_dic(data.didian))
+   position.point.x=float(register().pre_register_position(self.direct_position_dic[data.didian])[0])
+   position.point.y=float(register().pre_register_position(self.direct_position_dic[data.didian])[1])
+   position.point.z=float(register().pre_register_position(self.direct_position_dic[data.didian])[2])
+   
    position.header.frame_id='map'
-   orientation=register.pre_register_orientation(self.direct_position_dic(data.didian))
+   orientation.x=float(register().pre_register_orientation(self.direct_position_dic[data.didian])[0])
+   orientation.y=float(register().pre_register_orientation(self.direct_position_dic[data.didian])[1])
+   orientation.z=float(register().pre_register_orientation(self.direct_position_dic[data.didian])[2])
+   orientation.w=float(register().pre_register_orientation(self.direct_position_dic[data.didian])[3])
+   
    state=vioce_tasks(1,position,orientation)
    #循环到任务完成为止
-   while state!=GoalStatus.SUCCEEDED:
+   while state!=GoalStatus.SUCCEEDED or :
     state=vioce_tasks(1,position,orientation)
    rospy.sleep(3)#wait for 3 sec
    #等有机械臂后用rospy.wait_for_message()监听机械臂，取东西时必要
@@ -302,22 +330,24 @@ class voice_interface():
    self.sp_dict[data.my_motion.pattern]
   except:
    data.my_motion.pattern=13
-  return data.my_motion.pattern
+  return self.sp_dict[data.my_motion.pattern]
 
  #read default items
  def read(self,name):
+  print '读取预注册物品'
   count=getpass.getuser()
   readfile=open('/home/%s/mapdata/%s.txt'%(count,name),'r')
   dic=readfile.readlines()
-  dic=eval(dic)
+  dic=eval(dic[0])
   readfile.close()
   return dic
 
  #store default items
- def store(self,name,data)
+ def store(self,name,data):
+  print'存储预注册物体'
   count=getpass.getuser()
   storefile=open('/home/%s/mapdata/%s.txt'%(count,name),'w')
-  dic=storefile.writelines(data)
+  dic=storefile.writelines('%s'%data)
   storefile.close()
 
 

@@ -8,7 +8,7 @@ import struct
 import voice_msg.msg
 
 class Command(genpy.Message):
-  _md5sum = "3cbdeafeecf997d6c967c6edbf968861"
+  _md5sum = "93cb2845c321adf1c318805c4ffd4891"
   _type = "voice_msg/Command"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """Motion my_motion
@@ -22,7 +22,6 @@ bool motion
 int64 direction
 int64 pattern
 int64 stepcount
-int64 metric
 
 ================================================================================
 MSG: voice_msg/Navigation
@@ -86,7 +85,7 @@ int64 didian
     """
     try:
       _x = self
-      buff.write(_struct_B4qB4qB2qB2q.pack(_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian))
+      buff.write(_struct_B3qB4qB2qB2q.pack(_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -107,8 +106,8 @@ int64 didian
       end = 0
       _x = self
       start = end
-      end += 100
-      (_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian,) = _struct_B4qB4qB2qB2q.unpack(str[start:end])
+      end += 92
+      (_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian,) = _struct_B3qB4qB2qB2q.unpack(str[start:end])
       self.my_motion.motion = bool(self.my_motion.motion)
       self.my_navigation.navigation = bool(self.my_navigation.navigation)
       self.my_send.transmit = bool(self.my_send.transmit)
@@ -126,7 +125,7 @@ int64 didian
     """
     try:
       _x = self
-      buff.write(_struct_B4qB4qB2qB2q.pack(_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian))
+      buff.write(_struct_B3qB4qB2qB2q.pack(_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -148,8 +147,8 @@ int64 didian
       end = 0
       _x = self
       start = end
-      end += 100
-      (_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_motion.metric, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian,) = _struct_B4qB4qB2qB2q.unpack(str[start:end])
+      end += 92
+      (_x.my_motion.motion, _x.my_motion.direction, _x.my_motion.pattern, _x.my_motion.stepcount, _x.my_navigation.navigation, _x.my_navigation.go, _x.my_navigation.direct, _x.my_navigation.columnNum, _x.my_navigation.rowNum, _x.my_send.transmit, _x.my_send.object, _x.my_send.didian, _x.my_get.transmit, _x.my_get.object, _x.my_get.didian,) = _struct_B3qB4qB2qB2q.unpack(str[start:end])
       self.my_motion.motion = bool(self.my_motion.motion)
       self.my_navigation.navigation = bool(self.my_navigation.navigation)
       self.my_send.transmit = bool(self.my_send.transmit)
@@ -159,4 +158,4 @@ int64 didian
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_B4qB4qB2qB2q = struct.Struct("<B4qB4qB2qB2q")
+_struct_B3qB4qB2qB2q = struct.Struct("<B3qB4qB2qB2q")

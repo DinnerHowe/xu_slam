@@ -27,18 +27,17 @@ class voice_interface_tester():
    #voice_command.my_get.object=52
    #voice_command.my_get.didian=39
 #导航
-   #voice_command.my_navigation.navigation=1
-   #voice_command.my_navigation.go=33
-   #voice_command.my_navigation.direct=34
+   voice_command.my_navigation.navigation=1
+   voice_command.my_navigation.go=33
+   voice_command.my_navigation.direct=38
    #voice_command.my_navigation.columnNum=40
    #voice_command.my_navigation.rowNum=46
 
 #动作指示
    #voice_command.my_motion.motion=1
-   #voice_command.my_motion.direction=1
+   #voice_command.my_motion.direction=12
    #voice_command.my_motion.pattern=13
-   #voice_command.my_motion.stepcount=16
-   #voice_command.my_motion.metric=57
+   #voice_command.my_motion.stepcount=30
 
    pub.publish(voice_command)
 

@@ -131,12 +131,12 @@ struct MD5Sum< ::voice_msg::Command_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "3cbdeafeecf997d6c967c6edbf968861";
+    return "93cb2845c321adf1c318805c4ffd4891";
   }
 
   static const char* value(const ::voice_msg::Command_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x3cbdeafeecf997d6ULL;
-  static const uint64_t static_value2 = 0xc967c6edbf968861ULL;
+  static const uint64_t static_value1 = 0x93cb2845c321adf1ULL;
+  static const uint64_t static_value2 = 0xc318805c4ffd4891ULL;
 };
 
 template<class ContainerAllocator>
@@ -166,7 +166,6 @@ bool motion\n\
 int64 direction\n\
 int64 pattern\n\
 int64 stepcount\n\
-int64 metric\n\
 \n\
 ================================================================================\n\
 MSG: voice_msg/Navigation\n\
