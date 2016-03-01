@@ -1866,32 +1866,6 @@ run_tests_rplidar_python_roslaunch-check_launch/fast:
 .PHONY : run_tests_rplidar_python_roslaunch-check_launch/fast
 
 #=============================================================================
-# Target rules for targets named rplidarNode
-
-# Build rule for target.
-rplidarNode: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rplidarNode
-.PHONY : rplidarNode
-
-# fast build rule for target.
-rplidarNode/fast:
-	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
-.PHONY : rplidarNode/fast
-
-#=============================================================================
-# Target rules for targets named rplidarNodeClient
-
-# Build rule for target.
-rplidarNodeClient: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rplidarNodeClient
-.PHONY : rplidarNodeClient
-
-# fast build rule for target.
-rplidarNodeClient/fast:
-	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
-.PHONY : rplidarNodeClient/fast
-
-#=============================================================================
 # Target rules for targets named _speed_handle_generate_messages_check_deps_Speed
 
 # Build rule for target.
@@ -3960,8 +3934,6 @@ help:
 	@echo "... run_tests_rplidar_python"
 	@echo "... run_tests_rplidar_python_roslaunch-check"
 	@echo "... run_tests_rplidar_python_roslaunch-check_launch"
-	@echo "... rplidarNode"
-	@echo "... rplidarNodeClient"
 	@echo "... _speed_handle_generate_messages_check_deps_Speed"
 	@echo "... _speed_handle_generate_messages_check_deps_Victor"
 	@echo "... _speed_handle_generate_messages_check_deps_speed"

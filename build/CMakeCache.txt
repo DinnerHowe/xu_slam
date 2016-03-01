@@ -1241,12 +1241,6 @@ rplidar_python_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/rplidar_python
 //Value Computed by CMake
 rplidar_python_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/rplidar_python
 
-//Value Computed by CMake
-rplidar_ros_BINARY_DIR:STATIC=/home/turtlebot2/xu_slam/build/rplidar_ros
-
-//Value Computed by CMake
-rplidar_ros_SOURCE_DIR:STATIC=/home/turtlebot2/xu_slam/src/rplidar_ros
-
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
 
@@ -1429,7 +1423,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=43
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=42
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
