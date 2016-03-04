@@ -62,7 +62,8 @@ class register():
 
  def store_data(self,dictionary):
   for name in set(self.name_sp)-set(dictionary.keys()):
-   dictionary=self.store_update(name,dictionary)
+   #dictionary=self.store_update(name,dictionary)
+   dictionary=self.store_update_point_only(name,dictionary)
    print dictionary
   count=getpass.getuser()
   write=open('/home/%s/mapdata/pre_regist_pose.txt'%count,'w')
@@ -72,7 +73,7 @@ class register():
 
  def store_update(self,name,dictionary):
   if name not in dictionary:
-   rospy.loginfo('请使用2D Pose Estimate输入%s的位置'%name.split('_')[0])
+   rospy.loginfo('请使用2D Pose Estimate输入%s(行列)的位置'%name.split('_')[0])
    data=rospy.wait_for_message('/initialpose', PoseWithCovarianceStamped)
    if len(name.split('_position'))>1:
     rospy.loginfo('正在注册position')
@@ -82,11 +83,22 @@ class register():
     rospy.loginfo('正在注册orientation')
     dictionary['%s'%name]='%s,%s,%s,%s'%(data.pose.pose.orientation.x,data.pose.pose.orientation.y,data.pose.pose.orientation.z,data.pose.pose.orientation.w)
     dictionary['%s'%name.split('_orientation')[0]+'_position']='%s,%s,%s'%(data.pose.pose.position.x,data.pose.pose.position.y,data.pose.pose.position.z)
-   #or use geometry_msgs/PointStamped
-   #data=rospy.wait_for_message('/clicked_point',PointStamped)
-   #dictionary['%s_position'%name]=data.point
-   #dictionary['%s_orientation'%name]=Quaternion()
-   rospy.loginfo('注册%s的位置'%name)
+   rospy.loginfo('注册%s的位置'%name.split('_position'))
+  return dictionary
+
+#or use geometry_msgs/PointStamped
+ def store_update_point_only(self,name,dictionary):
+  if name not in dictionary:
+   rospy.loginfo('请使用Publish Point输入%s(行,列)的位置'%name.split('_')[0])
+   data=rospy.wait_for_message('/clicked_point',PointStamped)
+   if len(name.split('_position'))>1:
+    dictionary['%s'%name]='%s,%s,%s'%(data.point.x,data.point.y,data.point.z)
+    dictionary['%s'%name.split('_position')[0]+'_orientation']='%s,%s,%s,%s'%(0,0,0,1)
+    rospy.loginfo('注册%s的位置'%name.split('_position'))
+   if len(name.split('_orientation'))>1:
+    dictionary['%s'%name.split('_orientation')[0]+'_position']='%s,%s,%s'%(data.point.x,data.point.y,data.point.z)
+    dictionary['%s'%name]='%s,%s,%s,%s'%(0,0,0,1)
+   rospy.loginfo('注册%s的位置'%name.split('_position'))
   return dictionary
 
 
@@ -115,14 +127,13 @@ class register():
 
  def office_desk_matrix_position(self,column,row):
   self.defination()
-  point=self.office_matrix_orientation['%s%s'%(row,column)].split(',')
+  point=self.office_matrix_position['%s%s'%(row,column)].split(',')
   return point
 
 
  def office_desk_matrix_orientation(self,column,row):
   self.defination()
   orientation=self.office_matrix_orientation['%s%s'%(row,column)].split(',')
-  
   return orientation
 
  def read_data(self):

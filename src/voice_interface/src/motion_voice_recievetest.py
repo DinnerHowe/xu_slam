@@ -10,7 +10,7 @@ This program is free software; you can redistribute it and/or modify
 This programm is tested on kuboki base turtlebot. 
 
 """
-import rospy,getpass
+import rospy,getpass,os,stat
 from math import *
 from actions_reference import *
 from geometry_msgs import *
@@ -214,7 +214,12 @@ class voice_interface():
 ############  导航（单向）##########
 #注释：position这里要是PointStamped
   if data.my_navigation.navigation:
-   rospy.loginfo('导航')#测试
+   try:
+    self.direct_position_dic[data.my_navigation.direct]
+    rospy.loginfo('导航到%s'%self.direct_position_dic[data.my_navigation.direct])#测试
+   except:
+    rospy.loginfo('导航到第%s列，第%s行'%(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum]))#测试
+
    register().store_coordinate()
    position=PointStamped()
    orientation=Quaternion()
@@ -231,8 +236,10 @@ class voice_interface():
      orientation.z=float(register().pre_register_orientation(self.direct_position_dic[data.my_navigation.direct])[2])
      orientation.w=float(register().pre_register_orientation(self.direct_position_dic[data.my_navigation.direct])[3])
 
-    elif data.my_navigation.columnNum in self.colum_dic and data.my_navigation.rowNum in self.row_dic:
-
+    elif (data.my_navigation.columnNum in self.colum_dic) and (data.my_navigation.rowNum in self.row_dic):
+     rospy.loginfo('查询工位矩阵坐标')
+     print self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum]
+     print register().office_desk_matrix_position(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])
      position.point.x=float(register().office_desk_matrix_position(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[0])
      position.point.y=float(register().office_desk_matrix_position(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[1])
      position.point.z=float(register().office_desk_matrix_position(self.colum_dic[data.my_navigation.columnNum],self.row_dic[data.my_navigation.rowNum])[2])
@@ -248,49 +255,57 @@ class voice_interface():
      rospy.loginfo('this especial position not in pre-register position list')
    else:
     rospy.loginfo('navigation error message')
+    
+   print position,'\n',orientation
    state=vioce_tasks(1,position,orientation)
+   initial_time=rospy.Time.now()
 #循环到任务完成为止？？？？？
    while state!=GoalStatus.SUCCEEDED:
+    if rospy.Time.now()-initial_time>rospy.Duration.from_sec(180):
+     rospy.loginfo( 'timeout break')
+     break
     state=vioce_tasks(1,position,orientation)
 
 ###############送东西(双向)###################
   if data.my_send.transmit:
    rospy.loginfo('送东西')#测试
    register().store_coordinate()
+   init_pose=rospy.wait_for_message("odom",Odometry)
    if data.my_send.object in self.object_dic:
     obj=''
-    while obj!='y' or obj!='Y':
-     obj=raw_input("请放%s，然后按y确认"%data.my_send.object)  #等有机械臂后用rospy.wait_for_message()监听机械臂
-    self.trans(data.my_send)
+    while obj.lower()!='y':
+     obj=raw_input("请放%s，然后按y确认: "%self.object_dic[data.my_send.object])  #等有机械臂后用rospy.wait_for_message()监听机械臂
+    self.trans(data.my_send,init_pose)
    else:
-    rospy.loginfo('%s not in object list'%data.object)
+    rospy.loginfo('%s not in object list'%data.my_send.object)
     rospy.loginfo('adding new object into object list')
-    self.object_dic[data.my_send.object]=raw_input('请输入该物品的名称')
+    self.object_dic[data.my_send.object]=raw_input('请输入该物品的名称: ')
     self.store('object_dic',self.object_dic)
     obj=''
-    while obj!='y' or obj!='Y':
-     obj=raw_input("请放%s，然后按y确认"%data.my_send.object)  #等有机械臂后用rospy.wait_for_message()监听机械臂
-    self.trans(data.my_send)
+    while obj.lower()!='y':
+     obj=raw_input("请放%s，然后按y确认: "%self.object_dic[data.my_send.object])  #等有机械臂后用rospy.wait_for_message()监听机械臂
+    self.trans(data.my_send,init_pose)
     rospy.loginfo('%s已经送达'%self.object_dic[data.my_send.object])
 
 ###############取东西（双向）##################
   if data.my_get.transmit:
-   rospy.loginfo('取东西')#测试
+   rospy.loginfo('任务：取%s'%self.object_dic[data.my_get.object])#测试
    register().store_coordinate()
-   if data.my_send.object in self.object_dic:
-    self.trans(data.my_get)
+   init_pose=rospy.wait_for_message("odom",Odometry)
+   if data.my_get.object in self.object_dic:
+    self.trans(data.my_get,init_pose)
    else:
-    rospy.loginfo('%s not in object list'%data.object)
+    rospy.loginfo('%s not in object list'%self.object_dic[data.my_get.object])
     rospy.loginfo('adding new object into object list')
-    self.object_dic[data.my_send.object]=raw_input('请输入该物品的名称')
+    self.object_dic[data.my_get.object]=raw_input('请输入该物品的名称')
     self.store('object_dic',self.object_dic)
-    self.trans(data.my_get)   #等有机械臂后用rospy.wait_for_message()监听机械臂
+    self.trans(data.my_get,init_pose)#等有机械臂后用rospy.wait_for_message()监听机械臂
 
 
- def trans(self,data):
+ def trans(self,data,init_pose):
   position=PointStamped()
   orientation=Quaternion()
-  init_pose=rospy.wait_for_message("odom",Odometry)
+  rospy.loginfo('目的地%s'%self.direct_position_dic[data.didian])
   if data.didian in self.direct_position_dic:
    position.point.x=float(register().pre_register_position(self.direct_position_dic[data.didian])[0])
    position.point.y=float(register().pre_register_position(self.direct_position_dic[data.didian])[1])
@@ -304,14 +319,26 @@ class voice_interface():
    
    state=vioce_tasks(1,position,orientation)
    #循环到任务完成为止
-   while state!=GoalStatus.SUCCEEDED or :
+   initial_time=rospy.Time.now()
+   while state!=GoalStatus.SUCCEEDED:
+    if rospy.Time.now()-initial_time>rospy.Duration.from_sec(180):
+     rospy.loginfo('timeout break')
+     break
     state=vioce_tasks(1,position,orientation)
    rospy.sleep(3)#wait for 3 sec
-   #等有机械臂后用rospy.wait_for_message()监听机械臂，取东西时必要
+   obj=''
+   while obj.lower()!='y':
+    obj=raw_input("接收%s，然后按y确认: "%self.object_dic[data.object]) #等有机械臂后用rospy.wait_for_message()监听机械臂，取东西时必要
    position.point=init_pose.pose.pose.position
    position.header.frame_id='map'
    orientation=init_pose.pose.pose.orientation
    state=vioce_tasks(1,position,orientation)
+   initial_time=rospy.Time.now()
+   while state!=GoalStatus.SUCCEEDED:
+    if rospy.Time.now()-initial_time>rospy.Duration.from_sec(180):
+     rospy.loginfo('timeout break')
+     break
+    state=vioce_tasks(1,position,orientation)
   else:
    rospy.loginfo('this especial position not in pre-register position list')
 
@@ -346,6 +373,11 @@ class voice_interface():
  def store(self,name,data):
   print'存储预注册物体'
   count=getpass.getuser()
+  if os.path.exists('home/%s/mapdata'%count):
+   pass
+  else:
+   os.makedirs('home/%s/mapdata'%count)
+   os.chmod('home/%s/mapdata'%count,stat.S_IRWXU)
   storefile=open('/home/%s/mapdata/%s.txt'%(count,name),'w')
   dic=storefile.writelines('%s'%data)
   storefile.close()
