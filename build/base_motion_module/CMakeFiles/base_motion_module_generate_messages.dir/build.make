@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for base_motion_module_generate_messages.
 
@@ -56,10 +56,10 @@ base_motion_module/CMakeFiles/base_motion_module_generate_messages.dir/build: ba
 .PHONY : base_motion_module/CMakeFiles/base_motion_module_generate_messages.dir/build
 
 base_motion_module/CMakeFiles/base_motion_module_generate_messages.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/base_motion_module && $(CMAKE_COMMAND) -P CMakeFiles/base_motion_module_generate_messages.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/base_motion_module && $(CMAKE_COMMAND) -P CMakeFiles/base_motion_module_generate_messages.dir/cmake_clean.cmake
 .PHONY : base_motion_module/CMakeFiles/base_motion_module_generate_messages.dir/clean
 
 base_motion_module/CMakeFiles/base_motion_module_generate_messages.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/base_motion_module /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/base_motion_module /home/turtlebot2/xu_slam/build/base_motion_module/CMakeFiles/base_motion_module_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/base_motion_module /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/base_motion_module /home/turtlebot/xu_slam/build/base_motion_module/CMakeFiles/base_motion_module_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : base_motion_module/CMakeFiles/base_motion_module_generate_messages.dir/depend
 

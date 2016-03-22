@@ -2,7 +2,7 @@
 
 message(STATUS "laser: 2 messages, 0 services")
 
-set(MSG_I_FLAGS "-Ilaser:/home/turtlebot2/xu_slam/src/laser/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ilaser:/home/turtlebot/xu_slam/src/laser/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,14 +15,14 @@ add_custom_target(laser_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/laser/msg/LaserLikihood.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/laser/msg/LaserLikihood.msg" NAME_WE)
 add_custom_target(_laser_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "laser" "/home/turtlebot2/xu_slam/src/laser/msg/LaserLikihood.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "laser" "/home/turtlebot/xu_slam/src/laser/msg/LaserLikihood.msg" ""
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/laser/msg/warning.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/laser/msg/warning.msg" NAME_WE)
 add_custom_target(_laser_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "laser" "/home/turtlebot2/xu_slam/src/laser/msg/warning.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "laser" "/home/turtlebot/xu_slam/src/laser/msg/warning.msg" ""
 )
 
 #
@@ -32,13 +32,13 @@ add_custom_target(_laser_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(laser
-  "/home/turtlebot2/xu_slam/src/laser/msg/LaserLikihood.msg"
+  "/home/turtlebot/xu_slam/src/laser/msg/warning.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/laser
 )
 _generate_msg_cpp(laser
-  "/home/turtlebot2/xu_slam/src/laser/msg/warning.msg"
+  "/home/turtlebot/xu_slam/src/laser/msg/LaserLikihood.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/laser
@@ -58,9 +58,9 @@ add_custom_target(laser_generate_messages_cpp
 add_dependencies(laser_generate_messages laser_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/laser/msg/LaserLikihood.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/laser/msg/LaserLikihood.msg" NAME_WE)
 add_dependencies(laser_generate_messages_cpp _laser_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/laser/msg/warning.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/laser/msg/warning.msg" NAME_WE)
 add_dependencies(laser_generate_messages_cpp _laser_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -73,13 +73,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS laser_generate_messages_cpp)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(laser
-  "/home/turtlebot2/xu_slam/src/laser/msg/LaserLikihood.msg"
+  "/home/turtlebot/xu_slam/src/laser/msg/warning.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/laser
 )
 _generate_msg_lisp(laser
-  "/home/turtlebot2/xu_slam/src/laser/msg/warning.msg"
+  "/home/turtlebot/xu_slam/src/laser/msg/LaserLikihood.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/laser
@@ -99,9 +99,9 @@ add_custom_target(laser_generate_messages_lisp
 add_dependencies(laser_generate_messages laser_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/laser/msg/LaserLikihood.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/laser/msg/LaserLikihood.msg" NAME_WE)
 add_dependencies(laser_generate_messages_lisp _laser_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/laser/msg/warning.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/laser/msg/warning.msg" NAME_WE)
 add_dependencies(laser_generate_messages_lisp _laser_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -114,13 +114,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS laser_generate_messages_lisp)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(laser
-  "/home/turtlebot2/xu_slam/src/laser/msg/LaserLikihood.msg"
+  "/home/turtlebot/xu_slam/src/laser/msg/warning.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/laser
 )
 _generate_msg_py(laser
-  "/home/turtlebot2/xu_slam/src/laser/msg/warning.msg"
+  "/home/turtlebot/xu_slam/src/laser/msg/LaserLikihood.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/laser
@@ -140,9 +140,9 @@ add_custom_target(laser_generate_messages_py
 add_dependencies(laser_generate_messages laser_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/laser/msg/LaserLikihood.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/laser/msg/LaserLikihood.msg" NAME_WE)
 add_dependencies(laser_generate_messages_py _laser_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/laser/msg/warning.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/laser/msg/warning.msg" NAME_WE)
 add_dependencies(laser_generate_messages_py _laser_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

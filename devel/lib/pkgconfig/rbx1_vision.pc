@@ -1,8 +1,8 @@
-prefix=/home/turtlebot2/xu_slam/devel
+prefix=/home/turtlebot/xu_slam/devel
 
 Name: rbx1_vision
 Description: Description of rbx1_vision
 Version: 0.4.0
 Cflags: 
-Libs: -L/home/turtlebot2/xu_slam/devel/lib 
+Libs: -L/home/turtlebot/xu_slam/devel/lib 
 Requires: 

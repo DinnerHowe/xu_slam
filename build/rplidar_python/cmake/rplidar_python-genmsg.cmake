@@ -1,8 +1,10 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "rplidar_python: 3 messages, 0 services")
+message(WARNING "Invoking generate_messages() without having added any message or service file before.
+You should either add add_message_files() and/or add_service_files() calls or remove the invocation of generate_messages().")
+message(STATUS "rplidar_python: 0 messages, 0 services")
 
-set(MSG_I_FLAGS "-Irplidar_python:/home/turtlebot2/xu_slam/src/rplidar_python/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,45 +17,12 @@ add_custom_target(rplidar_python_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg" NAME_WE)
-add_custom_target(_rplidar_python_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rplidar_python" "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg" ""
-)
-
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg" NAME_WE)
-add_custom_target(_rplidar_python_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rplidar_python" "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg" ""
-)
-
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg" NAME_WE)
-add_custom_target(_rplidar_python_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rplidar_python" "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg" ""
-)
-
 #
 #  langs = gencpp;genlisp;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
-_generate_msg_cpp(rplidar_python
-  "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rplidar_python
-)
-_generate_msg_cpp(rplidar_python
-  "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rplidar_python
-)
-_generate_msg_cpp(rplidar_python
-  "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rplidar_python
-)
 
 ### Generating Services
 
@@ -69,12 +38,6 @@ add_custom_target(rplidar_python_generate_messages_cpp
 add_dependencies(rplidar_python_generate_messages rplidar_python_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg" NAME_WE)
-add_dependencies(rplidar_python_generate_messages_cpp _rplidar_python_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg" NAME_WE)
-add_dependencies(rplidar_python_generate_messages_cpp _rplidar_python_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg" NAME_WE)
-add_dependencies(rplidar_python_generate_messages_cpp _rplidar_python_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(rplidar_python_gencpp)
@@ -85,24 +48,6 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rplidar_python_generate_messages_cp
 
 ### Section generating for lang: genlisp
 ### Generating Messages
-_generate_msg_lisp(rplidar_python
-  "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rplidar_python
-)
-_generate_msg_lisp(rplidar_python
-  "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rplidar_python
-)
-_generate_msg_lisp(rplidar_python
-  "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rplidar_python
-)
 
 ### Generating Services
 
@@ -118,12 +63,6 @@ add_custom_target(rplidar_python_generate_messages_lisp
 add_dependencies(rplidar_python_generate_messages rplidar_python_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg" NAME_WE)
-add_dependencies(rplidar_python_generate_messages_lisp _rplidar_python_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg" NAME_WE)
-add_dependencies(rplidar_python_generate_messages_lisp _rplidar_python_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg" NAME_WE)
-add_dependencies(rplidar_python_generate_messages_lisp _rplidar_python_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(rplidar_python_genlisp)
@@ -134,24 +73,6 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rplidar_python_generate_messages_li
 
 ### Section generating for lang: genpy
 ### Generating Messages
-_generate_msg_py(rplidar_python
-  "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rplidar_python
-)
-_generate_msg_py(rplidar_python
-  "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rplidar_python
-)
-_generate_msg_py(rplidar_python
-  "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rplidar_python
-)
 
 ### Generating Services
 
@@ -167,12 +88,6 @@ add_custom_target(rplidar_python_generate_messages_py
 add_dependencies(rplidar_python_generate_messages rplidar_python_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg" NAME_WE)
-add_dependencies(rplidar_python_generate_messages_py _rplidar_python_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg" NAME_WE)
-add_dependencies(rplidar_python_generate_messages_py _rplidar_python_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg" NAME_WE)
-add_dependencies(rplidar_python_generate_messages_py _rplidar_python_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(rplidar_python_genpy)

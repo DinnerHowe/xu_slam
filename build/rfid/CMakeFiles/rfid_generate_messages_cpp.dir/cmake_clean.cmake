@@ -1,9 +1,9 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/rfid_generate_messages_cpp"
-  "/home/turtlebot2/xu_slam/devel/include/rfid/RFIDreadRow.h"
-  "/home/turtlebot2/xu_slam/devel/include/rfid/TransferData.h"
-  "/home/turtlebot2/xu_slam/devel/include/rfid/rfid_info.h"
-  "/home/turtlebot2/xu_slam/devel/include/rfid/rfid_odom.h"
+  "/home/turtlebot/xu_slam/devel/include/rfid/rfid_info.h"
+  "/home/turtlebot/xu_slam/devel/include/rfid/rfid_odom.h"
+  "/home/turtlebot/xu_slam/devel/include/rfid/RFIDreadRow.h"
+  "/home/turtlebot/xu_slam/devel/include/rfid/TransferData.h"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/turtlebot2/xu_slam/src/base_motion_module
+# Install script for directory: /home/turtlebot/xu_slam/src/base_motion_module
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot2/xu_slam/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot/xu_slam/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,45 +33,45 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_motion_module/cmake" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_module-msg-paths.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_motion_module/cmake" TYPE FILE FILES "/home/turtlebot/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_module-msg-paths.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/base_motion_module")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/base_motion_module")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/base_motion_module")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/base_motion_module")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_module.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_module.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_motion_module/cmake" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_module-msg-extras.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_motion_module/cmake" TYPE FILE FILES "/home/turtlebot/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_module-msg-extras.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_motion_module/cmake" TYPE FILE FILES
-    "/home/turtlebot2/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_moduleConfig.cmake"
-    "/home/turtlebot2/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_moduleConfig-version.cmake"
+    "/home/turtlebot/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_moduleConfig.cmake"
+    "/home/turtlebot/xu_slam/build/base_motion_module/catkin_generated/installspace/base_motion_moduleConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_motion_module" TYPE FILE FILES "/home/turtlebot2/xu_slam/src/base_motion_module/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_motion_module" TYPE FILE FILES "/home/turtlebot/xu_slam/src/base_motion_module/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/base_motion_module" TYPE PROGRAM FILES "/home/turtlebot2/xu_slam/src/base_motion_module/BaseMotionModule/src")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/base_motion_module" TYPE PROGRAM FILES "/home/turtlebot/xu_slam/src/base_motion_module/BaseMotionModule/src")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_motion_module" TYPE FILE FILES
-    "/home/turtlebot2/xu_slam/src/base_motion_module/base_action.launch"
-    "/home/turtlebot2/xu_slam/src/base_motion_module/follower.launch"
-    "/home/turtlebot2/xu_slam/src/base_motion_module/stay.launch"
+    "/home/turtlebot/xu_slam/src/base_motion_module/base_action.launch"
+    "/home/turtlebot/xu_slam/src/base_motion_module/follower.launch"
+    "/home/turtlebot/xu_slam/src/base_motion_module/stay.launch"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

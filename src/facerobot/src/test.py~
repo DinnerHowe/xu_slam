@@ -1,0 +1,14 @@
+#test.py  
+def HelloWorld():  
+    print "Hello World"  
+def add(a, b):  
+    return a+b  
+def TestDict(dict):  
+    print dict  
+    dict["Age"] = 17  
+    return dict  
+class Person:  
+    def greet(self, greetStr):  
+        print greetStr  
+#print add(5,7)  
+#a = raw_input("Enter To Continue...")

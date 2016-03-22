@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for run_tests_rfid_roslaunch-check_launch.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/progress.make
 
 rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch:
-	cd /home/turtlebot2/xu_slam/build/rfid && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot2/xu_slam/build/test_results/rfid/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot2/xu_slam/build/test_results/rfid /opt/ros/indigo/share/roslaunch/cmake/../scripts/roslaunch-check\ -o\ '/home/turtlebot2/xu_slam/build/test_results/rfid/roslaunch-check_launch.xml'\ '/home/turtlebot2/xu_slam/src/rfid/launch'\ 
+	cd /home/turtlebot/xu_slam/build/rfid && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot/xu_slam/build/test_results/rfid/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot/xu_slam/build/test_results/rfid /opt/ros/indigo/share/roslaunch/cmake/../scripts/roslaunch-check\ -o\ '/home/turtlebot/xu_slam/build/test_results/rfid/roslaunch-check_launch.xml'\ '/home/turtlebot/xu_slam/src/rfid/launch'\ 
 
 run_tests_rfid_roslaunch-check_launch: rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch
 run_tests_rfid_roslaunch-check_launch: rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/build.make
@@ -57,10 +57,10 @@ rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/build: run_tests_rfid_
 .PHONY : rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/build
 
 rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/rfid && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/rfid && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/cmake_clean.cmake
 .PHONY : rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/clean
 
 rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/rfid /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/rfid /home/turtlebot2/xu_slam/build/rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/rfid /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/rfid /home/turtlebot/xu_slam/build/rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rfid/CMakeFiles/run_tests_rfid_roslaunch-check_launch.dir/depend
 

@@ -2,7 +2,7 @@
 
 message(STATUS "rfid: 4 messages, 0 services")
 
-set(MSG_I_FLAGS "-Irfid:/home/turtlebot2/xu_slam/src/rfid/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Irfid:/home/turtlebot/xu_slam/src/rfid/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,24 +15,24 @@ add_custom_target(rfid_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/RFIDreadRow.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/TransferData.msg" NAME_WE)
 add_custom_target(_rfid_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid" "/home/turtlebot2/xu_slam/src/rfid/msg/RFIDreadRow.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid" "/home/turtlebot/xu_slam/src/rfid/msg/TransferData.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/TransferData.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/RFIDreadRow.msg" NAME_WE)
 add_custom_target(_rfid_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid" "/home/turtlebot2/xu_slam/src/rfid/msg/TransferData.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid" "/home/turtlebot/xu_slam/src/rfid/msg/RFIDreadRow.msg" ""
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_info.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/rfid_odom.msg" NAME_WE)
 add_custom_target(_rfid_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid" "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_info.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid" "/home/turtlebot/xu_slam/src/rfid/msg/rfid_odom.msg" "geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/Pose"
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_odom.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/rfid_info.msg" NAME_WE)
 add_custom_target(_rfid_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid" "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_odom.msg" "geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid" "/home/turtlebot/xu_slam/src/rfid/msg/rfid_info.msg" ""
 )
 
 #
@@ -42,27 +42,27 @@ add_custom_target(_rfid_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/RFIDreadRow.msg"
+  "/home/turtlebot/xu_slam/src/rfid/msg/rfid_info.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rfid
 )
 _generate_msg_cpp(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/TransferData.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rfid
-)
-_generate_msg_cpp(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_info.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rfid
-)
-_generate_msg_cpp(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_odom.msg"
+  "/home/turtlebot/xu_slam/src/rfid/msg/rfid_odom.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rfid
+)
+_generate_msg_cpp(rfid
+  "/home/turtlebot/xu_slam/src/rfid/msg/RFIDreadRow.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rfid
+)
+_generate_msg_cpp(rfid
+  "/home/turtlebot/xu_slam/src/rfid/msg/TransferData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rfid
 )
 
@@ -80,13 +80,13 @@ add_custom_target(rfid_generate_messages_cpp
 add_dependencies(rfid_generate_messages rfid_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/RFIDreadRow.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/TransferData.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_cpp _rfid_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/TransferData.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/RFIDreadRow.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_cpp _rfid_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_info.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/rfid_odom.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_cpp _rfid_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_odom.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/rfid_info.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_cpp _rfid_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -99,27 +99,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rfid_generate_messages_cpp)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/RFIDreadRow.msg"
+  "/home/turtlebot/xu_slam/src/rfid/msg/rfid_info.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rfid
 )
 _generate_msg_lisp(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/TransferData.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rfid
-)
-_generate_msg_lisp(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_info.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rfid
-)
-_generate_msg_lisp(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_odom.msg"
+  "/home/turtlebot/xu_slam/src/rfid/msg/rfid_odom.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rfid
+)
+_generate_msg_lisp(rfid
+  "/home/turtlebot/xu_slam/src/rfid/msg/RFIDreadRow.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rfid
+)
+_generate_msg_lisp(rfid
+  "/home/turtlebot/xu_slam/src/rfid/msg/TransferData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rfid
 )
 
@@ -137,13 +137,13 @@ add_custom_target(rfid_generate_messages_lisp
 add_dependencies(rfid_generate_messages rfid_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/RFIDreadRow.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/TransferData.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_lisp _rfid_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/TransferData.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/RFIDreadRow.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_lisp _rfid_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_info.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/rfid_odom.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_lisp _rfid_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_odom.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/rfid_info.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_lisp _rfid_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -156,27 +156,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rfid_generate_messages_lisp)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/RFIDreadRow.msg"
+  "/home/turtlebot/xu_slam/src/rfid/msg/rfid_info.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rfid
 )
 _generate_msg_py(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/TransferData.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rfid
-)
-_generate_msg_py(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_info.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rfid
-)
-_generate_msg_py(rfid
-  "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_odom.msg"
+  "/home/turtlebot/xu_slam/src/rfid/msg/rfid_odom.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rfid
+)
+_generate_msg_py(rfid
+  "/home/turtlebot/xu_slam/src/rfid/msg/RFIDreadRow.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rfid
+)
+_generate_msg_py(rfid
+  "/home/turtlebot/xu_slam/src/rfid/msg/TransferData.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rfid
 )
 
@@ -194,13 +194,13 @@ add_custom_target(rfid_generate_messages_py
 add_dependencies(rfid_generate_messages rfid_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/RFIDreadRow.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/TransferData.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_py _rfid_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/TransferData.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/RFIDreadRow.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_py _rfid_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_info.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/rfid_odom.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_py _rfid_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_odom.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid/msg/rfid_info.msg" NAME_WE)
 add_dependencies(rfid_generate_messages_py _rfid_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

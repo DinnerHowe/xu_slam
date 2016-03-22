@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot2/xu_slam/build/CMakeFiles /home/turtlebot2/xu_slam/build/voice_interface/CMakeFiles/progress.marks
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot2/xu_slam/build/CMakeFiles 0
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/xu_slam/build/CMakeFiles /home/turtlebot/xu_slam/build/voice_interface/CMakeFiles/progress.marks
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/xu_slam/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/clean
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/clean
 .PHONY : clean
 
 # The main clean target
@@ -136,22 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/preinstall
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/preinstall
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 voice_interface/CMakeFiles/_run_tests_voice_interface.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_run_tests_voice_interface.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_run_tests_voice_interface.dir/rule
 .PHONY : voice_interface/CMakeFiles/_run_tests_voice_interface.dir/rule
 
 # Convenience name for target.
@@ -160,12 +160,12 @@ _run_tests_voice_interface: voice_interface/CMakeFiles/_run_tests_voice_interfac
 
 # fast build rule for target.
 _run_tests_voice_interface/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_run_tests_voice_interface.dir/build.make voice_interface/CMakeFiles/_run_tests_voice_interface.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_run_tests_voice_interface.dir/build.make voice_interface/CMakeFiles/_run_tests_voice_interface.dir/build
 .PHONY : _run_tests_voice_interface/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check.dir/rule
 .PHONY : voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check.dir/rule
 
 # Convenience name for target.
@@ -174,12 +174,12 @@ _run_tests_voice_interface_roslaunch-check: voice_interface/CMakeFiles/_run_test
 
 # fast build rule for target.
 _run_tests_voice_interface_roslaunch-check/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check.dir/build.make voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check.dir/build.make voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check.dir/build
 .PHONY : _run_tests_voice_interface_roslaunch-check/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check_launch.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check_launch.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check_launch.dir/rule
 .PHONY : voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check_launch.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ _run_tests_voice_interface_roslaunch-check_launch: voice_interface/CMakeFiles/_r
 
 # fast build rule for target.
 _run_tests_voice_interface_roslaunch-check_launch/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check_launch.dir/build.make voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check_launch.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check_launch.dir/build.make voice_interface/CMakeFiles/_run_tests_voice_interface_roslaunch-check_launch.dir/build
 .PHONY : _run_tests_voice_interface_roslaunch-check_launch/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/run_tests_voice_interface.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/run_tests_voice_interface.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/run_tests_voice_interface.dir/rule
 .PHONY : voice_interface/CMakeFiles/run_tests_voice_interface.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,12 @@ run_tests_voice_interface: voice_interface/CMakeFiles/run_tests_voice_interface.
 
 # fast build rule for target.
 run_tests_voice_interface/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/run_tests_voice_interface.dir/build.make voice_interface/CMakeFiles/run_tests_voice_interface.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/run_tests_voice_interface.dir/build.make voice_interface/CMakeFiles/run_tests_voice_interface.dir/build
 .PHONY : run_tests_voice_interface/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check.dir/rule
 .PHONY : voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check.dir/rule
 
 # Convenience name for target.
@@ -216,12 +216,12 @@ run_tests_voice_interface_roslaunch-check: voice_interface/CMakeFiles/run_tests_
 
 # fast build rule for target.
 run_tests_voice_interface_roslaunch-check/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check.dir/build.make voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check.dir/build.make voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check.dir/build
 .PHONY : run_tests_voice_interface_roslaunch-check/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check_launch.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check_launch.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check_launch.dir/rule
 .PHONY : voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check_launch.dir/rule
 
 # Convenience name for target.
@@ -230,12 +230,12 @@ run_tests_voice_interface_roslaunch-check_launch: voice_interface/CMakeFiles/run
 
 # fast build rule for target.
 run_tests_voice_interface_roslaunch-check_launch/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check_launch.dir/build.make voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check_launch.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check_launch.dir/build.make voice_interface/CMakeFiles/run_tests_voice_interface_roslaunch-check_launch.dir/build
 .PHONY : run_tests_voice_interface_roslaunch-check_launch/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/voice_interface_gencpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_gencpp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_gencpp.dir/rule
 .PHONY : voice_interface/CMakeFiles/voice_interface_gencpp.dir/rule
 
 # Convenience name for target.
@@ -244,12 +244,12 @@ voice_interface_gencpp: voice_interface/CMakeFiles/voice_interface_gencpp.dir/ru
 
 # fast build rule for target.
 voice_interface_gencpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_gencpp.dir/build.make voice_interface/CMakeFiles/voice_interface_gencpp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_gencpp.dir/build.make voice_interface/CMakeFiles/voice_interface_gencpp.dir/build
 .PHONY : voice_interface_gencpp/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/voice_interface_generate_messages.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_generate_messages.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_generate_messages.dir/rule
 .PHONY : voice_interface/CMakeFiles/voice_interface_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -258,12 +258,12 @@ voice_interface_generate_messages: voice_interface/CMakeFiles/voice_interface_ge
 
 # fast build rule for target.
 voice_interface_generate_messages/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_generate_messages.dir/build.make voice_interface/CMakeFiles/voice_interface_generate_messages.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_generate_messages.dir/build.make voice_interface/CMakeFiles/voice_interface_generate_messages.dir/build
 .PHONY : voice_interface_generate_messages/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/rule
 .PHONY : voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -272,12 +272,12 @@ voice_interface_generate_messages_cpp: voice_interface/CMakeFiles/voice_interfac
 
 # fast build rule for target.
 voice_interface_generate_messages_cpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/build.make voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/build.make voice_interface/CMakeFiles/voice_interface_generate_messages_cpp.dir/build
 .PHONY : voice_interface_generate_messages_cpp/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/rule
 .PHONY : voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -286,12 +286,12 @@ voice_interface_generate_messages_lisp: voice_interface/CMakeFiles/voice_interfa
 
 # fast build rule for target.
 voice_interface_generate_messages_lisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/build.make voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/build.make voice_interface/CMakeFiles/voice_interface_generate_messages_lisp.dir/build
 .PHONY : voice_interface_generate_messages_lisp/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/rule
 .PHONY : voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -300,12 +300,12 @@ voice_interface_generate_messages_py: voice_interface/CMakeFiles/voice_interface
 
 # fast build rule for target.
 voice_interface_generate_messages_py/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/build.make voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/build.make voice_interface/CMakeFiles/voice_interface_generate_messages_py.dir/build
 .PHONY : voice_interface_generate_messages_py/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/voice_interface_genlisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_genlisp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_genlisp.dir/rule
 .PHONY : voice_interface/CMakeFiles/voice_interface_genlisp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ voice_interface_genlisp: voice_interface/CMakeFiles/voice_interface_genlisp.dir/
 
 # fast build rule for target.
 voice_interface_genlisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_genlisp.dir/build.make voice_interface/CMakeFiles/voice_interface_genlisp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_genlisp.dir/build.make voice_interface/CMakeFiles/voice_interface_genlisp.dir/build
 .PHONY : voice_interface_genlisp/fast
 
 # Convenience name for target.
 voice_interface/CMakeFiles/voice_interface_genpy.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_genpy.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_interface/CMakeFiles/voice_interface_genpy.dir/rule
 .PHONY : voice_interface/CMakeFiles/voice_interface_genpy.dir/rule
 
 # Convenience name for target.
@@ -328,7 +328,7 @@ voice_interface_genpy: voice_interface/CMakeFiles/voice_interface_genpy.dir/rule
 
 # fast build rule for target.
 voice_interface_genpy/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_genpy.dir/build.make voice_interface/CMakeFiles/voice_interface_genpy.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_interface/CMakeFiles/voice_interface_genpy.dir/build.make voice_interface/CMakeFiles/voice_interface_genpy.dir/build
 .PHONY : voice_interface_genpy/fast
 
 # Help Target
@@ -368,6 +368,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

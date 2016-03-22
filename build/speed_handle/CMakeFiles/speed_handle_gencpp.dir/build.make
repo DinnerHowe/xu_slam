@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for speed_handle_gencpp.
 
@@ -56,10 +56,10 @@ speed_handle/CMakeFiles/speed_handle_gencpp.dir/build: speed_handle_gencpp
 .PHONY : speed_handle/CMakeFiles/speed_handle_gencpp.dir/build
 
 speed_handle/CMakeFiles/speed_handle_gencpp.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/speed_handle && $(CMAKE_COMMAND) -P CMakeFiles/speed_handle_gencpp.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/speed_handle && $(CMAKE_COMMAND) -P CMakeFiles/speed_handle_gencpp.dir/cmake_clean.cmake
 .PHONY : speed_handle/CMakeFiles/speed_handle_gencpp.dir/clean
 
 speed_handle/CMakeFiles/speed_handle_gencpp.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/speed_handle /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/speed_handle /home/turtlebot2/xu_slam/build/speed_handle/CMakeFiles/speed_handle_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/speed_handle /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/speed_handle /home/turtlebot/xu_slam/build/speed_handle/CMakeFiles/speed_handle_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : speed_handle/CMakeFiles/speed_handle_gencpp.dir/depend
 

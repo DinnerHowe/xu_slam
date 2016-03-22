@@ -35,64 +35,73 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for voice_msg_generate_messages_py.
 
 # Include the progress variables for this target.
 include voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/progress.make
 
-voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py
-voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py
-voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py
-voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py
-voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py
+voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py
+voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py
+voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py
+voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_recog_result.py
+voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py
+voice_msg/CMakeFiles/voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py: /home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG voice_msg/Transmit"
-	cd /home/turtlebot2/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg -Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg -p voice_msg -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg
-
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py: /home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py: /home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG voice_msg/Motion"
-	cd /home/turtlebot2/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg -Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg -p voice_msg -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg
+	cd /home/turtlebot/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -p voice_msg -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py: /home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py: /home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG voice_msg/Navigation"
-	cd /home/turtlebot2/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg -Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg -p voice_msg -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg
+	cd /home/turtlebot/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -p voice_msg -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py: /home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG voice_msg/Command"
-	cd /home/turtlebot2/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg -Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg -p voice_msg -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg
+	cd /home/turtlebot/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -p voice_msg -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_5)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_recog_result.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_recog_result.py: /home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG voice_msg/recog_result"
+	cd /home/turtlebot/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -p voice_msg -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg
+
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py: /home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG voice_msg/Transmit"
+	cd /home/turtlebot/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg -p voice_msg -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg
+
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_recog_result.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for voice_msg"
-	cd /home/turtlebot2/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg --initpy
+	cd /home/turtlebot/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg --initpy
 
 voice_msg_generate_messages_py: voice_msg/CMakeFiles/voice_msg_generate_messages_py
-voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py
-voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py
-voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py
-voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py
-voice_msg_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py
+voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Motion.py
+voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Navigation.py
+voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Command.py
+voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_recog_result.py
+voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/_Transmit.py
+voice_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_msg/msg/__init__.py
 voice_msg_generate_messages_py: voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/build.make
 .PHONY : voice_msg_generate_messages_py
 
@@ -101,10 +110,10 @@ voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/build: voice_msg_generat
 .PHONY : voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/build
 
 voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/voice_msg && $(CMAKE_COMMAND) -P CMakeFiles/voice_msg_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/voice_msg && $(CMAKE_COMMAND) -P CMakeFiles/voice_msg_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/clean
 
 voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/voice_msg /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/voice_msg /home/turtlebot2/xu_slam/build/voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/voice_msg /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/voice_msg /home/turtlebot/xu_slam/build/voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/depend
 

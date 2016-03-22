@@ -35,52 +35,19 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for rplidar_python_generate_messages_py.
 
 # Include the progress variables for this target.
 include rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/progress.make
 
-rplidar_python/CMakeFiles/rplidar_python_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_data.py
-rplidar_python/CMakeFiles/rplidar_python_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_point.py
-rplidar_python/CMakeFiles/rplidar_python_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_parameters.py
-rplidar_python/CMakeFiles/rplidar_python_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/__init__.py
-
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_data.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_data.py: /home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rplidar_python/rplidar_data"
-	cd /home/turtlebot2/xu_slam/build/rplidar_python && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_data.msg -Irplidar_python:/home/turtlebot2/xu_slam/src/rplidar_python/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p rplidar_python -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg
-
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_point.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_point.py: /home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rplidar_python/rplidar_point"
-	cd /home/turtlebot2/xu_slam/build/rplidar_python && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_point.msg -Irplidar_python:/home/turtlebot2/xu_slam/src/rplidar_python/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p rplidar_python -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg
-
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_parameters.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_parameters.py: /home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rplidar_python/rplidar_parameters"
-	cd /home/turtlebot2/xu_slam/build/rplidar_python && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/rplidar_python/msg/rplidar_parameters.msg -Irplidar_python:/home/turtlebot2/xu_slam/src/rplidar_python/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p rplidar_python -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg
-
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_data.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_point.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_parameters.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for rplidar_python"
-	cd /home/turtlebot2/xu_slam/build/rplidar_python && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg --initpy
+rplidar_python/CMakeFiles/rplidar_python_generate_messages_py:
 
 rplidar_python_generate_messages_py: rplidar_python/CMakeFiles/rplidar_python_generate_messages_py
-rplidar_python_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_data.py
-rplidar_python_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_point.py
-rplidar_python_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/_rplidar_parameters.py
-rplidar_python_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rplidar_python/msg/__init__.py
 rplidar_python_generate_messages_py: rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/build.make
 .PHONY : rplidar_python_generate_messages_py
 
@@ -89,10 +56,10 @@ rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/build: rplidar
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/build
 
 rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/rplidar_python && $(CMAKE_COMMAND) -P CMakeFiles/rplidar_python_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/rplidar_python && $(CMAKE_COMMAND) -P CMakeFiles/rplidar_python_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/clean
 
 rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/rplidar_python /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/rplidar_python /home/turtlebot2/xu_slam/build/rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/rplidar_python /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/rplidar_python /home/turtlebot/xu_slam/build/rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/depend
 

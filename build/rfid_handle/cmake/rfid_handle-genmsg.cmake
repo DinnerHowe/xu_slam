@@ -2,7 +2,7 @@
 
 message(STATUS "rfid_handle: 1 messages, 1 services")
 
-set(MSG_I_FLAGS "-Irfid_handle:/home/turtlebot2/xu_slam/src/rfid_handle/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Irfid_handle:/home/turtlebot/xu_slam/src/rfid_handle/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,14 +15,14 @@ add_custom_target(rfid_handle_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid_handle/msg/probability.msg" NAME_WE)
 add_custom_target(_rfid_handle_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid_handle" "/home/turtlebot2/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid_handle" "/home/turtlebot/xu_slam/src/rfid_handle/msg/probability.msg" ""
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid_handle/msg/probability.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" NAME_WE)
 add_custom_target(_rfid_handle_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid_handle" "/home/turtlebot2/xu_slam/src/rfid_handle/msg/probability.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rfid_handle" "/home/turtlebot/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" ""
 )
 
 #
@@ -32,7 +32,7 @@ add_custom_target(_rfid_handle_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(rfid_handle
-  "/home/turtlebot2/xu_slam/src/rfid_handle/msg/probability.msg"
+  "/home/turtlebot/xu_slam/src/rfid_handle/msg/probability.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rfid_handle
@@ -40,7 +40,7 @@ _generate_msg_cpp(rfid_handle
 
 ### Generating Services
 _generate_srv_cpp(rfid_handle
-  "/home/turtlebot2/xu_slam/src/rfid_handle/srv/ClassifiedData.srv"
+  "/home/turtlebot/xu_slam/src/rfid_handle/srv/ClassifiedData.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rfid_handle
@@ -58,9 +58,9 @@ add_custom_target(rfid_handle_generate_messages_cpp
 add_dependencies(rfid_handle_generate_messages rfid_handle_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid_handle/msg/probability.msg" NAME_WE)
 add_dependencies(rfid_handle_generate_messages_cpp _rfid_handle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid_handle/msg/probability.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" NAME_WE)
 add_dependencies(rfid_handle_generate_messages_cpp _rfid_handle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -73,7 +73,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rfid_handle_generate_messages_cpp)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(rfid_handle
-  "/home/turtlebot2/xu_slam/src/rfid_handle/msg/probability.msg"
+  "/home/turtlebot/xu_slam/src/rfid_handle/msg/probability.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rfid_handle
@@ -81,7 +81,7 @@ _generate_msg_lisp(rfid_handle
 
 ### Generating Services
 _generate_srv_lisp(rfid_handle
-  "/home/turtlebot2/xu_slam/src/rfid_handle/srv/ClassifiedData.srv"
+  "/home/turtlebot/xu_slam/src/rfid_handle/srv/ClassifiedData.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rfid_handle
@@ -99,9 +99,9 @@ add_custom_target(rfid_handle_generate_messages_lisp
 add_dependencies(rfid_handle_generate_messages rfid_handle_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid_handle/msg/probability.msg" NAME_WE)
 add_dependencies(rfid_handle_generate_messages_lisp _rfid_handle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid_handle/msg/probability.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" NAME_WE)
 add_dependencies(rfid_handle_generate_messages_lisp _rfid_handle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -114,7 +114,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rfid_handle_generate_messages_lisp)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(rfid_handle
-  "/home/turtlebot2/xu_slam/src/rfid_handle/msg/probability.msg"
+  "/home/turtlebot/xu_slam/src/rfid_handle/msg/probability.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rfid_handle
@@ -122,7 +122,7 @@ _generate_msg_py(rfid_handle
 
 ### Generating Services
 _generate_srv_py(rfid_handle
-  "/home/turtlebot2/xu_slam/src/rfid_handle/srv/ClassifiedData.srv"
+  "/home/turtlebot/xu_slam/src/rfid_handle/srv/ClassifiedData.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rfid_handle
@@ -140,9 +140,9 @@ add_custom_target(rfid_handle_generate_messages_py
 add_dependencies(rfid_handle_generate_messages rfid_handle_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid_handle/msg/probability.msg" NAME_WE)
 add_dependencies(rfid_handle_generate_messages_py _rfid_handle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/rfid_handle/msg/probability.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/rfid_handle/srv/ClassifiedData.srv" NAME_WE)
 add_dependencies(rfid_handle_generate_messages_py _rfid_handle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

@@ -35,85 +35,85 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for robot_status_generate_messages_py.
 
 # Include the progress variables for this target.
 include robot_status/CMakeFiles/robot_status_generate_messages_py.dir/progress.make
 
-robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py
-robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py
-robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py
-robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py
-robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py
-robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py
+robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py
+robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py
+robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py
+robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py
+robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py
+robot_status/CMakeFiles/robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /home/turtlebot2/xu_slam/src/robot_status/msg/mapdata.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /home/turtlebot2/xu_slam/src/robot_status/msg/robot_odom.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/nav_msgs/cmake/../msg/OccupancyGrid.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/nav_msgs/cmake/../msg/MapMetaData.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_status/mapdata"
-	cd /home/turtlebot2/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/robot_status/msg/mapdata.msg -Irobot_status:/home/turtlebot2/xu_slam/src/robot_status/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -p robot_status -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg
-
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /home/turtlebot2/xu_slam/src/robot_status/msg/robot_odom.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_status/robot_odom"
-	cd /home/turtlebot2/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/robot_status/msg/robot_odom.msg -Irobot_status:/home/turtlebot2/xu_slam/src/robot_status/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -p robot_status -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg
-
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /home/turtlebot2/xu_slam/src/robot_status/msg/map_odom.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /home/turtlebot/xu_slam/src/robot_status/msg/map_odom.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_status/map_odom"
-	cd /home/turtlebot2/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/robot_status/msg/map_odom.msg -Irobot_status:/home/turtlebot2/xu_slam/src/robot_status/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -p robot_status -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg
+	cd /home/turtlebot/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/robot_status/msg/map_odom.msg -Irobot_status:/home/turtlebot/xu_slam/src/robot_status/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -p robot_status -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py: /home/turtlebot2/xu_slam/src/robot_status/srv/launch_amcl.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /home/turtlebot/xu_slam/src/robot_status/msg/mapdata.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /home/turtlebot/xu_slam/src/robot_status/msg/robot_odom.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/nav_msgs/cmake/../msg/OccupancyGrid.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/nav_msgs/cmake/../msg/MapMetaData.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Pose.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_status/mapdata"
+	cd /home/turtlebot/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/robot_status/msg/mapdata.msg -Irobot_status:/home/turtlebot/xu_slam/src/robot_status/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -p robot_status -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg
+
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /home/turtlebot/xu_slam/src/robot_status/msg/robot_odom.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Quaternion.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_status/robot_odom"
+	cd /home/turtlebot/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/robot_status/msg/robot_odom.msg -Irobot_status:/home/turtlebot/xu_slam/src/robot_status/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -p robot_status -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg
+
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py: /home/turtlebot/xu_slam/src/robot_status/srv/launch_amcl.srv
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV robot_status/launch_amcl"
-	cd /home/turtlebot2/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/turtlebot2/xu_slam/src/robot_status/srv/launch_amcl.srv -Irobot_status:/home/turtlebot2/xu_slam/src/robot_status/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -p robot_status -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv
+	cd /home/turtlebot/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/turtlebot/xu_slam/src/robot_status/srv/launch_amcl.srv -Irobot_status:/home/turtlebot/xu_slam/src/robot_status/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -p robot_status -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_5)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for robot_status"
-	cd /home/turtlebot2/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg --initpy
+	cd /home/turtlebot/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg --initpy
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_6)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for robot_status"
-	cd /home/turtlebot2/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv --initpy
+	cd /home/turtlebot/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv --initpy
 
 robot_status_generate_messages_py: robot_status/CMakeFiles/robot_status_generate_messages_py
-robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py
-robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py
-robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py
-robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py
-robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py
-robot_status_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py
+robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_map_odom.py
+robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_mapdata.py
+robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/_robot_odom.py
+robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/_launch_amcl.py
+robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/msg/__init__.py
+robot_status_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/robot_status/srv/__init__.py
 robot_status_generate_messages_py: robot_status/CMakeFiles/robot_status_generate_messages_py.dir/build.make
 .PHONY : robot_status_generate_messages_py
 
@@ -122,10 +122,10 @@ robot_status/CMakeFiles/robot_status_generate_messages_py.dir/build: robot_statu
 .PHONY : robot_status/CMakeFiles/robot_status_generate_messages_py.dir/build
 
 robot_status/CMakeFiles/robot_status_generate_messages_py.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/robot_status && $(CMAKE_COMMAND) -P CMakeFiles/robot_status_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/robot_status && $(CMAKE_COMMAND) -P CMakeFiles/robot_status_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : robot_status/CMakeFiles/robot_status_generate_messages_py.dir/clean
 
 robot_status/CMakeFiles/robot_status_generate_messages_py.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/robot_status /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/robot_status /home/turtlebot2/xu_slam/build/robot_status/CMakeFiles/robot_status_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/robot_status /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/robot_status /home/turtlebot/xu_slam/build/robot_status/CMakeFiles/robot_status_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_status/CMakeFiles/robot_status_generate_messages_py.dir/depend
 

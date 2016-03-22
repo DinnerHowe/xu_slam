@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for _voice_msg_generate_messages_check_deps_Motion.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/progress.make
 
 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion:
-	cd /home/turtlebot2/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py voice_msg /home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg 
+	cd /home/turtlebot/xu_slam/build/voice_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py voice_msg /home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg 
 
 _voice_msg_generate_messages_check_deps_Motion: voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion
 _voice_msg_generate_messages_check_deps_Motion: voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/build.make
@@ -57,10 +57,10 @@ voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/build: _
 .PHONY : voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/build
 
 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/voice_msg && $(CMAKE_COMMAND) -P CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/voice_msg && $(CMAKE_COMMAND) -P CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/cmake_clean.cmake
 .PHONY : voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/clean
 
 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/voice_msg /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/voice_msg /home/turtlebot2/xu_slam/build/voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/voice_msg /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/voice_msg /home/turtlebot/xu_slam/build/voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/depend
 

@@ -35,54 +35,54 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for slam_main_generate_messages_py.
 
 # Include the progress variables for this target.
 include slam_main/CMakeFiles/slam_main_generate_messages_py.dir/progress.make
 
-slam_main/CMakeFiles/slam_main_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py
-slam_main/CMakeFiles/slam_main_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py
-slam_main/CMakeFiles/slam_main_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py
-slam_main/CMakeFiles/slam_main_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py
+slam_main/CMakeFiles/slam_main_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py
+slam_main/CMakeFiles/slam_main_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py
+slam_main/CMakeFiles/slam_main_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py
+slam_main/CMakeFiles/slam_main_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py: /home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py: /home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG slam_main/orientation"
-	cd /home/turtlebot2/xu_slam/build/slam_main && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg -Islam_main:/home/turtlebot2/xu_slam/src/slam_main/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Imove_base_msgs:/opt/ros/indigo/share/move_base_msgs/cmake/../msg -p slam_main -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg
+	cd /home/turtlebot/xu_slam/build/slam_main && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg -Islam_main:/home/turtlebot/xu_slam/src/slam_main/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Imove_base_msgs:/opt/ros/indigo/share/move_base_msgs/cmake/../msg -p slam_main -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py: /home/turtlebot2/xu_slam/src/slam_main/msg/position.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG slam_main/position"
-	cd /home/turtlebot2/xu_slam/build/slam_main && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/slam_main/msg/position.msg -Islam_main:/home/turtlebot2/xu_slam/src/slam_main/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Imove_base_msgs:/opt/ros/indigo/share/move_base_msgs/cmake/../msg -p slam_main -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg
-
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py: /home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py: /home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py: /home/turtlebot2/xu_slam/src/slam_main/msg/position.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py: /home/turtlebot/xu_slam/src/slam_main/msg/pose.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py: /home/turtlebot/xu_slam/src/slam_main/msg/position.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py: /home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG slam_main/pose"
-	cd /home/turtlebot2/xu_slam/build/slam_main && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg -Islam_main:/home/turtlebot2/xu_slam/src/slam_main/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Imove_base_msgs:/opt/ros/indigo/share/move_base_msgs/cmake/../msg -p slam_main -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg
+	cd /home/turtlebot/xu_slam/build/slam_main && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/slam_main/msg/pose.msg -Islam_main:/home/turtlebot/xu_slam/src/slam_main/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Imove_base_msgs:/opt/ros/indigo/share/move_base_msgs/cmake/../msg -p slam_main -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py: /home/turtlebot/xu_slam/src/slam_main/msg/position.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG slam_main/position"
+	cd /home/turtlebot/xu_slam/build/slam_main && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/slam_main/msg/position.msg -Islam_main:/home/turtlebot/xu_slam/src/slam_main/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg -Imove_base_msgs:/opt/ros/indigo/share/move_base_msgs/cmake/../msg -p slam_main -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg
+
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for slam_main"
-	cd /home/turtlebot2/xu_slam/build/slam_main && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg --initpy
+	cd /home/turtlebot/xu_slam/build/slam_main && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg --initpy
 
 slam_main_generate_messages_py: slam_main/CMakeFiles/slam_main_generate_messages_py
-slam_main_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py
-slam_main_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py
-slam_main_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py
-slam_main_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py
+slam_main_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_orientation.py
+slam_main_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_pose.py
+slam_main_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/_position.py
+slam_main_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/slam_main/msg/__init__.py
 slam_main_generate_messages_py: slam_main/CMakeFiles/slam_main_generate_messages_py.dir/build.make
 .PHONY : slam_main_generate_messages_py
 
@@ -91,10 +91,10 @@ slam_main/CMakeFiles/slam_main_generate_messages_py.dir/build: slam_main_generat
 .PHONY : slam_main/CMakeFiles/slam_main_generate_messages_py.dir/build
 
 slam_main/CMakeFiles/slam_main_generate_messages_py.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/slam_main && $(CMAKE_COMMAND) -P CMakeFiles/slam_main_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/slam_main && $(CMAKE_COMMAND) -P CMakeFiles/slam_main_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : slam_main/CMakeFiles/slam_main_generate_messages_py.dir/clean
 
 slam_main/CMakeFiles/slam_main_generate_messages_py.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/slam_main /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/slam_main /home/turtlebot2/xu_slam/build/slam_main/CMakeFiles/slam_main_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/slam_main /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/slam_main /home/turtlebot/xu_slam/build/slam_main/CMakeFiles/slam_main_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : slam_main/CMakeFiles/slam_main_generate_messages_py.dir/depend
 

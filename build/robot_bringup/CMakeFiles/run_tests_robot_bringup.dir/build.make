@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for run_tests_robot_bringup.
 
@@ -56,10 +56,10 @@ robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/build: run_tests_robot_brin
 .PHONY : robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/build
 
 robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/robot_bringup && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_robot_bringup.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/robot_bringup && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_robot_bringup.dir/cmake_clean.cmake
 .PHONY : robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/clean
 
 robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/robot_bringup /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/robot_bringup /home/turtlebot2/xu_slam/build/robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/robot_bringup /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/robot_bringup /home/turtlebot/xu_slam/build/robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_bringup/CMakeFiles/run_tests_robot_bringup.dir/depend
 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for _speed_handle_generate_messages_check_deps_Speed.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/progress.make
 
 speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed:
-	cd /home/turtlebot2/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py speed_handle /home/turtlebot2/xu_slam/src/speed_handle/srv/Speed.srv speed_handle/Victor
+	cd /home/turtlebot/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py speed_handle /home/turtlebot/xu_slam/src/speed_handle/srv/Speed.srv speed_handle/Victor
 
 _speed_handle_generate_messages_check_deps_Speed: speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed
 _speed_handle_generate_messages_check_deps_Speed: speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/build.make
@@ -57,10 +57,10 @@ speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/bui
 .PHONY : speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/build
 
 speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/speed_handle && $(CMAKE_COMMAND) -P CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/speed_handle && $(CMAKE_COMMAND) -P CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/cmake_clean.cmake
 .PHONY : speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/clean
 
 speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/speed_handle /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/speed_handle /home/turtlebot2/xu_slam/build/speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/speed_handle /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/speed_handle /home/turtlebot/xu_slam/build/speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : speed_handle/CMakeFiles/_speed_handle_generate_messages_check_deps_Speed.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/turtlebot2/xu_slam/src/rbx1/rbx1_speech
+# Install script for directory: /home/turtlebot/xu_slam/src/rbx1/rbx1_speech
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot2/xu_slam/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot/xu_slam/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/rbx1/rbx1_speech/catkin_generated/installspace/rbx1_speech.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot/xu_slam/build/rbx1/rbx1_speech/catkin_generated/installspace/rbx1_speech.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rbx1_speech/cmake" TYPE FILE FILES
-    "/home/turtlebot2/xu_slam/build/rbx1/rbx1_speech/catkin_generated/installspace/rbx1_speechConfig.cmake"
-    "/home/turtlebot2/xu_slam/build/rbx1/rbx1_speech/catkin_generated/installspace/rbx1_speechConfig-version.cmake"
+    "/home/turtlebot/xu_slam/build/rbx1/rbx1_speech/catkin_generated/installspace/rbx1_speechConfig.cmake"
+    "/home/turtlebot/xu_slam/build/rbx1/rbx1_speech/catkin_generated/installspace/rbx1_speechConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rbx1_speech" TYPE FILE FILES "/home/turtlebot2/xu_slam/src/rbx1/rbx1_speech/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rbx1_speech" TYPE FILE FILES "/home/turtlebot/xu_slam/src/rbx1/rbx1_speech/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

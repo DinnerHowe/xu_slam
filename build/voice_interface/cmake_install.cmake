@@ -1,8 +1,8 @@
-# Install script for directory: /home/turtlebot2/xu_slam/src/voice_interface
+# Install script for directory: /home/turtlebot/xu_slam/src/voice_interface
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot2/xu_slam/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot/xu_slam/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,33 +33,33 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/voice_interface/cmake" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interface-msg-paths.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/voice_interface/cmake" TYPE FILE FILES "/home/turtlebot/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interface-msg-paths.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_interface")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/voice_interface")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/voice_interface")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interface.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interface.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/voice_interface/cmake" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interface-msg-extras.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/voice_interface/cmake" TYPE FILE FILES "/home/turtlebot/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interface-msg-extras.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/voice_interface/cmake" TYPE FILE FILES
-    "/home/turtlebot2/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interfaceConfig.cmake"
-    "/home/turtlebot2/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interfaceConfig-version.cmake"
+    "/home/turtlebot/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interfaceConfig.cmake"
+    "/home/turtlebot/xu_slam/build/voice_interface/catkin_generated/installspace/voice_interfaceConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/voice_interface" TYPE FILE FILES "/home/turtlebot2/xu_slam/src/voice_interface/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/voice_interface" TYPE FILE FILES "/home/turtlebot/xu_slam/src/voice_interface/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

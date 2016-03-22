@@ -139,10 +139,10 @@
   "e8697dfd5fe04ac5e825e08bf637779c")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Motion>)))
   "Returns full string definition for message of type '<Motion>"
-  (cl:format cl:nil "bool motion~%int64 direction~%int64 pattern~%int64 stepcount~%~%~%"))
+  (cl:format cl:nil "bool motion~%int64 direction~%int64 pattern~%int64 stepcount~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Motion)))
   "Returns full string definition for message of type 'Motion"
-  (cl:format cl:nil "bool motion~%int64 direction~%int64 pattern~%int64 stepcount~%~%~%"))
+  (cl:format cl:nil "bool motion~%int64 direction~%int64 pattern~%int64 stepcount~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Motion>))
   (cl:+ 0
      1

@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot2/xu_slam/build/CMakeFiles /home/turtlebot2/xu_slam/build/rfid_handle/CMakeFiles/progress.marks
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot2/xu_slam/build/CMakeFiles 0
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/xu_slam/build/CMakeFiles /home/turtlebot/xu_slam/build/rfid_handle/CMakeFiles/progress.marks
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/xu_slam/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/clean
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/clean
 .PHONY : clean
 
 # The main clean target
@@ -136,22 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/preinstall
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/preinstall
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_ClassifiedData.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_ClassifiedData.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_ClassifiedData.dir/rule
 .PHONY : rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_ClassifiedData.dir/rule
 
 # Convenience name for target.
@@ -160,12 +160,12 @@ _rfid_handle_generate_messages_check_deps_ClassifiedData: rfid_handle/CMakeFiles
 
 # fast build rule for target.
 _rfid_handle_generate_messages_check_deps_ClassifiedData/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_ClassifiedData.dir/build.make rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_ClassifiedData.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_ClassifiedData.dir/build.make rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_ClassifiedData.dir/build
 .PHONY : _rfid_handle_generate_messages_check_deps_ClassifiedData/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_probability.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_probability.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_probability.dir/rule
 .PHONY : rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_probability.dir/rule
 
 # Convenience name for target.
@@ -174,12 +174,12 @@ _rfid_handle_generate_messages_check_deps_probability: rfid_handle/CMakeFiles/_r
 
 # fast build rule for target.
 _rfid_handle_generate_messages_check_deps_probability/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_probability.dir/build.make rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_probability.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_probability.dir/build.make rfid_handle/CMakeFiles/_rfid_handle_generate_messages_check_deps_probability.dir/build
 .PHONY : _rfid_handle_generate_messages_check_deps_probability/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/_run_tests_rfid_handle.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_run_tests_rfid_handle.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_run_tests_rfid_handle.dir/rule
 .PHONY : rfid_handle/CMakeFiles/_run_tests_rfid_handle.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ _run_tests_rfid_handle: rfid_handle/CMakeFiles/_run_tests_rfid_handle.dir/rule
 
 # fast build rule for target.
 _run_tests_rfid_handle/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_run_tests_rfid_handle.dir/build.make rfid_handle/CMakeFiles/_run_tests_rfid_handle.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_run_tests_rfid_handle.dir/build.make rfid_handle/CMakeFiles/_run_tests_rfid_handle.dir/build
 .PHONY : _run_tests_rfid_handle/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check.dir/rule
 .PHONY : rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,12 @@ _run_tests_rfid_handle_roslaunch-check: rfid_handle/CMakeFiles/_run_tests_rfid_h
 
 # fast build rule for target.
 _run_tests_rfid_handle_roslaunch-check/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check.dir/build.make rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check.dir/build.make rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check.dir/build
 .PHONY : _run_tests_rfid_handle_roslaunch-check/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check_launch.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check_launch.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check_launch.dir/rule
 .PHONY : rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check_launch.dir/rule
 
 # Convenience name for target.
@@ -216,12 +216,12 @@ _run_tests_rfid_handle_roslaunch-check_launch: rfid_handle/CMakeFiles/_run_tests
 
 # fast build rule for target.
 _run_tests_rfid_handle_roslaunch-check_launch/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check_launch.dir/build.make rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check_launch.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check_launch.dir/build.make rfid_handle/CMakeFiles/_run_tests_rfid_handle_roslaunch-check_launch.dir/build
 .PHONY : _run_tests_rfid_handle_roslaunch-check_launch/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/rfid_handle_gencpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_gencpp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_gencpp.dir/rule
 .PHONY : rfid_handle/CMakeFiles/rfid_handle_gencpp.dir/rule
 
 # Convenience name for target.
@@ -230,12 +230,12 @@ rfid_handle_gencpp: rfid_handle/CMakeFiles/rfid_handle_gencpp.dir/rule
 
 # fast build rule for target.
 rfid_handle_gencpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_gencpp.dir/build.make rfid_handle/CMakeFiles/rfid_handle_gencpp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_gencpp.dir/build.make rfid_handle/CMakeFiles/rfid_handle_gencpp.dir/build
 .PHONY : rfid_handle_gencpp/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/rfid_handle_generate_messages.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_generate_messages.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_generate_messages.dir/rule
 .PHONY : rfid_handle/CMakeFiles/rfid_handle_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -244,12 +244,12 @@ rfid_handle_generate_messages: rfid_handle/CMakeFiles/rfid_handle_generate_messa
 
 # fast build rule for target.
 rfid_handle_generate_messages/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_generate_messages.dir/build.make rfid_handle/CMakeFiles/rfid_handle_generate_messages.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_generate_messages.dir/build.make rfid_handle/CMakeFiles/rfid_handle_generate_messages.dir/build
 .PHONY : rfid_handle_generate_messages/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/rfid_handle_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_generate_messages_cpp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_generate_messages_cpp.dir/rule
 .PHONY : rfid_handle/CMakeFiles/rfid_handle_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -258,12 +258,12 @@ rfid_handle_generate_messages_cpp: rfid_handle/CMakeFiles/rfid_handle_generate_m
 
 # fast build rule for target.
 rfid_handle_generate_messages_cpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_generate_messages_cpp.dir/build.make rfid_handle/CMakeFiles/rfid_handle_generate_messages_cpp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_generate_messages_cpp.dir/build.make rfid_handle/CMakeFiles/rfid_handle_generate_messages_cpp.dir/build
 .PHONY : rfid_handle_generate_messages_cpp/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/rfid_handle_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_generate_messages_lisp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_generate_messages_lisp.dir/rule
 .PHONY : rfid_handle/CMakeFiles/rfid_handle_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -272,12 +272,12 @@ rfid_handle_generate_messages_lisp: rfid_handle/CMakeFiles/rfid_handle_generate_
 
 # fast build rule for target.
 rfid_handle_generate_messages_lisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_generate_messages_lisp.dir/build.make rfid_handle/CMakeFiles/rfid_handle_generate_messages_lisp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_generate_messages_lisp.dir/build.make rfid_handle/CMakeFiles/rfid_handle_generate_messages_lisp.dir/build
 .PHONY : rfid_handle_generate_messages_lisp/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/rfid_handle_generate_messages_py.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_generate_messages_py.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_generate_messages_py.dir/rule
 .PHONY : rfid_handle/CMakeFiles/rfid_handle_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -286,12 +286,12 @@ rfid_handle_generate_messages_py: rfid_handle/CMakeFiles/rfid_handle_generate_me
 
 # fast build rule for target.
 rfid_handle_generate_messages_py/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_generate_messages_py.dir/build.make rfid_handle/CMakeFiles/rfid_handle_generate_messages_py.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_generate_messages_py.dir/build.make rfid_handle/CMakeFiles/rfid_handle_generate_messages_py.dir/build
 .PHONY : rfid_handle_generate_messages_py/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/rfid_handle_genlisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_genlisp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_genlisp.dir/rule
 .PHONY : rfid_handle/CMakeFiles/rfid_handle_genlisp.dir/rule
 
 # Convenience name for target.
@@ -300,12 +300,12 @@ rfid_handle_genlisp: rfid_handle/CMakeFiles/rfid_handle_genlisp.dir/rule
 
 # fast build rule for target.
 rfid_handle_genlisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_genlisp.dir/build.make rfid_handle/CMakeFiles/rfid_handle_genlisp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_genlisp.dir/build.make rfid_handle/CMakeFiles/rfid_handle_genlisp.dir/build
 .PHONY : rfid_handle_genlisp/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/rfid_handle_genpy.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_genpy.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/rfid_handle_genpy.dir/rule
 .PHONY : rfid_handle/CMakeFiles/rfid_handle_genpy.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ rfid_handle_genpy: rfid_handle/CMakeFiles/rfid_handle_genpy.dir/rule
 
 # fast build rule for target.
 rfid_handle_genpy/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_genpy.dir/build.make rfid_handle/CMakeFiles/rfid_handle_genpy.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/rfid_handle_genpy.dir/build.make rfid_handle/CMakeFiles/rfid_handle_genpy.dir/build
 .PHONY : rfid_handle_genpy/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/run_tests_rfid_handle.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/run_tests_rfid_handle.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/run_tests_rfid_handle.dir/rule
 .PHONY : rfid_handle/CMakeFiles/run_tests_rfid_handle.dir/rule
 
 # Convenience name for target.
@@ -328,12 +328,12 @@ run_tests_rfid_handle: rfid_handle/CMakeFiles/run_tests_rfid_handle.dir/rule
 
 # fast build rule for target.
 run_tests_rfid_handle/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/run_tests_rfid_handle.dir/build.make rfid_handle/CMakeFiles/run_tests_rfid_handle.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/run_tests_rfid_handle.dir/build.make rfid_handle/CMakeFiles/run_tests_rfid_handle.dir/build
 .PHONY : run_tests_rfid_handle/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check.dir/rule
 .PHONY : rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check.dir/rule
 
 # Convenience name for target.
@@ -342,12 +342,12 @@ run_tests_rfid_handle_roslaunch-check: rfid_handle/CMakeFiles/run_tests_rfid_han
 
 # fast build rule for target.
 run_tests_rfid_handle_roslaunch-check/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check.dir/build.make rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check.dir/build.make rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check.dir/build
 .PHONY : run_tests_rfid_handle_roslaunch-check/fast
 
 # Convenience name for target.
 rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check_launch.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check_launch.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check_launch.dir/rule
 .PHONY : rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check_launch.dir/rule
 
 # Convenience name for target.
@@ -356,7 +356,7 @@ run_tests_rfid_handle_roslaunch-check_launch: rfid_handle/CMakeFiles/run_tests_r
 
 # fast build rule for target.
 run_tests_rfid_handle_roslaunch-check_launch/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check_launch.dir/build.make rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check_launch.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check_launch.dir/build.make rfid_handle/CMakeFiles/run_tests_rfid_handle_roslaunch-check_launch.dir/build
 .PHONY : run_tests_rfid_handle_roslaunch-check_launch/fast
 
 # Help Target
@@ -398,6 +398,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

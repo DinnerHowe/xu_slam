@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for utils_genpy.
 
@@ -56,10 +56,10 @@ utils/CMakeFiles/utils_genpy.dir/build: utils_genpy
 .PHONY : utils/CMakeFiles/utils_genpy.dir/build
 
 utils/CMakeFiles/utils_genpy.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils_genpy.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils_genpy.dir/cmake_clean.cmake
 .PHONY : utils/CMakeFiles/utils_genpy.dir/clean
 
 utils/CMakeFiles/utils_genpy.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/utils /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/utils /home/turtlebot2/xu_slam/build/utils/CMakeFiles/utils_genpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/utils /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/utils /home/turtlebot/xu_slam/build/utils/CMakeFiles/utils_genpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : utils/CMakeFiles/utils_genpy.dir/depend
 

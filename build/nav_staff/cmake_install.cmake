@@ -1,8 +1,8 @@
-# Install script for directory: /home/turtlebot2/xu_slam/src/nav_staff
+# Install script for directory: /home/turtlebot/xu_slam/src/nav_staff
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot2/xu_slam/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot/xu_slam/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/nav_staff/catkin_generated/installspace/nav_staff.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot/xu_slam/build/nav_staff/catkin_generated/installspace/nav_staff.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nav_staff/cmake" TYPE FILE FILES
-    "/home/turtlebot2/xu_slam/build/nav_staff/catkin_generated/installspace/nav_staffConfig.cmake"
-    "/home/turtlebot2/xu_slam/build/nav_staff/catkin_generated/installspace/nav_staffConfig-version.cmake"
+    "/home/turtlebot/xu_slam/build/nav_staff/catkin_generated/installspace/nav_staffConfig.cmake"
+    "/home/turtlebot/xu_slam/build/nav_staff/catkin_generated/installspace/nav_staffConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nav_staff" TYPE FILE FILES "/home/turtlebot2/xu_slam/src/nav_staff/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nav_staff" TYPE FILE FILES "/home/turtlebot/xu_slam/src/nav_staff/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

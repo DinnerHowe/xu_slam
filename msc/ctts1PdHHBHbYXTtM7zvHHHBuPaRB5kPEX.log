@@ -1,0 +1,163 @@
+============================================================
+Time  2016/01/22 11:50:31 347 
+============================================================
+[2016/01/22 11:50:31 347] tts        400  SYS_MSG_LOAD | tts LOAD!  
+[2016/01/22 11:50:31 347] tts        414  SYS_MSG_REGCB |SYS_MSG_REGCB param0 =   msp_status_cb  param1 =  func(af748640) 
+[2016/01/22 11:50:31 347] tts_cloud  1238 SYS_MSG_REGCB param0 =   msp_status_cb  param1 =  func(af748640) 
+[2016/01/22 11:50:31 347] tts        437  TTS_MSG_SSB  
+[2016/01/22 11:50:31 347] tts        478  TTS_MSG_SSB | local tts sessionbegin in  
+[2016/01/22 11:50:31 348] tts        499  TTS_MSG_SSB | local out   
+[2016/01/22 11:50:31 348] tts        554  TTS_MSG_SYN  0  
+[2016/01/22 11:50:31 348] tts        559  TTS_MSG_SYN | local in  
+[2016/01/22 11:50:31 348] tts        568  TTS_MSG_SYN | local out  
+[2016/01/22 11:50:31 348] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 348] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 348] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 364] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 364] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 364] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 379] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 379] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 379] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 392] tts        280  Aisound_cb | AISOUND_CB_BEGIN  
+[2016/01/22 11:50:31 394] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 394] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 394] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 410] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 410] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 410] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 425] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 425] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 425] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 441] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 441] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 441] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 456] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 456] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 456] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 471] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 471] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 472] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 487] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 487] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 487] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 503] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 503] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 503] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 518] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 518] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 518] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 518] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 518] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 518] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 518] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 518] tts        620  TTS_MSG_GETAUDIO | local out  0  udata(af780354) 1  
+[2016/01/22 11:50:31 534] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 534] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 534] tts        620  TTS_MSG_GETAUDIO | local out  0  nil  1  
+[2016/01/22 11:50:31 554] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 554] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 554] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 554] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 554] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 554] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 554] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 554] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 554] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 555] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 555] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 555] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 555] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 555] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 555] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 555] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 555] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 555] tts        620  TTS_MSG_GETAUDIO | local out  0  udata(af74a6fc) 1  
+[2016/01/22 11:50:31 571] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 571] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  6  
+[2016/01/22 11:50:31 571] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 571] tts        620  TTS_MSG_GETAUDIO | local out  0  udata(af74aa5c) 1  
+[2016/01/22 11:50:31 587] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 587] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 587] tts        620  TTS_MSG_GETAUDIO | local out  0  udata(af74974c) 1  
+[2016/01/22 11:50:31 603] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 603] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 603] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 603] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 603] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 603] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 603] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 603] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 603] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 604] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 605] tts        620  TTS_MSG_GETAUDIO | local out  0  udata(af77c21c) 1  
+[2016/01/22 11:50:31 605] tts        283  Aisound_cb | AISOUND_CB_END   
+[2016/01/22 11:50:31 605] tts        295  Aisound_cb | AISOUND_CB_END Aisound_status =  2  
+[2016/01/22 11:50:31 620] tts        579  TTS_MSG_GETAUDIO  0  
+[2016/01/22 11:50:31 620] tts        584  TTS_MSG_GETAUDIO | local in  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 620] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 621] tts        605  TTS_MSG_GETAUDIO | ced =  31  
+[2016/01/22 11:50:31 621] tts        620  TTS_MSG_GETAUDIO | local out  0  udata(af78037c) 2  
+[2016/01/22 11:50:31 621] tts        631  TTS_MSG_SSE  
+[2016/01/22 11:50:31 621] tts        640  TTS_MSG_SSE | local in  
+[2016/01/22 11:50:31 621] tts        186  collect_plog_data | in  
+[2016/01/22 11:50:31 621] tts        224  collect_plog_data | out  
+[2016/01/22 11:50:31 623] tts        644  TTS_MSG_SSE | local out  

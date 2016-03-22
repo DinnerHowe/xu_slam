@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for _robot_status_generate_messages_check_deps_mapdata.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/progress.make
 
 robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata:
-	cd /home/turtlebot2/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py robot_status /home/turtlebot2/xu_slam/src/robot_status/msg/mapdata.msg geometry_msgs/Point:robot_status/robot_odom:std_msgs/Header:geometry_msgs/Quaternion:nav_msgs/OccupancyGrid:nav_msgs/MapMetaData:geometry_msgs/Pose
+	cd /home/turtlebot/xu_slam/build/robot_status && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py robot_status /home/turtlebot/xu_slam/src/robot_status/msg/mapdata.msg geometry_msgs/Point:robot_status/robot_odom:std_msgs/Header:geometry_msgs/Quaternion:nav_msgs/OccupancyGrid:nav_msgs/MapMetaData:geometry_msgs/Pose
 
 _robot_status_generate_messages_check_deps_mapdata: robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata
 _robot_status_generate_messages_check_deps_mapdata: robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/build.make
@@ -57,10 +57,10 @@ robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/b
 .PHONY : robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/build
 
 robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/robot_status && $(CMAKE_COMMAND) -P CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/robot_status && $(CMAKE_COMMAND) -P CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/cmake_clean.cmake
 .PHONY : robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/clean
 
 robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/robot_status /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/robot_status /home/turtlebot2/xu_slam/build/robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/robot_status /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/robot_status /home/turtlebot/xu_slam/build/robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_status/CMakeFiles/_robot_status_generate_messages_check_deps_mapdata.dir/depend
 

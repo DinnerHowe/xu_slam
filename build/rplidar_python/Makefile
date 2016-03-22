@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot2/xu_slam/build/CMakeFiles /home/turtlebot2/xu_slam/build/rplidar_python/CMakeFiles/progress.marks
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot2/xu_slam/build/CMakeFiles 0
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/xu_slam/build/CMakeFiles /home/turtlebot/xu_slam/build/rplidar_python/CMakeFiles/progress.marks
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/xu_slam/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/clean
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/clean
 .PHONY : clean
 
 # The main clean target
@@ -136,64 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/preinstall
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/preinstall
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_data.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_data.dir/rule
-.PHONY : rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_data.dir/rule
-
-# Convenience name for target.
-_rplidar_python_generate_messages_check_deps_rplidar_data: rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_data.dir/rule
-.PHONY : _rplidar_python_generate_messages_check_deps_rplidar_data
-
-# fast build rule for target.
-_rplidar_python_generate_messages_check_deps_rplidar_data/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_data.dir/build.make rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_data.dir/build
-.PHONY : _rplidar_python_generate_messages_check_deps_rplidar_data/fast
-
-# Convenience name for target.
-rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_parameters.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_parameters.dir/rule
-.PHONY : rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_parameters.dir/rule
-
-# Convenience name for target.
-_rplidar_python_generate_messages_check_deps_rplidar_parameters: rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_parameters.dir/rule
-.PHONY : _rplidar_python_generate_messages_check_deps_rplidar_parameters
-
-# fast build rule for target.
-_rplidar_python_generate_messages_check_deps_rplidar_parameters/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_parameters.dir/build.make rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_parameters.dir/build
-.PHONY : _rplidar_python_generate_messages_check_deps_rplidar_parameters/fast
-
-# Convenience name for target.
-rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_point.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_point.dir/rule
-.PHONY : rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_point.dir/rule
-
-# Convenience name for target.
-_rplidar_python_generate_messages_check_deps_rplidar_point: rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_point.dir/rule
-.PHONY : _rplidar_python_generate_messages_check_deps_rplidar_point
-
-# fast build rule for target.
-_rplidar_python_generate_messages_check_deps_rplidar_point/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_point.dir/build.make rplidar_python/CMakeFiles/_rplidar_python_generate_messages_check_deps_rplidar_point.dir/build
-.PHONY : _rplidar_python_generate_messages_check_deps_rplidar_point/fast
-
-# Convenience name for target.
 rplidar_python/CMakeFiles/_run_tests_rplidar_python.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/_run_tests_rplidar_python.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/_run_tests_rplidar_python.dir/rule
 .PHONY : rplidar_python/CMakeFiles/_run_tests_rplidar_python.dir/rule
 
 # Convenience name for target.
@@ -202,12 +160,12 @@ _run_tests_rplidar_python: rplidar_python/CMakeFiles/_run_tests_rplidar_python.d
 
 # fast build rule for target.
 _run_tests_rplidar_python/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/_run_tests_rplidar_python.dir/build.make rplidar_python/CMakeFiles/_run_tests_rplidar_python.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/_run_tests_rplidar_python.dir/build.make rplidar_python/CMakeFiles/_run_tests_rplidar_python.dir/build
 .PHONY : _run_tests_rplidar_python/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check.dir/rule
 .PHONY : rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check.dir/rule
 
 # Convenience name for target.
@@ -216,12 +174,12 @@ _run_tests_rplidar_python_roslaunch-check: rplidar_python/CMakeFiles/_run_tests_
 
 # fast build rule for target.
 _run_tests_rplidar_python_roslaunch-check/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check.dir/build.make rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check.dir/build.make rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check.dir/build
 .PHONY : _run_tests_rplidar_python_roslaunch-check/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check_launch.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check_launch.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check_launch.dir/rule
 .PHONY : rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check_launch.dir/rule
 
 # Convenience name for target.
@@ -230,12 +188,12 @@ _run_tests_rplidar_python_roslaunch-check_launch: rplidar_python/CMakeFiles/_run
 
 # fast build rule for target.
 _run_tests_rplidar_python_roslaunch-check_launch/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check_launch.dir/build.make rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check_launch.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check_launch.dir/build.make rplidar_python/CMakeFiles/_run_tests_rplidar_python_roslaunch-check_launch.dir/build
 .PHONY : _run_tests_rplidar_python_roslaunch-check_launch/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/rplidar_python_gencpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_gencpp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_gencpp.dir/rule
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_gencpp.dir/rule
 
 # Convenience name for target.
@@ -244,12 +202,12 @@ rplidar_python_gencpp: rplidar_python/CMakeFiles/rplidar_python_gencpp.dir/rule
 
 # fast build rule for target.
 rplidar_python_gencpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_gencpp.dir/build.make rplidar_python/CMakeFiles/rplidar_python_gencpp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_gencpp.dir/build.make rplidar_python/CMakeFiles/rplidar_python_gencpp.dir/build
 .PHONY : rplidar_python_gencpp/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/rplidar_python_generate_messages.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_generate_messages.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_generate_messages.dir/rule
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -258,12 +216,12 @@ rplidar_python_generate_messages: rplidar_python/CMakeFiles/rplidar_python_gener
 
 # fast build rule for target.
 rplidar_python_generate_messages/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_generate_messages.dir/build.make rplidar_python/CMakeFiles/rplidar_python_generate_messages.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_generate_messages.dir/build.make rplidar_python/CMakeFiles/rplidar_python_generate_messages.dir/build
 .PHONY : rplidar_python_generate_messages/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/rplidar_python_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_generate_messages_cpp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_generate_messages_cpp.dir/rule
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -272,12 +230,12 @@ rplidar_python_generate_messages_cpp: rplidar_python/CMakeFiles/rplidar_python_g
 
 # fast build rule for target.
 rplidar_python_generate_messages_cpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_generate_messages_cpp.dir/build.make rplidar_python/CMakeFiles/rplidar_python_generate_messages_cpp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_generate_messages_cpp.dir/build.make rplidar_python/CMakeFiles/rplidar_python_generate_messages_cpp.dir/build
 .PHONY : rplidar_python_generate_messages_cpp/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/rplidar_python_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_generate_messages_lisp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_generate_messages_lisp.dir/rule
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -286,12 +244,12 @@ rplidar_python_generate_messages_lisp: rplidar_python/CMakeFiles/rplidar_python_
 
 # fast build rule for target.
 rplidar_python_generate_messages_lisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_generate_messages_lisp.dir/build.make rplidar_python/CMakeFiles/rplidar_python_generate_messages_lisp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_generate_messages_lisp.dir/build.make rplidar_python/CMakeFiles/rplidar_python_generate_messages_lisp.dir/build
 .PHONY : rplidar_python_generate_messages_lisp/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/rule
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -300,12 +258,12 @@ rplidar_python_generate_messages_py: rplidar_python/CMakeFiles/rplidar_python_ge
 
 # fast build rule for target.
 rplidar_python_generate_messages_py/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/build.make rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/build.make rplidar_python/CMakeFiles/rplidar_python_generate_messages_py.dir/build
 .PHONY : rplidar_python_generate_messages_py/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/rplidar_python_genlisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_genlisp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_genlisp.dir/rule
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_genlisp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +272,12 @@ rplidar_python_genlisp: rplidar_python/CMakeFiles/rplidar_python_genlisp.dir/rul
 
 # fast build rule for target.
 rplidar_python_genlisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_genlisp.dir/build.make rplidar_python/CMakeFiles/rplidar_python_genlisp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_genlisp.dir/build.make rplidar_python/CMakeFiles/rplidar_python_genlisp.dir/build
 .PHONY : rplidar_python_genlisp/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/rplidar_python_genpy.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_genpy.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/rplidar_python_genpy.dir/rule
 .PHONY : rplidar_python/CMakeFiles/rplidar_python_genpy.dir/rule
 
 # Convenience name for target.
@@ -328,12 +286,12 @@ rplidar_python_genpy: rplidar_python/CMakeFiles/rplidar_python_genpy.dir/rule
 
 # fast build rule for target.
 rplidar_python_genpy/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_genpy.dir/build.make rplidar_python/CMakeFiles/rplidar_python_genpy.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/rplidar_python_genpy.dir/build.make rplidar_python/CMakeFiles/rplidar_python_genpy.dir/build
 .PHONY : rplidar_python_genpy/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/run_tests_rplidar_python.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/run_tests_rplidar_python.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/run_tests_rplidar_python.dir/rule
 .PHONY : rplidar_python/CMakeFiles/run_tests_rplidar_python.dir/rule
 
 # Convenience name for target.
@@ -342,12 +300,12 @@ run_tests_rplidar_python: rplidar_python/CMakeFiles/run_tests_rplidar_python.dir
 
 # fast build rule for target.
 run_tests_rplidar_python/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/run_tests_rplidar_python.dir/build.make rplidar_python/CMakeFiles/run_tests_rplidar_python.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/run_tests_rplidar_python.dir/build.make rplidar_python/CMakeFiles/run_tests_rplidar_python.dir/build
 .PHONY : run_tests_rplidar_python/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/rule
 .PHONY : rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/rule
 
 # Convenience name for target.
@@ -356,12 +314,12 @@ run_tests_rplidar_python_roslaunch-check: rplidar_python/CMakeFiles/run_tests_rp
 
 # fast build rule for target.
 run_tests_rplidar_python_roslaunch-check/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/build.make rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/build.make rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/build
 .PHONY : run_tests_rplidar_python_roslaunch-check/fast
 
 # Convenience name for target.
 rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check_launch.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check_launch.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check_launch.dir/rule
 .PHONY : rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check_launch.dir/rule
 
 # Convenience name for target.
@@ -370,7 +328,7 @@ run_tests_rplidar_python_roslaunch-check_launch: rplidar_python/CMakeFiles/run_t
 
 # fast build rule for target.
 run_tests_rplidar_python_roslaunch-check_launch/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check_launch.dir/build.make rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check_launch.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check_launch.dir/build.make rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check_launch.dir/build
 .PHONY : run_tests_rplidar_python_roslaunch-check_launch/fast
 
 # Help Target
@@ -379,9 +337,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... _rplidar_python_generate_messages_check_deps_rplidar_data"
-	@echo "... _rplidar_python_generate_messages_check_deps_rplidar_parameters"
-	@echo "... _rplidar_python_generate_messages_check_deps_rplidar_point"
 	@echo "... _run_tests_rplidar_python"
 	@echo "... _run_tests_rplidar_python_roslaunch-check"
 	@echo "... _run_tests_rplidar_python_roslaunch-check_launch"
@@ -413,6 +368,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

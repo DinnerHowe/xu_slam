@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for run_tests_rplidar_python_roslaunch-check.
 
@@ -56,10 +56,10 @@ rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/build: ru
 .PHONY : rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/build
 
 rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/rplidar_python && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/rplidar_python && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/cmake_clean.cmake
 .PHONY : rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/clean
 
 rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/rplidar_python /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/rplidar_python /home/turtlebot2/xu_slam/build/rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/rplidar_python /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/rplidar_python /home/turtlebot/xu_slam/build/rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rplidar_python/CMakeFiles/run_tests_rplidar_python_roslaunch-check.dir/depend
 

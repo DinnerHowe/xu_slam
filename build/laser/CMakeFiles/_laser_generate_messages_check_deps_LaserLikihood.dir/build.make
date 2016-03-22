@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for _laser_generate_messages_check_deps_LaserLikihood.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/progress.make
 
 laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood:
-	cd /home/turtlebot2/xu_slam/build/laser && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py laser /home/turtlebot2/xu_slam/src/laser/msg/LaserLikihood.msg 
+	cd /home/turtlebot/xu_slam/build/laser && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py laser /home/turtlebot/xu_slam/src/laser/msg/LaserLikihood.msg 
 
 _laser_generate_messages_check_deps_LaserLikihood: laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood
 _laser_generate_messages_check_deps_LaserLikihood: laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/build.make
@@ -57,10 +57,10 @@ laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/build: _l
 .PHONY : laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/build
 
 laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/laser && $(CMAKE_COMMAND) -P CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/laser && $(CMAKE_COMMAND) -P CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/cmake_clean.cmake
 .PHONY : laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/clean
 
 laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/laser /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/laser /home/turtlebot2/xu_slam/build/laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/laser /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/laser /home/turtlebot/xu_slam/build/laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : laser/CMakeFiles/_laser_generate_messages_check_deps_LaserLikihood.dir/depend
 

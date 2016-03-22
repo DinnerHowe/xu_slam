@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot2/xu_slam/build/CMakeFiles /home/turtlebot2/xu_slam/build/voice_msg/CMakeFiles/progress.marks
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot2/xu_slam/build/CMakeFiles 0
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/xu_slam/build/CMakeFiles /home/turtlebot/xu_slam/build/voice_msg/CMakeFiles/progress.marks
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/turtlebot/xu_slam/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/clean
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/clean
 .PHONY : clean
 
 # The main clean target
@@ -136,22 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/preinstall
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/preinstall
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Command.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Command.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Command.dir/rule
 .PHONY : voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Command.dir/rule
 
 # Convenience name for target.
@@ -160,12 +160,12 @@ _voice_msg_generate_messages_check_deps_Command: voice_msg/CMakeFiles/_voice_msg
 
 # fast build rule for target.
 _voice_msg_generate_messages_check_deps_Command/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Command.dir/build.make voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Command.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Command.dir/build.make voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Command.dir/build
 .PHONY : _voice_msg_generate_messages_check_deps_Command/fast
 
 # Convenience name for target.
 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/rule
 .PHONY : voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/rule
 
 # Convenience name for target.
@@ -174,12 +174,12 @@ _voice_msg_generate_messages_check_deps_Motion: voice_msg/CMakeFiles/_voice_msg_
 
 # fast build rule for target.
 _voice_msg_generate_messages_check_deps_Motion/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/build.make voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/build.make voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Motion.dir/build
 .PHONY : _voice_msg_generate_messages_check_deps_Motion/fast
 
 # Convenience name for target.
 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Navigation.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Navigation.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Navigation.dir/rule
 .PHONY : voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Navigation.dir/rule
 
 # Convenience name for target.
@@ -188,12 +188,12 @@ _voice_msg_generate_messages_check_deps_Navigation: voice_msg/CMakeFiles/_voice_
 
 # fast build rule for target.
 _voice_msg_generate_messages_check_deps_Navigation/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Navigation.dir/build.make voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Navigation.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Navigation.dir/build.make voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Navigation.dir/build
 .PHONY : _voice_msg_generate_messages_check_deps_Navigation/fast
 
 # Convenience name for target.
 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Transmit.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Transmit.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Transmit.dir/rule
 .PHONY : voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Transmit.dir/rule
 
 # Convenience name for target.
@@ -202,12 +202,26 @@ _voice_msg_generate_messages_check_deps_Transmit: voice_msg/CMakeFiles/_voice_ms
 
 # fast build rule for target.
 _voice_msg_generate_messages_check_deps_Transmit/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Transmit.dir/build.make voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Transmit.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Transmit.dir/build.make voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_Transmit.dir/build
 .PHONY : _voice_msg_generate_messages_check_deps_Transmit/fast
 
 # Convenience name for target.
+voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_recog_result.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_recog_result.dir/rule
+.PHONY : voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_recog_result.dir/rule
+
+# Convenience name for target.
+_voice_msg_generate_messages_check_deps_recog_result: voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_recog_result.dir/rule
+.PHONY : _voice_msg_generate_messages_check_deps_recog_result
+
+# fast build rule for target.
+_voice_msg_generate_messages_check_deps_recog_result/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_recog_result.dir/build.make voice_msg/CMakeFiles/_voice_msg_generate_messages_check_deps_recog_result.dir/build
+.PHONY : _voice_msg_generate_messages_check_deps_recog_result/fast
+
+# Convenience name for target.
 voice_msg/CMakeFiles/voice_msg_gencpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_gencpp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_gencpp.dir/rule
 .PHONY : voice_msg/CMakeFiles/voice_msg_gencpp.dir/rule
 
 # Convenience name for target.
@@ -216,12 +230,12 @@ voice_msg_gencpp: voice_msg/CMakeFiles/voice_msg_gencpp.dir/rule
 
 # fast build rule for target.
 voice_msg_gencpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_gencpp.dir/build.make voice_msg/CMakeFiles/voice_msg_gencpp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_gencpp.dir/build.make voice_msg/CMakeFiles/voice_msg_gencpp.dir/build
 .PHONY : voice_msg_gencpp/fast
 
 # Convenience name for target.
 voice_msg/CMakeFiles/voice_msg_generate_messages.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_generate_messages.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_generate_messages.dir/rule
 .PHONY : voice_msg/CMakeFiles/voice_msg_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -230,12 +244,12 @@ voice_msg_generate_messages: voice_msg/CMakeFiles/voice_msg_generate_messages.di
 
 # fast build rule for target.
 voice_msg_generate_messages/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_generate_messages.dir/build.make voice_msg/CMakeFiles/voice_msg_generate_messages.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_generate_messages.dir/build.make voice_msg/CMakeFiles/voice_msg_generate_messages.dir/build
 .PHONY : voice_msg_generate_messages/fast
 
 # Convenience name for target.
 voice_msg/CMakeFiles/voice_msg_generate_messages_cpp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_generate_messages_cpp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_generate_messages_cpp.dir/rule
 .PHONY : voice_msg/CMakeFiles/voice_msg_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -244,12 +258,12 @@ voice_msg_generate_messages_cpp: voice_msg/CMakeFiles/voice_msg_generate_message
 
 # fast build rule for target.
 voice_msg_generate_messages_cpp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_generate_messages_cpp.dir/build.make voice_msg/CMakeFiles/voice_msg_generate_messages_cpp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_generate_messages_cpp.dir/build.make voice_msg/CMakeFiles/voice_msg_generate_messages_cpp.dir/build
 .PHONY : voice_msg_generate_messages_cpp/fast
 
 # Convenience name for target.
 voice_msg/CMakeFiles/voice_msg_generate_messages_lisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_generate_messages_lisp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_generate_messages_lisp.dir/rule
 .PHONY : voice_msg/CMakeFiles/voice_msg_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -258,12 +272,12 @@ voice_msg_generate_messages_lisp: voice_msg/CMakeFiles/voice_msg_generate_messag
 
 # fast build rule for target.
 voice_msg_generate_messages_lisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_generate_messages_lisp.dir/build.make voice_msg/CMakeFiles/voice_msg_generate_messages_lisp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_generate_messages_lisp.dir/build.make voice_msg/CMakeFiles/voice_msg_generate_messages_lisp.dir/build
 .PHONY : voice_msg_generate_messages_lisp/fast
 
 # Convenience name for target.
 voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/rule
 .PHONY : voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -272,12 +286,12 @@ voice_msg_generate_messages_py: voice_msg/CMakeFiles/voice_msg_generate_messages
 
 # fast build rule for target.
 voice_msg_generate_messages_py/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/build.make voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/build.make voice_msg/CMakeFiles/voice_msg_generate_messages_py.dir/build
 .PHONY : voice_msg_generate_messages_py/fast
 
 # Convenience name for target.
 voice_msg/CMakeFiles/voice_msg_genlisp.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_genlisp.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_genlisp.dir/rule
 .PHONY : voice_msg/CMakeFiles/voice_msg_genlisp.dir/rule
 
 # Convenience name for target.
@@ -286,12 +300,12 @@ voice_msg_genlisp: voice_msg/CMakeFiles/voice_msg_genlisp.dir/rule
 
 # fast build rule for target.
 voice_msg_genlisp/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_genlisp.dir/build.make voice_msg/CMakeFiles/voice_msg_genlisp.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_genlisp.dir/build.make voice_msg/CMakeFiles/voice_msg_genlisp.dir/build
 .PHONY : voice_msg_genlisp/fast
 
 # Convenience name for target.
 voice_msg/CMakeFiles/voice_msg_genpy.dir/rule:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_genpy.dir/rule
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 voice_msg/CMakeFiles/voice_msg_genpy.dir/rule
 .PHONY : voice_msg/CMakeFiles/voice_msg_genpy.dir/rule
 
 # Convenience name for target.
@@ -300,7 +314,7 @@ voice_msg_genpy: voice_msg/CMakeFiles/voice_msg_genpy.dir/rule
 
 # fast build rule for target.
 voice_msg_genpy/fast:
-	cd /home/turtlebot2/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_genpy.dir/build.make voice_msg/CMakeFiles/voice_msg_genpy.dir/build
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f voice_msg/CMakeFiles/voice_msg_genpy.dir/build.make voice_msg/CMakeFiles/voice_msg_genpy.dir/build
 .PHONY : voice_msg_genpy/fast
 
 # Help Target
@@ -313,6 +327,7 @@ help:
 	@echo "... _voice_msg_generate_messages_check_deps_Motion"
 	@echo "... _voice_msg_generate_messages_check_deps_Navigation"
 	@echo "... _voice_msg_generate_messages_check_deps_Transmit"
+	@echo "... _voice_msg_generate_messages_check_deps_recog_result"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -338,6 +353,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

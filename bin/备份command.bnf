@@ -1,0 +1,80 @@
+﻿#BNF+IAT 1.0 UTF-8;
+!grammar command;
+!slot <contact>;
+!slot <direction>;
+!slot <pattern>;
+!slot <stepcount>;
+!slot <metric>;
+!slot <date>;
+!slot <iweather>;
+!slot <songname>;
+!slot <name>;
+!slot <go>;
+!slot <destination>;
+!slot <postfix>;
+!start <command>;
+<command>:<motion>|<call>|<whoareyou>|<weather>|<song>|<navigation>|<send1>;
+
+<motion>:[<contact>]<direction>[<pattern>][<stepcount>][<metric>];
+<contact>:机器人|嗨|嘿|谓;
+<direction>:直行|前进|倒退|向前|往前|向后|往后|向左|向右|向左前方|向右前方|向左后方|向右后方|前进|后退|左转|右转|向后转|转弯|转个弯|停|停下|停止|别动;
+<pattern>:走|跑|前进|移动|转|转弯;
+<stepcount>:一|二|三|四|五|六|七|八|九|十|十五|二十|五十|一百|九十|一百八十|三百六十;
+<metric>:步|米|度;
+
+<call>:[<want>]<dial>;
+<want>:我想|我要|请|帮我|我想要|请帮我;
+<dial>:<dialpre><linkman>[<dialsuf>];
+<dialpre>:打电话给!id(10001)|打给!id(10001)|拨打!id(10001)|拨打电话给!id(10001)|呼叫!id(10001)|
+打一个电话给!id(10001)|打个电话给!id(10001)|给|拨通!id(10001)|
+接通!id(10001)|呼叫!id(10001)|呼叫给!id(10001)|打!id(10001);
+<dialsuf>:打电话!id(10001)|打个电话!id(10001)|打一个电话!id(10001)|
+拨打电话!id(10001)|拨电话!id(10001)|拨个电话!id(10001)|呼个电话!id(10001)|
+的电话!id(10001)|的号码!id(10001)|的手机!id(10001)|
+的办公电话!id(10001)|的移动号码!id(10001)|的联通号码!id(10001)|
+的电信号码!id(10001)|客服电话!id(10001);
+<linkman>:孟孟|张三|婧婧|丁伟;
+
+<whoareyou>:你是谁|你叫什么名字|你的名字是什么|你几岁了|你多大了|自我介绍下吧|做个自我介绍吧;
+
+<weather>:[<date>]<iweather>;
+<date>:今天|明天|今天的|明天的|本周|本周的|下周|下周的;
+<iweather>:天气怎样|空气如何|空气质量怎样|空气质量如何|有雾霾吗|会有雾霾吗|雾霾严重吗|天晴吗|是大晴天吗|是晴天吗|会天晴吗|阴天吗|会下雨吗|会下雪吗|有风吗|会刮风吗|风力有几级|PM值是多少|PM值爆表了吗|紫外线强度高吗|紫外线强吗;
+
+<song>:<songpre><songname>;
+<songpre>:唱首歌吧|唱一首|唱首|请唱|唱|演唱|播放;
+<songname>:小苹果|圣诞歌;
+
+<navigation>:([<name>]<go>)<direct>|<indirect>([<postfix>]);
+<name>:机器人|谓|嗨|嘿;
+<go>:到|去|过去|去到|往|前往|请到|请去|请过去;
+<direct>:门口|盆栽|充电|刘孟孟|孟孟|刘孟孟的|孟孟的|刘森|刘森的|徐志浩|徐志浩的;
+<indirect>:[<di>][<columnNum>][<lie>][<rowNum>][<seriaNo>];
+<di>:第|前|后;
+<columnNum>:一|二|三|四|五|六;
+<lie>:排|列|边;
+<rowNum>:一|二|三|四;
+<seriaNo>:号|个;
+<postfix>:工位|那边|那|那里;
+
+<send1>:([<robot1>][<qing>]<song1><object1><dao1>[<dd>])<didian1>;
+<robot1>:机器人|嗨|嘿;
+<qing>:请;
+<song1>:送|把;
+<object1>:水杯|这个水杯|这本书;
+<dao1>:到|给|送;
+<dd>:到|给;
+<didian1>:<rencheng1>[<xiushi1>];
+<rencheng1>:刘孟孟|孟孟|刘孟孟的|孟孟的|刘森的|刘森|徐志浩|徐志浩的;
+<xiushi1>:那边|工位;
+
+
+<get>:[<robot2>]<dao2><><didian2><ba><object2>[<xiushi2>];
+<robot2>:机器人|嗨;
+<dao2>:去|到|请到|请去;
+<didian2>:<rencheng2><houzhui>;
+<rencheng2>:刘孟孟|孟孟|刘孟孟的|孟孟的|刘森的|刘森|徐志浩|徐志浩的;
+<houzhui>:那边|工位;
+<ba>:把|取回|拿回;
+<object2>:书|水杯;
+<xiushi2>:拿回来|取回来;

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for go_points_generate_messages_cpp.
 
@@ -56,10 +56,10 @@ go_points/CMakeFiles/go_points_generate_messages_cpp.dir/build: go_points_genera
 .PHONY : go_points/CMakeFiles/go_points_generate_messages_cpp.dir/build
 
 go_points/CMakeFiles/go_points_generate_messages_cpp.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/go_points && $(CMAKE_COMMAND) -P CMakeFiles/go_points_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/go_points && $(CMAKE_COMMAND) -P CMakeFiles/go_points_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : go_points/CMakeFiles/go_points_generate_messages_cpp.dir/clean
 
 go_points/CMakeFiles/go_points_generate_messages_cpp.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/go_points /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/go_points /home/turtlebot2/xu_slam/build/go_points/CMakeFiles/go_points_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/go_points /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/go_points /home/turtlebot/xu_slam/build/go_points/CMakeFiles/go_points_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : go_points/CMakeFiles/go_points_generate_messages_cpp.dir/depend
 

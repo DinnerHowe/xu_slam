@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for slam_main_genlisp.
 
@@ -56,10 +56,10 @@ slam_main/CMakeFiles/slam_main_genlisp.dir/build: slam_main_genlisp
 .PHONY : slam_main/CMakeFiles/slam_main_genlisp.dir/build
 
 slam_main/CMakeFiles/slam_main_genlisp.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/slam_main && $(CMAKE_COMMAND) -P CMakeFiles/slam_main_genlisp.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/slam_main && $(CMAKE_COMMAND) -P CMakeFiles/slam_main_genlisp.dir/cmake_clean.cmake
 .PHONY : slam_main/CMakeFiles/slam_main_genlisp.dir/clean
 
 slam_main/CMakeFiles/slam_main_genlisp.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/slam_main /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/slam_main /home/turtlebot2/xu_slam/build/slam_main/CMakeFiles/slam_main_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/slam_main /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/slam_main /home/turtlebot/xu_slam/build/slam_main/CMakeFiles/slam_main_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : slam_main/CMakeFiles/slam_main_genlisp.dir/depend
 

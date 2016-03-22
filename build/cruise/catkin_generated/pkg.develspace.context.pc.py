@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "roscpp;rospy;tf;message_runtime".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lbase_motion_module".split(';') if "-lbase_motion_module" != "" else []
 PROJECT_NAME = "cruise"
-PROJECT_SPACE_DIR = "/home/turtlebot2/xu_slam/devel"
+PROJECT_SPACE_DIR = "/home/turtlebot/xu_slam/devel"
 PROJECT_VERSION = "0.0.0"

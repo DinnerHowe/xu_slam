@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for run_tests_laser_roslaunch-check_launch.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/progress.make
 
 laser/CMakeFiles/run_tests_laser_roslaunch-check_launch:
-	cd /home/turtlebot2/xu_slam/build/laser && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot2/xu_slam/build/test_results/laser/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot2/xu_slam/build/test_results/laser /opt/ros/indigo/share/roslaunch/cmake/../scripts/roslaunch-check\ -o\ '/home/turtlebot2/xu_slam/build/test_results/laser/roslaunch-check_launch.xml'\ '/home/turtlebot2/xu_slam/src/laser/launch'\ 
+	cd /home/turtlebot/xu_slam/build/laser && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot/xu_slam/build/test_results/laser/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot/xu_slam/build/test_results/laser /opt/ros/indigo/share/roslaunch/cmake/../scripts/roslaunch-check\ -o\ '/home/turtlebot/xu_slam/build/test_results/laser/roslaunch-check_launch.xml'\ '/home/turtlebot/xu_slam/src/laser/launch'\ 
 
 run_tests_laser_roslaunch-check_launch: laser/CMakeFiles/run_tests_laser_roslaunch-check_launch
 run_tests_laser_roslaunch-check_launch: laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/build.make
@@ -57,10 +57,10 @@ laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/build: run_tests_las
 .PHONY : laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/build
 
 laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/laser && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/laser && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/cmake_clean.cmake
 .PHONY : laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/clean
 
 laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/laser /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/laser /home/turtlebot2/xu_slam/build/laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/laser /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/laser /home/turtlebot/xu_slam/build/laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : laser/CMakeFiles/run_tests_laser_roslaunch-check_launch.dir/depend
 

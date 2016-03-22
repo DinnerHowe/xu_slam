@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for _run_tests_laser.
 
@@ -56,10 +56,10 @@ laser/CMakeFiles/_run_tests_laser.dir/build: _run_tests_laser
 .PHONY : laser/CMakeFiles/_run_tests_laser.dir/build
 
 laser/CMakeFiles/_run_tests_laser.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/laser && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_laser.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/laser && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_laser.dir/cmake_clean.cmake
 .PHONY : laser/CMakeFiles/_run_tests_laser.dir/clean
 
 laser/CMakeFiles/_run_tests_laser.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/laser /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/laser /home/turtlebot2/xu_slam/build/laser/CMakeFiles/_run_tests_laser.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/laser /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/laser /home/turtlebot/xu_slam/build/laser/CMakeFiles/_run_tests_laser.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : laser/CMakeFiles/_run_tests_laser.dir/depend
 

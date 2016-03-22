@@ -23,6 +23,7 @@ int64 direction
 int64 pattern
 int64 stepcount
 
+
 ================================================================================
 MSG: voice_msg/Navigation
 bool navigation

@@ -15,6 +15,7 @@ int64 direction
 int64 pattern
 int64 stepcount
 
+
 """
   __slots__ = ['motion','direction','pattern','stepcount']
   _slot_types = ['bool','int64','int64','int64']

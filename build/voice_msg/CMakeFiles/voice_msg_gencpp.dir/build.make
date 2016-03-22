@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for voice_msg_gencpp.
 
@@ -56,10 +56,10 @@ voice_msg/CMakeFiles/voice_msg_gencpp.dir/build: voice_msg_gencpp
 .PHONY : voice_msg/CMakeFiles/voice_msg_gencpp.dir/build
 
 voice_msg/CMakeFiles/voice_msg_gencpp.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/voice_msg && $(CMAKE_COMMAND) -P CMakeFiles/voice_msg_gencpp.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/voice_msg && $(CMAKE_COMMAND) -P CMakeFiles/voice_msg_gencpp.dir/cmake_clean.cmake
 .PHONY : voice_msg/CMakeFiles/voice_msg_gencpp.dir/clean
 
 voice_msg/CMakeFiles/voice_msg_gencpp.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/voice_msg /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/voice_msg /home/turtlebot2/xu_slam/build/voice_msg/CMakeFiles/voice_msg_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/voice_msg /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/voice_msg /home/turtlebot/xu_slam/build/voice_msg/CMakeFiles/voice_msg_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : voice_msg/CMakeFiles/voice_msg_gencpp.dir/depend
 

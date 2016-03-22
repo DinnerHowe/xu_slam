@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for dynamic_reconfigure_generate_messages_py.
 
@@ -56,10 +56,10 @@ rbx1/rbx1_nav/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build: dyn
 .PHONY : rbx1/rbx1_nav/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
 
 rbx1/rbx1_nav/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/rbx1/rbx1_nav && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/rbx1/rbx1_nav && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : rbx1/rbx1_nav/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
 
 rbx1/rbx1_nav/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/rbx1/rbx1_nav /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/rbx1/rbx1_nav /home/turtlebot2/xu_slam/build/rbx1/rbx1_nav/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/rbx1/rbx1_nav /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/rbx1/rbx1_nav /home/turtlebot/xu_slam/build/rbx1/rbx1_nav/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rbx1/rbx1_nav/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/depend
 

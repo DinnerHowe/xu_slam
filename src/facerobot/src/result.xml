@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?><nlp>
+  <version>1.1</version>
+  <rawtext>别动</rawtext>
+  <confidence>41</confidence>
+  <engine>local</engine>
+  <result>
+    <focus>direction</focus>
+    <confidence>0</confidence>
+    <object>
+      <direction id="12">别动</direction>
+    </object>
+  </result>
+</nlp>
+

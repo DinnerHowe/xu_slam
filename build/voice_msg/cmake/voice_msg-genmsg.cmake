@@ -1,8 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "voice_msg: 4 messages, 0 services")
+message(STATUS "voice_msg: 5 messages, 0 services")
 
-set(MSG_I_FLAGS "-Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Ivoice_msg:/home/turtlebot2/xu_slam/src/voice_msg/msg")
+set(MSG_I_FLAGS "-Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Ivoice_msg:/home/turtlebot/xu_slam/src/voice_msg/msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,24 +15,29 @@ add_custom_target(voice_msg_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg" NAME_WE)
 add_custom_target(_voice_msg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_msg" "/home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg" "voice_msg/Transmit:voice_msg/Motion:voice_msg/Navigation"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_msg" "/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg" ""
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg" NAME_WE)
 add_custom_target(_voice_msg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_msg" "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_msg" "/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg" ""
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg" NAME_WE)
 add_custom_target(_voice_msg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_msg" "/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_msg" "/home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg" "voice_msg/Transmit:voice_msg/Navigation:voice_msg/Motion"
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg" NAME_WE)
 add_custom_target(_voice_msg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_msg" "/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_msg" "/home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg" ""
+)
+
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg" NAME_WE)
+add_custom_target(_voice_msg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "voice_msg" "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg" ""
 )
 
 #
@@ -42,27 +47,33 @@ add_custom_target(_voice_msg_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/voice_msg
 )
 _generate_msg_cpp(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/voice_msg
 )
 _generate_msg_cpp(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg"
+  "${MSG_I_FLAGS}"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg;/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg;/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/voice_msg
+)
+_generate_msg_cpp(voice_msg
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/voice_msg
 )
 _generate_msg_cpp(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg"
   "${MSG_I_FLAGS}"
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg;/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg;/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/voice_msg
 )
 
@@ -80,13 +91,15 @@ add_custom_target(voice_msg_generate_messages_cpp
 add_dependencies(voice_msg_generate_messages voice_msg_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_cpp _voice_msg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_cpp _voice_msg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_cpp _voice_msg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg" NAME_WE)
+add_dependencies(voice_msg_generate_messages_cpp _voice_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_cpp _voice_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -99,27 +112,33 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS voice_msg_generate_messages_cpp)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/voice_msg
 )
 _generate_msg_lisp(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/voice_msg
 )
 _generate_msg_lisp(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg"
+  "${MSG_I_FLAGS}"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg;/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg;/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/voice_msg
+)
+_generate_msg_lisp(voice_msg
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/voice_msg
 )
 _generate_msg_lisp(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg"
   "${MSG_I_FLAGS}"
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg;/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg;/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/voice_msg
 )
 
@@ -137,13 +156,15 @@ add_custom_target(voice_msg_generate_messages_lisp
 add_dependencies(voice_msg_generate_messages voice_msg_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_lisp _voice_msg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_lisp _voice_msg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_lisp _voice_msg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg" NAME_WE)
+add_dependencies(voice_msg_generate_messages_lisp _voice_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_lisp _voice_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -156,27 +177,33 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS voice_msg_generate_messages_lisp)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/voice_msg
 )
 _generate_msg_py(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/voice_msg
 )
 _generate_msg_py(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg"
+  "${MSG_I_FLAGS}"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg;/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg;/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/voice_msg
+)
+_generate_msg_py(voice_msg
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/voice_msg
 )
 _generate_msg_py(voice_msg
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg"
+  "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg"
   "${MSG_I_FLAGS}"
-  "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg;/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg;/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/voice_msg
 )
 
@@ -194,13 +221,15 @@ add_custom_target(voice_msg_generate_messages_py
 add_dependencies(voice_msg_generate_messages voice_msg_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Motion.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_py _voice_msg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Transmit.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Navigation.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_py _voice_msg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Navigation.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Command.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_py _voice_msg_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/voice_msg/msg/Motion.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/recog_result.msg" NAME_WE)
+add_dependencies(voice_msg_generate_messages_py _voice_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/voice_msg/msg/Transmit.msg" NAME_WE)
 add_dependencies(voice_msg_generate_messages_py _voice_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

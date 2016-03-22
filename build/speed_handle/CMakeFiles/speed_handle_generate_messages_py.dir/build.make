@@ -35,64 +35,64 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for speed_handle_generate_messages_py.
 
 # Include the progress variables for this target.
 include speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/progress.make
 
-speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py
-speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py
-speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py
-speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py
-speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py
+speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py
+speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py
+speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py
+speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py
+speed_handle/CMakeFiles/speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py: /home/turtlebot2/xu_slam/src/speed_handle/msg/speed.msg
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py: /home/turtlebot2/xu_slam/src/speed_handle/msg/Victor.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py: /home/turtlebot/xu_slam/src/speed_handle/msg/speed.msg
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py: /home/turtlebot/xu_slam/src/speed_handle/msg/Victor.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG speed_handle/speed"
-	cd /home/turtlebot2/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/speed_handle/msg/speed.msg -Ispeed_handle:/home/turtlebot2/xu_slam/src/speed_handle/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p speed_handle -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg
+	cd /home/turtlebot/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/speed_handle/msg/speed.msg -Ispeed_handle:/home/turtlebot/xu_slam/src/speed_handle/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p speed_handle -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py: /home/turtlebot2/xu_slam/src/speed_handle/msg/Victor.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py: /home/turtlebot/xu_slam/src/speed_handle/msg/Victor.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG speed_handle/Victor"
-	cd /home/turtlebot2/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot2/xu_slam/src/speed_handle/msg/Victor.msg -Ispeed_handle:/home/turtlebot2/xu_slam/src/speed_handle/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p speed_handle -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg
+	cd /home/turtlebot/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/speed_handle/msg/Victor.msg -Ispeed_handle:/home/turtlebot/xu_slam/src/speed_handle/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p speed_handle -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py: /home/turtlebot2/xu_slam/src/speed_handle/srv/Speed.srv
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py: /home/turtlebot2/xu_slam/src/speed_handle/msg/Victor.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py: /home/turtlebot/xu_slam/src/speed_handle/srv/Speed.srv
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py: /home/turtlebot/xu_slam/src/speed_handle/msg/Victor.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV speed_handle/Speed"
-	cd /home/turtlebot2/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/turtlebot2/xu_slam/src/speed_handle/srv/Speed.srv -Ispeed_handle:/home/turtlebot2/xu_slam/src/speed_handle/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p speed_handle -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv
+	cd /home/turtlebot/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/turtlebot/xu_slam/src/speed_handle/srv/Speed.srv -Ispeed_handle:/home/turtlebot/xu_slam/src/speed_handle/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p speed_handle -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for speed_handle"
-	cd /home/turtlebot2/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg --initpy
+	cd /home/turtlebot/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg --initpy
 
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py
-/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot2/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_5)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for speed_handle"
-	cd /home/turtlebot2/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv --initpy
+	cd /home/turtlebot/xu_slam/build/speed_handle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv --initpy
 
 speed_handle_generate_messages_py: speed_handle/CMakeFiles/speed_handle_generate_messages_py
-speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py
-speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py
-speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py
-speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py
-speed_handle_generate_messages_py: /home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py
+speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_speed.py
+speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/_Victor.py
+speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/_Speed.py
+speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/msg/__init__.py
+speed_handle_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/speed_handle/srv/__init__.py
 speed_handle_generate_messages_py: speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/build.make
 .PHONY : speed_handle_generate_messages_py
 
@@ -101,10 +101,10 @@ speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/build: speed_handl
 .PHONY : speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/build
 
 speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/speed_handle && $(CMAKE_COMMAND) -P CMakeFiles/speed_handle_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/speed_handle && $(CMAKE_COMMAND) -P CMakeFiles/speed_handle_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/clean
 
 speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/speed_handle /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/speed_handle /home/turtlebot2/xu_slam/build/speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/speed_handle /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/speed_handle /home/turtlebot/xu_slam/build/speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : speed_handle/CMakeFiles/speed_handle_generate_messages_py.dir/depend
 

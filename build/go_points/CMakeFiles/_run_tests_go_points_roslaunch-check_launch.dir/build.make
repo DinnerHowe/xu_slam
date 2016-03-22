@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for _run_tests_go_points_roslaunch-check_launch.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/progress.make
 
 go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch:
-	cd /home/turtlebot2/xu_slam/build/go_points && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot2/xu_slam/build/test_results/go_points/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot2/xu_slam/build/test_results/go_points \ -o\ '/home/turtlebot2/xu_slam/build/test_results/go_points/roslaunch-check_launch.xml'\ '/home/turtlebot2/xu_slam/src/go_points/launch'\ 
+	cd /home/turtlebot/xu_slam/build/go_points && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot/xu_slam/build/test_results/go_points/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot/xu_slam/build/test_results/go_points \ -o\ '/home/turtlebot/xu_slam/build/test_results/go_points/roslaunch-check_launch.xml'\ '/home/turtlebot/xu_slam/src/go_points/launch'\ 
 
 _run_tests_go_points_roslaunch-check_launch: go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch
 _run_tests_go_points_roslaunch-check_launch: go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/build.make
@@ -57,10 +57,10 @@ go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/build: _run
 .PHONY : go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/build
 
 go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/go_points && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/go_points && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/cmake_clean.cmake
 .PHONY : go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/clean
 
 go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/go_points /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/go_points /home/turtlebot2/xu_slam/build/go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/go_points /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/go_points /home/turtlebot/xu_slam/build/go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : go_points/CMakeFiles/_run_tests_go_points_roslaunch-check_launch.dir/depend
 

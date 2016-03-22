@@ -1,0 +1,162 @@
+#!/usr/bin/python
+#coding=utf-8
+
+
+import rospy
+from std_msgs.msg import String
+from voice_msg.msg import Command
+from voice_msg.msg import recog_result
+
+import  xml.dom.minidom
+from xml.etree import ElementTree as ET
+
+#几种语音内容（运动指示、导航、送东西、取东西）的标识位
+Motion_Flag=["1","2","3","4","5","6","7","8","9","10","11","12"]
+Navigation_Flag=["33"]
+Send_Flag=["50"]
+Get_Flag=["56"]
+#Motion.msg
+direction_flag = ["1","2","3","4","5","6","7","8","9","10","11","12"]
+pattern_flag = ["13","14","15"]
+stepcount_flag = ["16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32"]
+#metric_flag = ["57","58"]
+#Navigation.msg
+go_flag = ["33"]
+direct_flag = ["34","35","36","37","38","39"]
+colunmNum_flag = ["16","17","18","19","20","21"]
+rosNum_flag = ["16","17","18","19"]
+#Transmit.msg //(Transmit my_send)/（Transmit my_get）
+send_flag = ["50"]
+get_flag = ["56"]
+objects_flag = ["51","52"]
+didian_flag = ["37","38","39"]
+
+pub = rospy.Publisher('Command', Command, queue_size=10)
+rospy.init_node('parser', anonymous=False)
+#rate = rospy.Rate(10) # 10hz
+start = Command()
+
+def print_all_msg():
+    print '所有msg取值情况'
+    print 'motion = ',start.my_motion.motion
+    print 'direction = ',start.my_motion.direction
+    print 'pattern = ',start.my_motion.pattern
+    print 'stepcount = ',start.my_motion.stepcount
+    #print 'metric= ',start.my_motion.metric
+    print 'navigation = ',start.my_navigation.navigation
+    print 'go = ',start.my_navigation.go
+    print 'direct = ',start.my_navigation.direct
+    print 'columnNum = ',start.my_navigation.columnNum
+    print 'rosNum = ',start.my_navigation.rosNum
+    print 'send = ',start.my_send.transmit
+    print 'objects = ',start.my_send.object
+    print 'didian = ',start.my_send.didian
+    print 'get = ',start.my_get.transmit
+    print 'objects = ',start.my_get.object
+    print 'didian = ',start.my_get.didian
+
+def parser(data):
+    start = Command()
+    if(data.finished == True):
+        print "listen one message!\n"
+        dom = xml.dom.minidom.parse('/home/turtlebot/xu_slam/src/facerobot/src/result.xml')
+        root = dom.documentElement
+        rr = root.getElementsByTagName('rawtext')
+        r = rr[0]
+        #print r.firstChild.data
+        rawtext = r.firstChild.data #rawtext存放最终的识别结果，如“去孟孟工位取回水杯”
+
+        per = ET.parse('/home/turtlebot/xu_slam/src/facerobot/src/result.xml')
+        p = per.findall('./result/object')
+        result=list()#result存放识别出来的所有词条。
+        for oneper in p:
+            for child in oneper.getchildren():
+    	       # print child.tag,':',child.attrib['id'],':',child.text
+	        temp=['%s'%child.attrib['id'],'%s'%child.text]
+	        result.append(temp)
+       # print '待匹配词条个数：',len(oneper.getchildren())
+        print '最佳匹配结果：',rawtext
+
+        for i in range(len(oneper.getchildren())):
+	        if (result[i][1] in rawtext) and (result[i][0] != "65535") and (result[i][0] in Motion_Flag):
+                    print result[i][0],result[i][1],'exsit in Motion'
+                    start.my_motion.motion = True
+                    #print 'motion = ',start.my_motion.motion
+                    for j in range(len(oneper.getchildren())):
+                        if (result[j][1] in rawtext) and (result[j][0] != "65535") and (result[j][0] in direction_flag):
+                            start.my_motion.direction=int(result[j][0])
+                            #print start.my_motion.direction
+                        elif (result[j][1] in rawtext) and (result[j][0] != "65535") and (result[j][0] in pattern_flag):
+                            start.my_motion.pattern=int(result[j][0])
+                            #print start.my_motion.pattern
+                        elif (result[j][1] in rawtext) and (result[j][0] != "65535") and (result[j][0] in stepcount_flag):
+                            start.my_motion.stepcount=int(result[j][0])
+                            #print start.my_motion.stepcount
+                        #elif (result[j][1] in rawtext) and (result[j][0] != "65535") and (result[j][0] in metric_flag):
+                            #start.my_motion.metric=int(result[j][0])
+                            #print start.my_motion.metric
+                   # print_all_msg() 
+                elif (result[i][1] in rawtext) and (result[i][0] != "65535") and (result[i][0] in Navigation_Flag):
+                    print result[i][0],result[i][1],'exsit in Navigation'
+                    start.my_navigation.navigation = True
+                    print 'navigation = ',start.my_navigation.navigation
+                    for k in range(len(oneper.getchildren())):
+                        if (result[k][1] in rawtext) and (result[k][0] != "65535") and (result[k][0] in go_flag):
+                            start.my_navigation.go=int(result[k][0])
+                            print  start.my_navigation.go
+                        elif (result[k][1] in rawtext) and (result[k][0] != "65535") and (result[k][0] in direct_flag):
+                            start.my_navigation.direct=int(result[k][0])
+                            print start.my_navigation.direct
+                        elif (result[k][1] in rawtext) and (result[k][0] != "65535") and (result[k][0] in colunmNum_flag):
+                            start.my_navigation.columnNum=int(result[k][0])
+                            print start.my_navigation.columnNum
+                        elif (result[k][1] in rawtext) and (result[k][0] != "65535") and (result[k][0] in rosNum_flag):
+                            start.my_navigation.rosNum=int(result[k][0])
+                            print start.my_navigation.rosNum
+                    #print_all_msg()  
+                elif (result[i][1] in rawtext) and (result[i][0] != "65535") and (result[i][0] in Send_Flag):
+                    print result[i][0],result[i][1],'exsit in Send'
+                    start.my_send.transmit = True
+                    print 'send = ',start.my_send.transmit
+                    for n in range(len(oneper.getchildren())):
+                        if (result[n][1] in rawtext) and (result[n][0] != "65535") and (result[n][0] in objects_flag):
+                            start.my_send.object=int(result[n][0])
+                            print start.my_send.object
+                        elif (result[n][1] in rawtext) and (result[n][0] != "65535") and (result[n][0] in didian_flag):
+                            start.my_send.didian=int(result[n][0])
+                            print start.my_send.didian
+                    #print_all_msg()   
+                elif (result[i][1] in rawtext) and (result[i][0] != "65535") and (result[i][0] in Get_Flag):
+                    print result[i][0],result[i][1],'exsit in Get'
+                    start.my_get.transmit = True
+                    print 'get = ',start.my_get.transmit
+                    for m in range(len(oneper.getchildren())):
+                        if (result[m][1] in rawtext) and (result[m][0] != "65535") and (result[m][0] in objects_flag):
+                            start.my_get.object=int(result[m][0])
+                            print start.my_get.object
+                        elif (result[m][1] in rawtext) and (result[m][0] != "65535") and (result[m][0] in didian_flag):
+                            start.my_get.didian=int(result[m][0])
+                            print  start.my_get.didian
+                    #print_all_msg()
+                else:
+                    pass
+        #print type(start)
+    	pub.publish(start)
+        rate = rospy.Rate(10)
+        rate.sleep()
+        print start
+        #print_all_msg()
+    	rospy.loginfo("pub msg one time!")
+
+
+def Monitor():
+    rospy.Subscriber("recog_result",recog_result,parser)
+    rospy.spin()
+
+if __name__ == '__main__':
+    try:
+        Monitor()
+    except rospy.ROSInterruptException:
+        pass
+
+

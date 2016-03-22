@@ -1,0 +1,66 @@
+﻿#BNF+IAT 1.0 UTF-8;
+!grammar command;
+!slot <contact>;
+!slot <direction>;
+!slot <pattern>;
+!slot <stepcount>;
+!slot <metric>;
+!slot <date>;
+!slot <iweather>;
+!slot <songname>;
+!slot <name>;
+!slot <go>;
+!slot <destination>;
+!slot <postfix>;
+!start <command>;
+<command>:<motion>|<navigation>|<send1>|<get>|<song>;
+
+<motion>:[<contact>]<direction>[<pattern>][<stepcount>][<metric>];
+<contact>:机器人|嗨|嘿|谓;
+<direction>:直行!id(1)|前进!id(1)|倒退!id(2)|向前!id(1)|往前!id(1)|向后!id(2)|往后!id(2)|向左!id(3)|向右!id(4)|向左前方!id(5)|向右前方!id(7)|向左后方!id(6)|向右后方!id(8)|后退!id(2)|左转!id(9)|向左转!id(9)|右转!id(10)|向后转!id(11)|转弯!id(10)|转个弯!id(10)|停!id(12)|停下!id(12)|停止!id(12)|别动!id(12);
+<pattern>:走!id(13)|跑!id(14)|行进!id(13)|移动!id(13)|转!id(15);
+<stepcount>:一!id(16)|二!id(17)|三!id(18)|四!id(19)|五!id(20)|六!id(21)|七!id(22)|八!id(23)|九!id(24)|十!id(25)|二十!id(26)|五十!id(27)|一百!id(28)|九十!id(29)|一百八十!id(30)|二百七十!id(31)|三百六十!id(32);
+<metric>:米!id(57)|度!id(58);
+
+<navigation>:([<name>]<go>)(<direct>|<indirect>)([<postfix>]);
+<name>:机器人|谓|嗨|嘿;
+<go>:到!id(33)|去!id(33)|过去!id(33)|去到!id(33)|往!id(33)|请到!id(33)|请去!id(33)|请过去!id(33);
+<direct>:门口!id(34)|盆栽!id(35)|充电!id(36)|刘孟孟!id(37)|孟孟!id(37)|刘孟孟的!id(37)|孟孟的!id(37)|刘森!id(38)|刘森的!id(38)|徐志浩!id(39)|徐志浩的!id(39);
+<indirect>:[<di>][<columnNum>][<lie>][<rowNum>][<seriaNo>];
+<di>:第|前|后;
+<columnNum>:一!id(16)|二!id(17)|三!id(18)|四!id(19)|五!id(20)|六!id(21);
+<lie>:排|列|边;
+<rowNum>:一!id(16)|二!id(17)|三!id(18)|四!id(19);
+<seriaNo>:号|个;
+<postfix>:工位|那边|那|那里;
+
+<send1>:([<robot1>][<qing>]<song1><object1><dao1>[<dd>])<didian1>;
+<robot1>:机器人|嗨|嘿;
+<qing>:请;
+<song1>:送!id(50)|把;
+<object1>:水杯!id(51)|这个水杯!id(51)|书!id(52)|这本书!id(52);
+<dao1>:到|给!id(50)|送!id(50);
+<dd>:到|给!id(50);
+<didian1>:<rencheng1>[<xiushi1>];
+<rencheng1>:刘孟孟!id(37)|孟孟!id(37)|刘孟孟的!id(37)|孟孟的!id(37)|刘森的!id(38)|刘森!id(38)|徐志浩的!id(39)|徐志浩!id(39);
+<xiushi1>:那边|工位;
+
+<get>:[<robot2>]<dao2><didian2><operation><object2>[<action>];
+<robot2>:机器人|嗨;
+<dao2>:去|到|请到|请去;
+<didian2>:<rencheng2><houzhui>;
+<rencheng2>:刘孟孟!id(37)|孟孟!id(37)|刘孟孟的!id(37)|孟孟的!id(37)|刘森的!id(38)|刘森!id(38)|徐志浩!id(39)|徐志浩的!id(39);
+<houzhui>:那边|工位;
+<operation>:把|取回!id(56)|拿回!id(56);
+<object2>:书!id(52)|那本书!id(52)|水杯!id(51)|杯子!id(51);
+<action>:拿回来!id(56)|取回来!id(56);
+
+<song>:<songpre><songname>;
+<songpre>:唱首歌吧!id(53)|唱一首!id(53)|唱首!id(53)|请唱!id(53)|唱!id(53)|演唱!id(53)|播放!id(53);
+<songname>:小苹果!id(54)|圣诞歌!id(55);
+
+
+
+
+
+

@@ -1,8 +1,8 @@
-# Install script for directory: /home/turtlebot2/xu_slam/src/rfid
+# Install script for directory: /home/turtlebot/xu_slam/src/rfid
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot2/xu_slam/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/turtlebot/xu_slam/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,57 +34,57 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid/msg" TYPE FILE FILES
-    "/home/turtlebot2/xu_slam/src/rfid/msg/TransferData.msg"
-    "/home/turtlebot2/xu_slam/src/rfid/msg/RFIDreadRow.msg"
-    "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_odom.msg"
-    "/home/turtlebot2/xu_slam/src/rfid/msg/rfid_info.msg"
+    "/home/turtlebot/xu_slam/src/rfid/msg/TransferData.msg"
+    "/home/turtlebot/xu_slam/src/rfid/msg/RFIDreadRow.msg"
+    "/home/turtlebot/xu_slam/src/rfid/msg/rfid_odom.msg"
+    "/home/turtlebot/xu_slam/src/rfid/msg/rfid_info.msg"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid/cmake" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/rfid/catkin_generated/installspace/rfid-msg-paths.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid/cmake" TYPE FILE FILES "/home/turtlebot/xu_slam/build/rfid/catkin_generated/installspace/rfid-msg-paths.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/turtlebot2/xu_slam/devel/include/rfid")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/turtlebot/xu_slam/devel/include/rfid")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/turtlebot2/xu_slam/devel/share/common-lisp/ros/rfid")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/turtlebot/xu_slam/devel/share/common-lisp/ros/rfid")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rfid")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/rfid")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/turtlebot2/xu_slam/devel/lib/python2.7/dist-packages/rfid")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/rfid")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/rfid/catkin_generated/installspace/rfid.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/turtlebot/xu_slam/build/rfid/catkin_generated/installspace/rfid.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid/cmake" TYPE FILE FILES "/home/turtlebot2/xu_slam/build/rfid/catkin_generated/installspace/rfid-msg-extras.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid/cmake" TYPE FILE FILES "/home/turtlebot/xu_slam/build/rfid/catkin_generated/installspace/rfid-msg-extras.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid/cmake" TYPE FILE FILES
-    "/home/turtlebot2/xu_slam/build/rfid/catkin_generated/installspace/rfidConfig.cmake"
-    "/home/turtlebot2/xu_slam/build/rfid/catkin_generated/installspace/rfidConfig-version.cmake"
+    "/home/turtlebot/xu_slam/build/rfid/catkin_generated/installspace/rfidConfig.cmake"
+    "/home/turtlebot/xu_slam/build/rfid/catkin_generated/installspace/rfidConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid" TYPE FILE FILES "/home/turtlebot2/xu_slam/src/rfid/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid" TYPE FILE FILES "/home/turtlebot/xu_slam/src/rfid/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rfid" TYPE PROGRAM FILES "/home/turtlebot2/xu_slam/src/rfid/rfid/src")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rfid" TYPE PROGRAM FILES "/home/turtlebot/xu_slam/src/rfid/rfid/src")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid" TYPE FILE FILES "/home/turtlebot2/xu_slam/src/rfid/rfid_sensor.launch")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rfid" TYPE FILE FILES "/home/turtlebot/xu_slam/src/rfid/rfid_sensor.launch")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

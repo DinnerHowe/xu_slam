@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for run_tests_avoidance_roslaunch-check_launch.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/progress.make
 
 avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch:
-	cd /home/turtlebot2/xu_slam/build/avoidance && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot2/xu_slam/build/test_results/avoidance/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot2/xu_slam/build/test_results/avoidance /opt/ros/indigo/share/roslaunch/cmake/../scripts/roslaunch-check\ -o\ '/home/turtlebot2/xu_slam/build/test_results/avoidance/roslaunch-check_launch.xml'\ '/home/turtlebot2/xu_slam/src/avoidance/launch'\ 
+	cd /home/turtlebot/xu_slam/build/avoidance && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/turtlebot/xu_slam/build/test_results/avoidance/roslaunch-check_launch.xml /usr/bin/cmake\ -E\ make_directory\ /home/turtlebot/xu_slam/build/test_results/avoidance /opt/ros/indigo/share/roslaunch/cmake/../scripts/roslaunch-check\ -o\ '/home/turtlebot/xu_slam/build/test_results/avoidance/roslaunch-check_launch.xml'\ '/home/turtlebot/xu_slam/src/avoidance/launch'\ 
 
 run_tests_avoidance_roslaunch-check_launch: avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch
 run_tests_avoidance_roslaunch-check_launch: avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/build.make
@@ -57,10 +57,10 @@ avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/build: run_t
 .PHONY : avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/build
 
 avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/avoidance && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/avoidance && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/cmake_clean.cmake
 .PHONY : avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/clean
 
 avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/avoidance /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/avoidance /home/turtlebot2/xu_slam/build/avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/avoidance /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/avoidance /home/turtlebot/xu_slam/build/avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : avoidance/CMakeFiles/run_tests_avoidance_roslaunch-check_launch.dir/depend
 

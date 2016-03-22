@@ -7,7 +7,7 @@ from sys import path as sys_path
 
 from pkgutil import extend_path
 
-__extended_path = "/home/turtlebot2/xu_slam/src/rbx1/rbx1_vision/src".split(";")
+__extended_path = "/home/turtlebot/xu_slam/src/rbx1/rbx1_vision/src".split(";")
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

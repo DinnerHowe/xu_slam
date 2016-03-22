@@ -1,8 +1,8 @@
-prefix=/home/turtlebot2/xu_slam/devel
+prefix=/home/turtlebot/xu_slam/devel
 
 Name: rfid_handle
 Description: Description of rfid_handle
 Version: 0.0.0
-Cflags: -I/home/turtlebot2/xu_slam/devel/include
-Libs: -L/home/turtlebot2/xu_slam/devel/lib -lrfid_handle
+Cflags: -I/home/turtlebot/xu_slam/devel/include
+Libs: -L/home/turtlebot/xu_slam/devel/lib -lrfid_handle
 Requires: roslaunch rospy std_msgs message_runtime

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for robot_status_gencpp.
 
@@ -56,10 +56,10 @@ robot_status/CMakeFiles/robot_status_gencpp.dir/build: robot_status_gencpp
 .PHONY : robot_status/CMakeFiles/robot_status_gencpp.dir/build
 
 robot_status/CMakeFiles/robot_status_gencpp.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/robot_status && $(CMAKE_COMMAND) -P CMakeFiles/robot_status_gencpp.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/robot_status && $(CMAKE_COMMAND) -P CMakeFiles/robot_status_gencpp.dir/cmake_clean.cmake
 .PHONY : robot_status/CMakeFiles/robot_status_gencpp.dir/clean
 
 robot_status/CMakeFiles/robot_status_gencpp.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/robot_status /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/robot_status /home/turtlebot2/xu_slam/build/robot_status/CMakeFiles/robot_status_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/robot_status /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/robot_status /home/turtlebot/xu_slam/build/robot_status/CMakeFiles/robot_status_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_status/CMakeFiles/robot_status_gencpp.dir/depend
 

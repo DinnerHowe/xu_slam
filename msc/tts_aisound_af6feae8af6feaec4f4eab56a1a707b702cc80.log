@@ -1,0 +1,95 @@
+============================================================
+Time  2016/01/22 11:50:31 349 
+============================================================
+[2016/01/22 11:50:31 349] tts_aisoun 1120 tts_aisound REGCB | in  
+[2016/01/22 11:50:31 349] tts_aisoun 1127 tts_aisound REGCB | msp_status_cb  
+[2016/01/22 11:50:31 349] tts_aisoun 1482 last gc at  1453434631  
+[2016/01/22 11:50:31 349] tts_aisoun 1120 tts_aisound REGCB | in  
+[2016/01/22 11:50:31 349] tts_aisoun 1123 tts_aisound REGCB | Aisound_cb  
+[2016/01/22 11:50:31 349] tts_aisoun 1482 last gc at  1453434631  
+[2016/01/22 11:50:31 349] tts_aisoun 1242 AISOUND_MSG_SETPARAM | in  
+[2016/01/22 11:50:31 349] tts_aisoun 1245 isAuthFailed | forbid_aisound=  0  
+[2016/01/22 11:50:31 349] tts_aisoun 217  k:  engine_type   v:  local  
+[2016/01/22 11:50:31 349] tts_aisoun 217  k:  text_encoding   v:  UTF8  
+[2016/01/22 11:50:31 349] tts_aisoun 217  k:  tts_res_path   v:  fo|res/tts/xiaoyan.jet;fo|res/tts/common.jet  
+[2016/01/22 11:50:31 349] tts_aisoun 217  k:  sample_rate   v:  16000  
+[2016/01/22 11:50:31 349] tts_aisoun 1376 AISOUND_MSG_SETPARAM | gAisound nil，Engine is not inited before SessionBegin   
+[2016/01/22 11:50:31 349] tts_aisoun 1132 AISOUND_MSG_INIT | in  
+[2016/01/22 11:50:31 349] tts_aisoun 201  isAuthFailed | forbid_tts=  nil  
+[2016/01/22 11:50:31 349] tts_aisoun 1140 AISOUND_MSG_INIT | os_type is:  Linux  
+[2016/01/22 11:50:31 349] tts_aisoun 217  k:  engine_type   v:  local  
+[2016/01/22 11:50:31 349] tts_aisoun 217  k:  text_encoding   v:  UTF8  
+[2016/01/22 11:50:31 349] tts_aisoun 217  k:  tts_res_path   v:  fo|res/tts/xiaoyan.jet;fo|res/tts/common.jet  
+[2016/01/22 11:50:31 350] tts_aisoun 217  k:  sample_rate   v:  16000  
+[2016/01/22 11:50:31 350] tts_aisoun 1169 AISOUND_MSG_INIT | init_params vcn:  nil  
+[2016/01/22 11:50:31 350] tts_aisoun 1183 AISOUND_MSG_INIT | default voice name:  xiaoyan  
+[2016/01/22 11:50:31 350] tts_aisoun 795  paraseResFilePaths | Path passed by app:  fo|res/tts/xiaoyan.jet;fo|res/tts/common.jet  
+[2016/01/22 11:50:31 350] tts_aisoun 709  parseOneResFilePath |   fo|res/tts/xiaoyan.jet  
+[2016/01/22 11:50:31 350] tts_aisoun 762  analysisOneResFilePath |   common   fileType is :  fo   fileInfo is :  res/tts/xiaoyan.jet  
+[2016/01/22 11:50:31 350] tts_aisoun 811  comFileType :  0   comFileInfo:  res/tts/xiaoyan.jet   comFileOffset:  0  
+[2016/01/22 11:50:31 350] tts_aisoun 709  parseOneResFilePath |   fo|res/tts/common.jet  
+[2016/01/22 11:50:31 350] tts_aisoun 762  analysisOneResFilePath |   vcn   fileType is :  fo   fileInfo is :  res/tts/common.jet  
+[2016/01/22 11:50:31 350] tts_aisoun 818  vcnFileType :  0   vcnFileInfo:  res/tts/common.jet  vcnFileOffset  0  
+[2016/01/22 11:50:31 350] tts_aisoun 819  paraseResFilePaths | disperse res  
+[2016/01/22 11:50:31 350] tts_aisoun 954  aisoundAuthCheck | speech_plus_setting  1  
+[2016/01/22 11:50:31 350] tts_aisoun 958   aisoundAuthCheck | file count =   2  
+[2016/01/22 11:50:31 350] tts_aisoun 985  aisoundAuthCheck | file open type is:   fo  
+[2016/01/22 11:50:31 350] tts_aisoun 1013 fo  res/tts/xiaoyan.jet  nil  0  0  
+[2016/01/22 11:50:31 364] tts_aisoun 1015 aisoundAuthCheck | res_ver  2  
+[2016/01/22 11:50:31 364] tts_aisoun 1016 aisoundAuthCheck | res appid 5  066839d96a62df675fedcbd3d304e3c8  
+[2016/01/22 11:50:31 364] tts_aisoun 1017 aisoundAuthCheck | res_new_old_mark  v5pp  
+[2016/01/22 11:50:31 364] tts_aisoun 1018 aisoundAuthCheck | res_usr_name    
+[2016/01/22 11:50:31 364] tts_aisoun 1019 aisoundAuthCheck | res_expires    
+[2016/01/22 11:50:31 364] tts_aisoun 1020 aisoundAuthCheck | err  0  
+[2016/01/22 11:50:31 364] tts_aisoun 1033  aisoundAuthCheck | lgi appid 5  066839d96a62df675fedcbd3d304e3c8  
+[2016/01/22 11:50:31 364] tts_aisoun 1044 res_expires is null  
+[2016/01/22 11:50:31 364] tts_aisoun 1057 aisoundAuthCheck | res_usr_name is null  
+[2016/01/22 11:50:31 364] tts_aisoun 985  aisoundAuthCheck | file open type is:   fo  
+[2016/01/22 11:50:31 364] tts_aisoun 1013 fo  res/tts/common.jet  nil  0  0  
+[2016/01/22 11:50:31 371] tts_aisoun 1015 aisoundAuthCheck | res_ver  2  
+[2016/01/22 11:50:31 371] tts_aisoun 1016 aisoundAuthCheck | res appid 5  066839d96a62df675fedcbd3d304e3c8  
+[2016/01/22 11:50:31 371] tts_aisoun 1017 aisoundAuthCheck | res_new_old_mark  v5pp  
+[2016/01/22 11:50:31 371] tts_aisoun 1018 aisoundAuthCheck | res_usr_name    
+[2016/01/22 11:50:31 371] tts_aisoun 1019 aisoundAuthCheck | res_expires    
+[2016/01/22 11:50:31 371] tts_aisoun 1020 aisoundAuthCheck | err  0  
+[2016/01/22 11:50:31 371] tts_aisoun 1033  aisoundAuthCheck | lgi appid 5  066839d96a62df675fedcbd3d304e3c8  
+[2016/01/22 11:50:31 371] tts_aisoun 1044 res_expires is null  
+[2016/01/22 11:50:31 372] tts_aisoun 1057 aisoundAuthCheck | res_usr_name is null  
+[2016/01/22 11:50:31 391] tts_aisoun 1215 AISOUND_MSG_INIT | init ret :  0  
+[2016/01/22 11:50:31 391] tts_aisoun 882  paraseToSplitResPath |  disperse res  
+[2016/01/22 11:50:31 391] tts_aisoun 1235 AISOUND_MSG_INIT | AISOUND_MSG_INIT SUCCESS !  
+[2016/01/22 11:50:31 391] tts_aisoun 1239 AISOUND_MSG_INIT | out  
+[2016/01/22 11:50:31 391] tts_aisoun 1482 last gc at  1453434631  
+[2016/01/22 11:50:31 391] tts_aisoun 250  aisoundSetSpeedIncrease | speed increase not set  
+[2016/01/22 11:50:31 391] tts_aisoun 272  aisoundSetRcn | rcn not set  
+[2016/01/22 11:50:31 391] tts_aisoun 296  aisoundSetBgs | bgs not set   
+[2016/01/22 11:50:31 391] tts_aisoun 630  aisound_param_set | spd  
+[2016/01/22 11:50:31 391] tts_aisoun 480  aisoundSetSPV |  not set  
+[2016/01/22 11:50:31 391] tts_aisoun 638  aisound_param_set | speed  
+[2016/01/22 11:50:31 391] tts_aisoun 480  aisoundSetSPV |  not set  
+[2016/01/22 11:50:31 391] tts_aisoun 646  aisound_param_set | pit  
+[2016/01/22 11:50:31 391] tts_aisoun 480  aisoundSetSPV |  not set  
+[2016/01/22 11:50:31 391] tts_aisoun 654  aisound_param_set | pitch  
+[2016/01/22 11:50:31 391] tts_aisoun 480  aisoundSetSPV |  not set  
+[2016/01/22 11:50:31 391] tts_aisoun 662  aisound_param_set | vol  
+[2016/01/22 11:50:31 391] tts_aisoun 480  aisoundSetSPV |  not set  
+[2016/01/22 11:50:31 391] tts_aisoun 670  aisound_param_set | volume  
+[2016/01/22 11:50:31 391] tts_aisoun 480  aisoundSetSPV |  not set  
+[2016/01/22 11:50:31 391] tts_aisoun 496  aisoundSetSampleRate | sample rate :  16000   map value :  528  
+[2016/01/22 11:50:31 391] tts_aisoun 500  aisoundSetSampleRate | not set   
+[2016/01/22 11:50:31 391] tts_aisoun 571  aisoundSetEffect | effect not set  
+[2016/01/22 11:50:31 391] tts_aisoun 511  aisoundSetTextEncoding |tte is :  UTF8  
+[2016/01/22 11:50:31 391] tts_aisoun 518  aisoundSetTextEncoding | not set   
+[2016/01/22 11:50:31 391] tts_aisoun 547  aisoundSetRdn | rdn not set  
+[2016/01/22 11:50:31 391] tts_aisoun 1389 AISOUND_MSG_SETPARAM | out  
+[2016/01/22 11:50:31 391] tts_aisoun 1482 last gc at  1453434631  
+[2016/01/22 11:50:31 392] tts_aisoun 1393 AISOUND_MSG_PUTTEXT | in   
+[2016/01/22 11:50:31 392] tts_aisoun 1426 AISOUND_MSG_PUTTEXT | ret:   0  
+[2016/01/22 11:50:31 392] tts_aisoun 1482 last gc at  1453434631  
+[2016/01/22 11:50:31 392] tts_aisoun 833  aisound_callback | AISOUND_CB_BEGIN  
+[2016/01/22 11:50:31 604] tts_aisoun 840  aisound_callback | AISOUND_CB_END  
+[2016/01/22 11:50:31 621] tts_aisoun 1436 AISOUND_MSG_END | in  
+[2016/01/22 11:50:31 621] tts_aisoun 1442 AISOUND_MSG_END | out , ret =   0  
+[2016/01/22 11:50:31 621] tts_aisoun 1482 last gc at  1453434631  
+[2016/01/22 11:50:31 641] tts_aisoun 1116 SYS_MSG_SHUTDOWN | tts_aisound SHUTDOWN!  
+[2016/01/22 11:50:31 641] tts_aisoun 1482 last gc at  1453434631  

@@ -1,0 +1,41 @@
+============================================================
+Time  2016/01/28 17:19:51 621 
+============================================================
+[2016/01/28 17:19:51 622] isr_local  2027 os_type is:  Linux  
+[2016/01/28 17:19:51 622] isr_local  2036 Aitalk LOAD!  
+[2016/01/28 17:19:51 622] isr_local  2064 SYS_MSG_REGCB| param0 =  msp_status_cb  
+[2016/01/28 17:19:51 622] isr_local  2064 SYS_MSG_REGCB| param0 =  build_grm_cb  
+[2016/01/28 17:19:51 622] isr_local  2130 last gc at  1453972791  
+[2016/01/28 17:19:51 622] isr_local  2081 ASR_MSG_BUILD_GRM  bnf  nil  engine_type = local, 		asr_res_path = fo|res/asr/common.jet, sample_rate = 16000, 		grm_build_path = res/asr/GrmBuilld,   
+[2016/01/28 17:19:51 622] isr_local  1812 grmInit() [in]   
+[2016/01/28 17:19:51 622] isr_local  751  text_encoding =   nil  
+[2016/01/28 17:19:51 622] isr_local  1821 sample_rate:  16000  
+[2016/01/28 17:19:51 622] isr_local  1841 grmInit | params parse success  
+[2016/01/28 17:19:51 622] isr_local  1780 createGrmObject() [in]  
+[2016/01/28 17:19:51 622] isr_local  954  paramResPathAnalysis() [in], param_str :  fo|res/asr/common.jet  
+[2016/01/28 17:19:51 622] isr_local  978  file count =   1  
+[2016/01/28 17:19:51 622] isr_local  870  resPathSubStrAnalysis() [in], sub_str:  fo|res/asr/common.jet  
+[2016/01/28 17:19:51 622] isr_local  897  file open type is:   fo  
+[2016/01/28 17:19:51 622] isr_local  931  res/asr/common.jet  0  0  
+[2016/01/28 17:19:51 622] isr_local  1000 speech_plus_setting  1  
+[2016/01/28 17:19:51 622] isr_local  1013 2  nil  res/asr/common.jet  0  0  
+[2016/01/28 17:19:51 622] isr_local  1015 res_ver  2  
+[2016/01/28 17:19:51 622] isr_local  1016 res 5  066839d96a62df675fedcbd3d304e3c8  
+[2016/01/28 17:19:51 622] isr_local  1017 res_new_old_mark  v5pp  
+[2016/01/28 17:19:51 622] isr_local  1018 res_usr_name    
+[2016/01/28 17:19:51 622] isr_local  1019 res_expires    
+[2016/01/28 17:19:51 622] isr_local  1020 err  0  
+[2016/01/28 17:19:51 622] isr_local  1037 lgi appid 5  066839d96a62df675fedcbd3d304e3c8  
+[2016/01/28 17:19:51 622] isr_local  1049 res_expires is null  
+[2016/01/28 17:19:51 622] isr_local  933  ret, res_head_offset  0  256  
+[2016/01/28 17:19:51 623] isr_local  947  resPathSubStrAnalysis() [out], ret :  0  
+[2016/01/28 17:19:51 623] isr_local  987  paramResPathAnalysis() [out], ret :  0  
+[2016/01/28 17:19:51 623] isr_local  1807 createGrmObject() [out]  
+[2016/01/28 17:19:51 623] isr_local  1855 grmInit() [out]   
+[2016/01/28 17:19:51 623] isr_local  1554 buildGrammarByBnf() [in]  
+[2016/01/28 17:19:51 623] isr_local  1573 buildGrammarByBnf() [out]  
+[2016/01/28 17:19:51 623] isr_local  1545 processRetCodeGrm | errorcode =  0  
+[2016/01/28 17:19:53 433] isr_local  1915 luac_grm_cbmsg_handler msg=  1542  errorCode=  0  
+[2016/01/28 17:19:53 433] isr_local  1917 grmMessageHandler grammarId=command  
+[2016/01/28 17:19:53 433] isr_local  1925 param2=  0  param3=  command  
+[2016/01/28 17:19:53 433] isr_local  1537 onGrmLocalServiceCb  0  command  

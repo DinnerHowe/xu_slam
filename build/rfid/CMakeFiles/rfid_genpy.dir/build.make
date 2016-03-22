@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for rfid_genpy.
 
@@ -56,10 +56,10 @@ rfid/CMakeFiles/rfid_genpy.dir/build: rfid_genpy
 .PHONY : rfid/CMakeFiles/rfid_genpy.dir/build
 
 rfid/CMakeFiles/rfid_genpy.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/rfid && $(CMAKE_COMMAND) -P CMakeFiles/rfid_genpy.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/rfid && $(CMAKE_COMMAND) -P CMakeFiles/rfid_genpy.dir/cmake_clean.cmake
 .PHONY : rfid/CMakeFiles/rfid_genpy.dir/clean
 
 rfid/CMakeFiles/rfid_genpy.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/rfid /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/rfid /home/turtlebot2/xu_slam/build/rfid/CMakeFiles/rfid_genpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/rfid /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/rfid /home/turtlebot/xu_slam/build/rfid/CMakeFiles/rfid_genpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rfid/CMakeFiles/rfid_genpy.dir/depend
 

@@ -88,7 +88,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'voice_msg': ['/home/turtlebot2/xu_slam/src/voice_msg/msg', '/home/turtlebot2/xu_slam/src/voice_msg/msg'], 'std_msgs': ['/opt/ros/indigo/share/std_msgs/cmake/../msg']}
+// {'voice_msg': ['/home/turtlebot/xu_slam/src/voice_msg/msg', '/home/turtlebot/xu_slam/src/voice_msg/msg'], 'std_msgs': ['/opt/ros/indigo/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -166,6 +166,7 @@ bool motion\n\
 int64 direction\n\
 int64 pattern\n\
 int64 stepcount\n\
+\n\
 \n\
 ================================================================================\n\
 MSG: voice_msg/Navigation\n\

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for cruise_generate_messages_lisp.
 
@@ -56,10 +56,10 @@ cruise/CMakeFiles/cruise_generate_messages_lisp.dir/build: cruise_generate_messa
 .PHONY : cruise/CMakeFiles/cruise_generate_messages_lisp.dir/build
 
 cruise/CMakeFiles/cruise_generate_messages_lisp.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/cruise && $(CMAKE_COMMAND) -P CMakeFiles/cruise_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/cruise && $(CMAKE_COMMAND) -P CMakeFiles/cruise_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : cruise/CMakeFiles/cruise_generate_messages_lisp.dir/clean
 
 cruise/CMakeFiles/cruise_generate_messages_lisp.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/cruise /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/cruise /home/turtlebot2/xu_slam/build/cruise/CMakeFiles/cruise_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/cruise /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/cruise /home/turtlebot/xu_slam/build/cruise/CMakeFiles/cruise_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : cruise/CMakeFiles/cruise_generate_messages_lisp.dir/depend
 

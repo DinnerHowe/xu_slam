@@ -2,7 +2,7 @@
 
 message(STATUS "slam_main: 3 messages, 0 services")
 
-set(MSG_I_FLAGS "-Islam_main:/home/turtlebot2/xu_slam/src/slam_main/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg;-Imove_base_msgs:/opt/ros/indigo/share/move_base_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Islam_main:/home/turtlebot/xu_slam/src/slam_main/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg;-Imove_base_msgs:/opt/ros/indigo/share/move_base_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,19 +15,19 @@ add_custom_target(slam_main_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg" NAME_WE)
 add_custom_target(_slam_main_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slam_main" "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slam_main" "/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg" ""
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/pose.msg" NAME_WE)
 add_custom_target(_slam_main_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slam_main" "/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slam_main" "/home/turtlebot/xu_slam/src/slam_main/msg/pose.msg" "slam_main/position:slam_main/orientation"
 )
 
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg" NAME_WE)
 add_custom_target(_slam_main_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slam_main" "/home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg" "slam_main/orientation:slam_main/position"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slam_main" "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg" ""
 )
 
 #
@@ -37,21 +37,21 @@ add_custom_target(_slam_main_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(slam_main
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg"
+  "/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slam_main
 )
 _generate_msg_cpp(slam_main
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg"
+  "/home/turtlebot/xu_slam/src/slam_main/msg/pose.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg;/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slam_main
 )
 _generate_msg_cpp(slam_main
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg"
+  "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg"
   "${MSG_I_FLAGS}"
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg;/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slam_main
 )
 
@@ -69,11 +69,11 @@ add_custom_target(slam_main_generate_messages_cpp
 add_dependencies(slam_main_generate_messages slam_main_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg" NAME_WE)
 add_dependencies(slam_main_generate_messages_cpp _slam_main_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/pose.msg" NAME_WE)
 add_dependencies(slam_main_generate_messages_cpp _slam_main_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg" NAME_WE)
 add_dependencies(slam_main_generate_messages_cpp _slam_main_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -86,21 +86,21 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS slam_main_generate_messages_cpp)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(slam_main
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg"
+  "/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slam_main
 )
 _generate_msg_lisp(slam_main
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg"
+  "/home/turtlebot/xu_slam/src/slam_main/msg/pose.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg;/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slam_main
 )
 _generate_msg_lisp(slam_main
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg"
+  "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg"
   "${MSG_I_FLAGS}"
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg;/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slam_main
 )
 
@@ -118,11 +118,11 @@ add_custom_target(slam_main_generate_messages_lisp
 add_dependencies(slam_main_generate_messages slam_main_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg" NAME_WE)
 add_dependencies(slam_main_generate_messages_lisp _slam_main_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/pose.msg" NAME_WE)
 add_dependencies(slam_main_generate_messages_lisp _slam_main_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg" NAME_WE)
 add_dependencies(slam_main_generate_messages_lisp _slam_main_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -135,21 +135,21 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS slam_main_generate_messages_lisp)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(slam_main
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg"
+  "/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slam_main
 )
 _generate_msg_py(slam_main
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg"
+  "/home/turtlebot/xu_slam/src/slam_main/msg/pose.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg;/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slam_main
 )
 _generate_msg_py(slam_main
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg"
+  "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg"
   "${MSG_I_FLAGS}"
-  "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg;/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slam_main
 )
 
@@ -167,11 +167,11 @@ add_custom_target(slam_main_generate_messages_py
 add_dependencies(slam_main_generate_messages slam_main_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/orientation.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/orientation.msg" NAME_WE)
 add_dependencies(slam_main_generate_messages_py _slam_main_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/pose.msg" NAME_WE)
 add_dependencies(slam_main_generate_messages_py _slam_main_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/turtlebot2/xu_slam/src/slam_main/msg/pose.msg" NAME_WE)
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/slam_main/msg/position.msg" NAME_WE)
 add_dependencies(slam_main_generate_messages_py _slam_main_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

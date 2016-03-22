@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for web_map_genlisp.
 
@@ -56,10 +56,10 @@ web_map/CMakeFiles/web_map_genlisp.dir/build: web_map_genlisp
 .PHONY : web_map/CMakeFiles/web_map_genlisp.dir/build
 
 web_map/CMakeFiles/web_map_genlisp.dir/clean:
-	cd /home/turtlebot2/xu_slam/build/web_map && $(CMAKE_COMMAND) -P CMakeFiles/web_map_genlisp.dir/cmake_clean.cmake
+	cd /home/turtlebot/xu_slam/build/web_map && $(CMAKE_COMMAND) -P CMakeFiles/web_map_genlisp.dir/cmake_clean.cmake
 .PHONY : web_map/CMakeFiles/web_map_genlisp.dir/clean
 
 web_map/CMakeFiles/web_map_genlisp.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src/web_map /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/web_map /home/turtlebot2/xu_slam/build/web_map/CMakeFiles/web_map_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src/web_map /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/web_map /home/turtlebot/xu_slam/build/web_map/CMakeFiles/web_map_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : web_map/CMakeFiles/web_map_genlisp.dir/depend
 

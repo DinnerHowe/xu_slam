@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turtlebot2/xu_slam/src
+CMAKE_SOURCE_DIR = /home/turtlebot/xu_slam/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
+CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 
 # Utility rule file for clean_test_results_Project.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot2/xu_slam/build
 include CMakeFiles/clean_test_results_Project.dir/progress.make
 
 CMakeFiles/clean_test_results_Project:
-	/usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/turtlebot2/xu_slam/build/test_results/Project
+	/usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/turtlebot/xu_slam/build/test_results/Project
 
 clean_test_results_Project: CMakeFiles/clean_test_results_Project
 clean_test_results_Project: CMakeFiles/clean_test_results_Project.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/clean_test_results_Project.dir/clean:
 .PHONY : CMakeFiles/clean_test_results_Project.dir/clean
 
 CMakeFiles/clean_test_results_Project.dir/depend:
-	cd /home/turtlebot2/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/src /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build /home/turtlebot2/xu_slam/build/CMakeFiles/clean_test_results_Project.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/turtlebot/xu_slam/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/src /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build /home/turtlebot/xu_slam/build/CMakeFiles/clean_test_results_Project.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results_Project.dir/depend
 
