@@ -1,8 +1,0 @@
-prefix=/home/turtlebot/xu_slam/devel
-
-Name: facerobot
-Description: Description of facerobot
-Version: 0.0.0
-Cflags: -I/home/turtlebot/xu_slam/devel/include -I/home/turtlebot/xu_slam/src/facerobot/include
-Libs: -L/home/turtlebot/xu_slam/devel/lib -lfacerobot
-Requires: message_runtime roscpp rospy std_msgs

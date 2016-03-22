@@ -1,8 +1,0 @@
-prefix=/home/turtlebot/xu_slam/devel
-
-Name: robot_description
-Description: Description of robot_description
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/turtlebot/xu_slam/devel/lib 
-Requires: 

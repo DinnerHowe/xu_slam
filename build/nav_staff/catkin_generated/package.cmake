@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "nav_staff")
-set(nav_staff_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
-set(nav_staff_DEPRECATED "")
-set(nav_staff_VERSION "0.0.0")
-set(nav_staff_BUILD_DEPENDS "roslaunch" "rospy")
-set(nav_staff_RUN_DEPENDS "roslaunch" "rospy")
-set(nav_staff_BUILDTOOL_DEPENDS "catkin")

@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "base_motion_module")
-set(base_motion_module_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
-set(base_motion_module_DEPRECATED "")
-set(base_motion_module_VERSION "0.0.0")
-set(base_motion_module_BUILD_DEPENDS "message_generation" "roscpp" "rospy" "tf")
-set(base_motion_module_RUN_DEPENDS "message_runtime" "roscpp" "rospy" "tf")
-set(base_motion_module_BUILDTOOL_DEPENDS "catkin")

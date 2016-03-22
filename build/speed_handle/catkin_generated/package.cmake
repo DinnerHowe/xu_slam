@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "speed_handle")
-set(speed_handle_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
-set(speed_handle_DEPRECATED "")
-set(speed_handle_VERSION "0.0.0")
-set(speed_handle_BUILD_DEPENDS "message_generation" "roslaunch" "rospy" "std_msgs")
-set(speed_handle_RUN_DEPENDS "message_runtime" "roslaunch" "rospy" "std_msgs")
-set(speed_handle_BUILDTOOL_DEPENDS "catkin")

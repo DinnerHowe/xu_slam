@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "voice_interface")
-set(voice_interface_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
-set(voice_interface_DEPRECATED "")
-set(voice_interface_VERSION "0.0.0")
-set(voice_interface_BUILD_DEPENDS "message_generation" "roscpp" "rospy" "tf" "voice_msg")
-set(voice_interface_RUN_DEPENDS "message_runtime" "voice_msg" "roscpp" "rospy" "tf")
-set(voice_interface_BUILDTOOL_DEPENDS "catkin")

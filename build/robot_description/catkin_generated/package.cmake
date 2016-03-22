@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "robot_description")
-set(robot_description_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
-set(robot_description_DEPRECATED "")
-set(robot_description_VERSION "0.0.0")
-set(robot_description_BUILD_DEPENDS "urdf")
-set(robot_description_RUN_DEPENDS "urdf")
-set(robot_description_BUILDTOOL_DEPENDS "catkin")

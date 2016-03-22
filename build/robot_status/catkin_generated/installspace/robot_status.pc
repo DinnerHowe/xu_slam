@@ -1,8 +1,0 @@
-prefix=/home/turtlebot/xu_slam/install
-
-Name: robot_status
-Description: Description of robot_status
-Version: 0.0.0
-Cflags: -I/home/turtlebot/xu_slam/install/include
-Libs: -L/home/turtlebot/xu_slam/install/lib 
-Requires: rospy tf geometry_msgs std_msgs message_runtime

@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "go_points")
-set(go_points_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
-set(go_points_DEPRECATED "")
-set(go_points_VERSION "0.0.0")
-set(go_points_BUILD_DEPENDS "message_generation" "roscpp" "rospy" "tf")
-set(go_points_RUN_DEPENDS "message_runtime" "roscpp" "rospy" "tf")
-set(go_points_BUILDTOOL_DEPENDS "catkin")
