@@ -19,7 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
   LIBRARIES marker
- CATKIN_DEPENDS rospy
+  CATKIN_DEPENDS rospy message_runtime std_msgs geometry_msgs visualization_msgs
   DEPENDS system_lib
 )
 
