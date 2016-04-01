@@ -1,0 +1,18 @@
+agv: turtlebot启动
+cruise: turtlebot多点巡航模块
+go_points: turtlebot多点/单点导航模块
+laser: kinect深度点转laser点的包
+nav_staff: 导航启动文件以及配置文件,包括了nav_demo(amcl) asus_gmapping map_saver以及rviz显示界面
+rbx1: 仿真包
+rfid: rfid驱动包
+robot_bringup: 各种启动文件及其配置文件,包括kinect/asus传感器的gmapping/hector启动文件, rplidar启动文件,office_gazbo.launch
+robot_status: 机器状态监视包(已淘汰)
+rplidar_python: rplidar的python驱动包
+slam_main:包括kinect_gmapping_demo.launch minimal.launch blind_rviz.launch,以及之前导航的中间产物
+tf_nodes: 用来测试tf的文件包, 包括添加frame,接收frame,发送frame
+voice_interface: 语音对接文件包括移动接受指令motion_voice_recievetest.py
+voice_msg: 语音对接消息
+web_map: 网页地图模块包
+youtoo: 腾讯优图人脸包(未完成)
+utils:各种工具文件
+marker:用来视觉显示一个maker在rviz上

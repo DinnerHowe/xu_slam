@@ -21,7 +21,7 @@ class voice_interface_tester():
 #送东西
    #voice_command.my_send.transmit=1
    #voice_command.my_send.object=52
-   #voice_command.my_send.didian=37
+   #voice_command.my_send.didian=39
 #拿东西
    #voice_command.my_get.transmit=1
    #voice_command.my_get.object=52
@@ -30,7 +30,7 @@ class voice_interface_tester():
    voice_command.my_navigation.navigation=1
    voice_command.my_navigation.go=33
    #voice_command.my_navigation.direct=37
-   voice_command.my_navigation.columnNum=43
+   voice_command.my_navigation.columnNum=44
    voice_command.my_navigation.rowNum=46
 
 #动作指示

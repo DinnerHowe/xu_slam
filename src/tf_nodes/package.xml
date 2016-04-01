@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>tf_nodes</name>
+  <version>0.0.0</version>
+  <description>The tf_nodes package</description>
+  <maintainer email="turtlebot@todo.todo">turtlebot</maintainer>
+  <license>TODO</license>
+
+  <build_depend>message_generation</build_depend>
+  <run_depend>message_runtime</run_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>tf</build_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>tf</run_depend>
+
+</package>

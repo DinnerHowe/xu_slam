@@ -1,8 +1,0 @@
-<launch>
-  <include file="$(find rfid)/launch/rfid_sensor.launch" />
-
-  <node name="RFID_Data_Handle_service" pkg="rfid_handle" type="data_handle_server.py" respawn="true" />
-
-  <node name="RFID_Data_Handle_Client" pkg="rfid_handle" type="data_handle_client.py" respawn="true" />
-
-</launch>

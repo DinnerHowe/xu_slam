@@ -1,2 +1,0 @@
-Victor linear
-Victor angular
