@@ -1,0 +1,8 @@
+prefix=/home/turtlebot/xu_slam/install
+
+Name: tasks
+Description: Description of tasks
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot/xu_slam/install/lib 
+Requires: 

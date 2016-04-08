@@ -8,9 +8,9 @@
       <param name="child" type="string" value="turtle1_child" />
     </node>-->
 
-    <node name="tf_turtle" pkg="tf_nodes" type="turtle_tf_listener.py" >
+    <!--<node name="tf_turtle" pkg="tf_nodes" type="turtle_tf_listener.py" >
       <param name="child" type="string" value="turtle1_child" />
-    </node>
+    </node>-->
 
     <node name="turtle1_child_frame" pkg="tf_nodes" type="fixed_tf_broadcaster.py" />
     

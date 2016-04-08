@@ -4,6 +4,7 @@
 import rospy
 from geometry_msgs.msg import PointStamped
 from visualization_msgs.msg import Marker
+from nav_msgs.msg import Odometry
 
 class marker():
  def define(self):
@@ -26,17 +27,19 @@ class marker():
   self.period=rospy.Duration(0.3)
   
  def sub_callback(self,pose):
-   rospy.loginfo ('请使用publish point选出想要标记的地方')
-   self.marker.points.append(pose.point)
-   self.marker_pub.publish(self.marker)
-   self.count=self.count+1
-   rospy.loginfo('添加第%s个点'%self.count)
+  rospy.loginfo ('请使用publish point选出想要标记的地方')
+  self.marker.points.append(pose.point)
+  self.marker_pub.publish(self.marker)
+  self.count=self.count+1
+  rospy.loginfo('添加第%s个点'%self.count)
  
  def timer(self,event):
   if self.clear:
    rospy.loginfo ('清空上次任务')
    self.clear=False
-   self.marker.points=[] 
+   intial=rospy.wait_for_message("odom",Odometry)
+   self.intial_point=intial.pose.pose.position
+   self.marker.points=[self.intial_point] 
    self.marker_pub.publish(self.marker)
     
  def __init__(self):

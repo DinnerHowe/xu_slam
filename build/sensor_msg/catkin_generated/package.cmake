@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "sensor_msg")
+set(sensor_msg_MAINTAINER "zhihao xu <zhihao@iscas.ac.cn>")
+set(sensor_msg_DEPRECATED "")
+set(sensor_msg_VERSION "0.0.0")
+set(sensor_msg_BUILD_DEPENDS "message_generation" "rospy" "std_msgs")
+set(sensor_msg_RUN_DEPENDS "message_runtime" "rospy" "std_msgs")
+set(sensor_msg_BUILDTOOL_DEPENDS "catkin")

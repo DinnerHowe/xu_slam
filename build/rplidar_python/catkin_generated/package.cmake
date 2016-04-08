@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rplidar_python")
+set(rplidar_python_MAINTAINER "turtlebot2 <turtlebot2@todo.todo>")
+set(rplidar_python_DEPRECATED "")
+set(rplidar_python_VERSION "0.0.0")
+set(rplidar_python_BUILD_DEPENDS "roslaunch" "rospy" "std_msgs" "geometry_msgs")
+set(rplidar_python_RUN_DEPENDS "geometry_msgs" "std_msgs" "roslaunch" "rospy" "message_runtime")
+set(rplidar_python_BUILDTOOL_DEPENDS "catkin" "message_generation")

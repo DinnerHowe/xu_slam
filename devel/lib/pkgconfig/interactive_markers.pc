@@ -1,0 +1,8 @@
+prefix=/home/turtlebot/xu_slam/devel
+
+Name: interactive_markers
+Description: Description of interactive_markers
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot/xu_slam/devel/lib 
+Requires: 

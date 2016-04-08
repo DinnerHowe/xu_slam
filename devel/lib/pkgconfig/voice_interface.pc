@@ -1,0 +1,8 @@
+prefix=/home/turtlebot/xu_slam/devel
+
+Name: voice_interface
+Description: Description of voice_interface
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot/xu_slam/devel/lib -lbase_motion_module
+Requires: roscpp rospy tf message_runtime

@@ -1,0 +1,8 @@
+prefix=/home/turtlebot/xu_slam/install
+
+Name: rbx1_bringup
+Description: Description of rbx1_bringup
+Version: 0.4.0
+Cflags: 
+Libs: -L/home/turtlebot/xu_slam/install/lib 
+Requires: 

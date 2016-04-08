@@ -1,0 +1,3 @@
+marker.py 用来标记机器人其实位置以及选中地点的位置
+运行 rosrun marker marker.py
+或者 roslaunch marker marker_view.launch

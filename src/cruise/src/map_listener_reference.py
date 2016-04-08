@@ -21,10 +21,10 @@ This programm is tested on kuboki base turtlebot.
 
 """
 
-from openpyxl import load_workbook
-from openpyxl import  Workbook
-from openpyxl.writer.excel  import  ExcelWriter
-from openpyxl.cell import get_column_letter
+#from openpyxl import load_workbook
+#from openpyxl import  Workbook
+#from openpyxl.writer.excel  import  ExcelWriter
+#from openpyxl.cell import get_column_letter
 
 import getpass,PyKDL,collections,numpy,math
 from geometry_msgs.msg import Pose

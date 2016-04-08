@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "youtoo")
+set(youtoo_MAINTAINER "turtlebot <turtlebot@todo.todo>")
+set(youtoo_DEPRECATED "")
+set(youtoo_VERSION "0.0.0")
+set(youtoo_BUILD_DEPENDS "rospy")
+set(youtoo_RUN_DEPENDS "rospy")
+set(youtoo_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "tf_nodes")
+set(tf_nodes_MAINTAINER "turtlebot <turtlebot@todo.todo>")
+set(tf_nodes_DEPRECATED "")
+set(tf_nodes_VERSION "0.0.0")
+set(tf_nodes_BUILD_DEPENDS "message_generation" "rospy" "tf")
+set(tf_nodes_RUN_DEPENDS "message_runtime" "rospy" "tf")
+set(tf_nodes_BUILDTOOL_DEPENDS "catkin")

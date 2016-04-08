@@ -9,7 +9,10 @@ def callback(msg, turtlename):
 
 if __name__ == '__main__':
  rospy.init_node('turtle_tf_broadcaster')
- turtlename = rospy.get_param('~turtle')
+ try:
+  turtlename = rospy.get_param('~turtle')
+ except:
+  turtlename='turtle1'
  print turtlename
  rospy.Subscriber('/%s/pose' % turtlename,tf_nodes.msg.Pose,callback,turtlename)
  rospy.spin()

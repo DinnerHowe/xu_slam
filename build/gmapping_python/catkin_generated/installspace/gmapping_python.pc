@@ -1,0 +1,8 @@
+prefix=/home/turtlebot/xu_slam/install
+
+Name: gmapping_python
+Description: Description of gmapping_python
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot/xu_slam/install/lib -lgmapping_python
+Requires: nav_msgs rospy sensor_msgs std_msgs tf message_runtime

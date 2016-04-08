@@ -1,8 +1,0 @@
-<launch>
- <node name="Laser_pub" pkg="laser" type="laser_pub.py" respawn="true" />
- <group ns="laser_sensor">
-  <node name="Laser_Listener" pkg="laser" type="laser_listener.py" respawn="true" />
-  <node name="Detector" pkg="laser" type="obstacle_detector.py" respawn="true" />
-  <include file="$(find laser)/launch/depthsensor.launch"/>
- </group>
-</launch>
