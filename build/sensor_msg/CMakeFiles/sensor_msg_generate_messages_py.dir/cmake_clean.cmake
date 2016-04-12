@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/sensor_msg_generate_messages_py"
   "/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Cliff_Event.py"
+  "/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Bumper_Event.py"
   "/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/__init__.py"
 )
 

@@ -4,5 +4,5 @@ Name: interactive_markers
 Description: Description of interactive_markers
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/turtlebot/xu_slam/devel/lib 
-Requires: 
+Libs: -L/home/turtlebot/xu_slam/devel/lib -linteractive_markers
+Requires: rospy message_runtime std_msgs geometry_msgs visualization_msgs

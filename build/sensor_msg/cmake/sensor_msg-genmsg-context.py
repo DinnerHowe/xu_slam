@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg"
+messages_str = "/home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg;/home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg"
 services_str = ""
 pkg_name = "sensor_msg"
 dependencies_str = "std_msgs"

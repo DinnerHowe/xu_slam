@@ -9,7 +9,7 @@ This program is free software; you can redistribute it and/or modify
 This programm is tested on kuboki base turtlebot. 
 
 """
-import rospy,getpass,move_reference,actions_reference
+import rospy,getpass,move_reference,actions_reference,
 
 class cruise_modle():
  def __init__(self):

@@ -7,18 +7,32 @@ import struct
 
 
 class Cliff_Event(genpy.Message):
-  _md5sum = "4aa84ea193dabb93b5378e5ff8539958"
+  _md5sum = "65d7373d8798a63a14504318204bc7fa"
   _type = "sensor_msg/Cliff_Event"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """uint8 LEFT
-uint8 FRONT
-uint8 RIGHT
-uint8 BACK
+  _full_text = """uint8 LEFT=0
+uint8 CENTER=1
+uint8 RIGHT=2
+uint8 BACK=3
+
+uint8 RELEASED=0
+uint8 PRESSED=1
+
+uint8 bumper
+uint8 state
 
 
 """
-  __slots__ = ['LEFT','FRONT','RIGHT','BACK']
-  _slot_types = ['uint8','uint8','uint8','uint8']
+  # Pseudo-constants
+  LEFT = 0
+  CENTER = 1
+  RIGHT = 2
+  BACK = 3
+  RELEASED = 0
+  PRESSED = 1
+
+  __slots__ = ['bumper','state']
+  _slot_types = ['uint8','uint8']
 
   def __init__(self, *args, **kwds):
     """
@@ -28,7 +42,7 @@ uint8 BACK
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       LEFT,FRONT,RIGHT,BACK
+       bumper,state
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -37,19 +51,13 @@ uint8 BACK
     if args or kwds:
       super(Cliff_Event, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.LEFT is None:
-        self.LEFT = 0
-      if self.FRONT is None:
-        self.FRONT = 0
-      if self.RIGHT is None:
-        self.RIGHT = 0
-      if self.BACK is None:
-        self.BACK = 0
+      if self.bumper is None:
+        self.bumper = 0
+      if self.state is None:
+        self.state = 0
     else:
-      self.LEFT = 0
-      self.FRONT = 0
-      self.RIGHT = 0
-      self.BACK = 0
+      self.bumper = 0
+      self.state = 0
 
   def _get_types(self):
     """
@@ -64,7 +72,7 @@ uint8 BACK
     """
     try:
       _x = self
-      buff.write(_struct_4B.pack(_x.LEFT, _x.FRONT, _x.RIGHT, _x.BACK))
+      buff.write(_struct_2B.pack(_x.bumper, _x.state))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -77,8 +85,8 @@ uint8 BACK
       end = 0
       _x = self
       start = end
-      end += 4
-      (_x.LEFT, _x.FRONT, _x.RIGHT, _x.BACK,) = _struct_4B.unpack(str[start:end])
+      end += 2
+      (_x.bumper, _x.state,) = _struct_2B.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -92,7 +100,7 @@ uint8 BACK
     """
     try:
       _x = self
-      buff.write(_struct_4B.pack(_x.LEFT, _x.FRONT, _x.RIGHT, _x.BACK))
+      buff.write(_struct_2B.pack(_x.bumper, _x.state))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -106,11 +114,11 @@ uint8 BACK
       end = 0
       _x = self
       start = end
-      end += 4
-      (_x.LEFT, _x.FRONT, _x.RIGHT, _x.BACK,) = _struct_4B.unpack(str[start:end])
+      end += 2
+      (_x.bumper, _x.state,) = _struct_2B.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_4B = struct.Struct("<4B")
+_struct_2B = struct.Struct("<2B")

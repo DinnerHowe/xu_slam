@@ -11,7 +11,7 @@ TrajectoryPlannerROS:
    min_vel_theta: -1.0
    min_in_place_vel_theta: 0.4
    escape_vel: -0.1
-   acc_lim_x: 1.5
+   acc_lim_x: 1.2
    acc_lim_y: 0.0  # zero for a differential drive robot
    acc_lim_theta: 1.2
 
@@ -37,5 +37,5 @@ TrajectoryPlannerROS:
    vx_samples: 8
    vy_samples: 0  # zero for a differential drive robot
    vtheta_samples: 20
-   dwa: true
+   dwa: ture
    simple_attractor: false

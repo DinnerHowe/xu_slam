@@ -1,2 +1,0 @@
-string data
-geometry_msgs/Pose pose

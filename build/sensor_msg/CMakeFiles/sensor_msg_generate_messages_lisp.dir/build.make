@@ -46,6 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 include sensor_msg/CMakeFiles/sensor_msg_generate_messages_lisp.dir/progress.make
 
 sensor_msg/CMakeFiles/sensor_msg_generate_messages_lisp: /home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg/Cliff_Event.lisp
+sensor_msg/CMakeFiles/sensor_msg_generate_messages_lisp: /home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg/Bumper_Event.lisp
 
 /home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg/Cliff_Event.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg/Cliff_Event.lisp: /home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg
@@ -53,8 +54,15 @@ sensor_msg/CMakeFiles/sensor_msg_generate_messages_lisp: /home/turtlebot/xu_slam
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from sensor_msg/Cliff_Event.msg"
 	cd /home/turtlebot/xu_slam/build/sensor_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg -Isensor_msg:/home/turtlebot/xu_slam/src/sensor_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p sensor_msg -o /home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg
 
+/home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg/Bumper_Event.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg/Bumper_Event.lisp: /home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from sensor_msg/Bumper_Event.msg"
+	cd /home/turtlebot/xu_slam/build/sensor_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg -Isensor_msg:/home/turtlebot/xu_slam/src/sensor_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p sensor_msg -o /home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg
+
 sensor_msg_generate_messages_lisp: sensor_msg/CMakeFiles/sensor_msg_generate_messages_lisp
 sensor_msg_generate_messages_lisp: /home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg/Cliff_Event.lisp
+sensor_msg_generate_messages_lisp: /home/turtlebot/xu_slam/devel/share/common-lisp/ros/sensor_msg/msg/Bumper_Event.lisp
 sensor_msg_generate_messages_lisp: sensor_msg/CMakeFiles/sensor_msg_generate_messages_lisp.dir/build.make
 .PHONY : sensor_msg_generate_messages_lisp
 

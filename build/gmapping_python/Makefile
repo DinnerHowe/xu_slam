@@ -247,6 +247,48 @@ gmapping_python_genpy/fast:
 	cd /home/turtlebot/xu_slam/build && $(MAKE) -f gmapping_python/CMakeFiles/gmapping_python_genpy.dir/build.make gmapping_python/CMakeFiles/gmapping_python_genpy.dir/build
 .PHONY : gmapping_python_genpy/fast
 
+# Convenience name for target.
+gmapping_python/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 gmapping_python/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : gmapping_python/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_cpp: gmapping_python/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f gmapping_python/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make gmapping_python/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+gmapping_python/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 gmapping_python/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : gmapping_python/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_lisp: gmapping_python/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f gmapping_python/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make gmapping_python/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+gmapping_python/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 gmapping_python/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : gmapping_python/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: gmapping_python/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f gmapping_python/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make gmapping_python/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -265,6 +307,9 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_py"
 	@echo "... rebuild_cache"
 	@echo "... test"
 .PHONY : help

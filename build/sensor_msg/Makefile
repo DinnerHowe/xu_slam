@@ -150,6 +150,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+sensor_msg/CMakeFiles/_sensor_msg_generate_messages_check_deps_Bumper_Event.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 sensor_msg/CMakeFiles/_sensor_msg_generate_messages_check_deps_Bumper_Event.dir/rule
+.PHONY : sensor_msg/CMakeFiles/_sensor_msg_generate_messages_check_deps_Bumper_Event.dir/rule
+
+# Convenience name for target.
+_sensor_msg_generate_messages_check_deps_Bumper_Event: sensor_msg/CMakeFiles/_sensor_msg_generate_messages_check_deps_Bumper_Event.dir/rule
+.PHONY : _sensor_msg_generate_messages_check_deps_Bumper_Event
+
+# fast build rule for target.
+_sensor_msg_generate_messages_check_deps_Bumper_Event/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f sensor_msg/CMakeFiles/_sensor_msg_generate_messages_check_deps_Bumper_Event.dir/build.make sensor_msg/CMakeFiles/_sensor_msg_generate_messages_check_deps_Bumper_Event.dir/build
+.PHONY : _sensor_msg_generate_messages_check_deps_Bumper_Event/fast
+
+# Convenience name for target.
 sensor_msg/CMakeFiles/_sensor_msg_generate_messages_check_deps_Cliff_Event.dir/rule:
 	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 sensor_msg/CMakeFiles/_sensor_msg_generate_messages_check_deps_Cliff_Event.dir/rule
 .PHONY : sensor_msg/CMakeFiles/_sensor_msg_generate_messages_check_deps_Cliff_Event.dir/rule
@@ -267,6 +281,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... _sensor_msg_generate_messages_check_deps_Bumper_Event"
 	@echo "... _sensor_msg_generate_messages_check_deps_Cliff_Event"
 	@echo "... edit_cache"
 	@echo "... install"

@@ -1,7 +1,0 @@
-<!--this file is demo for voice interface -->
-<launch>
- <!--sensor-->
- <node name="voice_interface" pkg="voice_interface" type="motion_voice.py" respawn="True" />
-
-</launch>
-

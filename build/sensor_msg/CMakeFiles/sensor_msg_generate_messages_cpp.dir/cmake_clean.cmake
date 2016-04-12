@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/sensor_msg_generate_messages_cpp"
   "/home/turtlebot/xu_slam/devel/include/sensor_msg/Cliff_Event.h"
+  "/home/turtlebot/xu_slam/devel/include/sensor_msg/Bumper_Event.h"
 )
 
 # Per-language clean rules from dependency scanning.

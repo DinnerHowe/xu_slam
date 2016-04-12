@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "sensor_msg: 1 messages, 0 services")
+message(STATUS "sensor_msg: 2 messages, 0 services")
 
 set(MSG_I_FLAGS "-Isensor_msg:/home/turtlebot/xu_slam/src/sensor_msg/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
@@ -20,6 +20,11 @@ add_custom_target(_sensor_msg_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sensor_msg" "/home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg" ""
 )
 
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg" NAME_WE)
+add_custom_target(_sensor_msg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sensor_msg" "/home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg" ""
+)
+
 #
 #  langs = gencpp;genlisp;genpy
 #
@@ -28,6 +33,12 @@ add_custom_target(_sensor_msg_generate_messages_check_deps_${_filename}
 ### Generating Messages
 _generate_msg_cpp(sensor_msg
   "/home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/sensor_msg
+)
+_generate_msg_cpp(sensor_msg
+  "/home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/sensor_msg
@@ -49,6 +60,8 @@ add_dependencies(sensor_msg_generate_messages sensor_msg_generate_messages_cpp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg" NAME_WE)
 add_dependencies(sensor_msg_generate_messages_cpp _sensor_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg" NAME_WE)
+add_dependencies(sensor_msg_generate_messages_cpp _sensor_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(sensor_msg_gencpp)
@@ -61,6 +74,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS sensor_msg_generate_messages_cpp)
 ### Generating Messages
 _generate_msg_lisp(sensor_msg
   "/home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/sensor_msg
+)
+_generate_msg_lisp(sensor_msg
+  "/home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/sensor_msg
@@ -82,6 +101,8 @@ add_dependencies(sensor_msg_generate_messages sensor_msg_generate_messages_lisp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg" NAME_WE)
 add_dependencies(sensor_msg_generate_messages_lisp _sensor_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg" NAME_WE)
+add_dependencies(sensor_msg_generate_messages_lisp _sensor_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(sensor_msg_genlisp)
@@ -94,6 +115,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS sensor_msg_generate_messages_lisp)
 ### Generating Messages
 _generate_msg_py(sensor_msg
   "/home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/sensor_msg
+)
+_generate_msg_py(sensor_msg
+  "/home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/sensor_msg
@@ -114,6 +141,8 @@ add_dependencies(sensor_msg_generate_messages sensor_msg_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg" NAME_WE)
+add_dependencies(sensor_msg_generate_messages_py _sensor_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg" NAME_WE)
 add_dependencies(sensor_msg_generate_messages_py _sensor_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

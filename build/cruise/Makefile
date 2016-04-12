@@ -192,6 +192,90 @@ _run_tests_cruise_roslaunch-check_launch/fast:
 .PHONY : _run_tests_cruise_roslaunch-check_launch/fast
 
 # Convenience name for target.
+cruise/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : cruise/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: cruise/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make cruise/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : cruise/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_lisp: cruise/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make cruise/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : cruise/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: cruise/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/actionlib_generate_messages_py.dir/build.make cruise/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : cruise/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_cpp: cruise/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+.PHONY : actionlib_msgs_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_cpp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make cruise/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : cruise/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_lisp: cruise/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+.PHONY : actionlib_msgs_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make cruise/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : cruise/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_msgs_generate_messages_py: cruise/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+.PHONY : actionlib_msgs_generate_messages_py
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_py/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make cruise/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 cruise/CMakeFiles/cruise_gencpp.dir/rule:
 	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/cruise_gencpp.dir/rule
 .PHONY : cruise/CMakeFiles/cruise_gencpp.dir/rule
@@ -288,6 +372,90 @@ cruise_genpy: cruise/CMakeFiles/cruise_genpy.dir/rule
 cruise_genpy/fast:
 	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/cruise_genpy.dir/build.make cruise/CMakeFiles/cruise_genpy.dir/build
 .PHONY : cruise_genpy/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : cruise/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: cruise/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make cruise/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : cruise/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: cruise/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make cruise/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : cruise/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: cruise/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/roscpp_generate_messages_py.dir/build.make cruise/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : cruise/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: cruise/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make cruise/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : cruise/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: cruise/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make cruise/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+cruise/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f CMakeFiles/Makefile2 cruise/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : cruise/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: cruise/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/turtlebot/xu_slam/build && $(MAKE) -f cruise/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make cruise/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 cruise/CMakeFiles/run_tests_cruise.dir/rule:
@@ -466,6 +634,12 @@ help:
 	@echo "... _run_tests_cruise"
 	@echo "... _run_tests_cruise_roslaunch-check"
 	@echo "... _run_tests_cruise_roslaunch-check_launch"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... cruise_gencpp"
 	@echo "... cruise_generate_messages"
 	@echo "... cruise_generate_messages_cpp"
@@ -479,6 +653,12 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... run_tests_cruise"
 	@echo "... run_tests_cruise_roslaunch-check"
 	@echo "... run_tests_cruise_roslaunch-check_launch"

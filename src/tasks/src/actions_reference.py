@@ -20,7 +20,6 @@ from math import *
 #导航入口
 def cruise():
  marker_point=rospy.wait_for_message("visualization_marker", Marker)
- trigger=raw_input("是否开始任务?(输入y/Y确认)")
  pose_list=marker_point.points
  intial_position=pose_list[0]
  task_position=pose_list[1:]
@@ -29,10 +28,7 @@ def cruise():
   tasks.append(intial_position)
  else:
   pass
- if string.lower(trigger)=='y':
-  tasks(len(pose_list),tasks)
- else:
-  pass
+ tasks(len(pose_list),tasks)
   
 #任务执行
 def tasks(pose_number,pose_list):

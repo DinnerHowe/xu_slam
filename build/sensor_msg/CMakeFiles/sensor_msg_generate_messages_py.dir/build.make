@@ -46,6 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 include sensor_msg/CMakeFiles/sensor_msg_generate_messages_py.dir/progress.make
 
 sensor_msg/CMakeFiles/sensor_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Cliff_Event.py
+sensor_msg/CMakeFiles/sensor_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Bumper_Event.py
 sensor_msg/CMakeFiles/sensor_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/__init__.py
 
 /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Cliff_Event.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
@@ -54,14 +55,22 @@ sensor_msg/CMakeFiles/sensor_msg_generate_messages_py: /home/turtlebot/xu_slam/d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG sensor_msg/Cliff_Event"
 	cd /home/turtlebot/xu_slam/build/sensor_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg -Isensor_msg:/home/turtlebot/xu_slam/src/sensor_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p sensor_msg -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg
 
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Bumper_Event.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Bumper_Event.py: /home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG sensor_msg/Bumper_Event"
+	cd /home/turtlebot/xu_slam/build/sensor_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg -Isensor_msg:/home/turtlebot/xu_slam/src/sensor_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p sensor_msg -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg
+
 /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Cliff_Event.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
+/home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/__init__.py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Bumper_Event.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for sensor_msg"
 	cd /home/turtlebot/xu_slam/build/sensor_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg --initpy
 
 sensor_msg_generate_messages_py: sensor_msg/CMakeFiles/sensor_msg_generate_messages_py
 sensor_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Cliff_Event.py
+sensor_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/_Bumper_Event.py
 sensor_msg_generate_messages_py: /home/turtlebot/xu_slam/devel/lib/python2.7/dist-packages/sensor_msg/msg/__init__.py
 sensor_msg_generate_messages_py: sensor_msg/CMakeFiles/sensor_msg_generate_messages_py.dir/build.make
 .PHONY : sensor_msg_generate_messages_py

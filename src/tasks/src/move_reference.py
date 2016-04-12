@@ -51,8 +51,8 @@ def twist_frame(target_frame,source_frame):
    break
   
 #记录plan
-def plan_recorder():
- path=rospy.wait_for_message('/move_base/NavfnROS/plan', Path)
+def plan_recorder(topic):
+ path=rospy.wait_for_message('%s'%topic, Path)
  path_poses=path.poses
  return path_poses
  

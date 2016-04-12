@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "marker")
-set(marker_MAINTAINER "Jane Doe <zhihao@iscas.ac.cn>, turtlebot <turtlebot@todo.todo>")
+set(marker_MAINTAINER "zhihao xu <zhihao@iscas.ac.cn>")
 set(marker_DEPRECATED "")
 set(marker_VERSION "0.0.0")
 set(marker_BUILD_DEPENDS "message_generation" "rospy" "std_msgs" "geometry_msgs" "visualization_msgs")

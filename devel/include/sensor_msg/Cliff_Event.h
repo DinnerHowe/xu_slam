@@ -24,34 +24,30 @@ struct Cliff_Event_
   typedef Cliff_Event_<ContainerAllocator> Type;
 
   Cliff_Event_()
-    : LEFT(0)
-    , FRONT(0)
-    , RIGHT(0)
-    , BACK(0)  {
+    : bumper(0)
+    , state(0)  {
     }
   Cliff_Event_(const ContainerAllocator& _alloc)
-    : LEFT(0)
-    , FRONT(0)
-    , RIGHT(0)
-    , BACK(0)  {
+    : bumper(0)
+    , state(0)  {
     }
 
 
 
-   typedef uint8_t _LEFT_type;
-  _LEFT_type LEFT;
+   typedef uint8_t _bumper_type;
+  _bumper_type bumper;
 
-   typedef uint8_t _FRONT_type;
-  _FRONT_type FRONT;
-
-   typedef uint8_t _RIGHT_type;
-  _RIGHT_type RIGHT;
-
-   typedef uint8_t _BACK_type;
-  _BACK_type BACK;
+   typedef uint8_t _state_type;
+  _state_type state;
 
 
-
+    enum { LEFT = 0u };
+     enum { CENTER = 1u };
+     enum { RIGHT = 2u };
+     enum { BACK = 3u };
+     enum { RELEASED = 0u };
+     enum { PRESSED = 1u };
+ 
 
   typedef boost::shared_ptr< ::sensor_msg::Cliff_Event_<ContainerAllocator> > Ptr;
   typedef boost::shared_ptr< ::sensor_msg::Cliff_Event_<ContainerAllocator> const> ConstPtr;
@@ -64,6 +60,18 @@ typedef boost::shared_ptr< ::sensor_msg::Cliff_Event > Cliff_EventPtr;
 typedef boost::shared_ptr< ::sensor_msg::Cliff_Event const> Cliff_EventConstPtr;
 
 // constants requiring out of line definition
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
 
 
 
@@ -127,12 +135,12 @@ struct MD5Sum< ::sensor_msg::Cliff_Event_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "4aa84ea193dabb93b5378e5ff8539958";
+    return "65d7373d8798a63a14504318204bc7fa";
   }
 
   static const char* value(const ::sensor_msg::Cliff_Event_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x4aa84ea193dabb93ULL;
-  static const uint64_t static_value2 = 0xb5378e5ff8539958ULL;
+  static const uint64_t static_value1 = 0x65d7373d8798a63aULL;
+  static const uint64_t static_value2 = 0x14504318204bc7faULL;
 };
 
 template<class ContainerAllocator>
@@ -151,10 +159,16 @@ struct Definition< ::sensor_msg::Cliff_Event_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint8 LEFT\n\
-uint8 FRONT\n\
-uint8 RIGHT\n\
-uint8 BACK\n\
+    return "uint8 LEFT=0\n\
+uint8 CENTER=1\n\
+uint8 RIGHT=2\n\
+uint8 BACK=3\n\
+\n\
+uint8 RELEASED=0\n\
+uint8 PRESSED=1\n\
+\n\
+uint8 bumper\n\
+uint8 state\n\
 \n\
 ";
   }
@@ -174,10 +188,8 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.LEFT);
-      stream.next(m.FRONT);
-      stream.next(m.RIGHT);
-      stream.next(m.BACK);
+      stream.next(m.bumper);
+      stream.next(m.state);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -196,14 +208,10 @@ struct Printer< ::sensor_msg::Cliff_Event_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::sensor_msg::Cliff_Event_<ContainerAllocator>& v)
   {
-    s << indent << "LEFT: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.LEFT);
-    s << indent << "FRONT: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.FRONT);
-    s << indent << "RIGHT: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.RIGHT);
-    s << indent << "BACK: ";
-    Printer<uint8_t>::stream(s, indent + "  ", v.BACK);
+    s << indent << "bumper: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.bumper);
+    s << indent << "state: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.state);
   }
 };
 

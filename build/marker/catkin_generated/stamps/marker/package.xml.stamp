@@ -3,10 +3,9 @@
   <name>marker</name>
   <version>0.0.0</version>
   <description>The marker package</description>
-  <maintainer email="zhihao@iscas.ac.cn">Jane Doe</maintainer>
-  <maintainer email="turtlebot@todo.todo">turtlebot</maintainer>
+  <maintainer email="zhihao@iscas.ac.cn">zhihao xu</maintainer>
   <license>TODO</license>
-  <author email="zhihao@iscas.ac.cn">Jane Doe</author>
+  <author email="zhihao@iscas.ac.cn">zhihao xu</author>
   <build_depend>message_generation</build_depend>
   <run_depend>message_runtime</run_depend> 
 

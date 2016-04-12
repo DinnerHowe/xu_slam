@@ -1,0 +1,8 @@
+prefix=/home/turtlebot/xu_slam/devel
+
+Name: obstacle_markers
+Description: Description of obstacle_markers
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/turtlebot/xu_slam/devel/lib -lobstacle_markers
+Requires: rospy message_runtime std_msgs geometry_msgs visualization_msgs

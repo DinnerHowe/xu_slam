@@ -336,12 +336,6 @@ interactive_markers_BINARY_DIR:STATIC=/home/turtlebot/xu_slam/build/interactive_
 //Value Computed by CMake
 interactive_markers_SOURCE_DIR:STATIC=/home/turtlebot/xu_slam/src/interactive_markers
 
-//Value Computed by CMake
-laser_BINARY_DIR:STATIC=/home/turtlebot/xu_slam/build/laser
-
-//Value Computed by CMake
-laser_SOURCE_DIR:STATIC=/home/turtlebot/xu_slam/src/laser
-
 //Path to a library.
 lib:FILEPATH=/opt/ros/indigo/lib/librostime.so
 
@@ -371,6 +365,12 @@ nav_staff_BINARY_DIR:STATIC=/home/turtlebot/xu_slam/build/nav_staff
 
 //Value Computed by CMake
 nav_staff_SOURCE_DIR:STATIC=/home/turtlebot/xu_slam/src/nav_staff
+
+//Value Computed by CMake
+obstacle_markers_BINARY_DIR:STATIC=/home/turtlebot/xu_slam/build/obstacle_markers
+
+//Value Computed by CMake
+obstacle_markers_SOURCE_DIR:STATIC=/home/turtlebot/xu_slam/src/obstacle_markers
 
 //Value Computed by CMake
 rbx1_BINARY_DIR:STATIC=/home/turtlebot/xu_slam/build/rbx1/rbx1
@@ -654,7 +654,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=29
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

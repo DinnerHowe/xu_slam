@@ -46,6 +46,7 @@ CMAKE_BINARY_DIR = /home/turtlebot/xu_slam/build
 include sensor_msg/CMakeFiles/sensor_msg_generate_messages_cpp.dir/progress.make
 
 sensor_msg/CMakeFiles/sensor_msg_generate_messages_cpp: /home/turtlebot/xu_slam/devel/include/sensor_msg/Cliff_Event.h
+sensor_msg/CMakeFiles/sensor_msg_generate_messages_cpp: /home/turtlebot/xu_slam/devel/include/sensor_msg/Bumper_Event.h
 
 /home/turtlebot/xu_slam/devel/include/sensor_msg/Cliff_Event.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/turtlebot/xu_slam/devel/include/sensor_msg/Cliff_Event.h: /home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg
@@ -54,8 +55,16 @@ sensor_msg/CMakeFiles/sensor_msg_generate_messages_cpp: /home/turtlebot/xu_slam/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from sensor_msg/Cliff_Event.msg"
 	cd /home/turtlebot/xu_slam/build/sensor_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/turtlebot/xu_slam/src/sensor_msg/msg/Cliff_Event.msg -Isensor_msg:/home/turtlebot/xu_slam/src/sensor_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p sensor_msg -o /home/turtlebot/xu_slam/devel/include/sensor_msg -e /opt/ros/indigo/share/gencpp/cmake/..
 
+/home/turtlebot/xu_slam/devel/include/sensor_msg/Bumper_Event.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/turtlebot/xu_slam/devel/include/sensor_msg/Bumper_Event.h: /home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg
+/home/turtlebot/xu_slam/devel/include/sensor_msg/Bumper_Event.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/turtlebot/xu_slam/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from sensor_msg/Bumper_Event.msg"
+	cd /home/turtlebot/xu_slam/build/sensor_msg && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/turtlebot/xu_slam/src/sensor_msg/msg/Bumper_Event.msg -Isensor_msg:/home/turtlebot/xu_slam/src/sensor_msg/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p sensor_msg -o /home/turtlebot/xu_slam/devel/include/sensor_msg -e /opt/ros/indigo/share/gencpp/cmake/..
+
 sensor_msg_generate_messages_cpp: sensor_msg/CMakeFiles/sensor_msg_generate_messages_cpp
 sensor_msg_generate_messages_cpp: /home/turtlebot/xu_slam/devel/include/sensor_msg/Cliff_Event.h
+sensor_msg_generate_messages_cpp: /home/turtlebot/xu_slam/devel/include/sensor_msg/Bumper_Event.h
 sensor_msg_generate_messages_cpp: sensor_msg/CMakeFiles/sensor_msg_generate_messages_cpp.dir/build.make
 .PHONY : sensor_msg_generate_messages_cpp
 
