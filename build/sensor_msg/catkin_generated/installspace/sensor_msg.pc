@@ -1,8 +1,0 @@
-prefix=/home/turtlebot/xu_slam/install
-
-Name: sensor_msg
-Description: Description of sensor_msg
-Version: 0.0.0
-Cflags: -I/home/turtlebot/xu_slam/install/include
-Libs: -L/home/turtlebot/xu_slam/install/lib -lsensor_msg
-Requires: rospy message_runtime std_msgs

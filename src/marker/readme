@@ -1,3 +1,15 @@
-marker.py 用来标记机器人其实位置以及选中地点的位置
-运行 rosrun marker marker.py
-或者 roslaunch marker marker_view.launch
+marker.py 用来标记机器人其实位置以及选中地点的位置,和cruise_tasks一起用
+运行 rosrun marker marker.py(不带RVIZ显示)
+或者 roslaunch marker marker.launch(不带RVIZ显示)
+或者 roslaunch marker marker_view.launch(带RVIZ显示)
+
+marker清空触发
+rosrun marker marker_trigger.py
+roslaunch marker marker_with_trigger.launch
+(PS: marker+marker_trigger不带RVIZ)
+
+单marker实时调控/消除marker和go_task一起用
+rosrun marker ui_marker.py
+roslaunch marker ui_marker.launch
+
+

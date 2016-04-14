@@ -1,0 +1,3 @@
+<launch>
+ <node pkg="tasks" type="go_tasks.py" name="go_tasks" respawn="true" />
+</launch>

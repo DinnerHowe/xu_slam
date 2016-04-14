@@ -1,8 +1,0 @@
-prefix=/home/turtlebot/xu_slam/install
-
-Name: youtoo
-Description: Description of youtoo
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/turtlebot/xu_slam/install/lib 
-Requires: 

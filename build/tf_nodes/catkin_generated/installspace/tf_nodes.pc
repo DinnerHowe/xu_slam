@@ -1,8 +1,0 @@
-prefix=/home/turtlebot/xu_slam/install
-
-Name: tf_nodes
-Description: Description of tf_nodes
-Version: 0.0.0
-Cflags: -I/home/turtlebot/xu_slam/install/include
-Libs: -L/home/turtlebot/xu_slam/install/lib -ltf_nodes
-Requires: rospy tf

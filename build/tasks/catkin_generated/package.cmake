@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "tasks")
-set(tasks_MAINTAINER "turtlebot <turtlebot@todo.todo>")
-set(tasks_DEPRECATED "")
-set(tasks_VERSION "0.0.0")
-set(tasks_BUILD_DEPENDS "rospy")
-set(tasks_RUN_DEPENDS "rospy")
-set(tasks_BUILDTOOL_DEPENDS "catkin")

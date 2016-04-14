@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "gmapping_python")
-set(gmapping_python_MAINTAINER "zhihao xu(Howe) <zhihao@iscas.ac.cn>, turtlebot <turtlebot@todo.todo>")
-set(gmapping_python_DEPRECATED "")
-set(gmapping_python_VERSION "0.0.0")
-set(gmapping_python_BUILD_DEPENDS "message_generation" "message_filters" "nav_msgs" "rospy" "sensor_msgs" "std_msgs" "tf")
-set(gmapping_python_RUN_DEPENDS "message_runtime" "message_filters" "nav_msgs" "rospy" "sensor_msgs" "std_msgs" "tf")
-set(gmapping_python_BUILDTOOL_DEPENDS "catkin")

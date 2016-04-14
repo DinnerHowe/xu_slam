@@ -1,3 +1,30 @@
-rosrun tasks target_frame.py  用来发布一个goal的frame
-tasks.py 完成任务的程序
+1. rosrun tasks target_frame.py  用来发布一个goal的frame
+
+2. go_tasks.py 实时人工干预来完成任务的程序,和3D游戏一样
+   (仿真)运行一下命令:
+   roslaunch rbx1_bringup fake_turtlebot.launch (仿真)
+   roslaunch rbx1_nav fake_amcl.launch map:=office_map_manual.yaml (仿真)
+   roslaunch marker ui_marker.launch
+   rosrun rviz rviz (仿真)
+   rosrun tasks go_tasks.py 或者 roslaunch tasks go_tasks.launch
+
+3. cruise_tasks.py 自动顺序完成多任务点的移动(待测试)
+   (仿真)运行一下命令:
+   roslaunch rbx1_bringup fake_turtlebot.launch (仿真)
+   roslaunch rbx1_nav fake_amcl.launch map:=office_map_manual.yaml (仿真)
+   roslaunch marker ui_marker.launch
+   rosrun rviz rviz (仿真)
+   rosrun tasks cruise_tasks.py 或者 roslaunch tasks cruise_tasks.launch
+
+4. default_position_register.py 默认地点录入程序
+   运行 rosrun tasks default_position_register.py
+
+5. path_publisher.py 从一个plan中订阅path然后发布path到global_plan中
+   运行 rosrun tasks path_publisher.py
+
+6. path_recorder.py 记录path
+   运行 rosrun tasks path_recorder.py
+   
+7. plan_recorder.py 记录plan并且打印plan长度的
+   运行 rosrun tasks plan_recorder.py
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #coding=utf-8
 """ 
-this code is used for making markers in map
+this code is used for making one marker in map
 
 Copyright (c) 2015 Xu Zhihao (Howe).  All rights reserved.
 
@@ -10,10 +10,12 @@ This program is free software; you can redistribute it and/or modify
 This programm is tested on kuboki base turtlebot. 
 
 """
+
 import rospy,std_msgs.msg
 from geometry_msgs.msg import PointStamped
 from visualization_msgs.msg import Marker
 from nav_msgs.msg import Odometry
+
 
 class marker():
  def define(self):
@@ -35,23 +37,31 @@ class marker():
   self.count=0
   self.period=rospy.Duration(0.3)
   self.trigger=False
+  self.trigger_pub = rospy.Publisher('empty_marker', std_msgs.msg.Bool, queue_size=1)
 
  def sub_callback(self,pose):
-  rospy.loginfo ('请使用publish point选出想要标记的地方')
-  self.marker.points.append(pose.point)
-  self.marker_pub.publish(self.marker)
   self.count=self.count+1
-  rospy.loginfo('添加第%s个点'%self.count)
+  if not rospy.has_param('~goal_number'):
+   rospy.set_param('~goal_number',1)
+  else:
+   pass
+  goal_number=rospy.get_param('~goal_number')
+  if self.count>=goal_number:
+   self.trigger_pub.publish(True)
+  self.update_odom()
+  self.marker.points.append(pose.point)
+
+  self.marker_pub.publish(self.marker)
   
  def timer(self,event):
   if self.clear:
-   rospy.loginfo ('清空上次任务')
    self.clear=False
    self.define()
-   intial=rospy.wait_for_message("odom",Odometry)
-   self.intial_point=intial.pose.pose.position
-   self.marker.points=[self.intial_point] 
-   self.marker_pub.publish(self.marker)
+   
+ def update_odom(self):
+  self.intial_point=self.intial.pose.pose.position
+  self.marker.points=[self.intial_point]
+
    
  def empty_callback(self,trigger):
   if trigger.data:
@@ -60,13 +70,19 @@ class marker():
   else:
    pass
    
+ def odom_callback(self,odom):
+  self.intial = odom
+   
+   
  def __init__(self):
   self.clear=True 
-  rospy.init_node('marker')
+  rospy.init_node('ui_marker')
+  rospy.loginfo ('请使用publish point选出想要标记的地方')
   self.define()
   rospy.Timer(self.period, self.timer)
-  rospy.Subscriber("clicked_point", PointStamped, self.sub_callback) #pose=rospy.wait_for_message("clicked_point", PointStamped)
-  rospy.Subscriber('empty_marker',std_msgs.msg.Bool, self.empty_callback)
+  rospy.Subscriber('empty_marker', std_msgs.msg.Bool, self.empty_callback)
+  rospy.Subscriber("odom",         Odometry,          self.odom_callback)
+  rospy.Subscriber("clicked_point",PointStamped,      self.sub_callback)
   rospy.spin()
 
 

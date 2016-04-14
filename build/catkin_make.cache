@@ -1,2 +1,0 @@
-cruise:gmapping_python:marker:nav_staff:obstacle_markers:rbx1/rbx1:rbx1/rbx1_apps:rbx1/rbx1_bringup:rbx1/rbx1_description:rbx1/rbx1_dynamixels:rbx1/rbx1_nav:rbx1/rbx1_speech:rbx1/rbx1_vision:robot_bringup:tasks:utils
--DCATKIN_DEVEL_PREFIX=/home/turtlebot/xu_slam/devel -DCMAKE_INSTALL_PREFIX=/home/turtlebot/xu_slam/install -G Unix Makefiles

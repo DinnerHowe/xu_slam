@@ -2,5 +2,6 @@
   Used for visualising the turtlebot while building a map or navigating with the ros navistack.
  -->
 <launch>
+  <include file="$(find marker)/launch/xml/marker_with_trigger.launch.xml" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find marker)/rviz/marker_view_2d.rviz"/>
 </launch>

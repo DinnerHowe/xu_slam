@@ -15,13 +15,21 @@ import getpass,PyKDL,collections,numpy,math,tf,rospy
 from geometry_msgs.msg import Pose,Twist
 from nav_msgs.msg import Path
 
-#turn_speed in rad/s,radius in meter, duration in sec
+#turn_speed in m/s,rad/s,duration in sec
+def twist_tdr(turn_speed,duration,radius):
+ pub = rospy.Publisher('/cmd_vel_mux/input/teleop', Twist, queue_size=1)
+ move_cmd= Twist() 
+ time_stamp=rospy.get_rostime()
+ while (rospy.get_rostime()-time_stamp)<=rospy.Duration(duration):
+  move_cmd.angular.z = turn_speed
+  move_cmd.linear.x = radius
+  pub.publish(move_cmd)
 
 
 #twist by frame difference
 def twist_frame(target_frame,source_frame):
  #pub = rospy.Publisher('/cmd_vel_mux/input/teleop', Twist, queue_size=1)
- pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
+ pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)#for smulation
  move_cmd= Twist() 
  listener = tf.TransformListener()
  achieve_goal=True
@@ -56,11 +64,12 @@ def plan_recorder(topic):
  path_poses=path.poses
  return path_poses
  
-
+#return RPY angle in rad
 def quat_to_angle(quat):
  rot = PyKDL.Rotation.Quaternion(quat[0], quat[1], quat[2], quat[3])
  return rot.GetRPY()[2]
 
+#return (x,y,z,w)
 def angle_to_quat(angle):#in rad
  rot = PyKDL.Rotation.RotZ(angle)
  return rot.GetQuaternion()

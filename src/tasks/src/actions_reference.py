@@ -10,65 +10,69 @@ This programm is tested on kuboki base turtlebot.
 
 """
 
-import rospy,actionlib,getpass,move_reference,string
+import rospy,actionlib,getpass,move_reference,std_msgs.msg
 from geometry_msgs.msg import PointStamped
 from nav_msgs.msg import Path,Odometry
-from move_base_msgs.msg import MoveBaseAction
+from move_base_msgs.msg import MoveBaseAction,MoveBaseGoal
+from actionlib_msgs.msg import GoalStatus
 from visualization_msgs.msg import Marker
 from math import *
 
-#导航入口
+#回航导航入口
 def cruise():
  marker_point=rospy.wait_for_message("visualization_marker", Marker)
- pose_list=marker_point.points
- intial_position=pose_list[0]
- task_position=pose_list[1:]
- tasks=task_position
- if intial_position not in tasks:
-  tasks.append(intial_position)
+ point_list=marker_point.points
+ intial_point=point_list[0]
+ point_list.remove(intial_point)
+ point_list.append(intial_point)
+ count=0
+ for point in point_list:
+  rospy.loginfo('moving forwarding to %s_st target'%count)
+  count+=1
+  tasks(intial_point,point)
+ 
+#单向导航入口 
+def go():
+ marker_point=rospy.wait_for_message("visualization_marker", Marker)
+ if len(marker_point.points)==2:
+  point_list=marker_point.points
+  intial_point=point_list[0]
+  point_list.remove(intial_point)
+  task_point=point_list[0]
+  tasks(intial_point,task_point)
  else:
+  rospy.loginfo('error in number of markers')
   pass
- tasks(len(pose_list),tasks)
-  
+ 
 #任务执行
-def tasks(pose_number,pose_list):
- likelihood,weight=0,0.0
+def tasks(intial_point,point):
  move_base = actionlib.SimpleActionClient('move_base', MoveBaseAction)
  move_base.wait_for_server()
  goal = MoveBaseGoal()
- for goal_pose in pose_list:
-  init_pose=rospy.wait_for_message("odom",Odometry)
-  pre_position=PointStamped()
-  pre_position.point=init_pose.pose.pose.position
-  angle=angle_generater(goal_pose.point,pre_position.point)
-  try:
-   goal.target_pose.header.frame_id = goal_pose.header.frame_id
-  except:
-   goal.target_pose.header.frame_id = 'map'
-  goal.target_pose.pose.position=goal_pose.point
-  goal.target_pose.pose.orientation=Quaternion(*quaternion_from_euler(0,0,angle))
-  move_base.send_goal(goal)
-  move_base.wait_for_result(rospy.Duration.from_sec(30.0))
-  state=move_base.get_state()
-  if state==GoalStatus.SUCCEEDED:
-   print 'Achieved Goal'
-   weight-=1
-   if weight<=0:
-    weight=0
-   likelihood=weight/pose_number
-  else:
-   print 'Fail to Achieve Goal'
-   weight+=1
-   likelihood=weight/pose_number
-   #twist(2,1,0.0)
-  print 'path reset rate : %s percent'%likelihood
-  if likelihood>=1:
-   move_base.cancel_goal()
-   likelihood,weight=0,0.0
-   print 'goal unchievable, tring to find way out'
-  else:
-   pass
+ init_point=intial_point
+
+ angle=move_reference.angle_generater(point,init_point)
+ try:
+  goal.target_pose.header.frame_id = pose.header.frame_id
+ except:
+  goal.target_pose.header.frame_id = 'map'
+ goal.target_pose.pose.position=point
+ (goal.target_pose.pose.orientation.x,goal.target_pose.pose.orientation.y,goal.target_pose.pose.orientation.z,goal.target_pose.pose.orientation.w)=move_reference.angle_to_quat(angle)
+ move_base.send_goal(goal)
+ #move_base.wait_for_result()
+ """
+ state=move_base.get_state()
+ #return state
+ print state
+ if state==GoalStatus.SUCCEEDED:
+  print 'Achieved Goal'
+ elif state==GoalStatus.PENDING:
+  
+  print 'get new goal'
+ else:
+  print 'Fail to Achieve Goal'
  return
+"""
 
 #curse默认模式的注册程序
 def pre_regist(odom,modle):
@@ -149,3 +153,46 @@ def pre_load():
  pose_list.append(intial_point)
  tasks(len(pose_list),pose_list)
 
+
+def position_compara(data_1,data_2):
+ if round(data_1.x,4)==round(data_2.x,4):
+  x_state=True
+ else:
+  x_state=False
+  
+ if round(data_1.y,4)==round(data_2.y,4):
+  y_state=True
+ else:
+  y_state=False
+  
+ if round(data_1.z,4)==round(data_2.z,4):
+  z_state=True
+ else:
+  z_state=False
+  
+ return (x_state,y_state,z_state)
+ 
+def orientation_compara(data_1,data_2):
+ if round(data_1.x,4)==round(data_2.x,4):
+  x_state=True
+ else:
+  x_state=False
+  
+ if round(data_1.y,4)==round(data_2.y,4):
+  y_state=True
+ else:
+  y_state=False
+  
+ if round(data_1.z,4)==round(data_2.z,4):
+  z_state=True
+ else:
+  z_state=False
+  
+ if round(data_1.w,4)==round(data_2.w,4):
+  w_state=True
+ else:
+  w_state=False
+  
+ return (x_state,y_state,z_state)
+ 
+ 

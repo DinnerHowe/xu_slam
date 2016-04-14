@@ -1,0 +1,4 @@
+<launch>
+ <node pkg="marker" type="marker.py" name="marker" output="screen" respawn="true" />
+ <node pkg="marker" type="marker_trigger.py" name="marker_trigger" output="screen" respawn="true" />
+</launch>

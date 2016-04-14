@@ -1,0 +1,9 @@
+<launch>
+ <include file="$(find obstacle_markers)/launch/xml/obstacle_markers.launch.xml">
+  <arg name="color_r" default="0.5" />
+  <arg name="color_g" default="0.5" />
+  <arg name="color_b" default="0.5" />
+  <arg name="color_a" default="1" />
+  <arg name="frame_id" default="map" />
+ </include>
+</launch>

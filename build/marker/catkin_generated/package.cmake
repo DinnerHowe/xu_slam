@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "marker")
-set(marker_MAINTAINER "zhihao xu <zhihao@iscas.ac.cn>")
-set(marker_DEPRECATED "")
-set(marker_VERSION "0.0.0")
-set(marker_BUILD_DEPENDS "message_generation" "rospy" "std_msgs" "geometry_msgs" "visualization_msgs")
-set(marker_RUN_DEPENDS "message_runtime" "rospy" "std_msgs" "geometry_msgs" "visualization_msgs")
-set(marker_BUILDTOOL_DEPENDS "catkin")

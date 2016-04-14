@@ -1,8 +1,0 @@
-prefix=/home/turtlebot/xu_slam/devel
-
-Name: rbx1_description
-Description: Description of rbx1_description
-Version: 0.4.0
-Cflags: 
-Libs: -L/home/turtlebot/xu_slam/devel/lib 
-Requires: 

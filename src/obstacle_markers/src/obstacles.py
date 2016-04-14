@@ -19,10 +19,10 @@ from nav_msgs.msg import OccupancyGrid
 
 class obstacles():
 
- def obstacle_callback(self, feedback):
+ #def obstacle_callback(self, feedback):
   #print 'obstacles updataed'
-  pass
-  self.server.applyChanges()
+  #pass
+  #self.server.applyChanges()
   
   
  #方格的基础属性
@@ -65,18 +65,25 @@ class obstacles():
   scale.z=map_data.info.resolution*10
   
   ##这里添加param
-  
-  color.r=25
-  color.g=155
-  color.b=25
-  color.a=10
+  try:
+   color.r=rospy.get_param('~color_r')
+   color.g=rospy.get_param('~color_g')
+   color.b=rospy.get_param('~color_b')
+   color.a=rospy.get_param('~color_a')
+   frameID=rospy.get_param('~frame_id')
+  except:
+   color.r=25
+   color.g=155
+   color.b=25
+   color.a=100   
+   frameID='map'
   
   block_points=marker_reference.get_effective_point(map_data)[1]
   
   for block_point in block_points:
    
    obstacles=InteractiveMarker()
-   obstacles.header.frame_id='map'
+   obstacles.header.frame_id=frameID
    obstacles.scale = scale.x
 
    [position.x,position.y]=block_point
@@ -90,7 +97,7 @@ class obstacles():
    self.make_obstacle_control(obstacles,color,scale)
    
 # tell the server to call obstacle_callback() when feedback arrives for it
-   self.server.insert(obstacles,self.obstacle_callback)
+   self.server.insert(obstacles)#,self.obstacle_callback)
    
   self.server.applyChanges()
   rospy.spin()

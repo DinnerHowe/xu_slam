@@ -1,8 +1,0 @@
-prefix=/home/turtlebot/xu_slam/devel
-
-Name: slam_main
-Description: Description of slam_main
-Version: 0.0.0
-Cflags: -I/home/turtlebot/xu_slam/devel/include
-Libs: -L/home/turtlebot/xu_slam/devel/lib -lslam_main
-Requires: roslaunch rospy std_msgs geometry_msgs message_runtime

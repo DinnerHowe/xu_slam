@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "obstacle_markers")
-set(obstacle_markers_MAINTAINER "zhihao xu <zhihao@iscas.ac.cn>")
-set(obstacle_markers_DEPRECATED "")
-set(obstacle_markers_VERSION "0.0.0")
-set(obstacle_markers_BUILD_DEPENDS "message_generation" "rospy" "std_msgs" "geometry_msgs" "visualization_msgs")
-set(obstacle_markers_RUN_DEPENDS "message_runtime" "rospy" "std_msgs" "geometry_msgs" "visualization_msgs")
-set(obstacle_markers_BUILDTOOL_DEPENDS "catkin")

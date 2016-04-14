@@ -1,8 +1,0 @@
-prefix=/home/turtlebot/xu_slam/install
-
-Name: marker
-Description: Description of marker
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/turtlebot/xu_slam/install/lib -lmarker
-Requires: rospy message_runtime std_msgs geometry_msgs visualization_msgs

@@ -12,7 +12,7 @@ This programm is tested on kuboki base turtlebot.
 import string, rospy
 from nav_msgs.msg import Path
 
-#记录path的
+#从一个plan中订阅path然后发布path到global_plan中
 class path_publisher():
  def __init__(self):
   rospy.init_node('path_publisher')

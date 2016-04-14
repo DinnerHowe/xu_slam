@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "interactive_markers")
-set(interactive_markers_MAINTAINER "zhihao xu <zhihao@iscas.ac.cn>")
-set(interactive_markers_DEPRECATED "")
-set(interactive_markers_VERSION "0.0.0")
-set(interactive_markers_BUILD_DEPENDS "message_generation" "rospy" "std_msgs" "geometry_msgs" "visualization_msgs")
-set(interactive_markers_RUN_DEPENDS "message_runtime" "rospy" "std_msgs" "geometry_msgs" "visualization_msgs")
-set(interactive_markers_BUILDTOOL_DEPENDS "catkin")

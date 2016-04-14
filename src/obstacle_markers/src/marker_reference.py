@@ -33,6 +33,8 @@ def get_effective_point(data):
     block_area.append([block_x,block_y])
    else:
     pass
+    
+ print 'block_area',len(block_area)
  return [clear_area,block_area]
  
 #返回地图矩阵
