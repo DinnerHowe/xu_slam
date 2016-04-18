@@ -49,16 +49,18 @@ class cruise_modle():
   actions_reference.go()
   
  def status_callback(self,goal_state):
-  state=goal_state.status_list[0]
-  #print state.status
-  if state.status==GoalStatus.ACTIVE or state.status==GoalStatus.SUCCEEDED:
-   if self.state_define[state.status] not in self.log_info.msg:
-    rospy.loginfo(self.state_define[state.status])
+  state_list=goal_state.status_list
+  if state_list != []:
+   state=state_list[0]
+   #print state.status
+   if state.status==GoalStatus.ACTIVE or state.status==GoalStatus.SUCCEEDED:
+    if self.state_define[state.status] not in self.log_info.msg:
+     rospy.loginfo(self.state_define[state.status])
 
-  if state.status!=GoalStatus.ACTIVE and state.status!=GoalStatus.SUCCEEDED:
-   if self.error_state_define[state.status] not in self.log_info.msg:
-    rospy.loginfo(self.error_state_define[state.status])
-    self.move_base.cancel_goal()
+   if state.status!=GoalStatus.ACTIVE and state.status!=GoalStatus.SUCCEEDED:
+    if self.error_state_define[state.status] not in self.log_info.msg:
+     rospy.loginfo(self.error_state_define[state.status])
+     self.move_base.cancel_goal()
 
 
  def Log_callback(self,log_info):

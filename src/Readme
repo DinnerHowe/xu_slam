@@ -16,3 +16,5 @@ web_map: 网页地图模块包
 youtoo: 腾讯优图人脸包(未完成)
 utils:各种工具文件
 marker:用来视觉显示一个maker在rviz上
+tasks: 用来完成用户单任务及时控制，或者自动顺序完成多任务点的移动，默认地点录入程序，从一个plan中订阅path然后发布path到global_plan中，记录path，记录plan并且打印plan长度的
+obstacle_markers：3D显示地图

@@ -1,0 +1,9 @@
+<launch>
+ <include file="$(find nav_staff)/launch/rplidar.launch.xml">
+  <arg name="rplidar_frame" value="/camera_depth_frame" />
+  <arg name="scan_topic" value="/scan" />
+  <arg name="range_min" default="0.15" />
+  <arg name="range_max" default="6.0" />  
+ </include>
+</launch>
+

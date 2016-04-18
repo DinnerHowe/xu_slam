@@ -1,0 +1,8 @@
+仿真步骤
+1. roslaunch rbx1_bringup fake_turtlebot.launch
+2. roslaunch rbx1_nav fake_amcl.launch map:=office_map_manual.yaml
+3. roslaunch marker ui_marker.launch 
+4. rosrun tasks go_tasks.py  
+5. roslaunch obstacle_markers obstacle_markers.launch 
+6. rosrun rviz rviz 
+

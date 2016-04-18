@@ -3,15 +3,15 @@
  <arg name="custom_param_file" default="$(find nav_staff)/param/dummy.yaml"/>
 
  <!--sensor-->
-  <include file="$(find turtlebot_bringup)/launch/3dsensor.launch">
-  <arg name="rgb_processing" default="false" />
-  <arg name="depth_registration" default="false" />
-  <arg name="depth_processing" default="false" />
-  <arg name="scan_topic" default="/scan" />
+ <include file="$(find nav_staff)/launch/rplidar_driver_demo.launch">
+  <arg name="scan_topic" value="/scan" />
+  <arg name="rplidar_frame" value="/camera_depth_frame" />
+  <arg name="range_min" default="0.15" />
+  <arg name="range_max" default="6.0" />
  </include>
 
  <!--map saver-->
- <arg name="map_file" default="$(find nav_staff)/map/office_map1.yaml"/>
+ <arg name="map_file" default="$(find nav_staff)/map/office_map_manual.yaml"/>
  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
  <arg name="initial_pose_x" default="0.0"/>
  <arg name="initial_pose_y" default="0.0"/>

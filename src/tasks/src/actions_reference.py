@@ -44,7 +44,7 @@ def go():
   rospy.loginfo('error in number of markers')
   pass
  
-#任务执行
+#任务执行 #angle by goal && orientation
 def tasks(intial_point,point):
  move_base = actionlib.SimpleActionClient('move_base', MoveBaseAction)
  move_base.wait_for_server()
@@ -52,6 +52,7 @@ def tasks(intial_point,point):
  init_point=intial_point
 
  angle=move_reference.angle_generater(point,init_point)
+ 
  try:
   goal.target_pose.header.frame_id = pose.header.frame_id
  except:
@@ -59,21 +60,42 @@ def tasks(intial_point,point):
  goal.target_pose.pose.position=point
  (goal.target_pose.pose.orientation.x,goal.target_pose.pose.orientation.y,goal.target_pose.pose.orientation.z,goal.target_pose.pose.orientation.w)=move_reference.angle_to_quat(angle)
  move_base.send_goal(goal)
- #move_base.wait_for_result()
- """
- state=move_base.get_state()
- #return state
- print state
- if state==GoalStatus.SUCCEEDED:
-  print 'Achieved Goal'
- elif state==GoalStatus.PENDING:
-  
-  print 'get new goal'
- else:
-  print 'Fail to Achieve Goal'
- return
-"""
 
+
+#任务执行 #angle by plan
+def plan_tasks(intial_point,point):
+ move_base = actionlib.SimpleActionClient('move_base', MoveBaseAction)
+ move_base.wait_for_server()
+ goal = MoveBaseGoal()
+ init_point=intial_point
+
+ angle=move_reference.angle_generater(point,init_point)
+ 
+ try:
+  goal.target_pose.header.frame_id = pose.header.frame_id
+ except:
+  goal.target_pose.header.frame_id = 'map'
+ goal.target_pose.pose.position=point
+ (goal.target_pose.pose.orientation.x,goal.target_pose.pose.orientation.y,goal.target_pose.pose.orientation.z,goal.target_pose.pose.orientation.w)=move_reference.angle_to_quat(angle)
+ move_base.send_goal(goal)
+ 
+ path=rospy.wait_for_message('/move_base/TrajectoryPlannerROS/global_plan',Path)
+ path_poses=path.poses
+ path_num=len(path_poses)
+ new_angle=move_reference.angle_generater(path_poses[path_num-1],path_poses[path_num-2])
+ move_base.cancel_goal(goal)
+ 
+ new_goal = MoveBaseGoal()
+ try:
+  new_goal.target_pose.header.frame_id = pose.header.frame_id
+ except:
+  new_goal.target_pose.header.frame_id = 'map'
+ new_goal.target_pose.pose.position=point
+ (new_goal.target_pose.pose.orientation.x,new_goal.target_pose.pose.orientation.y,new_goal.target_pose.pose.orientation.z,new_goal.target_pose.pose.orientation.w)=move_reference.angle_to_quat(new_angle)
+ move_base.send_goal(new_goal)
+ 
+ 
+ 
 #curse默认模式的注册程序
 def pre_regist(odom,modle):
  if odom:

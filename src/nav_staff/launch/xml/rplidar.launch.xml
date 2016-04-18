@@ -1,0 +1,15 @@
+<launch>
+ <arg name="rplidar_frame" default="/laser" />
+ <arg name="range_min" default="0.15" />
+ <arg name="range_max" default="6.0" />
+ <arg name="scan_topic" default="/scan" />
+
+ <node pkg="rplidar_python" type="rplidar_scan.py" name="rplidar" respawn="true">
+  <param name="frame_id" value="$(arg rplidar_frame)"/>
+  <param name="range_min" value="$(arg range_min)"/>
+  <param name="range_max" value="$(arg range_max)"/>
+  <param name="scan_topic" value="$(arg scan_topic)"/>
+  
+ </node>
+</launch>
+
