@@ -12,7 +12,7 @@ This programm is tested on kuboki base turtlebot.
 """
 
 import rospy,std_msgs.msg
-from geometry_msgs.msg import PointStamped,Point
+from geometry_msgs.msg import PointStamped
 from visualization_msgs.msg import Marker
 from nav_msgs.msg import Odometry
 
@@ -50,7 +50,7 @@ class marker():
    self.trigger_pub.publish(True)
   self.update_odom()
   self.marker.points.append(pose.point)
-  #print len(self.marker.points)
+
   self.marker_pub.publish(self.marker)
   
  def timer(self,event):
@@ -59,7 +59,8 @@ class marker():
    self.define()
    
  def update_odom(self):
-  self.marker.points=[]
+  self.intial_point=self.intial.pose.pose.position
+  self.marker.points=[self.intial_point]
 
    
  def empty_callback(self,trigger):
@@ -69,6 +70,9 @@ class marker():
   else:
    pass
    
+ def odom_callback(self,odom):
+  self.intial = odom
+   
    
  def __init__(self):
   self.clear=True 
@@ -77,6 +81,7 @@ class marker():
   self.define()
   rospy.Timer(self.period, self.timer)
   rospy.Subscriber('empty_marker', std_msgs.msg.Bool, self.empty_callback)
+  rospy.Subscriber("odom",         Odometry,          self.odom_callback)
   rospy.Subscriber("clicked_point",PointStamped,      self.sub_callback)
   rospy.spin()
 

@@ -6,3 +6,17 @@
 5. roslaunch obstacle_markers obstacle_markers.launch 
 6. rosrun rviz rviz 
 
+
+实物步骤：
+
+ssh turtlebot@192.168.160.103
+
+        in turtlebot
+1. roslaunch turtlebot_bringup minimal.launch 
+2. roslaunch nav_staff asus_amcl_demo_office.launch
+
+        in PC
+3. roslaunch marker ui_marker.launch 
+4. roslaunch tasks go_tasks.launch  
+5. roslaunch obstacle_markers obstacle_markers.launch 
+6. rosrun rviz rviz 

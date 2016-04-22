@@ -17,9 +17,10 @@ from nav_msgs.msg import Path
 class plan_recorder():
  def __init__(self):
   rospy.init_node('plan_recorder')
-  topic='/move_base/NavfnROS/plan'
-  plan=move_reference.plan_recorder(topic)
-  print len(plan)
+  while not rospy.is_shutdown():
+   topic='/move_base/TrajectoryPlannerROS/global_plan'
+   plan=move_reference.plan_recorder(topic)
+   print len(plan)
 
  
 if __name__ == '__main__':

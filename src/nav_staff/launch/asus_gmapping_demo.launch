@@ -6,4 +6,5 @@
     <arg name="scan_topic" value="/scan" />
   </include>
   <include file="$(find robot_bringup)/launch/gmapping.launch.xml"/>
+  <include file="$(find nav_staff)/launch/xml/move_base_xu.launch.xml" />
 </launch>

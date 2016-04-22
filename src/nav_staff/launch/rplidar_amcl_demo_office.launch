@@ -3,7 +3,7 @@
  <arg name="custom_param_file" default="$(find nav_staff)/param/dummy.yaml"/>
 
  <!--sensor-->
- <include file="$(find nav_staff)/launch/rplidar_driver_demo.launch">
+ <include file="$(find nav_staff)/launch/xml/rplidar.launch.xml">
   <arg name="scan_topic" value="/scan" />
   <arg name="rplidar_frame" value="/camera_depth_frame" />
   <arg name="range_min" default="0.15" />

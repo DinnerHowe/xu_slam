@@ -32,14 +32,23 @@ def cruise():
   tasks(intial_point,point)
  
 #单向导航入口 
-def go():
- marker_point=rospy.wait_for_message("visualization_marker", Marker)
- if len(marker_point.points)==2:
+def go(current_odom,marker_point):
+ if len(marker_point.points)==1:
   point_list=marker_point.points
-  intial_point=point_list[0]
-  point_list.remove(intial_point)
+  intial_point=current_odom.pose.pose.position
   task_point=point_list[0]
   tasks(intial_point,task_point)
+ else:
+  rospy.loginfo('error in number of markers')
+  pass
+ 
+#单向导航入口 
+def go_single_marker(current_odom,marker_point):
+ if len(marker_point.points)==1:
+  point_list=marker_point.points
+  intial_point=current_odom.pose.pose.position
+  task_point=point_list[0]
+  plan_tasks(intial_point,task_point)
  else:
   rospy.loginfo('error in number of markers')
   pass
@@ -64,36 +73,32 @@ def tasks(intial_point,point):
 
 #任务执行 #angle by plan
 def plan_tasks(intial_point,point):
+ tasks(intial_point,point)
+ rospy.Subscriber('/move_base/TrajectoryPlannerROS/global_plan',Path, path_callback, point)
+ 
+#不停的规划新的路径
+def path_callback(path,point):
  move_base = actionlib.SimpleActionClient('move_base', MoveBaseAction)
  move_base.wait_for_server()
- goal = MoveBaseGoal()
- init_point=intial_point
-
- angle=move_reference.angle_generater(point,init_point)
- 
- try:
-  goal.target_pose.header.frame_id = pose.header.frame_id
- except:
-  goal.target_pose.header.frame_id = 'map'
- goal.target_pose.pose.position=point
- (goal.target_pose.pose.orientation.x,goal.target_pose.pose.orientation.y,goal.target_pose.pose.orientation.z,goal.target_pose.pose.orientation.w)=move_reference.angle_to_quat(angle)
- move_base.send_goal(goal)
- 
- path=rospy.wait_for_message('/move_base/TrajectoryPlannerROS/global_plan',Path)
  path_poses=path.poses
  path_num=len(path_poses)
- new_angle=move_reference.angle_generater(path_poses[path_num-1],path_poses[path_num-2])
- move_base.cancel_goal(goal)
- 
- new_goal = MoveBaseGoal()
- try:
-  new_goal.target_pose.header.frame_id = pose.header.frame_id
- except:
-  new_goal.target_pose.header.frame_id = 'map'
- new_goal.target_pose.pose.position=point
- (new_goal.target_pose.pose.orientation.x,new_goal.target_pose.pose.orientation.y,new_goal.target_pose.pose.orientation.z,new_goal.target_pose.pose.orientation.w)=move_reference.angle_to_quat(new_angle)
- move_base.send_goal(new_goal)
- 
+ #print 'path_distance: ',path_num
+ if path_num>100:  
+  print 'long path model'
+  move_base.cancel_goal()
+  print 'cancel old goal and create a new goal'
+  new_goal = MoveBaseGoal()
+  new_angle=move_reference.angle_generater(path_poses[int(path_num*0.8)].pose.position,path_poses[int(path_num*0.7)].pose.position)
+  try:
+   new_goal.target_pose.header.frame_id = pose.header.frame_id
+  except:
+   new_goal.target_pose.header.frame_id = 'map'
+  new_goal.target_pose.pose.position=point
+  (new_goal.target_pose.pose.orientation.x,new_goal.target_pose.pose.orientation.y,new_goal.target_pose.pose.orientation.z,new_goal.target_pose.pose.orientation.w)=move_reference.angle_to_quat(new_angle)
+  move_base.send_goal(new_goal)
+ else:
+  pass
+
  
  
 #curse默认模式的注册程序

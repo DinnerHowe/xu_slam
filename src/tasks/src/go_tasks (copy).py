@@ -10,13 +10,12 @@ This program is free software; you can redistribute it and/or modify
 This programm is tested on kuboki base turtlebot. 
 
 """
-import rospy,getpass,actions_reference,actionlib,subprocess
+import rospy,getpass,actions_reference,actionlib
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Point
 from move_base_msgs.msg import MoveBaseAction
 from actionlib_msgs.msg import GoalStatus,GoalStatusArray
 from rosgraph_msgs.msg import Log
-from visualization_msgs.msg import Marker
 
 class cruise_modle():
  def define(self):
@@ -46,31 +45,20 @@ class cruise_modle():
   self.log_info=Log()
     
  def odom_callback(self,odom):
-  self.current_odom=odom
- 
- def marker_callback(self,marker_point): 
-  self.marker_point=marker_point
-  self.move_base.cancel_goal()
-  actions_reference.go_single_marker(self.current_odom,self.marker_point)
+  actions_reference.go(odom)
   
  def status_callback(self,goal_state):
   state_list=goal_state.status_list
   if state_list != []:
    state=state_list[0]
-   self.state=state
    if state.status==GoalStatus.ACTIVE or state.status==GoalStatus.SUCCEEDED:
     if self.state_define[state.status] not in self.log_info.msg:
      rospy.loginfo(self.state_define[state.status])
-     self.move_base.cancel_goal()
-     pass
 
    if state.status!=GoalStatus.ACTIVE and state.status!=GoalStatus.SUCCEEDED:
     if self.error_state_define[state.status] not in self.log_info.msg:
      rospy.loginfo(self.error_state_define[state.status])
      self.move_base.cancel_goal()
-     pass
-
-
 
 
  def Log_callback(self,log_info):
@@ -82,19 +70,15 @@ class cruise_modle():
    self.last_position=self.current_position
   else:
    self.move_base.cancel_goal()
-   pass
-
 
 
  def __init__(self):
   rospy.init_node('go_tasks')
-  self.marker_point=Marker()
   self.define()
   rospy.Timer(self.period, self.timer)
   rospy.Subscriber("/rosout",Log, self.Log_callback)
   rospy.Subscriber("/move_base/status", GoalStatusArray, self.status_callback)
   rospy.Subscriber("odom", Odometry, self.odom_callback)
-  rospy.Subscriber("visualization_marker", Marker,self.marker_callback)
   rospy.spin()
 
 if __name__ == '__main__':

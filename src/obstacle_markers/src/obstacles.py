@@ -72,10 +72,10 @@ class obstacles():
    color.a=rospy.get_param('~color_a')
    frameID=rospy.get_param('~frame_id')
   except:
-   color.r=25
-   color.g=155
-   color.b=25
-   color.a=100   
+   color.r=0.5
+   color.g=0.5
+   color.b=0.5
+   color.a=1   
    frameID='map'
   
   block_points=marker_reference.get_effective_point(map_data)[1]
