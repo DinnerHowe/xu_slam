@@ -1,0 +1,46 @@
+<launch>
+  <arg name="base_frame_id" />
+  <arg name="odom_frame_id" />
+  
+  <!-- Load the URDF/Xacro model of our robot -->
+  <param name="/use_sim_time" value="false" />
+  
+  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find multi_machine)/urdf/xacro/turtlebot.urdf.xacro'" />
+   
+  <param name="robot_description" command="$(arg urdf_file)" />
+
+  <!--arbotix simulator-->  
+  <!--common it if use gazebo for simulation-->
+  
+  <node name="arbotix" pkg="arbotix_python" type="arbotix_driver" output="screen" clear_params="true">
+    <rosparam file="$(find multi_machine)/config/fake/fake_turtlebot_arbotix.yaml" command="load" />
+    <param name="sim" value="true"/>
+    <param name="~controllers/base_controller/base_frame_id" value="$(arg base_frame_id)"/>
+    <param name="~controllers/base_controller/odom_frame_id" value="$(arg odom_frame_id)"/>
+  </node>
+  
+  <!--robot state publisher-->  
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+    <param name="publish_frequency" type="double" value="20.0" />
+  </node>
+</launch>
+
+
+<!--uncommon it if use gazebo for simulation-->
+
+<!--  
+<launch>
+  <arg name="robot_name"/>
+  <arg name="init_pose"/>
+
+  <node name="spawn_minibot_model" pkg="gazebo" type="spawn_model" args="$(arg init_pose) -urdf -param /robot_description -model $(arg robot_name)" respawn="false" output="screen" />
+
+  <node pkg="robot_state_publisher" type="state_publisher"  name="robot_state_publisher" output="screen"/>
+ 
+  <node name="arbotix" pkg="arbotix_python" type="arbotix_driver" output="screen" clear_params="true">
+    <rosparam file="$(find multi_machine)/config/fake/fake_turtlebot_arbotix.yaml" command="load" />
+    <param name="sim" value="true"/>
+  </node>
+  
+</launch>
+-->

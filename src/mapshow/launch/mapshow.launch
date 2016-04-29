@@ -1,0 +1,31 @@
+<launch>
+
+  <param name="/use_sim_time" value="true"/>
+
+  <include file="$(find obstacle_markers)/launch/obstacle_markers.launch">  
+  </include>
+
+  <include file="$(find rbx1_nav)/launch/fake_amcl.launch" >
+  <arg name="map" value="office_map_manual.yaml"/>
+  </include>
+
+  
+
+  <!-- Load Stage -->
+  <node pkg="stage_ros" type="stageros" name="stage" args="$(find mapshow)/mapworld/world/office.world" respawn="false" output="screen"/>
+
+  <!-- run basic_shape -->
+  <node pkg="mapshow" type="mapshow" name="basic_shape"/>
+
+  
+
+
+
+
+  
+
+  <!-- Load rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mapshow)/rviz/mapshow.rviz"/>
+
+</launch>
+

@@ -1,0 +1,33 @@
+<launch>
+  <arg name="name_space"/>
+  <arg name="topic"/>
+  
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+  <!--"global_costmap_common_params"-->
+    <rosparam file="$(find multi_machine)/config/fake/costmap_common_params.yaml" command="load" ns="global_costmap" />
+  
+  <!--"local_costmap_common_params"-->
+    <rosparam file="$(find multi_machine)/config/fake/costmap_common_params.yaml" command="load" ns="local_costmap" />
+  
+  <!--"local_costmap_params"-->
+    <rosparam file="$(find multi_machine)/config/fake/local_costmap_params.yaml" command="load" >
+      <param name="robot_base_frame" value="$(arg name_space)/base_footprint"/>
+      <param name="global_frame" value="map"/>
+    </rosparam>
+    
+  <!--"global_costmap_params"-->
+    <rosparam file="$(find multi_machine)/config/fake/global_costmap_params.yaml" command="load" >
+      <param name="robot_base_frame" value="$(arg name_space)/base_footprint"/>
+      <param name="global_frame" value="map"/>
+    </rosparam>
+  
+  <!--"base_local_planner_params"-->
+    <rosparam file="$(find multi_machine)/config/fake/base_local_planner_params.yaml" command="load" >
+    </rosparam>
+    
+    <remap from="/scan" to="/$(arg topic)/scan" />
+    <remap from="map" to="/map" />
+    
+  </node>
+  
+</launch>

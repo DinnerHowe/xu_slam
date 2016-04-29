@@ -1,0 +1,37 @@
+<launch>
+  <param name="use_sim_time" value="false" />
+  
+                            <!-- Run the map server -->
+  <arg name="map" default="office_map_manual.yaml" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find rbx1_nav)/maps/$(arg map)" >
+    <param name="frame_id" value="/map" />
+  </node>
+
+                                <!--first_robot-->
+  <group ns="first_robot">
+  
+    <param name="tf_prefix" value="first_robot" />
+    <arg name="ns" default="first_robot"/>
+    
+    <!-- The move_base & amcl node -->
+    <include file="$(find multi_machine)/launch/uni/fake_uni_amcl.launch" >
+      <arg name="ns" value="first_robot"/>
+    </include>
+    
+  </group>
+
+                                <!--second_robot-->
+  <group ns="second_robot">
+  
+    <param name="tf_prefix" value="second_robot" />
+    <arg name="ns" default="second_robot"/>
+    
+    <!-- The move_base & amcl node -->
+    <include file="$(find multi_machine)/launch/uni/fake_uni_amcl.launch" >
+      <arg name="ns" value="second_robot"/>
+    </include>
+    
+  </group>
+  
+
+</launch>

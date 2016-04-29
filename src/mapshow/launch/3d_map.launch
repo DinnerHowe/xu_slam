@@ -1,0 +1,7 @@
+<launch>
+
+  <!-- run basic_shape -->
+  <node pkg="mapshow" type="mapshow" name="basic_shape"/>
+
+</launch>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>multi_machine</name>
+  <version>0.0.0</version>
+  <description>The mutli_machine package</description>
+
+  <maintainer email="zhihao@iscas.ac.cn">xu zhihao</maintainer>
+  <maintainer email="turtlebot@todo.todo">turtlebot</maintainer>
+
+  <license>TODO</license>
+  <author email="zhihao@iscas.ac.cn">xu zhihao</author> -->
+  <!-- Use build_depend for packages you need at compile time: -->
+  <build_depend>message_generation</build_depend>
+
+  <!-- Use run_depend for packages you need at runtime: -->
+  <run_depend>message_runtime</run_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <run_depend>rospy</run_depend>
+
+
+</package>

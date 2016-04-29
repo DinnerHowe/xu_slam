@@ -25,6 +25,7 @@ class codecounter():
    self.tot_code=0
    self.tot_line=0
    self.tot_others=0
+   self.tot_blank=0
    ty={'py':'python','srv':'service','msg':'message','xml':'package.xml','txt':'cmakelist','launch':'launch files','c':'c code','cpp':'c++ code','java':'java'}
 
    for filetype in ty:
@@ -36,6 +37,7 @@ class codecounter():
     totle_code=0
     totle_line=0
     totle_others=0
+    totle_blank=0
    
     for now_file in self.list:
      self.linenumbers=self.get_linenumbers(now_file)
@@ -43,16 +45,20 @@ class codecounter():
       #print now_file,self.linenumbers
       totle_code+=self.linenumbers[2]
       totle_line+=self.linenumbers[3]
-      totle_others+=(self.linenumbers[0]+self.linenumbers[1])
+      totle_others+=self.linenumbers[1]
+      totle_blank+=self.linenumbers[0]
+
+
 
     if len(self.list):
      print '文件类型：',filetype
-     print '代码量:',totle_code, '行数：',totle_line,'注释/空行：',totle_others,'\n'
+     print '代码量:',totle_code, '行数：',totle_line,'空行: ',totle_blank,'注释：',totle_others,'\n'
     self.tot_code+=totle_code
     self.tot_line+=totle_line
     self.tot_others+=totle_others
+    self.tot_blank+=totle_blank
 
-   print '总代码量:',self.tot_code, '总行数：',self.tot_line,'注释/空行：',self.tot_others,'\n'
+   print '总代码:',self.tot_code, '总行数：',self.tot_line,'总空行:', self.tot_blank,'总注释：',self.tot_others,'总代码量+注释:',self.tot_code+self.tot_others,'\n'
 
 
  def getfiles(self,root,format):

@@ -1,0 +1,51 @@
+<launch>
+ <param name="/use_sim_time" value="true" />
+ 
+ 
+ <!--first_robot-->
+ <group ns="first_robot">
+  <param name="tf_prefix" value="first_robot" />
+  <include file="$(find multi_machine)/launch/uni/fake_uni_turtlebot.launch" >
+    <arg name="base_frame_id" value="first_robot/base_footprint"/>
+    <arg name="odom_frame_id" value="first_robot/odom"/>
+  </include>
+ </group>
+ 
+ 
+ <!--second_robot-->
+ <group ns="second_robot">
+  <param name="tf_prefix" value="second_robot" />
+  <include file="$(find multi_machine)/launch/uni/fake_uni_turtlebot.launch" >
+    <arg name="base_frame_id" value="second_robot/base_footprint"/>
+    <arg name="odom_frame_id" value="second_robot/odom"/>
+  </include>
+ </group>
+ 
+</launch>
+
+
+<!--uncommon it if use gazebo for simulation-->
+<!--
+<launch>
+ <param name="/use_sim_time" value="true" />
+
+ <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find your_pkg)/worlds/your.world" respawn="false" output="screen" />
+ <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/>
+  
+ <group ns="first_robot">
+  <param name="tf_prefix" value="first_robot" />
+  <include file="$(find multi_machine)/launch/uni/fake_uni_turtlebot.launch" >
+   <arg name="init_pose" value="-x 1 -y 1 -z 0" />
+   <arg name="robot_name"  value="first_robot" />
+  </include>
+ </group>
+ 
+ <group ns="second_robot">
+  <param name="tf_prefix" value="second_robot" />
+  <include file="$(find multi_machine)/launch/uni/fake_uni_turtlebot.launch" >
+   <arg name="init_pose" value="-x -1 -y 1 -z 0" />
+   <arg name="robot_name"  value="second_robot" />
+  </include>
+ </group>
+</launch>
+-->
