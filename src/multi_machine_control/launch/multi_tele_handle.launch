@@ -1,0 +1,16 @@
+<launch>
+  <group ns="first_robot">
+    <node pkg="multi_machine_control" type="multi_tele_handle.py" name="multi_tele_handle"  output="screen">
+      <param name="subscribe_to" value="/first_robot/cmd_vel_mux/input/teleop"/>
+      <param name="topic" value="/first_robot/cmd_vel"/>
+    </node>
+  </group>
+  
+  <group ns="second_robot">
+    <node pkg="multi_machine_control" type="multi_tele_handle.py" name="multi_tele_handle"  output="screen">
+      <param name="subscribe_to" value="/second_robot/cmd_vel_mux/input/teleop"/>
+      <param name="topic" value="/second_robot/cmd_vel"/>
+    </node>
+  </group>
+  
+</launch>

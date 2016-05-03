@@ -94,7 +94,7 @@ class cruise_modle():
   rospy.Subscriber("/rosout",Log, self.Log_callback)
   rospy.Subscriber("/move_base/status", GoalStatusArray, self.status_callback)
   rospy.Subscriber("odom", Odometry, self.odom_callback)
-  rospy.Subscriber("visualization_marker", Marker,self.marker_callback)
+  rospy.Subscriber("ui_marker", Marker,self.marker_callback)
   rospy.spin()
 
 if __name__ == '__main__':

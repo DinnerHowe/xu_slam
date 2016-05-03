@@ -33,7 +33,7 @@ class marker():
   self.marker.type=Marker.SPHERE_LIST
   self.marker.action=Marker.ADD
   self.marker.lifetime = rospy.Duration(0)
-  self.marker_pub=rospy.Publisher("visualization_marker",Marker,queue_size=1)
+  self.marker_pub=rospy.Publisher("ui_marker",Marker,queue_size=1)
   self.count=0
   self.period=rospy.Duration(0.3)
   self.trigger=False
