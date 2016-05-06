@@ -1,0 +1,10 @@
+<launch>
+  <group ns="first_robot">
+    <node pkg="tasks" type="go_tasks.py" name="go_tasks" respawn="true" />
+  </group>
+  
+  <group ns="second_robot">
+    <node pkg="tasks" type="go_tasks.py" name="go_tasks" respawn="true" />
+  </group>
+  
+</launch>

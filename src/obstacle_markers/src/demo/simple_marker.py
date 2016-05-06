@@ -43,7 +43,7 @@ if __name__=="__main__":
     
     # create an interactive marker for our server
     int_marker = InteractiveMarker()
-    int_marker.header.frame_id = "base_link"
+    int_marker.header.frame_id = "map"
     int_marker.name = "my_marker"
     int_marker.description = "Simple 1-DOF Control"
 

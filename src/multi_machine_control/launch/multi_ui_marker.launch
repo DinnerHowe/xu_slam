@@ -1,0 +1,10 @@
+<launch>
+  <group ns="first_robot">
+    <include file="$(find marker)/launch/xml/ui_marker.launch.xml" />
+  </group>
+  
+  <group ns="second_robot">
+    <include file="$(find marker)/launch/xml/ui_marker.launch.xml" />
+  </group>
+  
+</launch>

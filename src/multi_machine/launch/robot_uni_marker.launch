@@ -1,0 +1,18 @@
+<launch> 
+ <!--first_robot-->
+ <group ns="first_robot">
+  <include file="$(find marker)/launch/xml/robot_uni_marker.launch.xml" >
+   <arg name="robot_laber" value="first_robot" />
+  </include>
+ </group>
+ 
+ 
+ <!--second_robot-->
+ <group ns="second_robot">
+  <include file="$(find marker)/launch/xml/robot_uni_marker.launch.xml" >
+   <arg name="robot_laber" value="second_robot" />
+  </include>
+ </group>
+ 
+</launch>
+

@@ -108,7 +108,7 @@ def makeCube():
             for k in range(side_length):
                 z = step * k
                 marker = InteractiveMarker()
-                marker.header.frame_id = "base_link"
+                marker.header.frame_id = "map"
                 marker.scale = step
 
                 marker.pose.position.x = x

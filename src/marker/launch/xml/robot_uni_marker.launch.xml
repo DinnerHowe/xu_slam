@@ -1,0 +1,6 @@
+<launch>
+ <arg name="robot_laber"/>
+ <node pkg="marker" type="robot_uni_marker.py" name="robot_uni_marker" output="screen" respawn="true" >
+  <param name="robot_laber" value="$(arg robot_laber)" />
+ </node>
+</launch>
