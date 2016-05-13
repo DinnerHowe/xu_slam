@@ -1,0 +1,13 @@
+<launch>
+  <!-- first_robot -->
+  <group ns="first_robot">
+    <node pkg="obstacle_warning" type="stopmove.py" name="stopmove" />
+    <node pkg="obstacle_warning" type="detect" name="detect" />
+  </group>
+
+  <!-- second_robot -->
+  <group ns="second_robot">
+    <node pkg="obstacle_warning" type="stopmove.py" name="stopmove" />
+    <node pkg="obstacle_warning" type="detect" name="detect" />
+  </group>  
+</launch>

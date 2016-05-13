@@ -28,5 +28,8 @@
  <include file="$(find nav_staff)/launch/xml/move_base_xu.launch.xml">
   <arg name="custom_param_file" value="$(arg custom_param_file)"/>
  </include>
+ 
+ 
+ 
 </launch>
 

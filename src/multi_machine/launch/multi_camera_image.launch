@@ -1,0 +1,17 @@
+<launch> 
+ <!--first_robot-->
+ <group ns="first_robot">
+  <include file="$(find camera_image)/launch/camera_image.launch" >
+   <arg name="name_space" value="first_robot" />
+  </include>
+ </group>
+ 
+ <!--second_robot-->
+ <group ns="second_robot">
+  <include file="$(find camera_image)/launch/camera_image.launch" >
+   <arg name="name_space" value="second_robot" />
+  </include>
+ </group>
+ 
+</launch>
+

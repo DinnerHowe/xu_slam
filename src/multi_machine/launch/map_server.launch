@@ -1,0 +1,9 @@
+<launch>
+  <!--map saver-->
+  <arg name="map_file" default="$(find nav_staff)/map/office_map_manual.yaml"/>
+  <arg name="initial_pose_x" default="0.0"/>
+  <arg name="initial_pose_y" default="0.0"/>
+  <arg name="initial_pose_a" default="0.0"/>
+  
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+</launch>

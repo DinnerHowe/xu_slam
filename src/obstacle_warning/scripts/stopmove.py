@@ -44,7 +44,7 @@ def stopmove():
     twist = Twist()
     twist.linear.x, twist.linear.y, twist.linear.z = 0, 0, 0
     twist.angular.x, twist.angular.y, twist.angular.z = 0, 0, 0
-    move_base = actionlib.SimpleActionClient("first_robot/move_base", MoveBaseAction)
+    move_base = actionlib.SimpleActionClient("move_base", MoveBaseAction)
     rospy.loginfo("waiting fro move_base action server")
     move_base.wait_for_server(rospy.Duration(60)) 
     

@@ -1,0 +1,10 @@
+<launch> 
+ <arg name="name_space" />
+ <node pkg="camera_image" type="camera_image.py" name="camera_image" output="screen" clear_params="true" respawn="true">
+   <param name="topic_camera" value="$(arg name_space)/camera/rgb/image_color" />
+   <param name="topic_warning" value="$(arg name_space)/stop_flag" />
+   <param name="ns" value="$(arg name_space)" />
+ </node>
+ 
+</launch>
+

@@ -1,0 +1,42 @@
+<launch>
+  <param name="use_sim_time" value="false" />
+  
+                            <!-- Run the map server -->
+  <!--map saver-->
+  <arg name="map_file" default="$(find nav_staff)/map/office_map_manual.yaml"/>
+  <arg name="initial_pose_x" default="0.0"/>
+  <arg name="initial_pose_y" default="0.0"/>
+  <arg name="initial_pose_a" default="0.0"/>
+  
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+                                <!--first_robot-->
+  <group ns="first_robot">
+  
+    <param name="tf_prefix" value="first_robot" />
+    
+    <!-- The move_base & amcl node -->
+    <include file="$(find multi_machine)/launch/asus_robot/asus_robot_amcl_office.launch" >
+      <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
+      <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
+      <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
+    </include>
+    
+  </group>
+
+                                <!--second_robot-->
+  <group ns="second_robot">
+  
+    <param name="tf_prefix" value="second_robot" />
+    
+    <!-- The move_base & amcl node -->
+    <include file="$(find multi_machine)/launch/kinect_robot/kinect_robot_amcl.launch" >
+      <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
+      <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
+      <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
+    </include>
+    
+  </group>
+  
+
+</launch>

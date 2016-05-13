@@ -1,0 +1,5 @@
+<launch>
+ <node pkg="multi_machine_control" type="multi_keyboard_control.py" name="multi_keyboard_teleop"  output="screen">
+ </node>
+</launch>
+

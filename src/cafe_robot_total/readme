@@ -36,7 +36,7 @@ ssh turtlebot@192.168.160.103
    roslaunch multi_machine fake_multi_amcl.launch map:=office_map_manual.yaml
 
 3. roslaunch multi_machine_control multi_tele_handle.launch
-4. rosrun multi_machine_control multi_keyboard_control.py
+4. roslaunch multi_machine_control multi_keyboard_control.launch
 
 5. rosrun mapshow mapshow
 6. roslaunch multi_machine 3D_multi_RVIZ.launch
@@ -50,18 +50,23 @@ ssh turtlebot@192.168.160.103
 4. roslaunch multi_machine_control multi_go_tasks.launch 
 5. roslaunch multi_machine robot_uni_marker.launch
 6. rosrun mapshow mapshow
-7. roslaunch multi_machine 3D_multi_RVIZ.launch
-8. rosrun obstacle_warning detect
-9. rosrun obstacle_warning stopmove.py
-10. rostopic pub /stop_flag std_msgs/String stop
+7. roslaunch multi_machine multi_obstacle_warning.launch
+8. roslaunch multi_machine 3D_multi_RVIZ.launch
+
+9. rostopic pub first_robot/stop_flag std_msgs/String stop
+10. rostopic pub second_robot/stop_flag std_msgs/String stop
 
 
 
 
 
 多机协同move base 方式：
-（等待remap topic）
 1. roslaunch multi_machine fake_multi_turtlebot.launch
+
+2. roslaunch multi_machine multi_turtlebot_bringup.launch
+
+
+
 2. roslaunch multi_machine fake_multi_amcl.launch
 
 3. roslaunch multi_machine_control multi_ui_marker.launch

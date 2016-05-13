@@ -76,4 +76,4 @@ if __name__=='__main__':
   marker()
   rospy.loginfo ("process done and quit")
  except rospy.ROSInterruptException:
-  rospy.loginfo("robot twist node terminated.")
+  rospy.loginfo("robot node terminated.")
