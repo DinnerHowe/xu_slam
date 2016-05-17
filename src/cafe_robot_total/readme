@@ -25,7 +25,9 @@ ssh turtlebot@192.168.160.103
         in PC
 3. roslaunch marker ui_marker.launch 
 4. roslaunch tasks go_tasks.launch  
-5. roslaunch obstacle_markers obstacle_markers.launch 
+5. roslaunch obstacle_markers obstacle_markers.launch （raw3Dmap）
+rosrun mapshow mapshow
+
 6. rosrun rviz rviz 
 
 
@@ -80,3 +82,13 @@ ssh turtlebot@192.168.160.103
 8. roslaunch obstacle_warning stopmove.py（等待remap topic）
 
 9. roslaunch multi_machine 3D_multi_RVIZ.launch
+
+
+
+多机控制演示
+
+启动控制
+roslaunch cafe_robot_total fake_cafe_robot_total.launch
+键盘控制
+roslaunch multi_machine_control multi_keyboard_control.launch
+

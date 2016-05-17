@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="cafe_robot_total" type="fake_cafe_robot_total.py" name="cafe_robot_total" output="screen" />
+</launch>

@@ -5,14 +5,6 @@
   <arg name="initial_pose_y"  default="0.0"/>
   <arg name="initial_pose_a"  default="0.0"/>
 
-  <!--sensor-->
-  <include file="$(find robot_bringup)/launch/asus_sense.launch">
-   <arg name="rgb_processing" default="false" />
-   <arg name="depth_registration" default="false" />
-   <arg name="depth_processing" default="false" />
-   <arg name="scan_topic" default="/scan" />
-  </include>
-
   <!--amcl-->
   <include file="$(find nav_staff)/launch/xml/amcl_xu.launch.xml">
    <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>

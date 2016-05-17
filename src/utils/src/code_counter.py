@@ -26,7 +26,7 @@ class codecounter():
    self.tot_line=0
    self.tot_others=0
    self.tot_blank=0
-   ty={'py':'python','srv':'service','msg':'message','xml':'package.xml','txt':'cmakelist','launch':'launch files','c':'c code','cpp':'c++ code','java':'java'}
+   ty={'py':'python','srv':'service','msg':'message','xml':'package.xml','txt':'cmakelist','launch':'launch files','xacro':'xacro','c':'c code','cpp':'c++ code','java':'java'}
 
    for filetype in ty:
     self.list=[]

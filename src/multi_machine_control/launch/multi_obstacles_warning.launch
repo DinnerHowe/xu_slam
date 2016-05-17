@@ -1,25 +1,25 @@
 <launch>
   <group ns="first_robot">
     <node pkg="obstacle_warning" type="stopmove.py" name="multi_stopmove"  output="screen">
-      <param name="subscribe_to" value="/first_robot/*"/>
-      <param name="topic" value="/first_robot/*"/>
+      <param name="source_frame" value="first_robot/base_footprint"/>
+      <param name="target_frame" value="first_robot/base_link"/>
     </node>
     
     <node pkg="obstacle_warning" type="detect" name="multi_pioneer_laser_node"  output="screen">
-      <param name="subscribe_to" value="/first_robot/*"/>
-      <param name="topic" value="/first_robot/*"/>
+      <!--<param name="subscribe_to" value="/first_robot/*"/>
+      <param name="topic" value="/first_robot/*"/>-->
     </node>
   </group>
   
   <group ns="second_robot">
     <node pkg="obstacle_warning" type="stopmove.py" name="multi_stopmove"  output="screen">
-      <param name="subscribe_to" value="/second_robot/*"/>
-      <param name="topic" value="/second_robot/*"/>
+      <param name="source_frame" value="second_robot/base_footprint"/>
+      <param name="target_frame" value="second_robot/base_link"/>
     </node>
     
     <node pkg="obstacle_warning" type="detect" name="multi_pioneer_laser_node"  output="screen">
-      <param name="subscribe_to" value="/second_robot/*"/>
-      <param name="topic" value="/second_robot/*"/>
+      <!--<param name="subscribe_to" value="/second_robot/*"/>
+      <param name="topic" value="/second_robot/*"/>-->
     </node>
   </group>
   

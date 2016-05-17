@@ -1,5 +1,9 @@
 <launch>
- <node pkg="multi_machine_control" type="multi_keyboard_control.py" name="multi_keyboard_teleop"  output="screen">
+
+  <include file="$(find multi_machine_control)/launch/multi_tele_handle.launch" />
+
+  <node pkg="multi_machine_control" type="multi_keyboard_control.py" name="multi_keyboard_control" output="screen">
  </node>
+  
 </launch>
 

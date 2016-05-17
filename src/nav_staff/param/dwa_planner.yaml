@@ -7,51 +7,38 @@ DWAPlannerROS:
  max_vel_y: 0.0
  min_vel_y: 0.0
 
-# choose slightly less than the base's capability
- max_trans_vel: 0.5
-# this is the min trans velocity when there is negligible rotational velocity,do not set min_trans_vel to 0.0 otherwise dwa will always think translational velocities.
- min_trans_vle: 0.1
+ max_trans_vel: 0.3
+ min_trans_vel: 0.1
  tans_stopped_vel: 0.1
 
- max_rot_vel: 5.0
- min_rot_vel: 0.4 #min angle volocity
- rot_stopped_vel: 0.4
+ max_rot_vel: 1.0
+ min_rot_vel: 0.5 
+ rot_stopped_vel: 0.5
 
- acc_lim_x: 0.1 #maxmium is 2.0
+ acc_lim_x: 0.5 
  acc_lim_theta: 2.0
  acc_lim_y: 0.0
 
  #goal tolerance
  yaw_goal_tolerance: 0.3
- xy_goal_tolerancd: 0.1
+ xy_goal_tolerance: 0.15
+ latch_xy_goal_tolerance: true
 
  #forward simulation params
- sim_time: 0.1
+ sim_time: 1.0
  vx_samples: 6
  vy_samples: 1
  vtheta_samples: 20
 
- #trajectory scoring params
- #ps:
- #path_distance_bias: weighting for how much it should stick to the global path plan
- #goal_distance_bias: wighting for how much it should attempt to reach its goal
- #occdist_scale: weighting for how much the controller should avoid obstacles
- #forward_point_distance: how far along to place an additional scoring point
- #stop_time_buffer: amount of time a robot must stop in before colliding for a valid trajactory.
- #scaling_speed: absolute velocity at which to start scaling the robot's footprint
- #max_scaling_factor: how much to scale the robot's footprint when at speed.
 
+ path_distance_bias: 100.0
+ goal_distance_bias: 20.0
+ occdist_scale: 0.07
+ forward_point_distance: 0.325
+ stop_time_buffer: 0.2 
+ scaling_speed: 0.25 
+ max_scaling_factor: 0.2  
 
- path_distance_bias: 32
- goal_distance_bias: 24
- occdist_scale: 0.5
- forward_point_distance: 0.3
- stop_time_buffer: 0.2  #???
- scaling_speed: 0.25 #???
- max_scaling_factor: 0.2  #???
-
- # Oscillation Prevention Parameters
- # how far to travel before resetting oscillation flags
  oscillation_reset_dist: 0.05
 
 # Debugging

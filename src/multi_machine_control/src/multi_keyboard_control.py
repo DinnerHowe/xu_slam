@@ -28,7 +28,9 @@ class multi_keybroad_handle():
            i     
       j    k    l
            ,     
-   For Holonomic mode (strafing), hold down the shift key:
+           
+           
+
    ---------------------------
    second robot Moving around:
            w     
@@ -124,15 +126,17 @@ class multi_keybroad_handle():
      
     self.first_pub.publish(self.first_cmd)
     self.second_pub.publish(self.second_cmd)
-        
+    self.first_cmd = Twist()
+    self.second_cmd = Twist()
+    
   except:
    print e
 
-  #finally:
-   #self.first_cmd = Twist()
-   #self.first_pub.publish(self.first_cmd)
-   #self.second_cmd = Twist()
-   #self.second_pub.publish(self.second_cmd)
+  finally:
+   self.first_cmd = Twist()
+   self.first_pub.publish(self.first_cmd)
+   self.second_cmd = Twist()
+   self.second_pub.publish(self.second_cmd)
    #termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
     		
 if __name__=='__main__':

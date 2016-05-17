@@ -5,7 +5,7 @@
 import sys
 import json
 import math
-import rospy
+import rospy, tf
 import roslib, actionlib, std_msgs.msg
 import geometry_msgs.msg
 from std_msgs.msg import String
@@ -16,9 +16,27 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PointStamped
 from visualization_msgs.msg import Marker
 
+# global position variables 
+poseX, poseY, poseZ = 0, 0, 0
 
+def OdomCallback(msg):
+    global poseX, poseY
+    poseX, poseY = msg.pose.pose.position.x, msg.pose.pose.position.y
+    
+    # rospy.loginfo("callx " + str(poseX))
+    # rospy.loginfo("cally " + str(poseY))
+    
 
 def addFlag():
+
+    # get the cooprations of turtlebot in map using tf
+    # listener = tf.TransformListener()    
+    # listener.waitForTransform("/odom", "/base_link", rospy.Time(0), rospy.Duration(1))
+    # (position, rotation) = listener.lookupTransform("/odom", "/base_link", rospy.Time(0))
+    
+    global poseX, poseY, poseZ
+    
+
     marker_pub = rospy.Publisher("warning_marker",Marker,queue_size=1)
     shape = Marker.TEXT_VIEW_FACING    
     for i in range(5):
@@ -28,17 +46,17 @@ def addFlag():
         marker.color.a = 1
         marker.ns = "WarningFlag"
         marker.id = 1024
-        marker.scale.x, marker.scale.y, marker.scale.z = 1, 1, 2
+        marker.pose.position.x, marker.pose.position.y, marker.pose.position.z =  poseX, poseY , poseZ+0.5#position[0], position[1]-0.7, 0
+        marker.scale.x, marker.scale.y, marker.scale.z = 0.01, 0.01, 0.2
         marker.type = shape
-        marker.text = "Obstacle!!!"
-        marker.lifetime = rospy.Duration(10)
+        marker.text = "WARNING"
+        marker.lifetime = rospy.Duration(5)
         marker_pub.publish(marker)
         rospy.sleep(1)        
 
 
+
 def stopmove():   
-    
-    
     pubStopMess = rospy.Publisher('cmd_vel',Twist,queue_size=100)
     pub = rospy.Publisher('cmd_vel_mux/input/navi',Twist,queue_size=100)
     twist = Twist()
@@ -71,17 +89,24 @@ def stopmove():
 
 def callback(data):
     info = data.data    
-    #rospy.loginfo(info)
+    rospy.loginfo(info)
     if (info == "stop"):
         stopmove()
     else :
-        pass
-        #rospy.loginfo("I dont know")
+        rospy.loginfo("I dont know")
 
 if(__name__ == '__main__'):
     rospy.init_node("stopmove", anonymous=True)
+    rospy.Subscriber('odom', Odometry, OdomCallback)
     rospy.loginfo('subscriber to /stop_flag')
+    stop_flag_topic = ''
+    if rospy.has_param('stop_flag_topic'):
+        stop_flag_topic = rospy.get_param('stop_flag_topic')
+    else:
+        rospy.set_param('stop_flag_topic',stop_flag_topic)
+
+
     rospy.Subscriber("stop_flag", String, callback)
     rospy.spin()
+    
     # stopmove()
-
