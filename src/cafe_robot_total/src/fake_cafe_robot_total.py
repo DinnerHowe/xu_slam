@@ -44,7 +44,7 @@ class cafe_robot_total():
  #roslaunch multi_machine_control multi_go_tasks.launch 
   subprocess.Popen('roslaunch multi_machine_control multi_go_tasks.launch',shell=True)
 
- #启动导航目标策略
+ #启动机器标码
  def multi_robot_uni_marker(self):
  #roslaunch multi_machine robot_uni_marker.launch
   subprocess.Popen('roslaunch multi_machine robot_uni_marker.launch',shell=True)

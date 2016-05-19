@@ -1,4 +1,6 @@
 <launch>
+
+  <param name="use_sim_time" value="false" />
   <!--map saver-->
   <arg name="map_file" default="$(find nav_staff)/map/office_map_manual.yaml"/>
   <arg name="initial_pose_x" default="0.0"/>
@@ -6,4 +8,17 @@
   <arg name="initial_pose_a" default="0.0"/>
   
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+  
+
+  <arg name="ns1" value="first_robot"/>
+  <group ns='first_robot'>
+    <node pkg="tf" type="static_transform_publisher" name="map_first_map_broadcaster" args="0 0 0 0 0 0 /map /$(arg ns1)/odom 100" />
+  </group>
+  
+
+  <arg name="ns2" value="second_robot"/>
+  <group ns='second_robot'>
+    <node pkg="tf" type="static_transform_publisher" name="map_second_map_broadcaster" args="0 0 0 0 0 0 /map /$(arg ns2)/odom 100" />
+  </group>
+  
 </launch>

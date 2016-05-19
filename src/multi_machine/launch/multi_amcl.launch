@@ -16,7 +16,7 @@
     <param name="tf_prefix" value="first_robot" />
     
     <!-- The move_base & amcl node -->
-    <include file="$(find multi_machine)/launch/asus_robot/asus_robot_amcl_office.launch" >
+    <include file="$(find multi_machine)/launch/asus_robot/asus_robot_amcl.launch" >
       <arg name="initial_pose_x" value="$(arg initial_pose_x)"/>
       <arg name="initial_pose_y" value="$(arg initial_pose_y)"/>
       <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
