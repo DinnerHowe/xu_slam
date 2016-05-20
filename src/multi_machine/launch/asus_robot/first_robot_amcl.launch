@@ -1,0 +1,36 @@
+<!--this file is demo for nav with auto obstacle avoidance -->
+<launch>
+
+  <arg name="initial_pose_x"  default="0.0"/>
+  <arg name="initial_pose_y"  default="0.0"/>
+  <arg name="initial_pose_a"  default="0.0"/>
+  
+  <arg name="odom_frame_id"   default="odom" />
+  <arg name="base_frame_id"   default="base_footprint" />
+  <arg name="global_frame_id" default="map" />
+  <arg name="scan_frame_id"   default="/first_robot/camera_depth_frame" />
+   
+  <arg name="odom_topic"      default="odom" />
+  <arg name="laser_topic"     default="scan" />
+  
+  <group ns='first_robot'>
+    <include  file="$(find multi_machine)/launch/asus_robot/asus_robot_amcl.launch" >
+      <arg name="odom_frame_id"         value="/first_robot/$(arg odom_frame_id)"/>
+      <arg name="base_frame_id"         value="/first_robot/$(arg base_frame_id)"/>
+      <arg name="global_frame_id"       value="/first_robot/$(arg global_frame_id)"/>
+      <arg name="laser_topic"           value="$(arg laser_topic)"/>
+      <arg name="odom_topic"            value="$(arg odom_topic)"/>
+      <remap from="initialpose"         to="$(arg initialpose_topic)"/>
+      
+      <arg name="initial_pose_x"        value="$(arg initial_pose_x)"/>
+      <arg name="initial_pose_y"        value="$(arg initial_pose_y)"/>
+      <arg name="initial_pose_a"        value="$(arg initial_pose_a)"/>
+    </include>
+    
+    <node name="scan_remaper" pkg="multi_machine" type="scan_remaper.py" >
+      <param name="scan_frame_id"       value="$(arg scan_frame_id)" />
+      <param name="scan_topic"       value="$(arg laser_topic)" />
+    </node>
+  </group>
+</launch>
+

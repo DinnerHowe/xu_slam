@@ -631,14 +631,19 @@ Visualization Manager:
   Tools:
     - Class: rviz/Interact
       Hide Inactive Objects: true
+      
     - Class: rviz/PublishPoint
       Single click: false
       Topic: /first_robot/clicked_point
     - Class: rviz/PublishPoint
       Single click: false
       Topic: /second_robot/clicked_point
+      
     - Class: rviz/SetInitialPose
-      Topic: initialpose
+      Topic: /first_robot/initialpose
+    - Class: rviz/SetInitialPose
+      Topic: /second_robot/initialpose
+      
     - Class: rviz/Select
   Value: true
   Views:

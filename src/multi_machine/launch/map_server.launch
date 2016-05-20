@@ -9,16 +9,9 @@
   
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
   
-
-  <arg name="ns1" value="first_robot"/>
-  <group ns='first_robot'>
-    <node pkg="tf" type="static_transform_publisher" name="map_first_map_broadcaster" args="0 0 0 0 0 0 /map /$(arg ns1)/odom 100" />
-  </group>
+  <node pkg="tf" type="static_transform_publisher" name="map_first_map_broadcaster" args="0 0 0 0 0 0 /map /first_robot/odom 100" />
   
+  <node pkg="tf" type="static_transform_publisher" name="map_second_map_broadcaster" args="0 0 0 0 0 0 /map /second_robot/odom 100" />
 
-  <arg name="ns2" value="second_robot"/>
-  <group ns='second_robot'>
-    <node pkg="tf" type="static_transform_publisher" name="map_second_map_broadcaster" args="0 0 0 0 0 0 /map /$(arg ns2)/odom 100" />
-  </group>
   
 </launch>

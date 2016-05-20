@@ -15,6 +15,8 @@
   
   <arg name="base_frame"        default="base_footprint" />
 
+  <arg name="scan_topic"        default="/scan" />
+
   <param name="/use_sim_time" value="$(arg simulation)"/>
   
   <!--urdf-->
@@ -41,7 +43,7 @@
    <arg name="rgb_processing" default="false" />
    <arg name="depth_registration" default="false" />
    <arg name="depth_processing" default="false" />
-   <arg name="scan_topic" default="/scan" />
+   <arg name="scan_topic" default="$(arg scan_topic)" />
   </include>
   
 </launch>

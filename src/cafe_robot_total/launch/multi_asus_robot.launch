@@ -8,5 +8,4 @@
   
     <node pkg="cafe_robot_total" type="multi_asus_robot.py" name="multi_asus_robot" output="screen" />
   </group>
- 
 </launch>
