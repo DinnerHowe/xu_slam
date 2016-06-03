@@ -14,12 +14,13 @@ class camera_image():
  def __init__(self):
   self.define()
   rospy.init_node("camera_image_tests")
-  if rospy.has_param('~topic'):
-   self.topic=rospy.get_param('~topic')
+  if rospy.has_param('~topic111'):
+   self.topic=rospy.get_param('~topic111')
   else:
-   rospy.set_param('~topic','/camera/rgb/image_color')
-   self.topic=rospy.get_param('~topic')
-  rospy.Subscriber(self.topic,Image ,self.camera_image_callback)
+   rospy.set_param('~topic111','/camera/rgb/image_raw')
+   self.topic=rospy.get_param('~topic111')
+   print type(self.topic),self.topic
+  rospy.Subscriber(self.topic, Image ,self.camera_image_callback)
   rospy.spin()
 
  def define(self):

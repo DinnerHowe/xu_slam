@@ -1,0 +1,4 @@
+<launch>
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find machine)/rviz/asus_robot.rviz" />
+</launch>
+

@@ -13,7 +13,7 @@ This programm is tested on kuboki base turtlebot.
 
 import rospy
 from visualization_msgs.msg import Marker
-from nav_msgs.msg import Odometry
+from geometry_msgs.msg import PoseWithCovarianceStamped,Pose
 
 
 class marker():
@@ -33,10 +33,11 @@ class marker():
   self.marker.lifetime = rospy.Duration(0)
   self.marker_pub=rospy.Publisher("robot_uni_marker",Marker,queue_size=1)
 
- def odom_callback(self, data):
+ def pose_callback(self, data):
   self.marker.header.stamp =rospy.Time.now()
-  self.marker.pose=data.pose.pose
-  self.marker.pose.position.z=1
+  #self.marker.pose=data.pose.pose
+  self.marker.pose=data
+  self.marker.pose.position.z=0.5
   if rospy.has_param('~robot_laber'):
    self.marker.text=rospy.get_param('~robot_laber')
   else:
@@ -47,7 +48,7 @@ class marker():
  def __init__(self):
   rospy.init_node('robot_uni_marker')
   self.define()
-  rospy.Subscriber("odom", Odometry, self.odom_callback)
+  rospy.Subscriber("turtlebot_position_in_map", Pose, self.pose_callback)
   rospy.spin()
 
 

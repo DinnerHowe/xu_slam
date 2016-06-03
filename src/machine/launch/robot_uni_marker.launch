@@ -1,0 +1,6 @@
+<launch> 
+ <include file="$(find marker)/launch/xml/robot_uni_marker.launch.xml" >
+  <arg name="robot_laber" value="asus_robot" />
+ </include>
+</launch>
+

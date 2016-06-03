@@ -9,7 +9,7 @@
 using namespace std;
 
 std_msgs::String flag;
-float max_dis = 0.5;
+float max_dis = 0.7;
 string pre_data  = "ahead";
 
 
@@ -78,7 +78,7 @@ int main (int argc, char **argv)
         my_handle.setParam("detect_sub_topic", detect_sub_topic);
 
 
-    ros::Publisher pub_object = my_handle.advertise<std_msgs::String>(stop_flag_topic,1000);
+    ros::Publisher pub_object = my_handle.advertise<std_msgs::String>(stop_flag_topic,1);
     ROS_DEBUG("advertise /stop_flag");
     // subscribe to the scan topic and define a callback function to process the data
     ros::Subscriber laser_sub_object = my_handle.subscribe(detect_sub_topic, 1, laserScanCallback);

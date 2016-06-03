@@ -17,6 +17,7 @@ from move_base_msgs.msg import MoveBaseAction
 from actionlib_msgs.msg import GoalStatus,GoalStatusArray
 from rosgraph_msgs.msg import Log
 from visualization_msgs.msg import Marker
+from geometry_msgs.msg import PoseWithCovarianceStamped,Pose
 
 class cruise_modle():
  def define(self):
@@ -44,9 +45,10 @@ class cruise_modle():
   self.move_base = actionlib.SimpleActionClient('move_base', MoveBaseAction)
   self.move_base.wait_for_server()
   self.log_info=Log()
-    
+  self.current_odom=PoseWithCovarianceStamped()
+  
  def odom_callback(self,odom):
-  self.current_odom=odom
+  self.current_odom.pose.pose=odom
  
  def marker_callback(self,marker_point): 
   self.marker_point=marker_point
@@ -93,7 +95,8 @@ class cruise_modle():
   rospy.Timer(self.period, self.timer)
   rospy.Subscriber("/rosout",Log, self.Log_callback)
   rospy.Subscriber("/move_base/status", GoalStatusArray, self.status_callback)
-  rospy.Subscriber("odom", Odometry, self.odom_callback)
+  #rospy.Subscriber("odom", Odometry, self.odom_callback)
+  rospy.Subscriber("turtlebot_position_in_map", Pose, self.odom_callback)
   rospy.Subscriber("ui_marker", Marker,self.marker_callback)
   rospy.spin()
 

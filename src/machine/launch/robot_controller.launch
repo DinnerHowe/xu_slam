@@ -1,0 +1,31 @@
+<launch> 
+
+ <arg name="target_frame"               default="/map"/>                  
+ <arg name="source_frame"               default="/base_footprint"/>  
+ 
+ <node pkg="amcl_odom" type="amcl_odom.py" name="amcl_odom" respawn="true">
+   <param name="target_frame"           value="$(arg target_frame)" />
+   <param name="source_frame"           value="$(arg source_frame)" />
+ </node>
+   
+ <!--启动导航目标策略-->
+ <include file="$(find tasks)/launch/go_tasks.launch" />
+ 
+ <!--启动机器人标记-->
+ roslaunch machine robot_uni_marker.launch
+ <include file="$(find machine)/launch/robot_uni_marker.launch" />
+ 
+ <!--启动3D map的marker节点-->
+ rosrun mapshow mapshow
+ <include file="$(find machine)/launch/mapshow.launch" />
+
+ <!--障碍物报警机制-->
+ roslaunch obstacle_warning obstacles_warning.launch
+ <include file="$(find obstacle_warning)/launch/obstacles_warning.launch" />
+
+ <!--pob out image window-->
+ roslaunch camera_image camera_image.launch
+ <include file="$(find camera_image)/launch/camera_image.launch" />
+
+</launch>
+

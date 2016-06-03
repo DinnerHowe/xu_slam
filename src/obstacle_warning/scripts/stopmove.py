@@ -12,27 +12,18 @@ from std_msgs.msg import String
 from geometry_msgs.msg import Twist, Point, Quaternion
 from actionlib_msgs.msg import *
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
-from nav_msgs.msg import Odometry
-from geometry_msgs.msg import PointStamped
+from geometry_msgs.msg import PoseWithCovarianceStamped,Pose
 from visualization_msgs.msg import Marker
 
 # global position variables 
 poseX, poseY, poseZ = 0, 0, 0
 
-def OdomCallback(msg):
+def PoseCallback(msg):
     global poseX, poseY
-    poseX, poseY = msg.pose.pose.position.x, msg.pose.pose.position.y
-    
-    # rospy.loginfo("callx " + str(poseX))
-    # rospy.loginfo("cally " + str(poseY))
-    
+    #poseX, poseY = msg.pose.pose.position.x, msg.pose.pose.position.y
+    poseX, poseY = msg.position.x, msg.position.y
 
 def addFlag():
-
-    # get the cooprations of turtlebot in map using tf
-    # listener = tf.TransformListener()    
-    # listener.waitForTransform("/odom", "/base_link", rospy.Time(0), rospy.Duration(1))
-    # (position, rotation) = listener.lookupTransform("/odom", "/base_link", rospy.Time(0))
     
     global poseX, poseY, poseZ
     
@@ -89,15 +80,15 @@ def stopmove():
 
 def callback(data):
     info = data.data    
-    rospy.loginfo(info)
+    #rospy.loginfo(info)
     if (info == "stop"):
         stopmove()
     else :
-        rospy.loginfo("I dont know")
+        pass
 
 if(__name__ == '__main__'):
     rospy.init_node("stopmove", anonymous=True)
-    rospy.Subscriber('odom', Odometry, OdomCallback)
+    rospy.Subscriber('turtlebot_position_in_map', Pose, PoseCallback)
     rospy.loginfo('subscriber to /stop_flag')
     stop_flag_topic = ''
     if rospy.has_param('stop_flag_topic'):

@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="obstacle_warning" type="stopmove.py" name="stopmove"  output="screen">
+  </node>
+    
+  <node pkg="obstacle_warning" type="detect" name="multi_pioneer_laser_node"  output="screen">
+  </node>
+
+</launch>

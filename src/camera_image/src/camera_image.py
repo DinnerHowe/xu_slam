@@ -20,40 +20,48 @@ class camera_image():
   rospy.spin()
 
  def define(self):
-  self.topic=''
-  self.warning_info=''
+  self.once=False
+  self.ns,self.warning_topic,self.warning_info,self.camera_topic='','','',''
   self.image=Image()
+  #print self.ns,self.warning_topic,self.camera_topic
+  
   #topic_camera
-  if rospy.has_param('~topic_camera'):
-   self.camera_topic=rospy.get_param('~topic_camera')
+  if rospy.has_param('~topic_camera_for_asus'):
+   self.camera_topic=rospy.get_param('~topic_camera_for_asus')
   else:
-   rospy.set_param('~topic_camera','/camera/rgb/image_color')
-   self.camera_topic=rospy.get_param('~topic_camera')
+   rospy.set_param('~topic_camera_for_asus','/camera/rgb/image_raw')
+   self.camera_topic=rospy.get_param('~topic_camera_for_asus')
    
   #topic_warning
-  if rospy.has_param('~topic_warning'):
-   self.warning_topic=rospy.get_param('~topic_warning')
+  if rospy.has_param('~topic_warning_for_asus'):
+   self.warning_topic=rospy.get_param('~topic_warning_for_asus')
   else:
-   rospy.set_param('~topic_warning','/stop_flag')
-   self.warning_topic=rospy.get_param('~topic_warning')
+   rospy.set_param('~topic_warning_for_asus','/stop_flag')
+   self.warning_topic=rospy.get_param('~topic_warning_for_asus')
    
   #~ns
-  if rospy.has_param('~ns'):
-   self.ns=rospy.get_param('~ns')
+  if rospy.has_param('~laber'):
+   self.ns=rospy.get_param('~laber')
   else:
-   rospy.set_param('~ns','first_robot')
-   self.ns=rospy.get_param('~ns')
+   rospy.set_param('~laber','asus_robot')
+   self.ns=rospy.get_param('~laber')
 
-  print self.ns,self.warning_topic,self.camera_topic
+  #print self.ns,self.warning_topic,self.camera_topic
 
   self.cv_type={"mono8":"CV_8UC1","mono16":" CV_16UC1",
                      "bgr8":"CV_8UC3","rgb8":"CV_8UC3",
                      "bgra8":"CV_8UC4","rgba8":"CV_8UC4",}
 
   self.data_type = {'8U':'uint8', '8S':'int8', '16U':'uint16','16S':'int16', '32S':'int32', '32F':'float32','64F':'float64'}
+ 
+ def warning_callback(self,data):
+  #print data.data
+  self.warning_info = data.data 
   
  def camera_image_callback(self,data):
-  if self.warning_info=='stop':
+  #print 'sub image'
+  if self.warning_info=='stop' or self.once:
+   self.once=True
    self.camera_image_pop(data)
   else:
    pass
@@ -66,8 +74,11 @@ class camera_image():
   if cv2.waitKey(2) & 0xFF == ord('q'):
    cv2.destroyWindow(self.ns)
    self.define()
-   os.system('rosnode kill /%s/camera_image'%self.ns)
-   print 'rosnode kill /%s/camera_image'%self.ns
+   self.once=False
+   os.system('rosnode kill /camera_image')
+   os.system('rosnode kill /stopmove')
+   os.system('rosnode kill /pioneer_laser_node')
+   print 'rosnode kill /camera_image'
   
   
  def ros_to_cv(self,image):
@@ -77,8 +88,6 @@ class camera_image():
   dtype=(self.data_type[data.split('C')[0]])
   return numpy.ndarray(shape, dtype, buffer=image.data)
 
- def warning_callback(self,data):
-  self.warning_info = data.data 
 
 if __name__=='__main__':
  try:

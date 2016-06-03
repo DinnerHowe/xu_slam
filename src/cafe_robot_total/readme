@@ -1,18 +1,3 @@
-仿真步骤
-1. roslaunch rbx1_bringup fake_turtlebot.launch
-2. roslaunch rbx1_nav fake_amcl.launch map:=office_map_manual.yaml
-3. roslaunch marker ui_marker.launch 
-4. rosrun tasks go_tasks.py  
-
-  #3D地图显示
-5. roslaunch obstacle_markers obstacle_markers.launch 
-   or 
-   rosrun mapshow mapshow（优化后）
-   
-6. rosrun rviz rviz 
-  #障碍物报警机制
-7. rosrun obstacle_warning detect 
-8. rosrun obstacle_warning stopmove.py
 
 实物步骤：
 
@@ -25,67 +10,13 @@ ssh turtlebot@192.168.160.103
         in PC
 3. roslaunch marker ui_marker.launch 
 4. roslaunch tasks go_tasks.launch  
-5. roslaunch obstacle_markers obstacle_markers.launch （raw3Dmap）
-rosrun mapshow mapshow
+5. rosrun mapshow mapshow
 
 6. rosrun rviz rviz 
 
 
-多机器协同键盘控制：
-1. roslaunch multi_machine fake_multi_turtlebot.launch
-2. roslaunch multi_machine fake_multi_amcl.launch
-   or 
-   roslaunch multi_machine fake_multi_amcl.launch map:=office_map_manual.yaml
 
-3. roslaunch multi_machine_control multi_tele_handle.launch
-4. roslaunch multi_machine_control multi_keyboard_control.launch
-
-5. rosrun mapshow mapshow
-6. roslaunch multi_machine 3D_multi_RVIZ.launch
-
-
-多机器协同仿真：
-1. roslaunch multi_machine fake_multi_turtlebot.launch
-2. roslaunch multi_machine fake_multi_amcl.launch
-
-3. roslaunch multi_machine_control multi_ui_marker.launch 
-4. roslaunch multi_machine_control multi_go_tasks.launch 
-5. roslaunch multi_machine robot_uni_marker.launch
-6. rosrun mapshow mapshow
-7. roslaunch multi_machine multi_obstacle_warning.launch
-8. roslaunch multi_machine 3D_multi_RVIZ.launch
-
-9. rostopic pub first_robot/stop_flag std_msgs/String stop
-10. rostopic pub second_robot/stop_flag std_msgs/String stop
-
-
-
-
-
-多机协同move base 方式：
-1. roslaunch multi_machine fake_multi_turtlebot.launch
-
-2. roslaunch multi_machine multi_turtlebot_bringup.launch
-
-
-
-2. roslaunch multi_machine fake_multi_amcl.launch
-
-3. roslaunch multi_machine_control multi_ui_marker.launch
-4. roslaunch multi_machine_control multi_go_tasks.launch
-#####5. roslaunch obstacle_markers obstacle_markers.launch (等待remap topic)
-5. rosrun mapshow mapshow
-
-6. roslaunch multi_machine robot_uni_marker.launch
-
-7. roslaunch obstacle_warning detect （等待remap topic）
-8. roslaunch obstacle_warning stopmove.py（等待remap topic）
-
-9. roslaunch multi_machine 3D_multi_RVIZ.launch
-
-
-
-多机控制演示
+控制演示
 
 启动控制
 roslaunch cafe_robot_total fake_cafe_robot_total.launch

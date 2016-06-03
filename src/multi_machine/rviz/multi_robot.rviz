@@ -645,6 +645,7 @@ Visualization Manager:
       Topic: /second_robot/initialpose
       
     - Class: rviz/Select
+    
   Value: true
   Views:
     Current:

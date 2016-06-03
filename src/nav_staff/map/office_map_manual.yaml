@@ -1,6 +1,6 @@
 image: office_map_manual.pgm
 resolution: 0.050000
-origin: [-6.50000, -6.500000, 0.000000]
+origin: [-5.87311236235758, -6.082926101916, 0.000000]
 negate: 0
 occupied_thresh: 0.65
 free_thresh: 0.196
