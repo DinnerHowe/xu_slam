@@ -12,20 +12,18 @@
  <include file="$(find tasks)/launch/go_tasks.launch" />
  
  <!--启动机器人标记-->
- roslaunch machine robot_uni_marker.launch
  <include file="$(find machine)/launch/robot_uni_marker.launch" />
  
  <!--启动3D map的marker节点-->
- rosrun mapshow mapshow
  <include file="$(find machine)/launch/mapshow.launch" />
 
  <!--障碍物报警机制-->
- roslaunch obstacle_warning obstacles_warning.launch
  <include file="$(find obstacle_warning)/launch/obstacles_warning.launch" />
 
  <!--pob out image window-->
- roslaunch camera_image camera_image.launch
  <include file="$(find camera_image)/launch/camera_image.launch" />
-
+ 
+ <!--停止后语音-->
+ <include file="$(find simple_voice)/launch/warning_speaker.launch" />
 </launch>
 

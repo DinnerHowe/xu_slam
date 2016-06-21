@@ -7,21 +7,26 @@ This programm is tested on kuboki base turtlebot."""
 import rospy
 from std_msgs.msg import String
 
-def talker():
- pub = rospy.Publisher('speak_string', String, queue_size=1)
- rospy.init_node('fake_speak_string_pubber', anonymous=True)
- rate = rospy.Rate(10) # 10hz
+def test():
+ pub = rospy.Publisher('stop_flag', String, queue_size=1)
+ rospy.init_node('fake_stop', anonymous=True)
+ rate = rospy.Rate(20) # 10hz
+ cout=0
  while not rospy.is_shutdown():
-  hello_str = get_text()
-  rospy.loginfo(hello_str)
-  pub.publish(hello_str)
+  cout+=1
+  if cout<=10:
+   rospy.loginfo("stop")
+   pub.publish("stop")
+  else:
+   rospy.loginfo("ahead")
+   pub.publish("ahead")
   rate.sleep()
-
-def get_text():
- return raw_input('请输入想要合成的话语： ')
+  
+  if cout>20:
+   cout=0
   
 if __name__ == '__main__':
     try:
-        talker()
+        test()
     except rospy.ROSInterruptException:
         pass

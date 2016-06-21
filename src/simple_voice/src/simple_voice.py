@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 "先存.wav然后识别"
+"""Copyright (c) 2016 Xu Zhihao (Howe).  All rights reserved.
+This program is free software; you can redistribute it and/or modify
+This programm is tested on kuboki base turtlebot."""
+
+
 from pyaudio import PyAudio, paInt16
 import json,base64,os,sys,requests,wave,rospy
 import numpy as np 

@@ -1,0 +1,8 @@
+<launch>
+ <arg name='words'              default="请让一下，谢谢" />
+ <include file="$(find simple_voice)/launch/simple_speaker.launch" />
+ 
+ <node pkg="simple_voice" type="node_main.py" name="warning2speaker" output="screen">
+  <param name='words'           value="$(arg words)"  type="str" />
+ </node>
+</launch>

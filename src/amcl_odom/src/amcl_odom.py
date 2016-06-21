@@ -2,7 +2,7 @@
 #coding=utf-8
 """
 combine amcl_pose and odom to figureout realtime robot pose in map
-Copyright (c) 2015 Xu Zhihao (Howe).  All rights reserved.
+Copyright (c) 2016 Xu Zhihao (Howe).  All rights reserved.
 This program is free software; you can redistribute it and/or modify
 This programm is tested on kuboki base turtlebot. 
 """
