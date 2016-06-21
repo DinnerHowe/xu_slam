@@ -1,0 +1,40 @@
+
+source /opt/ros/indigo/setup.bash
+source ~/xu_slam/devel/setup.bash
+source ~/cafe_robots/devel/setup.bash
+source ~/cafe_robot_single/devel/setup.bash
+
+export TURTLEBOT_3D_SENSOR=kinect
+export TURTLEBOT_BASE=kobuki
+export TURTLEBOT_STACKS=hexagons
+
+# Remote PC Setup
+# ROS_HOSTNAME=IP_OF_PC
+# ROS_MASTER_URI=http://IP_OF_TURTLEBOT:11311
+
+# Turtlebot Setup
+# ROS_HOSTNAME=IP_OF_TURTLEBOT
+# ROS_MASTER_URI=http://IP_OF_TURTLEBOT:11311
+
+
+#network xu
+#export IP_OF_TURTLEBOT=192.168.160.102
+#export IP_OF_WORKSTATION=192.168.160.101
+#export ROS_MASTER_URI=http://192.168.160.102:11311
+#export ROS_HOSTNAME=192.168.160.101
+
+#network mm
+#export IP_OF_TURTLEBOT=192.168.8.108
+#export IP_OF_WORKSTATION=192.168.8.105
+#export ROS_MASTER_URI=http://192.168.8.108:11311
+#export ROS_HOSTNAME=192.168.8.105
+
+#network mini pc
+#export IP_OF_TURTLEBOT=192.168.160.103
+#export IP_OF_WORKSTATION=192.168.160.102
+#export ROS_MASTER_URI=http://192.168.160.103:11311
+#export ROS_HOSTNAME=192.168.160.102
+
+#local
+export ROS_MASTER_URI=http://localhost:11311
+export ROS_HOSTNAME=localhost
