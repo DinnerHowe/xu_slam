@@ -1,4 +1,4 @@
-﻿小工具功能说明：
+小工具功能说明：
 
 code_counter.py：
 计算总共代码量，有效代码量，注释量，空格量的小工具。
@@ -54,3 +54,9 @@ twist.py
 
 reference
 reference中是初期web地图的api封装，具体说明见reference/readme.pdf
+
+Path.py 获取当前主机的workspace的路径存在home/usr下的path.txt文件中
+
+Chmod_to_all对某个目录下的全部文件进行可执行授权处理
+
+init_pose_handle.py 使用键盘来设置机器在地图上的初始点
